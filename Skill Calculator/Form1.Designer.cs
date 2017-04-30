@@ -184,7 +184,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.ia_panel = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.fa_lvl = new System.Windows.Forms.Label();
+            this.ia_lvl = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.immolation_aura = new System.Windows.Forms.NumericUpDown();
             this.label23 = new System.Windows.Forms.Label();
@@ -227,9 +227,9 @@
             this.FocusUD = new System.Windows.Forms.NumericUpDown();
             this.DexterityUD = new System.Windows.Forms.NumericUpDown();
             this.StrengthUD = new System.Windows.Forms.NumericUpDown();
-            this.paramspoints = new System.Windows.Forms.Label();
+            this.statpoints = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.points = new System.Windows.Forms.Label();
+            this.skillpoints = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.famepoints = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -373,9 +373,9 @@
             this.tabPage1.Controls.Add(this.FocusUD);
             this.tabPage1.Controls.Add(this.DexterityUD);
             this.tabPage1.Controls.Add(this.StrengthUD);
-            this.tabPage1.Controls.Add(this.paramspoints);
+            this.tabPage1.Controls.Add(this.statpoints);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.points);
+            this.tabPage1.Controls.Add(this.skillpoints);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.famepoints);
             this.tabPage1.Controls.Add(this.label4);
@@ -2110,7 +2110,7 @@
             this.ia_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
             this.ia_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ia_panel.Controls.Add(this.pictureBox6);
-            this.ia_panel.Controls.Add(this.fa_lvl);
+            this.ia_panel.Controls.Add(this.ia_lvl);
             this.ia_panel.Controls.Add(this.label22);
             this.ia_panel.Controls.Add(this.immolation_aura);
             this.ia_panel.Controls.Add(this.label23);
@@ -2130,15 +2130,15 @@
             this.pictureBox6.TabIndex = 13;
             this.pictureBox6.TabStop = false;
             // 
-            // fa_lvl
+            // ia_lvl
             // 
-            this.fa_lvl.AutoSize = true;
-            this.fa_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fa_lvl.Location = new System.Drawing.Point(119, 51);
-            this.fa_lvl.Name = "fa_lvl";
-            this.fa_lvl.Size = new System.Drawing.Size(19, 13);
-            this.fa_lvl.TabIndex = 12;
-            this.fa_lvl.Text = "    ";
+            this.ia_lvl.AutoSize = true;
+            this.ia_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ia_lvl.Location = new System.Drawing.Point(119, 51);
+            this.ia_lvl.Name = "ia_lvl";
+            this.ia_lvl.Size = new System.Drawing.Size(19, 13);
+            this.ia_lvl.TabIndex = 12;
+            this.ia_lvl.Text = "    ";
             // 
             // label22
             // 
@@ -2576,6 +2576,7 @@
             0,
             0,
             0});
+            this.DefenceUD.ValueChanged += new System.EventHandler(this.DefenceUD_ValueChanged);
             // 
             // FocusUD
             // 
@@ -2593,6 +2594,7 @@
             0,
             0,
             0});
+            this.FocusUD.ValueChanged += new System.EventHandler(this.FocusUD_ValueChanged);
             // 
             // DexterityUD
             // 
@@ -2610,6 +2612,7 @@
             0,
             0,
             0});
+            this.DexterityUD.ValueChanged += new System.EventHandler(this.DexterityUD_ValueChanged);
             // 
             // StrengthUD
             // 
@@ -2627,15 +2630,16 @@
             0,
             0,
             0});
+            this.StrengthUD.ValueChanged += new System.EventHandler(this.StrengthUD_ValueChanged);
             // 
-            // paramspoints
+            // statpoints
             // 
-            this.paramspoints.AutoSize = true;
-            this.paramspoints.Location = new System.Drawing.Point(536, 44);
-            this.paramspoints.Name = "paramspoints";
-            this.paramspoints.Size = new System.Drawing.Size(13, 13);
-            this.paramspoints.TabIndex = 18;
-            this.paramspoints.Text = "  ";
+            this.statpoints.AutoSize = true;
+            this.statpoints.Location = new System.Drawing.Point(536, 44);
+            this.statpoints.Name = "statpoints";
+            this.statpoints.Size = new System.Drawing.Size(13, 13);
+            this.statpoints.TabIndex = 18;
+            this.statpoints.Text = "  ";
             // 
             // label5
             // 
@@ -2646,14 +2650,14 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Очки параметров";
             // 
-            // points
+            // skillpoints
             // 
-            this.points.AutoSize = true;
-            this.points.Location = new System.Drawing.Point(522, 19);
-            this.points.Name = "points";
-            this.points.Size = new System.Drawing.Size(13, 13);
-            this.points.TabIndex = 16;
-            this.points.Text = "  ";
+            this.skillpoints.AutoSize = true;
+            this.skillpoints.Location = new System.Drawing.Point(522, 19);
+            this.skillpoints.Name = "skillpoints";
+            this.skillpoints.Size = new System.Drawing.Size(13, 13);
+            this.skillpoints.TabIndex = 16;
+            this.skillpoints.Text = "  ";
             // 
             // label6
             // 
@@ -3054,11 +3058,11 @@
         private System.Windows.Forms.ComboBox famebox;
         private System.Windows.Forms.NumericUpDown magma_spear;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label points;
+        private System.Windows.Forms.Label skillpoints;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label famepoints;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label paramspoints;
+        private System.Windows.Forms.Label statpoints;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel ms_panel;
         private System.Windows.Forms.Label ms_lvl;
@@ -3088,7 +3092,7 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Panel ia_panel;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label fa_lvl;
+        private System.Windows.Forms.Label ia_lvl;
         private System.Windows.Forms.NumericUpDown immolation_aura;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Panel ic_panel;
