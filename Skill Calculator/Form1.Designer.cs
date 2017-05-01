@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.reset_skills = new System.Windows.Forms.Button();
+            this.reset_stats = new System.Windows.Forms.Button();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
             this.panel21 = new System.Windows.Forms.Panel();
@@ -198,7 +200,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bp_lvl = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.blazing_piillar = new System.Windows.Forms.NumericUpDown();
+            this.blazing_pillar = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
             this.fb_panel = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -328,7 +330,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.infernal_collapse)).BeginInit();
             this.bp_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blazing_piillar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blazing_pillar)).BeginInit();
             this.fb_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.firebombs)).BeginInit();
@@ -360,6 +362,8 @@
             // 
             this.tabPage1.BackgroundImage = global::Skill_Calculator.Properties.Resources.background;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.Controls.Add(this.reset_skills);
+            this.tabPage1.Controls.Add(this.reset_stats);
             this.tabPage1.Controls.Add(this.pictureBox32);
             this.tabPage1.Controls.Add(this.pictureBox31);
             this.tabPage1.Controls.Add(this.panel21);
@@ -390,6 +394,26 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Эмберлинг";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // reset_skills
+            // 
+            this.reset_skills.Location = new System.Drawing.Point(1131, 57);
+            this.reset_skills.Name = "reset_skills";
+            this.reset_skills.Size = new System.Drawing.Size(85, 34);
+            this.reset_skills.TabIndex = 39;
+            this.reset_skills.Text = "Сбросить навыки";
+            this.reset_skills.UseVisualStyleBackColor = true;
+            this.reset_skills.Click += new System.EventHandler(this.reset_skills_Click);
+            // 
+            // reset_stats
+            // 
+            this.reset_stats.Location = new System.Drawing.Point(1131, 13);
+            this.reset_stats.Name = "reset_stats";
+            this.reset_stats.Size = new System.Drawing.Size(85, 38);
+            this.reset_stats.TabIndex = 38;
+            this.reset_stats.Text = "Сбросить атрибуты";
+            this.reset_stats.UseVisualStyleBackColor = true;
+            this.reset_stats.Click += new System.EventHandler(this.reset_stats_Click);
             // 
             // pictureBox32
             // 
@@ -487,6 +511,7 @@
             this.lightning_brand.Name = "lightning_brand";
             this.lightning_brand.Size = new System.Drawing.Size(60, 20);
             this.lightning_brand.TabIndex = 9;
+            this.lightning_brand.ValueChanged += new System.EventHandler(this.lightning_brand_ValueChanged);
             // 
             // label69
             // 
@@ -554,6 +579,7 @@
             this.prismatic_rift.Name = "prismatic_rift";
             this.prismatic_rift.Size = new System.Drawing.Size(60, 20);
             this.prismatic_rift.TabIndex = 9;
+            this.prismatic_rift.ValueChanged += new System.EventHandler(this.prismatic_rift_ValueChanged);
             // 
             // label72
             // 
@@ -621,6 +647,7 @@
             this.wand_chaos.Name = "wand_chaos";
             this.wand_chaos.Size = new System.Drawing.Size(60, 20);
             this.wand_chaos.TabIndex = 9;
+            this.wand_chaos.ValueChanged += new System.EventHandler(this.wand_chaos_ValueChanged);
             // 
             // label75
             // 
@@ -688,6 +715,7 @@
             this.shocking_orb.Name = "shocking_orb";
             this.shocking_orb.Size = new System.Drawing.Size(60, 20);
             this.shocking_orb.TabIndex = 9;
+            this.shocking_orb.ValueChanged += new System.EventHandler(this.shocking_orb_ValueChanged);
             // 
             // label78
             // 
@@ -755,6 +783,7 @@
             this.shockbolts.Name = "shockbolts";
             this.shockbolts.Size = new System.Drawing.Size(60, 20);
             this.shockbolts.TabIndex = 9;
+            this.shockbolts.ValueChanged += new System.EventHandler(this.shockbolts_ValueChanged);
             // 
             // label81
             // 
@@ -822,6 +851,7 @@
             this.deaths_bounty.Name = "deaths_bounty";
             this.deaths_bounty.Size = new System.Drawing.Size(60, 20);
             this.deaths_bounty.TabIndex = 9;
+            this.deaths_bounty.ValueChanged += new System.EventHandler(this.deaths_bounty_ValueChanged);
             // 
             // label84
             // 
@@ -889,6 +919,7 @@
             this.arc_beam.Name = "arc_beam";
             this.arc_beam.Size = new System.Drawing.Size(60, 20);
             this.arc_beam.TabIndex = 9;
+            this.arc_beam.ValueChanged += new System.EventHandler(this.arc_beam_ValueChanged);
             // 
             // label87
             // 
@@ -956,6 +987,7 @@
             this.thunder_locus.Name = "thunder_locus";
             this.thunder_locus.Size = new System.Drawing.Size(60, 20);
             this.thunder_locus.TabIndex = 9;
+            this.thunder_locus.ValueChanged += new System.EventHandler(this.thunder_locus_ValueChanged);
             // 
             // label90
             // 
@@ -1023,6 +1055,7 @@
             this.shocking_burst.Name = "shocking_burst";
             this.shocking_burst.Size = new System.Drawing.Size(60, 20);
             this.shocking_burst.TabIndex = 9;
+            this.shocking_burst.ValueChanged += new System.EventHandler(this.shocking_burst_ValueChanged);
             // 
             // label93
             // 
@@ -1101,6 +1134,7 @@
             this.prismatic_bolt.Name = "prismatic_bolt";
             this.prismatic_bolt.Size = new System.Drawing.Size(60, 20);
             this.prismatic_bolt.TabIndex = 9;
+            this.prismatic_bolt.ValueChanged += new System.EventHandler(this.prismatic_bolt_ValueChanged);
             // 
             // label101
             // 
@@ -1188,6 +1222,7 @@
             this.ice_brand.Name = "ice_brand";
             this.ice_brand.Size = new System.Drawing.Size(60, 20);
             this.ice_brand.TabIndex = 9;
+            this.ice_brand.ValueChanged += new System.EventHandler(this.ice_brand_ValueChanged);
             // 
             // label38
             // 
@@ -1255,6 +1290,7 @@
             this.staff_mastery.Name = "staff_mastery";
             this.staff_mastery.Size = new System.Drawing.Size(60, 20);
             this.staff_mastery.TabIndex = 9;
+            this.staff_mastery.ValueChanged += new System.EventHandler(this.staff_mastery_ValueChanged);
             // 
             // label41
             // 
@@ -1322,6 +1358,7 @@
             this.frozen_fate.Name = "frozen_fate";
             this.frozen_fate.Size = new System.Drawing.Size(60, 20);
             this.frozen_fate.TabIndex = 9;
+            this.frozen_fate.ValueChanged += new System.EventHandler(this.frozen_fate_ValueChanged);
             // 
             // label44
             // 
@@ -1389,6 +1426,7 @@
             this.astral_ally.Name = "astral_ally";
             this.astral_ally.Size = new System.Drawing.Size(60, 20);
             this.astral_ally.TabIndex = 9;
+            this.astral_ally.ValueChanged += new System.EventHandler(this.astral_ally_ValueChanged);
             // 
             // label47
             // 
@@ -1456,6 +1494,7 @@
             this.ice_prison.Name = "ice_prison";
             this.ice_prison.Size = new System.Drawing.Size(60, 20);
             this.ice_prison.TabIndex = 9;
+            this.ice_prison.ValueChanged += new System.EventHandler(this.ice_prison_ValueChanged);
             // 
             // label50
             // 
@@ -1523,6 +1562,7 @@
             this.frost_wave.Name = "frost_wave";
             this.frost_wave.Size = new System.Drawing.Size(60, 20);
             this.frost_wave.TabIndex = 9;
+            this.frost_wave.ValueChanged += new System.EventHandler(this.frost_wave_ValueChanged);
             // 
             // label53
             // 
@@ -1590,6 +1630,7 @@
             this.elemental_boon.Name = "elemental_boon";
             this.elemental_boon.Size = new System.Drawing.Size(60, 20);
             this.elemental_boon.TabIndex = 9;
+            this.elemental_boon.ValueChanged += new System.EventHandler(this.elemental_boon_ValueChanged);
             // 
             // label56
             // 
@@ -1657,6 +1698,7 @@
             this.frost_phase.Name = "frost_phase";
             this.frost_phase.Size = new System.Drawing.Size(60, 20);
             this.frost_phase.TabIndex = 9;
+            this.frost_phase.ValueChanged += new System.EventHandler(this.frost_phase_ValueChanged);
             // 
             // label59
             // 
@@ -1724,6 +1766,7 @@
             this.hailstorm.Name = "hailstorm";
             this.hailstorm.Size = new System.Drawing.Size(60, 20);
             this.hailstorm.TabIndex = 9;
+            this.hailstorm.ValueChanged += new System.EventHandler(this.hailstorm_ValueChanged);
             // 
             // label62
             // 
@@ -1802,6 +1845,7 @@
             this.icy_blast.Name = "icy_blast";
             this.icy_blast.Size = new System.Drawing.Size(60, 20);
             this.icy_blast.TabIndex = 9;
+            this.icy_blast.ValueChanged += new System.EventHandler(this.icy_blast_ValueChanged);
             // 
             // label66
             // 
@@ -2248,7 +2292,7 @@
             this.bp_panel.Controls.Add(this.pictureBox4);
             this.bp_panel.Controls.Add(this.bp_lvl);
             this.bp_panel.Controls.Add(this.label16);
-            this.bp_panel.Controls.Add(this.blazing_piillar);
+            this.bp_panel.Controls.Add(this.blazing_pillar);
             this.bp_panel.Controls.Add(this.label17);
             this.bp_panel.Location = new System.Drawing.Point(9, 123);
             this.bp_panel.Name = "bp_panel";
@@ -2286,18 +2330,18 @@
             this.label16.TabIndex = 11;
             this.label16.Text = "Уровень";
             // 
-            // blazing_piillar
+            // blazing_pillar
             // 
-            this.blazing_piillar.Location = new System.Drawing.Point(63, 19);
-            this.blazing_piillar.Maximum = new decimal(new int[] {
+            this.blazing_pillar.Location = new System.Drawing.Point(63, 19);
+            this.blazing_pillar.Maximum = new decimal(new int[] {
             15,
             0,
             0,
             0});
-            this.blazing_piillar.Name = "blazing_piillar";
-            this.blazing_piillar.Size = new System.Drawing.Size(60, 20);
-            this.blazing_piillar.TabIndex = 9;
-            this.blazing_piillar.ValueChanged += new System.EventHandler(this.blazing_piillar_ValueChanged);
+            this.blazing_pillar.Name = "blazing_pillar";
+            this.blazing_pillar.Size = new System.Drawing.Size(60, 20);
+            this.blazing_pillar.TabIndex = 9;
+            this.blazing_pillar.ValueChanged += new System.EventHandler(this.blazing_piillar_ValueChanged);
             // 
             // label17
             // 
@@ -2527,7 +2571,7 @@
             // label98
             // 
             this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(1001, 62);
+            this.label98.Location = new System.Drawing.Point(898, 62);
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(60, 13);
             this.label98.TabIndex = 33;
@@ -2536,7 +2580,7 @@
             // label97
             // 
             this.label97.AutoSize = true;
-            this.label97.Location = new System.Drawing.Point(760, 62);
+            this.label97.Location = new System.Drawing.Point(672, 62);
             this.label97.Name = "label97";
             this.label97.Size = new System.Drawing.Size(56, 13);
             this.label97.TabIndex = 32;
@@ -2545,7 +2589,7 @@
             // label96
             // 
             this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(982, 22);
+            this.label96.Location = new System.Drawing.Point(879, 22);
             this.label96.Name = "label96";
             this.label96.Size = new System.Drawing.Size(79, 13);
             this.label96.TabIndex = 31;
@@ -2554,7 +2598,7 @@
             // label95
             // 
             this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(775, 22);
+            this.label95.Location = new System.Drawing.Point(687, 22);
             this.label95.Name = "label95";
             this.label95.Size = new System.Drawing.Size(32, 13);
             this.label95.TabIndex = 30;
@@ -2562,7 +2606,7 @@
             // 
             // DefenceUD
             // 
-            this.DefenceUD.Location = new System.Drawing.Point(1074, 60);
+            this.DefenceUD.Location = new System.Drawing.Point(971, 60);
             this.DefenceUD.Maximum = new decimal(new int[] {
             535,
             0,
@@ -2580,7 +2624,7 @@
             // 
             // FocusUD
             // 
-            this.FocusUD.Location = new System.Drawing.Point(1074, 20);
+            this.FocusUD.Location = new System.Drawing.Point(971, 20);
             this.FocusUD.Maximum = new decimal(new int[] {
             535,
             0,
@@ -2598,7 +2642,7 @@
             // 
             // DexterityUD
             // 
-            this.DexterityUD.Location = new System.Drawing.Point(831, 60);
+            this.DexterityUD.Location = new System.Drawing.Point(743, 60);
             this.DexterityUD.Maximum = new decimal(new int[] {
             535,
             0,
@@ -2616,7 +2660,7 @@
             // 
             // StrengthUD
             // 
-            this.StrengthUD.Location = new System.Drawing.Point(831, 20);
+            this.StrengthUD.Location = new System.Drawing.Point(743, 20);
             this.StrengthUD.Maximum = new decimal(new int[] {
             535,
             0,
@@ -2635,7 +2679,7 @@
             // statpoints
             // 
             this.statpoints.AutoSize = true;
-            this.statpoints.Location = new System.Drawing.Point(536, 44);
+            this.statpoints.Location = new System.Drawing.Point(493, 45);
             this.statpoints.Name = "statpoints";
             this.statpoints.Size = new System.Drawing.Size(13, 13);
             this.statpoints.TabIndex = 18;
@@ -2644,7 +2688,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(434, 44);
+            this.label5.Location = new System.Drawing.Point(391, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 13);
             this.label5.TabIndex = 17;
@@ -2653,7 +2697,7 @@
             // skillpoints
             // 
             this.skillpoints.AutoSize = true;
-            this.skillpoints.Location = new System.Drawing.Point(522, 19);
+            this.skillpoints.Location = new System.Drawing.Point(479, 20);
             this.skillpoints.Name = "skillpoints";
             this.skillpoints.Size = new System.Drawing.Size(13, 13);
             this.skillpoints.TabIndex = 16;
@@ -2662,7 +2706,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(434, 19);
+            this.label6.Location = new System.Drawing.Point(391, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 13);
             this.label6.TabIndex = 15;
@@ -2671,7 +2715,7 @@
             // famepoints
             // 
             this.famepoints.AutoSize = true;
-            this.famepoints.Location = new System.Drawing.Point(635, 66);
+            this.famepoints.Location = new System.Drawing.Point(592, 67);
             this.famepoints.Name = "famepoints";
             this.famepoints.Size = new System.Drawing.Size(13, 13);
             this.famepoints.TabIndex = 14;
@@ -2680,7 +2724,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(434, 66);
+            this.label4.Location = new System.Drawing.Point(391, 67);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(195, 13);
             this.label4.TabIndex = 13;
@@ -3025,7 +3069,7 @@
             this.bp_panel.ResumeLayout(false);
             this.bp_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blazing_piillar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blazing_pillar)).EndInit();
             this.fb_panel.ResumeLayout(false);
             this.fb_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -3103,7 +3147,7 @@
         private System.Windows.Forms.Panel bp_panel;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label bp_lvl;
-        private System.Windows.Forms.NumericUpDown blazing_piillar;
+        private System.Windows.Forms.NumericUpDown blazing_pillar;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel fb_panel;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -3260,6 +3304,8 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button reset_skills;
+        private System.Windows.Forms.Button reset_stats;
     }
 }
 
