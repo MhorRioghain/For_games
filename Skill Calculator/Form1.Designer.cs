@@ -355,7 +355,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1395, 537);
+            this.tabControl1.Size = new System.Drawing.Size(1395, 572);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -390,7 +390,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1387, 511);
+            this.tabPage1.Size = new System.Drawing.Size(1387, 546);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Эмберлинг";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -403,7 +403,7 @@
             this.reset_skills.TabIndex = 39;
             this.reset_skills.Text = "Сбросить навыки";
             this.reset_skills.UseVisualStyleBackColor = true;
-            this.reset_skills.Click += new System.EventHandler(this.reset_skills_Click);
+            this.reset_skills.Click += new System.EventHandler(this.Embermage_reset_skills_Click);
             // 
             // reset_stats
             // 
@@ -413,7 +413,7 @@
             this.reset_stats.TabIndex = 38;
             this.reset_stats.Text = "Сбросить атрибуты";
             this.reset_stats.UseVisualStyleBackColor = true;
-            this.reset_stats.Click += new System.EventHandler(this.reset_stats_Click);
+            this.reset_stats.Click += new System.EventHandler(this.Embermage_reset_stats_Click);
             // 
             // pictureBox32
             // 
@@ -511,7 +511,7 @@
             this.lightning_brand.Name = "lightning_brand";
             this.lightning_brand.Size = new System.Drawing.Size(60, 20);
             this.lightning_brand.TabIndex = 9;
-            this.lightning_brand.ValueChanged += new System.EventHandler(this.lightning_brand_ValueChanged);
+            this.lightning_brand.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label69
             // 
@@ -579,7 +579,7 @@
             this.prismatic_rift.Name = "prismatic_rift";
             this.prismatic_rift.Size = new System.Drawing.Size(60, 20);
             this.prismatic_rift.TabIndex = 9;
-            this.prismatic_rift.ValueChanged += new System.EventHandler(this.prismatic_rift_ValueChanged);
+            this.prismatic_rift.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label72
             // 
@@ -647,7 +647,7 @@
             this.wand_chaos.Name = "wand_chaos";
             this.wand_chaos.Size = new System.Drawing.Size(60, 20);
             this.wand_chaos.TabIndex = 9;
-            this.wand_chaos.ValueChanged += new System.EventHandler(this.wand_chaos_ValueChanged);
+            this.wand_chaos.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label75
             // 
@@ -715,7 +715,7 @@
             this.shocking_orb.Name = "shocking_orb";
             this.shocking_orb.Size = new System.Drawing.Size(60, 20);
             this.shocking_orb.TabIndex = 9;
-            this.shocking_orb.ValueChanged += new System.EventHandler(this.shocking_orb_ValueChanged);
+            this.shocking_orb.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label78
             // 
@@ -783,7 +783,7 @@
             this.shockbolts.Name = "shockbolts";
             this.shockbolts.Size = new System.Drawing.Size(60, 20);
             this.shockbolts.TabIndex = 9;
-            this.shockbolts.ValueChanged += new System.EventHandler(this.shockbolts_ValueChanged);
+            this.shockbolts.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label81
             // 
@@ -851,7 +851,7 @@
             this.deaths_bounty.Name = "deaths_bounty";
             this.deaths_bounty.Size = new System.Drawing.Size(60, 20);
             this.deaths_bounty.TabIndex = 9;
-            this.deaths_bounty.ValueChanged += new System.EventHandler(this.deaths_bounty_ValueChanged);
+            this.deaths_bounty.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label84
             // 
@@ -919,7 +919,7 @@
             this.arc_beam.Name = "arc_beam";
             this.arc_beam.Size = new System.Drawing.Size(60, 20);
             this.arc_beam.TabIndex = 9;
-            this.arc_beam.ValueChanged += new System.EventHandler(this.arc_beam_ValueChanged);
+            this.arc_beam.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label87
             // 
@@ -987,7 +987,7 @@
             this.thunder_locus.Name = "thunder_locus";
             this.thunder_locus.Size = new System.Drawing.Size(60, 20);
             this.thunder_locus.TabIndex = 9;
-            this.thunder_locus.ValueChanged += new System.EventHandler(this.thunder_locus_ValueChanged);
+            this.thunder_locus.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label90
             // 
@@ -1055,7 +1055,7 @@
             this.shocking_burst.Name = "shocking_burst";
             this.shocking_burst.Size = new System.Drawing.Size(60, 20);
             this.shocking_burst.TabIndex = 9;
-            this.shocking_burst.ValueChanged += new System.EventHandler(this.shocking_burst_ValueChanged);
+            this.shocking_burst.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label93
             // 
@@ -1134,7 +1134,7 @@
             this.prismatic_bolt.Name = "prismatic_bolt";
             this.prismatic_bolt.Size = new System.Drawing.Size(60, 20);
             this.prismatic_bolt.TabIndex = 9;
-            this.prismatic_bolt.ValueChanged += new System.EventHandler(this.prismatic_bolt_ValueChanged);
+            this.prismatic_bolt.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label101
             // 
@@ -1222,7 +1222,7 @@
             this.ice_brand.Name = "ice_brand";
             this.ice_brand.Size = new System.Drawing.Size(60, 20);
             this.ice_brand.TabIndex = 9;
-            this.ice_brand.ValueChanged += new System.EventHandler(this.ice_brand_ValueChanged);
+            this.ice_brand.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label38
             // 
@@ -1290,7 +1290,7 @@
             this.staff_mastery.Name = "staff_mastery";
             this.staff_mastery.Size = new System.Drawing.Size(60, 20);
             this.staff_mastery.TabIndex = 9;
-            this.staff_mastery.ValueChanged += new System.EventHandler(this.staff_mastery_ValueChanged);
+            this.staff_mastery.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label41
             // 
@@ -1358,7 +1358,7 @@
             this.frozen_fate.Name = "frozen_fate";
             this.frozen_fate.Size = new System.Drawing.Size(60, 20);
             this.frozen_fate.TabIndex = 9;
-            this.frozen_fate.ValueChanged += new System.EventHandler(this.frozen_fate_ValueChanged);
+            this.frozen_fate.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label44
             // 
@@ -1426,7 +1426,7 @@
             this.astral_ally.Name = "astral_ally";
             this.astral_ally.Size = new System.Drawing.Size(60, 20);
             this.astral_ally.TabIndex = 9;
-            this.astral_ally.ValueChanged += new System.EventHandler(this.astral_ally_ValueChanged);
+            this.astral_ally.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label47
             // 
@@ -1494,7 +1494,7 @@
             this.ice_prison.Name = "ice_prison";
             this.ice_prison.Size = new System.Drawing.Size(60, 20);
             this.ice_prison.TabIndex = 9;
-            this.ice_prison.ValueChanged += new System.EventHandler(this.ice_prison_ValueChanged);
+            this.ice_prison.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label50
             // 
@@ -1562,7 +1562,7 @@
             this.frost_wave.Name = "frost_wave";
             this.frost_wave.Size = new System.Drawing.Size(60, 20);
             this.frost_wave.TabIndex = 9;
-            this.frost_wave.ValueChanged += new System.EventHandler(this.frost_wave_ValueChanged);
+            this.frost_wave.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label53
             // 
@@ -1630,7 +1630,7 @@
             this.elemental_boon.Name = "elemental_boon";
             this.elemental_boon.Size = new System.Drawing.Size(60, 20);
             this.elemental_boon.TabIndex = 9;
-            this.elemental_boon.ValueChanged += new System.EventHandler(this.elemental_boon_ValueChanged);
+            this.elemental_boon.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label56
             // 
@@ -1698,7 +1698,7 @@
             this.frost_phase.Name = "frost_phase";
             this.frost_phase.Size = new System.Drawing.Size(60, 20);
             this.frost_phase.TabIndex = 9;
-            this.frost_phase.ValueChanged += new System.EventHandler(this.frost_phase_ValueChanged);
+            this.frost_phase.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label59
             // 
@@ -1766,7 +1766,7 @@
             this.hailstorm.Name = "hailstorm";
             this.hailstorm.Size = new System.Drawing.Size(60, 20);
             this.hailstorm.TabIndex = 9;
-            this.hailstorm.ValueChanged += new System.EventHandler(this.hailstorm_ValueChanged);
+            this.hailstorm.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label62
             // 
@@ -1845,7 +1845,7 @@
             this.icy_blast.Name = "icy_blast";
             this.icy_blast.Size = new System.Drawing.Size(60, 20);
             this.icy_blast.TabIndex = 9;
-            this.icy_blast.ValueChanged += new System.EventHandler(this.icy_blast_ValueChanged);
+            this.icy_blast.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label66
             // 
@@ -1933,7 +1933,7 @@
             this.fire_brand.Name = "fire_brand";
             this.fire_brand.Size = new System.Drawing.Size(60, 20);
             this.fire_brand.TabIndex = 9;
-            this.fire_brand.ValueChanged += new System.EventHandler(this.fire_brand_ValueChanged);
+            this.fire_brand.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label35
             // 
@@ -2001,7 +2001,7 @@
             this.charge_mastery.Name = "charge_mastery";
             this.charge_mastery.Size = new System.Drawing.Size(60, 20);
             this.charge_mastery.TabIndex = 9;
-            this.charge_mastery.ValueChanged += new System.EventHandler(this.charge_mastery_ValueChanged);
+            this.charge_mastery.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label32
             // 
@@ -2069,7 +2069,7 @@
             this.elemental_attunement.Name = "elemental_attunement";
             this.elemental_attunement.Size = new System.Drawing.Size(60, 20);
             this.elemental_attunement.TabIndex = 9;
-            this.elemental_attunement.ValueChanged += new System.EventHandler(this.elemental_attunement_ValueChanged);
+            this.elemental_attunement.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label29
             // 
@@ -2137,7 +2137,7 @@
             this.firestorm.Name = "firestorm";
             this.firestorm.Size = new System.Drawing.Size(60, 20);
             this.firestorm.TabIndex = 9;
-            this.firestorm.ValueChanged += new System.EventHandler(this.firestorm_ValueChanged);
+            this.firestorm.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label26
             // 
@@ -2205,7 +2205,7 @@
             this.immolation_aura.Name = "immolation_aura";
             this.immolation_aura.Size = new System.Drawing.Size(60, 20);
             this.immolation_aura.TabIndex = 9;
-            this.immolation_aura.ValueChanged += new System.EventHandler(this.immolation_aura_ValueChanged);
+            this.immolation_aura.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label23
             // 
@@ -2273,7 +2273,7 @@
             this.infernal_collapse.Name = "infernal_collapse";
             this.infernal_collapse.Size = new System.Drawing.Size(60, 20);
             this.infernal_collapse.TabIndex = 9;
-            this.infernal_collapse.ValueChanged += new System.EventHandler(this.infernal_collapse_ValueChanged);
+            this.infernal_collapse.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label20
             // 
@@ -2341,7 +2341,7 @@
             this.blazing_pillar.Name = "blazing_pillar";
             this.blazing_pillar.Size = new System.Drawing.Size(60, 20);
             this.blazing_pillar.TabIndex = 9;
-            this.blazing_pillar.ValueChanged += new System.EventHandler(this.blazing_piillar_ValueChanged);
+            this.blazing_pillar.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label17
             // 
@@ -2409,7 +2409,7 @@
             this.firebombs.Name = "firebombs";
             this.firebombs.Size = new System.Drawing.Size(60, 20);
             this.firebombs.TabIndex = 9;
-            this.firebombs.ValueChanged += new System.EventHandler(this.firebombs_ValueChanged);
+            this.firebombs.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label14
             // 
@@ -2477,7 +2477,7 @@
             this.magma_mace.Name = "magma_mace";
             this.magma_mace.Size = new System.Drawing.Size(60, 20);
             this.magma_mace.TabIndex = 9;
-            this.magma_mace.ValueChanged += new System.EventHandler(this.magma_mace_ValueChanged);
+            this.magma_mace.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label11
             // 
@@ -2556,7 +2556,7 @@
             this.magma_spear.Name = "magma_spear";
             this.magma_spear.Size = new System.Drawing.Size(60, 20);
             this.magma_spear.TabIndex = 9;
-            this.magma_spear.ValueChanged += new System.EventHandler(this.magma_spear_ValueChanged);
+            this.magma_spear.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
             // 
             // label3
             // 
@@ -2620,7 +2620,7 @@
             0,
             0,
             0});
-            this.DefenceUD.ValueChanged += new System.EventHandler(this.DefenceUD_ValueChanged);
+            this.DefenceUD.ValueChanged += new System.EventHandler(this.Embermage_stats_ValueChanged);
             // 
             // FocusUD
             // 
@@ -2638,7 +2638,7 @@
             0,
             0,
             0});
-            this.FocusUD.ValueChanged += new System.EventHandler(this.FocusUD_ValueChanged);
+            this.FocusUD.ValueChanged += new System.EventHandler(this.Embermage_stats_ValueChanged);
             // 
             // DexterityUD
             // 
@@ -2656,7 +2656,7 @@
             0,
             0,
             0});
-            this.DexterityUD.ValueChanged += new System.EventHandler(this.DexterityUD_ValueChanged);
+            this.DexterityUD.ValueChanged += new System.EventHandler(this.Embermage_stats_ValueChanged);
             // 
             // StrengthUD
             // 
@@ -2674,7 +2674,7 @@
             0,
             0,
             0});
-            this.StrengthUD.ValueChanged += new System.EventHandler(this.StrengthUD_ValueChanged);
+            this.StrengthUD.ValueChanged += new System.EventHandler(this.Embermage_stats_ValueChanged);
             // 
             // statpoints
             // 
@@ -2772,7 +2772,7 @@
             this.famebox.Name = "famebox";
             this.famebox.Size = new System.Drawing.Size(121, 21);
             this.famebox.TabIndex = 8;
-            this.famebox.SelectedIndexChanged += new System.EventHandler(this.famebox_SelectedIndexChanged);
+            this.famebox.SelectedIndexChanged += new System.EventHandler(this.Embermage_calcpoints);
             // 
             // levelbox
             // 
@@ -2882,7 +2882,7 @@
             this.levelbox.Name = "levelbox";
             this.levelbox.Size = new System.Drawing.Size(121, 21);
             this.levelbox.TabIndex = 7;
-            this.levelbox.SelectedIndexChanged += new System.EventHandler(this.levelbox_SelectedIndexChanged);
+            this.levelbox.SelectedIndexChanged += new System.EventHandler(this.Embermage_calcpoints);
             // 
             // label2
             // 
@@ -2907,7 +2907,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1387, 511);
+            this.tabPage2.Size = new System.Drawing.Size(1387, 546);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Скиталец";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2917,7 +2917,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1387, 511);
+            this.tabPage3.Size = new System.Drawing.Size(1387, 546);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Берсерк";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -2927,15 +2927,15 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1387, 511);
+            this.tabPage4.Size = new System.Drawing.Size(1387, 546);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Инженер";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // toolTip1
             // 
-            this.toolTip1.AutomaticDelay = 50000;
-            this.toolTip1.AutoPopDelay = 500000;
+            this.toolTip1.AutomaticDelay = 10;
+            this.toolTip1.AutoPopDelay = 100000;
             this.toolTip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
             this.toolTip1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.toolTip1.InitialDelay = 1;
@@ -2947,7 +2947,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1396, 550);
+            this.ClientSize = new System.Drawing.Size(1396, 559);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
