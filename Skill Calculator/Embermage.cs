@@ -242,6 +242,7 @@ namespace Skill_Calculator
 
         double weapon_damage, critical_damage, double_chance, critical_chance, fumble_recovery,
             max_mana, magic_damage, execute_chance, max_health, armor_bonus, block_chance;
+
         public Embermage()
         {
             
