@@ -21,17 +21,21 @@ namespace Skill_Calculator
             InitializeComponent();
             famebox.SelectedIndex = 0;
             levelbox.SelectedIndex = 0;
+            o_famebox.SelectedIndex = 0;
+            o_levelbox.SelectedIndex = 0;
             Embermage_req_lvl();
+            Outlander_req_lvl();
         }
 
         public void Embermage_calcpoints(object sender, EventArgs e)
-        {            
-            emb.level= levelbox.SelectedIndex+1;
+        {
+            emb.level = levelbox.SelectedIndex + 1;
             emb.fame = famebox.SelectedIndex;
             emb.calc();
             skillpoints.Text = Convert.ToString(emb.skillpointsleft);
             famepoints.Text = emb.fame_ranks[emb.fame];
             statpoints.Text = Convert.ToString(emb.statpointsleft);
+            emb.stats_bonuses();
             Embermage_tooltips();
         }
 
@@ -72,7 +76,12 @@ namespace Skill_Calculator
         public void Embermage_tooltips()
         {
             emb.tooltips_text();
-            
+
+            toolTip1.SetToolTip(StrengthUD, emb.strength_text);
+            toolTip1.SetToolTip(DexterityUD, emb.dexterity_text);
+            toolTip1.SetToolTip(FocusUD, emb.focus_text);
+            toolTip1.SetToolTip(VitalityUD, emb.vitality_text);
+
             toolTip1.SetToolTip(ms_panel, emb.magma_spear_text);                        
             toolTip1.SetToolTip(mm_panel, emb.magma_mace_text);
             toolTip1.SetToolTip(fb_panel, emb.firebombs_text);            
@@ -105,6 +114,12 @@ namespace Skill_Calculator
             toolTip1.SetToolTip(lb_panel, emb.lightning_brand_text);
         }
 
+        public void Outlander_calcpoints(object sender, EventArgs e) { }
+
+        public void Outlander_req_lvl() { }
+
+        public void Outlander_tooltips() { }
+
         private void toolTip1_Draw(object sender, DrawToolTipEventArgs e)
         {
             Font f = new Font("Arial", 9.0f);  
@@ -118,7 +133,7 @@ namespace Skill_Calculator
             StrengthUD.Value = 5;
             DexterityUD.Value = 10;
             FocusUD.Value = 15;
-            DefenceUD.Value = 10;
+            VitalityUD.Value = 10;
         }
 
         private void Embermage_reset_skills_Click(object sender, EventArgs e)
@@ -160,7 +175,7 @@ namespace Skill_Calculator
             emb.strength = (int)StrengthUD.Value;
             emb.dexterity = (int)DexterityUD.Value;
             emb.focus = (int)FocusUD.Value;
-            emb.defence = (int)DefenceUD.Value;
+            emb.vitality = (int)VitalityUD.Value;
             Embermage_calcpoints(sender, e);
         }    
 
@@ -200,5 +215,15 @@ namespace Skill_Calculator
             Embermage_req_lvl();
         }
 
+        private void Outlander_stats_ValueChanged(object sender, EventArgs e)
+        {
+            outl.strength = (int)o_StrengthUD.Value;
+            outl.vitality = (int)o_VitalityUD.Value;
+        }
+
+        private void Outlander_skills_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

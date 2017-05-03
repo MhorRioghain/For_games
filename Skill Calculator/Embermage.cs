@@ -5,8 +5,9 @@ namespace Skill_Calculator
     public class Embermage
     {
         public int skillpointsleft, level, fame, statpointsleft;
-        public int strength = 5, dexterity = 10, focus = 15, defence = 10;
-         
+        public double strength = 5, dexterity = 10, focus = 15, vitality = 10;
+        public string strength_text, dexterity_text, focus_text, vitality_text;
+ 
         public string[] fame_ranks = {"2000", "3000", "4000", "5000", "7000", "9000", "12000", "14000", "16000", "18000", "19000", "22000", "23000", "26000", "27000", "29000", "31000", "34000", "35000", "37000", "40000", "41000", "44000", "46000", "48000", "50000", "52000", "55000", "56000", "59000", "62000", "63000", "9005000", "full"};
                 
         int[] armor_player_bylevel_forset = { 0, 8, 10, 12, 14, 17, 20, 22, 25, 28, 31, 34, 37, 40, 43, 46, 50, 53, 56, 60, 63, 67, 70, 74, 77, 81, 85, 88, 92, 96, 100, 103, 107, 111, 115, 119, 123, 127, 131, 135, 139, 143, 147, 151, 155, 159, 163, 167, 171, 176, 180, 184, 188, 192, 197, 201, 205, 209, 214, 218, 222, 226, 231, 235, 239, 244, 248, 253, 257, 261, 266, 270, 274, 279, 283, 288, 292, 297, 301, 305, 310, 314, 319, 323, 328, 332, 337, 341, 346, 350, 355, 359, 364, 368, 373, 377, 382, 386, 391, 395, 400, 405, 409, 414, 418, 423};
@@ -239,6 +240,8 @@ namespace Skill_Calculator
         double[] lightning_brand_b = { 0, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210 }; 
         public string[] lightning_brand_reqlevel = { "14", "15", "16", "18", "20", "23", "27", "32", "38", "46", "55", "63", "72", "83", "94", "full" };
 
+        double weapon_damage, critical_damage, double_chance, critical_chance, fumble_recovery,
+            max_mana, magic_damage, execute_chance, max_health, armor_bonus, block_chance;
         public Embermage()
         {
             
@@ -252,11 +255,61 @@ namespace Skill_Calculator
                  ice_prison_lvl - astral_ally_lvl - staff_mastery_lvl - frozen_fate_lvl - ice_brand_lvl -
                  prismatic_bolt_lvl - shocking_burst_lvl - thunder_locus_lvl - arc_beam_lvl - deaths_bounty_lvl -
                  shockbolts_lvl - shocking_orb_lvl - prismatic_rift_lvl - wand_chaos_lvl - lightning_brand_lvl;
-            statpointsleft = (40 + ((level - 1) * 5) - strength - dexterity - focus - defence);
+            statpointsleft = (int)(40 + ((level - 1) * 5) - strength - dexterity - focus - vitality);
+        }
+
+        public void stats_bonuses()
+        {
+            weapon_damage = Math.Round(strength, 2);
+            critical_damage = Math.Round(strength * 0.4, 1);
+
+			critical_chance = double_chance = Math.Round(dexterity * (0.2002 - 0.0002 * dexterity), 1);
+            if (dexterity >= 500) 
+            { 
+                critical_chance = 50.1;
+                double_chance = 50.1;
+            }
+			fumble_recovery = Math.Round(25 + dexterity * (0.3003 - 0.0003 * dexterity), 1);
+            if (dexterity >= 478)
+            {
+                fumble_recovery = 100;
+            }
+
+            max_mana = Math.Round(47 + level + Math.Floor(focus * 0.5));			
+            magic_damage = Math.Round((focus / 2), 1);
+            execute_chance = Math.Round(9.8 + focus * (0.2002 - 0.0002 * focus), 1);
+            if (focus >= 499)
+            {
+                execute_chance = 60;
+            }
+
+            max_health = Math.Round(160 + (level * 40) + Math.Floor(vitality * 3.6));			
+            armor_bonus = Math.Round(vitality * 0.25, 2);
+            if (vitality >= 500)
+            {
+                armor_bonus = 249.75;
+            }
+            block_chance = Math.Round(vitality * (0.2002 - 0.0002 * vitality), 1);
+            if (vitality >= 500)
+            {
+                block_chance = 50.1;
+            }
         }
 
         public void tooltips_text()
         {
+            strength_text = "Урон от оружия: +" + weapon_damage + Environment.NewLine +
+                "Критический урон: +" + critical_damage + " %" + Environment.NewLine;
+            dexterity_text = "Шанс критического удара: +" + critical_chance + " %" + Environment.NewLine +
+                "Шанс уклонения: +" + double_chance + " %" + Environment.NewLine +
+                "Точность удара: +" + fumble_recovery + " %";
+            focus_text = "Запас Маны (ОМ):  " + max_mana + Environment.NewLine +
+                "Урон от магии: +" + magic_damage + " %" + Environment.NewLine +
+                "Шанс казни: +" + execute_chance + " %";
+            vitality_text = "Запас Здоровья (ОЗ): " + max_health + Environment.NewLine +
+                "Бонус к броне: +" + armor_bonus + " %" + Environment.NewLine +
+                "Шанс блокировать удар: +" + block_chance + " %";
+
             int magma_spear_damage = (int)Math.Ceiling(magma_spear_c[magma_spear_lvl] * damage_monster[level] / 100) * magma_spear_d[magma_spear_lvl];
             magma_spear_text = "Вы обстреливаете врагов струей магмы, которая" + Environment.NewLine + "пробивает и поджигает их. Радиус зоны поражения 16 м." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + magma_spear_mana[magma_spear_lvl] + " в сек." + Environment.NewLine +
