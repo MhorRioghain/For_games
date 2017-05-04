@@ -322,12 +322,21 @@ namespace Skill_Calculator
                 "*улучшается вместе с уровнем игрока";
 
             int magma_mace_damage = (int)Math.Ceiling(magma_mace_c[magma_mace_lvl] * damage_monster[level] / 100) * 6;
-            magma_mace_text = "Вы призываете огромную огненную палицу, которая оглушает" + Environment.NewLine + 
+            magma_mace_text = "Вы призываете огромную огненную палицу, которая оглушает" + Environment.NewLine +
                 "и поджигает врагов в секторе радиусом 5 м. Заряд при этом не создается." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + magma_mace_mana[magma_mace_lvl] + Environment.NewLine +
                 "Наносит " + magma_mace_a[magma_mace_lvl] + "% от урона текущего оружия в сек. огнем" + Environment.NewLine +
                 "80% шанс оглушить цель на 3 сек." + Environment.NewLine +
-                magma_mace_damage + " Огнен. урона в теч. 6 сек.*" + Environment.NewLine + Environment.NewLine +
+                magma_mace_damage + " Огнен. урона в теч. 6 сек.*" + Environment.NewLine;
+            if (magma_mace_lvl >= 5)
+            {
+                magma_mace_text += "25% шанс разбить щит врага" + Environment.NewLine;
+            }
+            if (magma_mace_lvl >= 10)
+            {
+                magma_mace_text += "-" + magma_mace_b[magma_mace_lvl] + "% от скорости атаки в теч. 3 сек." + Environment.NewLine;
+            }
+            magma_mace_text += Environment.NewLine +
                 "Преимущество I уровня" + Environment.NewLine + "Магматическая палица с 25% вероятностью разбивает щиты." + Environment.NewLine +
                 "Преимущество II уровня" + Environment.NewLine + "Удар на 3 сек. замедляет атаки врагов на 33%." + Environment.NewLine +
                 "Преимущество III уровня" + Environment.NewLine + "Удар на 3 сек. замедляет атаки врагов на 67%." + Environment.NewLine + Environment.NewLine +
@@ -378,7 +387,12 @@ namespace Skill_Calculator
             immolation_aura_text = "Вас окружает огненный вихрь, наносящий урон" + Environment.NewLine + "врагам, находящимся в радиусе 3 м." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + immolation_aura_mana[immolation_aura_lvl] + Environment.NewLine +
                 "Эффект длится " + immolation_aura_c[immolation_aura_lvl] + " сек." + Environment.NewLine +
-                immolation_aura_damage + " Огнен. урона в теч. 1 сек.*" + Environment.NewLine + Environment.NewLine +
+                immolation_aura_damage + " Огнен. урона в теч. 1 сек.*" + Environment.NewLine;
+            if (immolation_aura_lvl >= 5)
+            {
+                immolation_aura_text += "-" + immolation_aura_a[immolation_aura_lvl] + "% от получаемого Люб. урона" + Environment.NewLine;
+            }
+            immolation_aura_text += Environment.NewLine +
                 "Преимущество I уровня" + Environment.NewLine + "Аура поглощает 5% наносимого вам урона." + Environment.NewLine +
                 "Преимущество II уровня" + Environment.NewLine + "Аура поглощает 10% наносимого вам урона." + Environment.NewLine +
                 "Преимущество III уровня" + Environment.NewLine + "Аура поглощает 15% наносимого вам урона." + Environment.NewLine + Environment.NewLine +
@@ -394,6 +408,10 @@ namespace Skill_Calculator
                 "Время между активациями: " + firestorm_g[firestorm_lvl] + " сек." + Environment.NewLine +
                 firestorm_dot_mindam + "-" + firestorm_dot_maxdam + " Огнен. урона в теч. 6 сек.*" + Environment.NewLine +
                 "+" + firestorm_c[firestorm_lvl] + "% к получаемому Огнен. урону в теч. 6 сек." + Environment.NewLine;
+            if (firestorm_lvl >= 5)
+            {
+                firestorm_text += "-30% от получаемого Огнен. урона в теч. 6 сек." + Environment.NewLine;
+            }
             if (firestorm_lvl >= 10)
             {
                 firestorm_text += "+" + firestorm_instant_mindam + "-" + firestorm_instant_maxdam + " к Огнен. урону*" + Environment.NewLine;
@@ -424,27 +442,36 @@ namespace Skill_Calculator
                 "+" + fire_brand_mindam + "-" + fire_brand_maxdam + " к Огнен. урону*" + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
 
-            icy_blast_text = "Обстрел врагов 5 рикошетящими ледяными снарядами," + Environment.NewLine + 
+            icy_blast_text = "Обстрел врагов 5 рикошетящими ледяными снарядами," + Environment.NewLine +
                 "которые замедляют и обездвиживают их.                                      " + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + icy_blast_mana[icy_blast_lvl] + Environment.NewLine +
                 "Наносит " + icy_blast_a[icy_blast_lvl] + "% от урона текущего оружия в сек. льдом" + Environment.NewLine +
                 icy_blast_b[icy_blast_lvl] + "% шанс заморозить цель на " + icy_blast_c[icy_blast_lvl] + " сек." + Environment.NewLine +
-                icy_blast_d[icy_blast_lvl] + "% шанс обездвижить цель на " + icy_blast_e[icy_blast_lvl] + " сек." + Environment.NewLine + Environment.NewLine +
+                icy_blast_d[icy_blast_lvl] + "% шанс обездвижить цель на " + icy_blast_e[icy_blast_lvl] + " сек." + Environment.NewLine;
+            if (icy_blast_lvl >= 5)
+            {
+                icy_blast_text += "-20% от Физич. урона в теч. 6 сек." + Environment.NewLine;
+            }
+            icy_blast_text += Environment.NewLine +
                 "Преимущество I уровня" + Environment.NewLine + "На 6 сек. наносимый цели урон уменьшается на 20%" + Environment.NewLine +
                 "Преимущество II уровня" + Environment.NewLine + "75% к шансу обездвижить врага в течение 4 сек." + Environment.NewLine +
                 "Преимущество III уровня" + Environment.NewLine + "Число зарядов увеличено до 7 на сектор поражения" + Environment.NewLine;
 
             int hailstorm_mindam = (int)Math.Ceiling(hailstorm_b[hailstorm_lvl] * damage_monster[level] / 100);
             int hailstorm_maxdam = (int)Math.Ceiling(hailstorm_c[hailstorm_lvl] * damage_monster[level] / 100);
-            hailstorm_text = "Сверху падают ледяные осколки, наносящие урон врагу в радиусе 15 метров." + Environment.NewLine + 
-                "Уровень Заряда при этом не увеличивается.                                                                       "+Environment.NewLine+Environment.NewLine+
+            hailstorm_text = "Сверху падают ледяные осколки, наносящие урон врагу в радиусе 15 метров." + Environment.NewLine +
+                "Уровень Заряда при этом не увеличивается.                                                                       " + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + hailstorm_mana[hailstorm_lvl] + Environment.NewLine +
                 "Время между активациями: " + hailstorm_f[hailstorm_lvl] + " сек." + Environment.NewLine +
                 hailstorm_a[hailstorm_lvl] + "% шанс оглушить цель на 3 сек." + Environment.NewLine +
-                "+"+hailstorm_mindam + "-" + hailstorm_maxdam + " к Лед. урону*" + Environment.NewLine+
-                hailstorm_d[hailstorm_lvl] + "% шанс заморозить цель на 6 сек." + Environment.NewLine +
-                "+" + hailstorm_e[hailstorm_lvl] + "% к получаемому Электр. урону в теч. 6 сек." + Environment.NewLine +
-                "+" + hailstorm_e[hailstorm_lvl] + "% к получаемому Лед. урону в теч. 6 сек." + Environment.NewLine + Environment.NewLine +
+                "+" + hailstorm_mindam + "-" + hailstorm_maxdam + " к Лед. урону*" + Environment.NewLine +
+                hailstorm_d[hailstorm_lvl] + "% шанс заморозить цель на 6 сек." + Environment.NewLine;
+            if (hailstorm_lvl >= 5)
+            {
+                hailstorm_text += "+" + hailstorm_e[hailstorm_lvl] + "% к получаемому Электр. урону в теч. 6 сек." + Environment.NewLine +
+                "+" + hailstorm_e[hailstorm_lvl] + "% к получаемому Лед. урону в теч. 6 сек." + Environment.NewLine;
+            }
+            hailstorm_text += Environment.NewLine +
                 "Преимущество I уровня" + Environment.NewLine + "На 6 сек. сопротивление жертв ледяным и электрическим атакам ниже на 20%." + Environment.NewLine +
                 "Преимущество II уровня" + Environment.NewLine + "На 6 сек. сопротивление жертв ледяным и электрическим атакам ниже на 40%." + Environment.NewLine +
                 "Преимущество III уровня" + Environment.NewLine + "На 6 сек. сопротивление жертв ледяным и электрическим атакам ниже на 60%." + Environment.NewLine + Environment.NewLine +
@@ -535,9 +562,13 @@ namespace Skill_Calculator
                 "Расход маны: " + astral_ally_mana[astral_ally_lvl] + Environment.NewLine +
                 "Время между активациями: " + astral_ally_e[astral_ally_lvl] + " сек." + Environment.NewLine +
                 "Время вызова: " + astral_ally_a[astral_ally_lvl] + " сек." + Environment.NewLine +
-                "Помощники наносят " + astral_ally_mindam + "-" + astral_ally_maxdam + " Физич. урона*" + Environment.NewLine +
-                "+" + astral_ally_b[astral_ally_lvl] + "% к Люб. урону" + Environment.NewLine +
-                "+" + astral_ally_b[astral_ally_lvl] + "% к Физич. броне" + Environment.NewLine + Environment.NewLine +
+                "Помощники наносят " + astral_ally_mindam + "-" + astral_ally_maxdam + " Физич. урона*" + Environment.NewLine;
+            if (astral_ally_lvl > 1)
+            {
+                astral_ally_text += "+" + astral_ally_b[astral_ally_lvl] + "% к Люб. урону" + Environment.NewLine +
+                    "+" + astral_ally_b[astral_ally_lvl] + "% к Физич. броне" + Environment.NewLine;
+            }
+            astral_ally_text += Environment.NewLine +
                 "Преимущество I уровня" + Environment.NewLine + "Астральный союзник появляется на 30 сек." + Environment.NewLine +
                 "Преимущество II уровня" + Environment.NewLine + "Астральный союзник появляется на 40 сек." + Environment.NewLine +
                 "Преимущество III уровня" + Environment.NewLine + "Астральный союзник появляется на 50 сек." + Environment.NewLine + Environment.NewLine +
@@ -639,6 +670,10 @@ namespace Skill_Calculator
             if (deaths_bounty_lvl >= 5)
             {
                 deaths_bounty_text += "-33% от скорости движения в теч.  2 сек." + Environment.NewLine;                    
+            }
+            if (deaths_bounty_lvl >= 10)
+            {
+                deaths_bounty_text += "100% шанс оглушить цель на 1 сек." + Environment.NewLine;
             }
             deaths_bounty_text += Environment.NewLine +
                 "Преимущество I уровня" + Environment.NewLine + "Вы получаете 4 заряда; враги замедляются на 2 сек." + Environment.NewLine +
