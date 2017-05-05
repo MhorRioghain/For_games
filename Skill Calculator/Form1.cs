@@ -25,6 +25,8 @@ namespace Skill_Calculator
             o_levelbox.SelectedIndex = 0;
             Embermage_req_lvl();
             Outlander_req_lvl();
+
+            toolTip1.SetToolTip(TEST, outl.death_ritual_text);       
         }
 
         public void Embermage_calcpoints(object sender, EventArgs e)
@@ -114,11 +116,92 @@ namespace Skill_Calculator
             toolTip1.SetToolTip(lb_panel, emb.lightning_brand_text);
         }
 
-        public void Outlander_calcpoints(object sender, EventArgs e) { }
+        public void Outlander_calcpoints(object sender, EventArgs e) 
+        {
+            outl.level = o_levelbox.SelectedIndex + 1;
+            outl.fame = o_famebox.SelectedIndex;
+            outl.calc();
+            o_skillpoints.Text = Convert.ToString(outl.skillpointsleft);
+            o_famepoints.Text = outl.fame_ranks[outl.fame];
+            o_statpoints.Text = Convert.ToString(outl.statpointsleft);
+            outl.stats_bonuses();
+            Outlander_tooltips();
+        } 
 
-        public void Outlander_req_lvl() { }
+        public void Outlander_req_lvl() 
+        {
+            orf_lvl.Text = outl.rapid_fire_reqlevel[outl.rapid_fire_lvl];
+            orv_lvl.Text = outl.rune_vault_reqlevel[outl.rune_vault_lvl];
+            ocb_lvl.Text = outl.chaos_burst_reqlevel[outl.chaos_burst_lvl];
+            ocd_lvl.Text = outl.cursed_daggers_reqlevel[outl.cursed_daggers_lvl];
+            ovh_lvl.Text = outl.vortex_hex_reqlevel[outl.vortex_hex_lvl];
+            osg_lvl.Text = outl.shattering_glaive_reqlevel[outl.shattering_glaive_lvl];
+            ovhail_lvl.Text = outl.venomous_hail_reqlevel[outl.venomous_hail_lvl];
+            olrm_lvl.Text = outl.long_range_mastery_reqlevel[outl.long_range_mastery_lvl];
+            osm_lvl.Text = outl.shotgonne_mastery_reqlevel[outl.shotgonne_mastery_lvl];
+            oa_lvl.Text = outl.akimbo_reqlevel[outl.akimbo_lvl];
+            ogt_lvl.Text = outl.glaive_throw_reqlevel[outl.glaive_throw_lvl];
+            ots_lvl.Text = outl.tangling_shot_reqlevel[outl.tangling_shot_lvl];
+            ogs_lvl.Text = outl.glaive_sweep_reqlevel[outl.glaive_sweep_lvl];
+            os_lvl.Text = outl.sandstorm_reqlevel[outl.sandstorm_lvl];
+            obw_lvl.Text = outl.bramble_wall_reqlevel[outl.bramble_wall_lvl];
+            obl_lvl.Text = outl.burning_leap_reqlevel[outl.burning_leap_lvl];
+            ofg_lvl.Text = outl.flaming_glaives_reqlevel[outl.flaming_glaives_lvl];
+            odm_lvl.Text = outl.dodge_mastery_reqlevel[outl.dodge_mastery_lvl];
+            opb_lvl.Text = outl.poison_burst_reqlevel[outl.poison_burst_lvl];
+            ostw_lvl.Text = outl.share_the_wealth_reqlevel[outl.share_the_wealth_lvl];
+            opb_lvl.Text = outl.blade_pact_reqlevel[outl.blade_pact_lvl];
+            oss_lvl.Text = outl.shadowshot_reqlevel[outl.shadowshot_lvl];
+            obb_lvl.Text = outl.bane_breath_reqlevel[outl.bane_breath_lvl];
+            orh_lvl.Text = outl.repulsion_hex_reqlevel[outl.repulsion_hex_lvl];
+            osp_lvl.Text = outl.stone_pact_reqlevel[outl.stone_pact_lvl];
+            oshad_lvl.Text = outl.shadowmantle_reqlevel[outl.shadowmantle_lvl];
+            osb_lvl.Text = outl.shadowling_brute_reqlevel[outl.shadowling_brute_lvl];
+            omote_lvl.Text = outl.master_of_the_elements_reqlevel[outl.master_of_the_elements_lvl];
+            osa_lvl.Text = outl.shadowling_ammo_reqlevel[outl.shadowling_ammo_lvl];
+            odr_lvl.Text = outl.death_ritual_reqlevel[outl.death_ritual_lvl];            
+        }
 
-        public void Outlander_tooltips() { }
+        public void Outlander_tooltips() 
+        {
+            outl.tooltips_text();
+
+            toolTip1.SetToolTip(o_StrengthUD, outl.strength_text);
+            toolTip1.SetToolTip(o_DexterityUD, outl.dexterity_text);
+            toolTip1.SetToolTip(o_FocusUD, outl.focus_text);
+            toolTip1.SetToolTip(o_VitalityUD, outl.vitality_text);
+
+            toolTip1.SetToolTip(orf_panel, outl.rapid_fire_text);
+            toolTip1.SetToolTip(orv_panel, outl.rune_vault_text);
+            toolTip1.SetToolTip(ocb_panel, outl.chaos_burst_text);
+            toolTip1.SetToolTip(ocd_panel, outl.cursed_daggers_text);
+            toolTip1.SetToolTip(ovh_panel, outl.vortex_hex_text);
+            toolTip1.SetToolTip(osg_panel, outl.shattering_glaive_text);
+            toolTip1.SetToolTip(ovhail_panel, outl.venomous_hail_text);
+            toolTip1.SetToolTip(olrm_panel, outl.long_range_mastery_text);
+            toolTip1.SetToolTip(osm_panel, outl.shotgonne_mastery_text);
+            toolTip1.SetToolTip(oa_panel, outl.akimbo_text);
+            toolTip1.SetToolTip(ogt_panel, outl.glaive_throw_text);
+            toolTip1.SetToolTip(ots_panel, outl.tangling_shot_text);
+            toolTip1.SetToolTip(ogs_panel, outl.glaive_sweep_text);
+            toolTip1.SetToolTip(os_panel, outl.sandstorm_text);
+            toolTip1.SetToolTip(obw_panel, outl.bramble_wall_text);
+            toolTip1.SetToolTip(obl_panel, outl.burning_leap_text);
+            toolTip1.SetToolTip(ofg_panel, outl.flaming_glaives_text);
+            toolTip1.SetToolTip(odm_panel, outl.dodge_mastery_text);
+            toolTip1.SetToolTip(opb_panel, outl.poison_burst_text);
+            toolTip1.SetToolTip(ostw_panel, outl.share_the_wealth_text);
+            toolTip1.SetToolTip(obp_panel, outl.blade_pact_text);
+            toolTip1.SetToolTip(oss_panel, outl.shadowshot_text);
+            toolTip1.SetToolTip(obb_panel, outl.bane_breath_text);
+            toolTip1.SetToolTip(orh_panel, outl.repulsion_hex_text);
+            toolTip1.SetToolTip(osp_panel, outl.stone_pact_text);
+            toolTip1.SetToolTip(oshad_panel, outl.shadowmantle_text);
+            toolTip1.SetToolTip(osb_panel, outl.shadowling_brute_text);
+            toolTip1.SetToolTip(omote_panel, outl.master_of_the_elements_text);
+            toolTip1.SetToolTip(osa_panel, outl.shadowling_ammo_text);
+            toolTip1.SetToolTip(odr_panel, outl.death_ritual_text);   
+        }
 
         private void toolTip1_Draw(object sender, DrawToolTipEventArgs e)
         {
@@ -215,15 +298,93 @@ namespace Skill_Calculator
             Embermage_req_lvl();
         }
 
-        private void Outlander_stats_ValueChanged(object sender, EventArgs e)
+        private void Outlander_reset_stats_Click(object sender, EventArgs e)
+        {
+            o_StrengthUD.Value = 10;
+            o_DexterityUD.Value = 15;
+            o_FocusUD.Value = 10;
+            o_VitalityUD.Value = 5;
+        }
+
+        private void Outlander_reset_skills_Click(object sender, EventArgs e)
+        {
+            rapid_fire.Value = 0;
+            rune_vault.Value = 0;
+            chaos_burst.Value = 0;
+            cursed_daggers.Value = 0;
+            vortex_hex.Value = 0;
+            shattering_glaive.Value = 0;
+            venomous_hail.Value = 0;
+            long_rage_mastery.Value = 0;
+            shotgonne_mastery.Value = 0;
+            akimbo.Value = 0;
+            glaive_throw.Value = 0;
+            tangling_shot.Value = 0;
+            glaive_sweep.Value = 0;
+            sandstorm.Value = 0;
+            bramble_wall.Value = 0;
+            burning_leap.Value = 0;
+            flaming_glaive.Value = 0;
+            dodge_mastery.Value = 0;
+            poison_burst.Value = 0;
+            share_the_wealth.Value = 0;
+            blade_pact.Value = 0;
+            shadowshot.Value = 0;
+            bane_breath.Value = 0;
+            repulsion_hex.Value = 0;
+            stone_pact.Value = 0;
+            shadowmantle.Value = 0;
+            shadowling_brute.Value = 0;
+            master_os_the_elements.Value = 0;
+            shadowling_ammo.Value = 0;
+            death_ritual.Value = 0;
+        } 
+
+        private void Outlander_stats_ValueChanged(object sender, EventArgs e) 
         {
             outl.strength = (int)o_StrengthUD.Value;
+            outl.dexterity = (int)o_DexterityUD.Value;
+            outl.focus = (int)o_FocusUD.Value;
             outl.vitality = (int)o_VitalityUD.Value;
+            Outlander_calcpoints(sender, e);
         }
 
         private void Outlander_skills_ValueChanged(object sender, EventArgs e)
         {
+            outl.rapid_fire_lvl = (int)rapid_fire.Value;
+			outl.rune_vault_lvl = (int)rune_vault.Value;
+			outl.chaos_burst_lvl = (int)chaos_burst.Value;
+			outl.cursed_daggers_lvl = (int)cursed_daggers.Value;
+			outl.vortex_hex_lvl = (int)vortex_hex.Value;
+			outl.shattering_glaive_lvl = (int)shattering_glaive.Value;
+			outl.venomous_hail_lvl = (int)venomous_hail.Value;
+			outl.long_range_mastery_lvl = (int)long_rage_mastery.Value;
+			outl.shotgonne_mastery_lvl = (int)shotgonne_mastery.Value;
+			outl.akimbo_lvl = (int)akimbo.Value;
+			outl.glaive_throw_lvl = (int)glaive_throw.Value;
+			outl.tangling_shot_lvl = (int)tangling_shot.Value;
+			outl.glaive_sweep_lvl = (int)glaive_sweep.Value;
+			outl.sandstorm_lvl = (int)sandstorm.Value;
+			outl.bramble_wall_lvl = (int)bramble_wall.Value;
+			outl.burning_leap_lvl = (int)burning_leap.Value;
+			outl.flaming_glaives_lvl = (int)flaming_glaive.Value;
+			outl.dodge_mastery_lvl = (int)dodge_mastery.Value;
+			outl.poison_burst_lvl = (int)poison_burst.Value;
+			outl.share_the_wealth_lvl = (int)share_the_wealth.Value;
+			outl.blade_pact_lvl = (int)blade_pact.Value;
+			outl.shadowshot_lvl = (int)shadowshot.Value;
+			outl.bane_breath_lvl = (int)bane_breath.Value;
+			outl.repulsion_hex_lvl = (int)repulsion_hex.Value;
+			outl.stone_pact_lvl = (int)stone_pact.Value;
+			outl.shadowmantle_lvl = (int)shadowmantle.Value;
+			outl.shadowling_brute_lvl = (int)shadowling_brute.Value;
+			outl.master_of_the_elements_lvl = (int)master_os_the_elements.Value;
+			outl.shadowling_ammo_lvl = (int)shadowling_ammo.Value;
+            outl.death_ritual_lvl = (int)death_ritual.Value;
+            Outlander_calcpoints(sender, e);
+            Outlander_req_lvl();
+        } 
 
-        }
+
     }
 }

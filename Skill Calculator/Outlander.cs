@@ -723,9 +723,9 @@ namespace Skill_Calculator
                 shadowling_ammo_a[shadowling_ammo_lvl] + "% шанс уничтожить цель заклинанием \"Создать теневика-союзника\"" + Environment.NewLine +
                 "Помощники наносят " + shadowling_ammo_mindam + "-" + shadowling_ammo_maxdam + " Физич. урона*" + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
-            
-            death_ritual_text="Ваши союзники-теневики живут дольше и наносят больший урон." +Environment.NewLine+Environment.NewLine+
-                "Теневики живут " + death_ritual_a[death_ritual_lvl] + " сек., урон увеличивается на " + death_ritual_b[death_ritual_lvl] + "%" +Environment.NewLine;
+
+            death_ritual_text = "Ваши союзники-теневики живут дольше и наносят больший урон." + Environment.NewLine + Environment.NewLine +
+                "Теневики живут " + death_ritual_a[death_ritual_lvl] + " сек., урон увеличивается на " + death_ritual_b[death_ritual_lvl] + "%" + Environment.NewLine;
         }
     }
 }
