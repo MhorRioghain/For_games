@@ -118,14 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="IG_menu_frame_bold5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IG_menu_frame_bold5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="outlander2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\outlander2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="skillicon_infernalcollapse" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skillicon_infernalcollapse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="skillicon_firebreath" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_firebreath.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="skillicon_flameaura" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skillicon_flameaura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="embermage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\embermage1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_shockbolts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_shockbolts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_pullhex" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_pullhex.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_rapidshot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_rapidshot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="skillicon_prismaticbolt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_prismaticbolt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,8 +142,8 @@
   <data name="skillicon_magmamace" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_magmamace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="skillicon_blazingpillar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skillicon_blazingpillar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="skillicon_chaosshot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_chaosshot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="embermage2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\embermage2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,17 +151,11 @@
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="skillicon_frostwave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skillicon_frostwave1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IG_modelmenu4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IG_modelmenu4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="skillicon_shockingburst" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_shockingburst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="skillicon_shockbolts" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skillicon_shockbolts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="skillicon_hailstorm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_hailstorm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,14 +163,23 @@
   <data name="skillicon_wand_chaos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_wand_chaos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="skillicon_shotgunmastery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_shotgunmastery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="skillicon_firestorm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_firestorm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_longrange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_longrange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="skillicon_iceblast" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_iceblast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="skillicon_magicitem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skillicon_magicitem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IG_menu_frame_bold5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IG_menu_frame_bold5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_exploding_glaive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_exploding_glaive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="skillicon_storm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_storm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,23 +193,35 @@
   <data name="skillicon_frozen_fate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_frozen_fate1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="skillicon_elementalboon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_elementalboon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="skillicon_ice_brand" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_ice_brand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_frostphase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_frostphase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outlander1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\outlander1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_infernalcollapse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_infernalcollapse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="skillicon_shockorb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_shockorb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="embermage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\embermage1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="skillicon_emberammo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_emberammo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="skillicon_flameaura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_flameaura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_firebomb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_firebomb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IG_modelmenu3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IG_modelmenu3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="skillicon_firebreath" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skillicon_firebreath.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="skillicon_staff_mastery" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_staff_mastery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,20 +229,32 @@
   <data name="skillicon_rejuvenatingkill" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_rejuvenatingkill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="skillicon_elementalboon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skillicon_elementalboon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="skillicon_frostwave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_frostwave1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="skillicon_arcbeam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_arcbeam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="skillicon_poisonarrows" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_poisonarrows.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="skillicon_magicmastery" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_magicmastery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="skillicon_frostphase" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skillicon_frostphase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="skillicon_dart_fan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_dart_fan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="skillicon_firebomb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skillicon_firebomb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="skillicon_pantom_flip" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_pantom_flip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_blazingpillar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_blazingpillar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_magicitem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_magicitem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_dualpistol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_dualpistol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="skillicon_embermageavatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_embermageavatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,10 +262,70 @@
   <data name="skillicon_magmaspear" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skillicon_magmaspear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="skillicon_stungrenade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_stungrenade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IG_menu_frame_bold2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IG_menu_frame_bold2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="skillicon_stungrenade" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\skillicon_stungrenade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="skillicon_armor_pact" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_armor_pact.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_brambles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_brambles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_charmmagic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_charmmagic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_damage_pact" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_damage_pact.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_deathritual" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_deathritual.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_dodgemastery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_dodgemastery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_fireglaive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_fireglaive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_glaive_swipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_glaive_swipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_master_of_elements" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_master_of_elements.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_poisonburst" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_poisonburst.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_repulsion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_repulsion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_sandstorm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_sandstorm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_severing_leap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_severing_leap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_shadow_brute" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_shadow_brute.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_shadowmantle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_shadowmantle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_shadowshot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_shadowshot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_tanglingshot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_tanglingshot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_throwing_glaive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_throwing_glaive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_zombie_dust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_zombie_dust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skillicon_zombieammo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skillicon_zombieammo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

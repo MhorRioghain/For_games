@@ -143,6 +143,26 @@ namespace Skill_Calculator.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap outlander1 {
+            get {
+                object obj = ResourceManager.GetObject("outlander1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outlander2 {
+            get {
+                object obj = ResourceManager.GetObject("outlander2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap skillicon_arcbeam {
             get {
                 object obj = ResourceManager.GetObject("skillicon_arcbeam", resourceCulture);
@@ -153,9 +173,99 @@ namespace Skill_Calculator.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap skillicon_armor_pact {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_armor_pact", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap skillicon_blazingpillar2 {
             get {
                 object obj = ResourceManager.GetObject("skillicon_blazingpillar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_brambles {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_brambles", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_chaosshot {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_chaosshot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_charmmagic {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_charmmagic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_damage_pact {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_damage_pact", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_dart_fan {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_dart_fan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_deathritual {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_deathritual", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_dodgemastery {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_dodgemastery", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_dualpistol {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_dualpistol", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +303,16 @@ namespace Skill_Calculator.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap skillicon_exploding_glaive {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_exploding_glaive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap skillicon_firebomb {
             get {
                 object obj = ResourceManager.GetObject("skillicon_firebomb", resourceCulture);
@@ -206,6 +326,16 @@ namespace Skill_Calculator.Properties {
         internal static System.Drawing.Bitmap skillicon_firebreath {
             get {
                 object obj = ResourceManager.GetObject("skillicon_firebreath", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_fireglaive {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_fireglaive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +393,16 @@ namespace Skill_Calculator.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap skillicon_glaive_swipe {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_glaive_swipe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap skillicon_hailstorm {
             get {
                 object obj = ResourceManager.GetObject("skillicon_hailstorm", resourceCulture);
@@ -313,6 +453,16 @@ namespace Skill_Calculator.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap skillicon_longrange {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_longrange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap skillicon_magicitem {
             get {
                 object obj = ResourceManager.GetObject("skillicon_magicitem", resourceCulture);
@@ -353,6 +503,46 @@ namespace Skill_Calculator.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap skillicon_master_of_elements {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_master_of_elements", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_pantom_flip {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_pantom_flip", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_poisonarrows {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_poisonarrows", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_poisonburst {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_poisonburst", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap skillicon_prismaticbolt {
             get {
                 object obj = ResourceManager.GetObject("skillicon_prismaticbolt", resourceCulture);
@@ -363,9 +553,89 @@ namespace Skill_Calculator.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap skillicon_pullhex {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_pullhex", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_rapidshot {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_rapidshot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap skillicon_rejuvenatingkill {
             get {
                 object obj = ResourceManager.GetObject("skillicon_rejuvenatingkill", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_repulsion {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_repulsion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_sandstorm {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_sandstorm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_severing_leap {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_severing_leap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_shadow_brute {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_shadow_brute", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_shadowmantle {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_shadowmantle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_shadowshot {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_shadowshot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -403,6 +673,16 @@ namespace Skill_Calculator.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap skillicon_shotgunmastery {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_shotgunmastery", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap skillicon_staff_mastery {
             get {
                 object obj = ResourceManager.GetObject("skillicon_staff_mastery", resourceCulture);
@@ -433,9 +713,49 @@ namespace Skill_Calculator.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap skillicon_tanglingshot {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_tanglingshot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_throwing_glaive {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_throwing_glaive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap skillicon_wand_chaos {
             get {
                 object obj = ResourceManager.GetObject("skillicon_wand_chaos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_zombie_dust {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_zombie_dust", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skillicon_zombieammo {
+            get {
+                object obj = ResourceManager.GetObject("skillicon_zombieammo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
