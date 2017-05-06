@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Berserker.cs" />
+    <Compile Include="Engineer.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +143,35 @@
     <None Include="Resources\skillicon_frostphase.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\skillicon_tremor.png" />
+    <None Include="Resources\skillicon_thunder_hammer.png" />
+    <None Include="Resources\skillicon_swordandboard.png" />
+    <None Include="Resources\skillicon_supportbot.png" />
+    <None Include="Resources\skillicon_spidermine.png" />
+    <None Include="Resources\skillicon_slowcopter.png" />
+    <None Include="Resources\skillicon_shockgrenade.png" />
+    <None Include="Resources\skillicon_shock_dash.png" />
+    <None Include="Resources\skillicon_shieldbash.png" />
+    <None Include="Resources\skillicon_seismicslam.png" />
+    <None Include="Resources\skillicon_pull.png" />
+    <None Include="Resources\skillicon_overload.png" />
+    <None Include="Resources\skillicon_onslaught.png" />
+    <None Include="Resources\skillicon_wolfstrike.png" />
+    <None Include="Resources\skillicon_wolfshade.png" />
+    <None Include="Resources\skillicon_wolfpack.png" />
+    <None Include="Resources\skillicon_werewolfrun.png" />
+    <None Include="Resources\skillicon_stormhatchet.png" />
+    <None Include="Resources\skillicon_stormclaw.png" />
+    <None Include="Resources\skillicon_shatterstorm.png" />
+    <None Include="Resources\skillicon_shadowleap.png" />
+    <None Include="Resources\skillicon_retaliate.png" />
+    <None Include="Resources\skillicon_rendandtear.png" />
+    <None Include="Resources\skillicon_redwolf.png" />
+    <None Include="Resources\skillicon_ravage.png" />
+    <None Include="Resources\skillicon_rampage.png" />
+    <None Include="Resources\skillicon_rageretaliate.png" />
+    <None Include="Resources\skillicon_permafrost.png" />
+    <None Include="Resources\skillicon_iceshield.png" />
     <None Include="Resources\skillicon_zombieammo.png" />
     <None Include="Resources\skillicon_zombie_dust.png" />
     <None Include="Resources\skillicon_throwing_glaive.png" />
@@ -177,11 +208,46 @@
     <None Include="Resources\skillicon_deathritual.png" />
     <None Include="Resources\skillicon_dodgemastery.png" />
     <None Include="Resources\skillicon_fireglaive.png" />
+    <None Include="Resources\berserk1.jpg" />
+    <None Include="Resources\berserk2.jpg" />
+    <None Include="Resources\enginer1.jpg" />
+    <None Include="Resources\enginer2.jpg" />
+    <None Include="Resources\skillicon_eviscerate.png" />
+    <None Include="Resources\skillicon_attackmagic.png" />
+    <None Include="Resources\skillicon_battlerage.png" />
+    <None Include="Resources\skillicon_battlestandard.png" />
+    <None Include="Resources\skillicon_bigstrike.png" />
+    <None Include="Resources\skillicon_blazingpillar.png" />
+    <None Include="Resources\skillicon_chainsnare.png" />
+    <None Include="Resources\skillicon_chargemastery.png" />
+    <None Include="Resources\skillicon_coldsteel.png" />
+    <None Include="Resources\skillicon_fateaegis.png" />
+    <None Include="Resources\skillicon_frostbreath.png" />
+    <None Include="Resources\skillicon_2hmastery.png" />
+    <None Include="Resources\skillicon_aegis_of_fate.png" />
+    <None Include="Resources\skillicon_armor.png" />
+    <None Include="Resources\skillicon_blastcannon.png" />
+    <None Include="Resources\skillicon_charge_of_recon.png" />
+    <None Include="Resources\skillicon_chargedomination.png" />
+    <None Include="Resources\skillicon_coupdegrace.png" />
+    <None Include="Resources\skillicon_dynamofield.png" />
+    <None Include="Resources\skillicon_ember_hammer.png" />
+    <None Include="Resources\skillicon_emberquake.png" />
+    <None Include="Resources\skillicon_fireandspark.png" />
+    <None Include="Resources\skillicon_firebash.png" />
+    <None Include="Resources\skillicon_flamehammer.png" />
+    <None Include="Resources\skillicon_forcefield.png" />
     <Content Include="Resources\skillicon_frostwave.png" />
     <None Include="Resources\skillicon_frostwave1.png" />
+    <None Include="Resources\skillicon_frostwolf.png" />
     <Content Include="Resources\skillicon_frozen_fate.png" />
     <None Include="Resources\skillicon_frozen_fate1.png" />
     <None Include="Resources\skillicon_glaive_swipe.png" />
+    <None Include="Resources\skillicon_geysers.png" />
+    <None Include="Resources\skillicon_howl.png" />
+    <None Include="Resources\skillicon_fusillade.png" />
+    <None Include="Resources\skillicon_gunturret.png" />
+    <None Include="Resources\skillicon_hammerbot.png" />
     <Content Include="Resources\skillicon_iceprison.png" />
     <None Include="Resources\skillicon_iceprison1.png" />
     <None Include="Resources\skillicon_ice_brand.png" />

@@ -15,6 +15,8 @@ namespace Skill_Calculator
     {
         Embermage emb = new Embermage();
         Outlander outl = new Outlander();
+        Berserker ber = new Berserker();
+        Engineer eng = new Engineer();
 
         public Form1()
         {
@@ -23,6 +25,10 @@ namespace Skill_Calculator
             levelbox.SelectedIndex = 0;
             o_famebox.SelectedIndex = 0;
             o_levelbox.SelectedIndex = 0;
+            b_famebox.SelectedIndex = 0;
+            b_levelbox.SelectedIndex = 0;
+            e_famebox.SelectedIndex = 0;
+            e_levelbox.SelectedIndex = 0;
             Embermage_req_lvl();
             Outlander_req_lvl();
 
@@ -56,7 +62,7 @@ namespace Skill_Calculator
             ib_lvl.Text = emb.icy_blast_reqlevel[emb.icy_blast_lvl];
             hs_lvl.Text = emb.hailstorm_reqlevel[emb.hailstorm_lvl];
             fp_lvl.Text = emb.frost_phase_reqlevel[emb.frost_phase_lvl];
-            eb_lbl.Text = emb.elemental_boon_reqlevel[emb.elemental_boon_lvl];
+            eb_lvl.Text = emb.elemental_boon_reqlevel[emb.elemental_boon_lvl];
             fw_lvl.Text = emb.frost_wave_reqlevel[emb.frost_wave_lvl];
             ip_lvl.Text = emb.ice_prison_reqlevel[emb.ice_prison_lvl];
             aa_lvl.Text = emb.astral_ally_reqlevel[emb.astral_ally_lvl];
@@ -201,6 +207,50 @@ namespace Skill_Calculator
             toolTip1.SetToolTip(omote_panel, outl.master_of_the_elements_text);
             toolTip1.SetToolTip(osa_panel, outl.shadowling_ammo_text);
             toolTip1.SetToolTip(odr_panel, outl.death_ritual_text);   
+        }
+
+        public void Berserker_calcpoints(object sender, EventArgs e)
+        {
+            ber.level = b_levelbox.SelectedIndex + 1;
+            ber.fame = b_famebox.SelectedIndex;
+            ber.calc();
+            b_skillpoints.Text = Convert.ToString(ber.skillpointsleft);
+            b_famepoints.Text = ber.fame_ranks[ber.fame];
+            b_statpoints.Text = Convert.ToString(ber.statpointsleft);
+            ber.stats_bonuses();
+            Berserker_tooltips();
+        } //complete
+
+        public void Berserker_req_lvl()
+        {
+
+        }
+
+        public void Berserker_tooltips()
+        {
+
+        }
+
+        public void Engineer_calcpoints(object sender, EventArgs e)
+        {
+            eng.level = e_levelbox.SelectedIndex + 1;
+            eng.fame = e_famebox.SelectedIndex;
+            eng.calc();
+            e_skillpoints.Text = Convert.ToString(eng.skillpointsleft);
+            e_famepoints.Text = eng.fame_ranks[eng.fame];
+            e_statpoints.Text = Convert.ToString(eng.statpointsleft);
+            eng.stats_bonuses();
+            Engineer__tooltips();
+        } //complete
+
+        public void Engineer_req_lvl()
+        {
+
+        }
+
+        public void Engineer__tooltips()
+        {
+
         }
 
         private void toolTip1_Draw(object sender, DrawToolTipEventArgs e)
@@ -383,8 +433,46 @@ namespace Skill_Calculator
             outl.death_ritual_lvl = (int)death_ritual.Value;
             Outlander_calcpoints(sender, e);
             Outlander_req_lvl();
-        } 
+        }
 
+        private void Berserker_reset_stats_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void Berserker_reset_skills_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Berserker_stats_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Berserker_skills_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Engineer_reset_stats_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Engineer_reset_skills_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Engineer_stats_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Engineer_skills_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
