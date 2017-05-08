@@ -685,30 +685,29 @@ namespace Skill_Calculator
                 "Преимущество I уровня" + Environment.NewLine + "Волки могут наносить урон нескольким целям" + Environment.NewLine +
                 "Преимущество II уровня" + Environment.NewLine + "Появляется еще 2 волка" + Environment.NewLine +
                 "Преимущество III уровня" + Environment.NewLine + "Расход маны снижен" + Environment.NewLine + Environment.NewLine +
-                "* улучшается вместе с уровнем игрока";             /* 
-            frenzy_mastery_tex
-             * int red_wolf_mindam = (int)Math.Ceiling(red_wolf_a[raze_lvl0] * damage_monster[level] / 100);
-		int red_wolf_maxdam = (int)Math.Ceiling(red_wolf_b[raze_lvl0] * damage_monster[level] / 100);
-            textraze_lvl0.innerHTML = "<img src='/pic/skills/skillicon_redt
-             * texthowl_lvl8.innerHTML = "<img src='/pic/skills/skillicon_attackmagic.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Мастер бешенства (Пассивный навык)" + Environment.NewLine +<a style='color:#ffffff; font-size: 13px;'> Ур. "+howl_lvl8+"/15  ";
-			texthowl_lvl8.innerHTML +=" Вам все сложнее сдерживать свою звериную натуру. Продолжительность приступов бешенства (связанных с заполнением индикатора Заряда) увеличивается." + Environment.NewLine +
-		 	texthowl_lvl8.innerHTML +="<a style='color:#C3C300'>Текущий ур.: "+howl_lvl8+ Environment.NewLine +
-		  	texthowl_lvl8.innerHTML +="<a style='color:#1F90FF'>Приступ бешенства длится до " + frenzy_mastery_a[howl_lvl8] + " сек. " + Environment.NewLine +
-             * 
-            shred_armor_text
-             * int shred_armor_armor_per_hit = (int)Math.Ceiling(shred_armor_a[howl_lvl9] * armor_monster_bylevel[level] / 100);
-		 int shred_armor_armor = (int)Math.Ceiling(shred_armor_b[howl_lvl9] * armor_player_bylevel_forset[level] / 100);
-		    texthowl_lvl9.innerHTML = "<img src='/pic/skills/skillicon_fateaegis.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Броня в клочья (Пассивный навык)" + Environment.NewLine +<a style='color:#ffffff; font-size: 13px;'> Ур. "+howl_lvl9+"/15  ";
-			texthowl_lvl9.innerHTML +=" Вы яростно крушите вражескую броню, а отлетающие кусочки при этом прикрепляете к своей. С каждым ударом противник становится слабее, а ваш показатель брони растет." + Environment.NewLine +
-		 	texthowl_lvl9.innerHTML +="<a style='color:#C3C300'>Текущий ур.: "+howl_lvl9+ Environment.NewLine +
-		  	texthowl_lvl9.innerHTML +="<a style='color:#1F90FF'>-" + shred_armor_armor_per_hit + " от всех видов брони за каждый удар* " + Environment.NewLine +
-			texthowl_lvl9.innerHTML +="<a style='color:#1F90FF'>+" + shred_armor_armor + " к Физич. броне в теч. 3 сек.* " + Environment.NewLine +
-             * 
-            red_wolf_textwolf.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Рыжий волк (Пассивный навык)" + Environment.NewLine +<a style='color:#ffffff; font-size: 13px;'> Ур. "+raze_lvl0+"/15  ";
-			textraze_lvl0.innerHTML +=" Когда вы наносите противнику критические повреждения, на поле боя может появиться воплощение вашей ярости и порвать в клочья одного или двух врагов." + Environment.NewLine +
-		 	textraze_lvl0.innerHTML +="<a style='color:#C3C300'>Текущий ур.: "+raze_lvl0+ Environment.NewLine +
-		  	textraze_lvl0.innerHTML +="<a style='color:#1F90FF'>+" + red_wolf_mindam + "-" + red_wolf_maxdam + " к Физич. урону* " + Environment.NewLine +
-            */
+                "* улучшается вместе с уровнем игрока";
+
+            frenzy_mastery_text = "Вам все сложнее сдерживать свою звериную натуру." + Environment.NewLine +
+                "Продолжительность приступов бешенства (связанных     " + Environment.NewLine +
+                "с заполнением индикатора Заряда) увеличивается." + Environment.NewLine + Environment.NewLine +
+                "Приступ бешенства длится до " + frenzy_mastery_a[frenzy_mastery_lvl] + " сек.";
+
+            int shred_armor_armor_per_hit = (int)Math.Ceiling(shred_armor_a[shred_armor_lvl] * armor_monster_bylevel[level] / 100);
+            int shred_armor_armor = (int)Math.Ceiling(shred_armor_b[shred_armor_lvl] * armor_player_bylevel_forset[level] / 100);
+            shred_armor_text = "Вы яростно крушите вражескую броню, а отлетающие" + Environment.NewLine +
+                "кусочки при этом прикрепляете к своей. С каждым ударом" + Environment.NewLine +
+                "противник становится слабее, а ваш показатель брони растет." + Environment.NewLine + Environment.NewLine +
+                "-" + shred_armor_armor_per_hit + " от всех видов брони за каждый удар*" + Environment.NewLine +
+                "+" + shred_armor_armor + " к Физич. броне в теч. 3 сек.*" + Environment.NewLine + Environment.NewLine +
+                "* улучшается вместе с уровнем игрока";
+
+            int red_wolf_mindam = (int)Math.Ceiling(red_wolf_a[red_wolf_lvl] * damage_monster[level] / 100);
+            int red_wolf_maxdam = (int)Math.Ceiling(red_wolf_b[red_wolf_lvl] * damage_monster[level] / 100);
+            red_wolf_text = "Когда вы наносите противнику критические повреждения," + Environment.NewLine +
+                "на поле боя может появиться воплощение вашей ярости и     " + Environment.NewLine +
+                "порвать в клочья одного или двух врагов." + Environment.NewLine + Environment.NewLine +
+                "+" + red_wolf_mindam + "-" + red_wolf_maxdam + " к Физич. урону*" + Environment.NewLine + Environment.NewLine +
+                "* улучшается вместе с уровнем игрока";
         }
     }
 }
