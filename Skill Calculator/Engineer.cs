@@ -5,7 +5,7 @@ namespace Skill_Calculator
     public class Engineer
     {
         public int skillpointsleft, level, fame, statpointsleft;
-        public double strength = 15, dexterity = 15, focus = 5, vitality = 5;
+        public double strength = 15, dexterity = 5, focus = 5, vitality = 15;
         public string strength_text, dexterity_text, focus_text, vitality_text;
 
         public string[] fame_ranks = { "2000", "3000", "4000", "5000", "7000", "9000", "12000", "14000", "16000", "18000", "19000", "22000", "23000", "26000", "27000", "29000", "31000", "34000", "35000", "37000", "40000", "41000", "44000", "46000", "48000", "50000", "52000", "55000", "56000", "59000", "62000", "63000", "9005000", "full" };
@@ -17,8 +17,8 @@ namespace Skill_Calculator
         double[] health_player_generic = { 0, 200, 240, 280, 320, 360, 400, 440, 480, 520, 560, 600, 640, 680, 720, 760, 800, 840, 880, 920, 960, 1000, 1040, 1080, 1120, 1160, 1200, 1240, 1280, 1320, 1360, 1400, 1440, 1480, 1520, 1560, 1600, 1640, 1680, 1720, 1760, 1800, 1840, 1880, 1920, 1960, 2000, 2040, 2080, 2120, 2160, 2200, 2240, 2280, 2320, 2360, 2400, 2440, 2480, 2520, 2560, 2600, 2640, 2680, 2720, 2760, 2800, 2840, 2880, 2920, 2960, 3000, 3040, 3080, 3120, 3160, 3200, 3240, 3280, 3320, 3360, 3400, 3440, 3480, 3520, 3560, 3600, 3640, 3680, 3720, 3760, 3800, 3840, 3880, 3920, 3960, 4000, 4040, 4080, 4120, 4160, 4200, 4240, 4280, 4320, 4360 };
         double[] mana_player_generic = { 0, 47.5, 48.5, 49.5, 50.5, 51.5, 52.5, 53.5, 54.5, 55.5, 56.5, 57.5, 58.5, 59.5, 60.5, 61.5, 62.5, 63.5, 64.5, 65.5, 66.5, 67.5, 68.5, 69.5, 70.5, 71.5, 72.5, 73.5, 74.5, 75.5, 76.5, 77.5, 78.5, 79.5, 80.5, 81.5, 82.5, 83.5, 84.5, 85.5, 86.5, 87.5, 88.5, 89.5, 90.5, 91.5, 92.5, 93.5, 94.5, 95.5, 96.5, 97.5, 98.5, 99.5, 100.5, 101.5, 102.5, 103.5, 104.5, 105.5, 106.5, 107.5, 108.5, 109.5, 110.5, 111.5, 112.5, 113.5, 114.5, 115.5, 116.5, 117.5, 118.5, 119.5, 120.5, 121.5, 122.5, 123.5, 124.5, 125.5, 126.5, 127.5, 128.5, 129.5, 130.5, 131.5, 132.5, 133.5, 134.5, 135.5, 136.5, 137.5, 138.5, 139.5, 140.5, 141.5, 142.5, 143.5, 144.5, 145.5, 146.5 }; double[] health_monster_bylevel = { 0, 11, 16, 21, 30, 37, 44, 53, 61, 71, 82, 93, 105, 118, 133, 148, 164, 182, 200, 220, 240, 262, 286, 310, 336, 363, 392, 422, 453, 486, 520, 556, 593, 633, 673, 716, 760, 806, 853, 902, 954, 1007, 1062, 1119, 1178, 1239, 1302, 1367, 1434, 1503, 1574, 1648, 1724, 1802, 1882, 1965, 2050, 2138, 2228, 2320, 2415, 2512, 2612, 2715, 2820, 2928, 3039, 3152, 3268, 3387, 3509, 3633, 3761, 3891, 4024, 4161, 4300, 4443, 4588, 4737, 4889, 5044, 5202, 5363, 5528, 5696, 5868, 6043, 6221, 6403, 6588, 6776, 6969, 7165, 7364, 7567, 7774, 7985, 8199, 8417, 8639, 8865, 9095, 9328, 9566, 9807 };
 
-        public int flame_hummer_lvl = 0;
-        public string flame_hummer_text;
+        public int flame_hammer_lvl = 0;
+        public string flame_hammer_text;
         double[] flame_hammer_a = { 0, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124 };
         double[] flame_hammer_b = { 0, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85 };
         double[] flame_hammer_mana = { 0, 14, 15, 16, 17, 18, 20, 23, 26, 28, 32, 36, 40, 45, 50, 55 };
@@ -255,7 +255,12 @@ namespace Skill_Calculator
 
         public void calc()
         {
-            skillpointsleft = (level + fame);
+            skillpointsleft = (level + fame) - flame_hammer_lvl - seismic_slam_lvl - ember_hammer_lvl - onslaught_lvl - ember_reach_lvl -
+                storm_burst_lvl - emberquake_lvl - heavy_lifting_lvl - supercharge_lvl - coup_de_grace_lvl -
+                healing_bot_lvl - blast_cannon_lvl - spider_mines_lvl - gun_bot_lvl - shock_grenade_lvl -
+                fusillade_lvl - sledgebot_lvl - bulwark_lvl - fire_and_spark_lvl - charge_domination_lvl -
+                shield_bash_lvl - forcefield_lvl - overload_lvl - dynamo_field_lvl - tremor_lvl -
+                fire_bash_lvl - immobilization_copter_lvl - sword_and_board_lvl - aegis_of_fate_lvl - charge_reconstitution_lvl;
             statpointsleft = (int)(40 + ((level - 1) * 5) - strength - dexterity - focus - vitality);
         }
 

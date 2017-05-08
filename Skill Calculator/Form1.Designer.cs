@@ -455,7 +455,7 @@
             this.pictureBox65 = new System.Windows.Forms.PictureBox();
             this.pictureBox66 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bwr_panel = new System.Windows.Forms.Panel();
+            this.brw_panel = new System.Windows.Forms.Panel();
             this.pictureBox67 = new System.Windows.Forms.PictureBox();
             this.brw_lvl = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -619,7 +619,7 @@
             this.pictureBox93 = new System.Windows.Forms.PictureBox();
             this.bw_lvl = new System.Windows.Forms.Label();
             this.label226 = new System.Windows.Forms.Label();
-            this.worfstrike = new System.Windows.Forms.NumericUpDown();
+            this.wolfstrike = new System.Windows.Forms.NumericUpDown();
             this.label227 = new System.Windows.Forms.Label();
             this.braze_panel = new System.Windows.Forms.Panel();
             this.pictureBox94 = new System.Windows.Forms.PictureBox();
@@ -1073,7 +1073,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).BeginInit();
             this.panel2.SuspendLayout();
-            this.bwr_panel.SuspendLayout();
+            this.brw_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.red_wolf)).BeginInit();
             this.bfm_panel.SuspendLayout();
@@ -1155,7 +1155,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.battle_rage)).BeginInit();
             this.bw_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox93)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.worfstrike)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wolfstrike)).BeginInit();
             this.braze_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox94)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.raze)).BeginInit();
@@ -1280,12 +1280,12 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1382, 525);
+            this.tabControl1.Size = new System.Drawing.Size(1396, 543);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.BackColor = System.Drawing.Color.Maroon;
             this.tabPage1.BackgroundImage = global::Skill_Calculator.Properties.Resources.background;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.Controls.Add(this.TEST);
@@ -1317,7 +1317,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1374, 499);
+            this.tabPage1.Size = new System.Drawing.Size(1388, 517);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Эмберлинг";
             // 
@@ -3551,7 +3551,7 @@
             this.VitalityUD.Size = new System.Drawing.Size(120, 20);
             this.VitalityUD.TabIndex = 29;
             this.VitalityUD.Value = new decimal(new int[] {
-            10,
+            15,
             0,
             0,
             0});
@@ -3569,7 +3569,7 @@
             this.FocusUD.Size = new System.Drawing.Size(120, 20);
             this.FocusUD.TabIndex = 28;
             this.FocusUD.Value = new decimal(new int[] {
-            15,
+            5,
             0,
             0,
             0});
@@ -3587,7 +3587,7 @@
             this.DexterityUD.Size = new System.Drawing.Size(120, 20);
             this.DexterityUD.TabIndex = 27;
             this.DexterityUD.Value = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             0});
@@ -3605,7 +3605,7 @@
             this.StrengthUD.Size = new System.Drawing.Size(120, 20);
             this.StrengthUD.TabIndex = 26;
             this.StrengthUD.Value = new decimal(new int[] {
-            5,
+            15,
             0,
             0,
             0});
@@ -3839,7 +3839,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage2.BackColor = System.Drawing.Color.Maroon;
             this.tabPage2.BackgroundImage = global::Skill_Calculator.Properties.Resources.background;
             this.tabPage2.Controls.Add(this.o_reset_skills);
             this.tabPage2.Controls.Add(this.o_reset_stats);
@@ -3869,7 +3869,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1374, 499);
+            this.tabPage2.Size = new System.Drawing.Size(1388, 517);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Скиталец";
             // 
@@ -6382,7 +6382,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage3.BackColor = System.Drawing.Color.Maroon;
             this.tabPage3.BackgroundImage = global::Skill_Calculator.Properties.Resources.background;
             this.tabPage3.Controls.Add(this.b_reset_skills);
             this.tabPage3.Controls.Add(this.b_reset_stats);
@@ -6412,7 +6412,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1374, 499);
+            this.tabPage3.Size = new System.Drawing.Size(1388, 517);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Берсерк";
             // 
@@ -6460,7 +6460,7 @@
             // 
             this.panel2.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_modelmenu8;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.bwr_panel);
+            this.panel2.Controls.Add(this.brw_panel);
             this.panel2.Controls.Add(this.bfm_panel);
             this.panel2.Controls.Add(this.bsa_panel);
             this.panel2.Controls.Add(this.bwp_panel);
@@ -6476,19 +6476,19 @@
             this.panel2.Size = new System.Drawing.Size(457, 402);
             this.panel2.TabIndex = 85;
             // 
-            // bwr_panel
+            // brw_panel
             // 
-            this.bwr_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold5;
-            this.bwr_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bwr_panel.Controls.Add(this.pictureBox67);
-            this.bwr_panel.Controls.Add(this.brw_lvl);
-            this.bwr_panel.Controls.Add(this.label18);
-            this.bwr_panel.Controls.Add(this.red_wolf);
-            this.bwr_panel.Controls.Add(this.label27);
-            this.bwr_panel.Location = new System.Drawing.Point(305, 305);
-            this.bwr_panel.Name = "bwr_panel";
-            this.bwr_panel.Size = new System.Drawing.Size(142, 85);
-            this.bwr_panel.TabIndex = 24;
+            this.brw_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold5;
+            this.brw_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.brw_panel.Controls.Add(this.pictureBox67);
+            this.brw_panel.Controls.Add(this.brw_lvl);
+            this.brw_panel.Controls.Add(this.label18);
+            this.brw_panel.Controls.Add(this.red_wolf);
+            this.brw_panel.Controls.Add(this.label27);
+            this.brw_panel.Location = new System.Drawing.Point(305, 305);
+            this.brw_panel.Name = "brw_panel";
+            this.brw_panel.Size = new System.Drawing.Size(142, 85);
+            this.brw_panel.TabIndex = 24;
             // 
             // pictureBox67
             // 
@@ -8313,7 +8313,7 @@
             this.bw_panel.Controls.Add(this.pictureBox93);
             this.bw_panel.Controls.Add(this.bw_lvl);
             this.bw_panel.Controls.Add(this.label226);
-            this.bw_panel.Controls.Add(this.worfstrike);
+            this.bw_panel.Controls.Add(this.wolfstrike);
             this.bw_panel.Controls.Add(this.label227);
             this.bw_panel.Location = new System.Drawing.Point(9, 123);
             this.bw_panel.Name = "bw_panel";
@@ -8351,18 +8351,18 @@
             this.label226.TabIndex = 11;
             this.label226.Text = "Уровень";
             // 
-            // worfstrike
+            // wolfstrike
             // 
-            this.worfstrike.Location = new System.Drawing.Point(63, 19);
-            this.worfstrike.Maximum = new decimal(new int[] {
+            this.wolfstrike.Location = new System.Drawing.Point(63, 19);
+            this.wolfstrike.Maximum = new decimal(new int[] {
             15,
             0,
             0,
             0});
-            this.worfstrike.Name = "worfstrike";
-            this.worfstrike.Size = new System.Drawing.Size(60, 20);
-            this.worfstrike.TabIndex = 9;
-            this.worfstrike.ValueChanged += new System.EventHandler(this.Berserker_skills_ValueChanged);
+            this.wolfstrike.Name = "wolfstrike";
+            this.wolfstrike.Size = new System.Drawing.Size(60, 20);
+            this.wolfstrike.TabIndex = 9;
+            this.wolfstrike.ValueChanged += new System.EventHandler(this.Berserker_skills_ValueChanged);
             // 
             // label227
             // 
@@ -8925,7 +8925,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage4.BackColor = System.Drawing.Color.Maroon;
             this.tabPage4.BackgroundImage = global::Skill_Calculator.Properties.Resources.background;
             this.tabPage4.Controls.Add(this.e_skills_reset);
             this.tabPage4.Controls.Add(this.e_stats_reset);
@@ -8955,7 +8955,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1374, 499);
+            this.tabPage4.Size = new System.Drawing.Size(1388, 517);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Инженер";
             // 
@@ -11468,20 +11468,20 @@
             // 
             // toolTip1
             // 
-            this.toolTip1.AutomaticDelay = 10;
-            this.toolTip1.AutoPopDelay = 100000;
+            this.toolTip1.AutomaticDelay = 1000;
+            this.toolTip1.AutoPopDelay = 10000;
             this.toolTip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
             this.toolTip1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.toolTip1.InitialDelay = 1;
             this.toolTip1.OwnerDraw = true;
-            this.toolTip1.ReshowDelay = 10;
+            this.toolTip1.ReshowDelay = 1;
             this.toolTip1.Draw += new System.Windows.Forms.DrawToolTipEventHandler(this.toolTip1_Draw);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 567);
+            this.ClientSize = new System.Drawing.Size(1397, 551);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -11760,8 +11760,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.bwr_panel.ResumeLayout(false);
-            this.bwr_panel.PerformLayout();
+            this.brw_panel.ResumeLayout(false);
+            this.brw_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.red_wolf)).EndInit();
             this.bfm_panel.ResumeLayout(false);
@@ -11871,7 +11871,7 @@
             this.bw_panel.ResumeLayout(false);
             this.bw_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox93)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.worfstrike)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wolfstrike)).EndInit();
             this.braze_panel.ResumeLayout(false);
             this.braze_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox94)).EndInit();
@@ -12047,7 +12047,6 @@
         private System.Windows.Forms.Panel ms_panel;
         private System.Windows.Forms.Label ms_lvl;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.Label label97;
         private System.Windows.Forms.Label label96;
@@ -12456,7 +12455,7 @@
         private System.Windows.Forms.PictureBox pictureBox65;
         private System.Windows.Forms.PictureBox pictureBox66;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel bwr_panel;
+        private System.Windows.Forms.Panel brw_panel;
         private System.Windows.Forms.PictureBox pictureBox67;
         private System.Windows.Forms.Label brw_lvl;
         private System.Windows.Forms.Label label18;
@@ -12620,7 +12619,7 @@
         private System.Windows.Forms.PictureBox pictureBox93;
         private System.Windows.Forms.Label bw_lvl;
         private System.Windows.Forms.Label label226;
-        private System.Windows.Forms.NumericUpDown worfstrike;
+        private System.Windows.Forms.NumericUpDown wolfstrike;
         private System.Windows.Forms.Label label227;
         private System.Windows.Forms.Panel braze_panel;
         private System.Windows.Forms.PictureBox pictureBox94;
@@ -12867,6 +12866,7 @@
         private System.Windows.Forms.ComboBox e_levelbox;
         private System.Windows.Forms.Label label353;
         private System.Windows.Forms.Label label354;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

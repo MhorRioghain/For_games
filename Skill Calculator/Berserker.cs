@@ -313,452 +313,401 @@ namespace Skill_Calculator
             vitality_text = "Запас Здоровья (ОЗ): " + max_health + Environment.NewLine +
                 "Бонус к броне: +" + armor_bonus + " %" + Environment.NewLine +
                 "Шанс блокировать удар: +" + block_chance + " %";
-            /*
-            eviscerate_text
- * var eviscerate_damage= Math.ceil(eviscerate_b[skill1]*damage_monster[level]/100)*eviscerate_c[skill1];
-			textskill1.innerHTML = "<img src='/pic/skills/skillicon_eviscerate.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Потрошение</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill1+"/15<br/><br/>";
-			textskill1.innerHTML +="<br/>Вы рвете на части всех досягаемых врагов впереди и вызываете у них 6-секундное кровотечение. Радиус сектора - 2,7 м, угол - 120 градусов. Применение навыка уменьшает скорость увеличения Заряда на 67%.</a><br/>";
-		 	textskill1.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill1+"</a><br>";
-		 	textskill1.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+eviscerate_mana[skill1-1]+"</a><br>";
-		 	textskill1.innerHTML +="<a style='color:#1F90FF'>Наносит " + eviscerate_a[skill1] + "% от урона текущего оружия в сек." + "<br \/>Физич. урон: "+eviscerate_damage+" в теч. " + eviscerate_c[skill1] + " сек.*" + "</a><br/>";
-		 textskill1.innerHTML +=texttemp+"Радиус увеличен до 3 м, угол - до 180 градусов<br>Кровотечение интенсивнее, но длится на 4 сек. меньше.<br></a>";
-		 	textskill1.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill1.innerHTML +=texttemp+"Радиус увеличен до 3,3 м, угол - до 240 градусов<br>Кровотечение интенсивнее, но длится на 2 сек. меньше.<br></a>";
-		 	textskill1.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill1.innerHTML +=texttemp+"Радиус увеличен до 4 м<br/></a>";
-             * textskill1.innerHTML +="<br/><a style='color:#ffff00'>Необходимо оружие ближнего боя в правой руке</a><br/>
-             * <a style='color:#1F90FF; font-size: 10px;'>* улучшается вместе с уровнем игрока</a><br>";
-		 
- * 
-            howl_text
-             * textskill2.innerHTML = "<img src='/pic/skills/skillicon_howl.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Вой</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill2+"/15<br/><br/>";
-			textskill2.innerHTML +="<br/>Вы яростно воете, вселяя ужас в души врагов. Противники на несколько секунд замедляются и становятся уязвимее.</a><br/>";
-		 	textskill2.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill2+"</a><br>";
-		 	textskill2.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+howl_mana[skill2-1]+"</a><br>";
-			textskill2.innerHTML +="<a style='color:#1F90FF'>Дальность: " + howl_d[skill2] + " м" + "<br \/>";
-			textskill2.innerHTML +="<a style='color:#1F90FF'>-" + howl_a[skill2] + "% от скорости движения в теч. " + howl_c[skill2] + " сек." + "</a><br \/>";
-			textskill2.innerHTML +="<a style='color:#1F90FF'>-" + howl_a[skill2] + "% от скорости атаки в теч. " + howl_c[skill2] + " сек." + "</a><br \/>";
-			textskill2.innerHTML +="<a style='color:#1F90FF'>-" + howl_b[skill2] + "% от скорости применения заклинаний в теч. " + howl_c[skill2] + " сек." + "</a><br \/>";
-			textskill2.innerHTML +="<a style='color:#1F90FF'>+" + howl_a[skill2] + "% к получаемому люб. урону в теч. " + howl_c[skill2] + " сек." + "<br \/></a>";
-             * textskill2.innerHTML +=texttemp+"Дальность увеличена до 7,5 м<br></a>";
-		 	textskill2.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill2.innerHTML +=texttemp+"Дальность увеличена до 10 м<br></a>";
-		 	textskill2.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill2.innerHTML +=texttemp+"Дальность увеличена до 10,5 м<br/></a>";
-             * 
-            raze_text
-             *  textskill3.innerHTML = "<img src='/pic/skills/skillicon_bigstrike.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Сокрушительный удар</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill3+"/15<br/><br/>";
-			textskill3.innerHTML +="<br/>Наносит огромный урон выбранной цели.<br/>С каждым последующим ударом ваша сила возрастает. Уровень Заряда при этом не повышается.</a><br/>";
-		 	textskill3.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill3+"</a><br>";
-		 	textskill3.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+raze_mana[skill3-1]+"</a><br>";
-		 	textskill3.innerHTML +="<a style='color:#1F90FF'>Наносит " + raze_a[skill3] + "% от урона текущего оружия в сек." + "</a><br>";
-			textskill3.innerHTML +="<a style='color:#1F90FF'>+100% шанс прервать действия врага" + "<br \/>";
-			textskill3.innerHTML +="<a style='color:#1F90FF'>+" + raze_e[skill3] + "% к люб. урону в теч. 2 сек." + "</a><br>";
-		if (skill3 >= 5)
+
+            int eviscerate_damage= (int)(Math.Ceiling(eviscerate_b[eviscerate_lvl]*damage_monster[level]/100)*eviscerate_c[eviscerate_lvl]);
+            eviscerate_text = "Вы рвете на части всех досягаемых врагов впереди и вызываете у них 6-секундное кровотечение. Радиус" + Environment.NewLine +
+                "сектора - 2,7 м, угол - 120 градусов. Применение навыка уменьшает скорость увеличения Заряда на 67%.            " + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + eviscerate_mana[eviscerate_lvl] + Environment.NewLine +
+                "Наносит " + eviscerate_a[eviscerate_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine +
+                "Физич. урон: " + eviscerate_damage + " в теч. " + eviscerate_c[eviscerate_lvl] + " сек.*" + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Радиус увеличен до 3 м, угол - до 180 градусов. Кровотечение интенсивнее, но длится на 4 сек. меньше." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Радиус увеличен до 3,3 м, угол - до 240 градусов. Кровотечение интенсивнее, но длится на 2 сек. меньше" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Радиус увеличен до 4 м" + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока" + Environment.NewLine + Environment.NewLine +
+                "Необходимо оружие ближнего боя в правой руке";
+
+            howl_text = "Вы яростно воете, вселяя ужас в души врагов. Противники" + Environment.NewLine +
+                "на несколько секунд замедляются и становятся уязвимее.       " + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + howl_mana[howl_lvl] + Environment.NewLine +
+                "Дальность: " + howl_d[howl_lvl] + " м" + Environment.NewLine +
+                "-" + howl_a[howl_lvl] + "% от скорости движения в теч. " + howl_c[howl_lvl] + " сек." + Environment.NewLine +
+                "-" + howl_a[howl_lvl] + "% от скорости атаки в теч. " + howl_c[howl_lvl] + " сек." + Environment.NewLine +
+                "-" + howl_b[howl_lvl] + "% от скорости применения заклинаний в теч. " + howl_c[howl_lvl] + " сек." + Environment.NewLine +
+                "+" + howl_a[howl_lvl] + "% к получаемому люб. урону в теч. " + howl_c[howl_lvl] + " сек." + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Дальность увеличена до 7,5 м" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Дальность увеличена до 10 м" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Дальность увеличена до 10,5 м" + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока";
+
+            raze_text = "Наносит огромный урон выбранной цели. С каждым" + Environment.NewLine +
+                "последующим ударом ваша сила возрастает. Уровень      " + Environment.NewLine +
+                "Заряда при этом не повышается." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + raze_mana[raze_lvl] + Environment.NewLine +
+                "Наносит " + raze_a[raze_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine +
+                "+100% шанс прервать действия врага" + Environment.NewLine +
+                "+" + raze_e[raze_lvl] + "% к люб. урону в теч. 2 сек." + Environment.NewLine;
+		    if (raze_lvl >= 5)
 			{
-			textskill3.innerHTML +="<a style='color:#1F90FF'>-" + raze_b[skill3] + "% от скорости движения в теч. 4 сек." + "<br>" + "-" + raze_b[skill3] + "% от скорости атаки в теч. 4 сек." + "<br>" + "-" + raze_b[skill3] + "% от скорости применения заклинаний в теч. 4 сек." + "</a><br>";
+                raze_text += "-" + raze_b[raze_lvl] + "% от скорости движения в теч. 4 сек." + Environment.NewLine +
+                    "-" + raze_b[raze_lvl] + "% от скорости атаки в теч. 4 сек." + Environment.NewLine +
+                    "-" + raze_b[raze_lvl] + "% от скорости применения заклинаний в теч. 4 сек." + Environment.NewLine;
 			}
-		if (skill3 >= 10)
+		    if (raze_lvl >= 10)
 			{
-			textskill3.innerHTML +="<a style='color:#1F90FF'>+"+raze_c[skill3] + "% к шансу промаха в теч. 4 сек." + "</a><br>";
+                raze_text += "+" + raze_c[raze_lvl] + "% к шансу промаха в теч. 4 сек." + Environment.NewLine;
 			}
-			if (skill3 >= 15)
+			if (raze_lvl == 15)
 			{
-			textskill3.innerHTML +="<a style='color:#1F90FF'>"+raze_d[skill3] + "% шанс оглушить цель на 4 сек." + "</a><br>";
+                raze_text += raze_d[raze_lvl] + "% шанс оглушить цель на 4 сек." + Environment.NewLine;
 			}
-             * textskill3.innerHTML +=texttemp+"Цель замедлена<br></a>";
-		 	textskill3.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill3.innerHTML +=texttemp+"Точность атак цели снижена<br></a>";
-		 	textskill3.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill3.innerHTML +=texttemp+"Цель оглушена<br/></a>";
-             * 
-            wolfstrike_text
-             * textskill4.innerHTML = "<img src='/pic/skills/skillicon_wolfstrike.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Волчий коготь</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill4+"/15<br/><br/>";
-			textskill4.innerHTML +="<br/>Вы бросаетесь вперед на 6 метров, раздирая когтями всех врагов, которые стоят на пути.</a><br/>";
-		 	textskill4.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill4+"</a><br>";
-		 	textskill4.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+wolfstrike_mana[skill4-1]+"</a><br>";
-			textskill4.innerHTML +="<a style='color:#1F90FF'>Наносит " + wolfstrike_a[skill4] + "% от урона текущего оружия в сек. физич. уроном" + "</a><br \/>";
-			textskill4.innerHTML +="<a style='color:#1F90FF'>+" + wolfstrike_b[skill4] + " к отбрасыванию" + "</a><br \/>";
-		    textskill4.innerHTML +="<a style='color:#1F90FF'>+" + wolfstrike_c[skill4] + "% шанс оглушить цель на 3 сек." + "</a><br \/>";
-             * textskill4.innerHTML +=texttemp+"Дистанция броска увеличена до 7 метров<br></a>";
-		 	textskill4.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill4.innerHTML +=texttemp+"Дистанция броска увеличена до 8 метров<br></a>";
-		 	textskill4.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill4.innerHTML +=texttemp+"Дистанция броска увеличена до 9 метров<br/></a>";
-             * 
-            battle_rage_text
-             * textskill5.innerHTML = "<img src='/pic/skills/skillicon_battlerage.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Боевая ярость</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill5+"/15<br/><br/>";
-			textskill5.innerHTML +="<br/>Вы приходите в ярость, и наносимый вами урон зависит от числа врагов в радиусе 4 метров. Время действия - 60 сек.</a><br/>";
-		 	textskill5.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill5+"</a><br>";
-		 	textskill5.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+battle_rage_mana[skill5-1]+"</a><br>";
-		 	textskill5.innerHTML +="<a style='color:#FF00FF'>Время между активациями: 50 сек.</a><br \/>";
-		    textskill5.innerHTML += "<a style='color:#1F90FF'>+" + battle_rage_a[skill5] + "% люб. урона за каждого монстра в радиусе " + battle_rage_c[skill5] + "м" + "</a><br \/>";
-		 if (skill5 >= 5)
-			 {
-			textskill5.innerHTML += "<a style='color:#1F90FF'>-" + battle_rage_b[skill5] + "% получаемого физич. урона за каждого монстра в радиусе " + battle_rage_c[skill5] + "м" + "</a><br \/>";             }
-		 texttemp ="<a style='color:#A0A0A0'>";
-		 	textskill5.innerHTML +=texttemp+"Наносимый вам урон снижается<br></a>";
-		 	textskill5.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill5.innerHTML +=texttemp+"Радиус действия увеличен до 5 м<br></a>";
-		 	textskill5.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill5.innerHTML +=texttemp+"Радиус действия увеличен до 6 м<br/></a>";
-             * 
-            rupture_text
-             * var rupture_damage = Math.ceil(rupture_b[skill6] * damage_monster[level] / 100);
-		    textskill6.innerHTML = "<img src='/pic/skills/skillicon_blazingpillar.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Разрыв</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill6+"/15<br/><br/>";
-			textskill6.innerHTML +="<br/>Мощным ударом вы отбрасываете врага назад, и после небольшой паузы он взрывается, нанося повреждения всем находящимся в радиусе 4 м противникам.</a><br/>";
-		 	textskill6.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill6+"</a><br>";
-		 	textskill6.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+rupture_mana[skill6-1]+"</a><br>";
-		    textskill6.innerHTML +="<a style='color:#1F90FF'>"+rupture_a[skill6] + "% шанс оглушить цель на 3 сек.</a><br \/>";
-			textskill6.innerHTML +="<a style='color:#1F90FF'>+35 к отбрасыванию</a><br \/>";
-			textskill6.innerHTML +="<a style='color:#1F90FF'>Дополнительный эффект:</a><br \/>";
-			textskill6.innerHTML +="<a style='color:#1F90FF'>"+rupture_damage + " Физический урон*</a><br \/>";
-             * textskill6.innerHTML +=texttemp+"Радиус взрыва увеличен до 5 м<br></a>";
-		 	textskill6.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill6.innerHTML +=texttemp+"Радиус взрыва увеличен до 6 м<br></a>";
-		 	textskill6.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill6.innerHTML +=texttemp+"Радиус взрыва увеличен до 7 м<br/></a>";
-		 	textskill6.innerHTML +="<br/><a style='color:#1F90FF; font-size: 10px;'>* улучшается вместе с уровнем игрока</a><br>";
-             * 
-            ravage_text
-             *  var ravage_armor = Math.floor(ravage_c[skill7] * armor_monster_bylevel[level] / 100);
-		    textskill7.innerHTML = "<img src='/pic/skills/skillicon_ravage.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Опустошение</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill7+"/15<br/><br/>";
-			textskill7.innerHTML +="<br/>Вы наносите 3 страшных удара каждому врагу в радиусе 4 м. После каждого удара уровень брони врагов снижается.</a><br/>";
-		 	textskill7.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill7+"</a><br>";
-		 	textskill7.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+ravage_mana[skill7-1]+"</a><br>";
-		    textskill7.innerHTML +="<a style='color:#1F90FF'>Наносит " + ravage_a[skill7] + "% от урона текущего оружия в сек." + "</a><br \/>";
-			textskill7.innerHTML +="<a style='color:#1F90FF'>-" + ravage_armor + " от всех видов брони в теч. " + ravage_d[skill7] + " сек.*</a><br \/>";
-			textskill7.innerHTML +="<a style='color:#1F90FF'>+ 8% шанс прервать действия врага</a><br \/>";
-		 if (skill7 >= 5)
+            raze_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Цель замедлена" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Точность атак цели снижена" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Цель оглушена";
+
+            wolfstrike_text = "Вы бросаетесь вперед на 6 метров, раздирая когтями всех врагов," + Environment.NewLine +
+                "которые стоят на пути.                                                                                       " + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + wolfstrike_mana[wolfstrike_lvl] + Environment.NewLine +
+                "Наносит " + wolfstrike_a[wolfstrike_lvl] + "% от урона текущего оружия в сек. физич. уроном" + Environment.NewLine +
+                "+" + wolfstrike_b[wolfstrike_lvl] + " к отбрасыванию" + Environment.NewLine +
+                "+" + wolfstrike_c[wolfstrike_lvl] + "% шанс оглушить цель на 3 сек." + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Дистанция броска увеличена до 7 метров" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Дистанция броска увеличена до 8 метров" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Дистанция броска увеличена до 9 метров";
+
+            battle_rage_text = "Вы приходите в ярость, и наносимый вами урон зависит" + Environment.NewLine +
+                "от числа врагов в радиусе 4 метров. Время действия - 60 сек." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + battle_rage_mana[battle_rage_lvl] + Environment.NewLine +
+                "Время между активациями: 50 сек." + Environment.NewLine +
+                "+" + battle_rage_a[battle_rage_lvl] + "% люб. урона за каждого монстра в радиусе" + battle_rage_c[battle_rage_lvl] + " м" + Environment.NewLine;
+		    if (battle_rage_lvl >= 5)			 
+            {
+                battle_rage_text += "-" + battle_rage_b[battle_rage_lvl] + "% получаемого физич. урона за каждого монстра в радиусе" + battle_rage_c[battle_rage_lvl] + " м" + Environment.NewLine;
+            }
+            battle_rage_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Наносимый вам урон снижается" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Радиус действия увеличен до 5 м" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Радиус действия увеличен до 6 м";
+
+            int rupture_damage = (int)Math.Ceiling(rupture_b[rupture_lvl] * damage_monster[level] / 100);
+            rupture_text = "Мощным ударом вы отбрасываете врага назад," + Environment.NewLine +
+                "и после небольшой паузы он взрывается, нанося" + Environment.NewLine +
+                "повреждения всем находящимся в радиусе 4 м" + Environment.NewLine +
+                "противникам." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + rupture_mana[rupture_lvl] + Environment.NewLine +
+                rupture_a[rupture_lvl] + "% шанс оглушить цель на 3 сек." + Environment.NewLine +
+                "+35 к отбрасыванию" + Environment.NewLine +
+                "Дополнительный эффект: " + Environment.NewLine +
+                rupture_damage + " Физический урон*" + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Радиус взрыва увеличен до 5 м" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Радиус взрыва увеличен до 6 м" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Радиус взрыва увеличен до 7 м" + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока";
+
+            int ravage_armor = (int)Math.Floor(ravage_c[ravage_lvl] * armor_monster_bylevel[level] / 100);
+            ravage_text = "Вы наносите 3 страшных удара каждому врагу в радиусе 4 м. После каждого" + Environment.NewLine +
+                "удара уровень брони врагов снижается.                                                                         " + Environment.NewLine +
+                "Расход маны: " + ravage_mana[ravage_lvl] + Environment.NewLine +
+                "Наносит " + ravage_a[ravage_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine +
+                "-" + ravage_armor + " от всех видов брони в теч. " + ravage_d[ravage_lvl] + " сек.*" + Environment.NewLine +
+                "+ 8% шанс прервать действия врага" + Environment.NewLine;
+		    if (ravage_lvl >= 5)
 		 	{
-			textskill7.innerHTML +="<a style='color:#1F90FF'>Сопротивление отбрасыванию: " + ravage_b[skill7] + "% в теч. 1 сек." + "</a><br \/>";
-			textskill7.innerHTML +="<a style='color:#1F90FF'>" + ravage_b[skill7] + " сопротивление замедлению на 1 сек." + "</a><br \/>";
+                ravage_text += "Сопротивление отбрасыванию: " + ravage_b[ravage_lvl] + "% в теч. 1 сек." + Environment.NewLine +
+                    ravage_b[ravage_lvl] + " сопротивление замедлению на 1 сек." + Environment.NewLine;
    			}
-             * textskill7.innerHTML +=texttemp+"При использовании заклинания на вас не действуют эффекты замедления<br></a>";
-		 	textskill7.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill7.innerHTML +=texttemp+"Время ослабления брони увеличено до 6 сек.<br></a>";
-		 	textskill7.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill7.innerHTML +=texttemp+"Радиус действия увеличен до 5 м<br/></a>";
-		 	textskill7.innerHTML +="<br/><a style='color:#ffff00'>Необходимо оружие ближнего боя в правой руке</a><br/>
-             * <a style='color:#1F90FF; font-size: 10px;'>* улучшается вместе с уровнем игрока</a><br>";
-		
-            blood_hunger_text
-             * textskill8.innerHTML = "<img src='/pic/skills/skillicon_rendandtear.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Жажда крови (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill8+"/15<br/><br/>";
-			textskill8.innerHTML +="<br/>Нанося противнику критические повреждения оружием ближнего боя, вы исцеляете себя с помощью жизненной энергии врага.</a><br/>";
-		 	textskill8.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill8+"</a><br>";
-		 	textskill8.innerHTML +="<a style='color:#1F90FF'>Каждый критический удар повышает ваш уровень здоровья на " + blood_hunger_a[skill8] + "% от макс.</a><br \/>";
-             * 
-            executioner_text
-             * textskill9.innerHTML = "<img src='/pic/skills/skillicon_retaliate.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Палач (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill9+"/15<br/><br/>";
-			textskill9.innerHTML +="<br/>Ярость помогает наносить урон оружием в обеих руках одновременно. В случае успешной атаки с двух рук скорость повышения уровня Заряда ненадолго увеличивается.</a><br/>";
-		 	textskill9.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill9+"</a><br>";
-		    textskill9.innerHTML +="<a style='color:#1F90FF'>+ " + executioner_a[skill9] + "% к шансу казнить цель</a><br \/>";
-			textskill9.innerHTML +="<a style='color:#1F90FF'>+ " + executioner_b[skill9] + "% к скорости увеличения Заряда в теч. 2 сек.</a><br \/>";
-             * 
-            rampage_text
-             * textskill10.innerHTML = "<img src='/pic/skills/skillicon_rampage.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Буйство (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill10+"/15<br/><br/>";
-			textskill10.innerHTML +="<br/>При уничтожении врага оружием ближнего боя у вас может начаться адреналиновое буйство.</a><br/>";
-		 	textskill10.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill10+"</a><br>";
-		 	textskill10.innerHTML +="<a style='color:#1F90FF'>25% к скорости атаки на 5 сек.</a><br \/>";
-			textskill10.innerHTML +="<a style='color:#1F90FF'>25% к скорости применения заклинаний на 5 сек.</a><br \/>";
-			textskill10.innerHTML +="<a style='color:#1F90FF'>12% к скорости передвижения на 5 сек.</a><br \/>";
-			textskill10.innerHTML +="<a style='color:#1F90FF'>Шанс на буйство после уничтожения врага:"+rampage_a[skill10] + "%</a><br \/>";
+            ravage_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "При использовании заклинания на вас не действуют эффекты замедления" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Время ослабления брони увеличено до 6 сек." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Радиус действия увеличен до 5 м" + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока" + Environment.NewLine + Environment.NewLine +
+                "Необходимо оружие ближнего боя в правой руке";
 
-            frost_breath_text
-             * textskill11.innerHTML = "<img src='/pic/skills/skillicon_frostbreath.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Ледяное дыхание</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill11+"/15<br/><br/>";
-			textskill11.innerHTML +="<br/>Призвав на помощь холодные северные ветра, вы замораживаете врага ледяным дыханием - противник обездвиживается и становится уязвимым. Зона действия - сектор с углом 90 градусов и радиусом 5 м.</a><br/>";
-		 	textskill11.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill11+"</a><br>";
-		 	textskill11.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+frost_breath_mana[skill11-1]+"</a><br>";
-		    textskill11.innerHTML +="<a style='color:#1F90FF'>Наносит " + frost_breath_a[skill11] + "% от урона текущего оружия в сек. льдом</a><br \/>";
-			textskill11.innerHTML +="<a style='color:#1F90FF'>"+frost_breath_b[skill11] + "% шанс заморозить цель на 4 сек.</a><br \/>";
-			textskill11.innerHTML +="<a style='color:#1F90FF'>80% шанс обездвижить цель на 4 сек." + "<br \/>";
-			textskill11.innerHTML +="<a style='color:#1F90FF'>+ " + frost_breath_b[skill11] + "% к получаемому люб. урону в теч. 4 сек.</a><br \/>";
-             * textskill11.innerHTML +=texttemp+"Радиус сектора увеличен до 6 м, а угол - до 120 градусов.<br></a>";
-		 	textskill11.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill11.innerHTML +=texttemp+"Радиус сектора увеличен до 7 м, а угол - до 150 градусов.<br></a>";
-		 	textskill11.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill11.innerHTML +=texttemp+"Радиус сектора увеличен до 8 м, а угол - до 150 градусов. Позволяет похищать здоровье и ману.<br/></a>";
-             * 
-            stormclaw_text
-             * textskill12.innerHTML = "<img src='/pic/skills/skillicon_stormclaw.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Штормовая клешня</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill12+"/15<br/><br/>";
-			textskill12.innerHTML +="<br/>Вы насыщаете оружие электрической энергией. Когда оно наносит удар, из него вырывается молния, которая поражает до 2 находящихся рядом врагов.</a><br/>";
-		 	textskill12.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill12+"</a><br>";
-		 	textskill12.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+stormclaw_mana[skill12-1]+"</a><br>";
-		 	textskill12.innerHTML +="<a style='color:#FF00FF'>Время между активациями: 20 сек.</a><br>";
-		    textskill12.innerHTML +="<a style='color:#1F90FF'>Наносит " + stormclaw_a[skill12] + "% урона от оружия электричеством</a><br \/>";
-			textskill12.innerHTML +="<a style='color:#1F90FF'>50% шанс эффекта &quot;Молния&quot; вокруг цели</a><br \/>";
-             * textskill12.innerHTML +=texttemp+"Молния поражает до 3 врагов.<br></a>";
-		 	textskill12.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill12.innerHTML +=texttemp+"Молния поражает до 4 врагов.<br></a>";
-		 	textskill12.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill12.innerHTML +=texttemp+"Молния поражает до 5 врагов.<br/></a>";
-		 	textskill12.innerHTML +="<br/><a style='color:#ffff00'>Срабатывает при базовых атаках оружием ближнего боя.</a><br/>";
-             * 
-            storm_hatchet_text
-             *  textskill13.innerHTML = "<img src='/pic/skills/skillicon_stormhatchet.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Топорик бури</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill13+"/15<br/><br/>";
-			textskill13.innerHTML +="<br/>Вы высекаете из оружия дикую северную молнию, создавая электрический метательный топор с радиусом действия 15 м.</a><br/>";
-		 	textskill13.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill13+"</a><br>";
-		 	textskill13.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+storm_hatchet_mana[skill13-1]+"</a><br>";
-		 	textskill13.innerHTML +="<a style='color:#1F90FF'>Каждое попадание увеличивает уровень индикатора Зарядов на "+storm_hatchet_d[skill13]+"%</a><br \/>";
-		    textskill13.innerHTML +="<a style='color:#1F90FF'>Наносит " + storm_hatchet_a[skill13] + "% от урона текущего оружия в сек. электричеством</a><br \/>";
-			textskill13.innerHTML +="<a style='color:#1F90FF'>-100% от скорости движения в теч. " + storm_hatchet_b[skill13] + " сек.</a><br \/>";
-		 if (skill13 >= 15)
-		 	 {
-			textskill13.innerHTML +="<a style='color:#1F90FF'>" + storm_hatchet_c[skill13] + "% шанс разбить щит врага</a><br \/>";
-			 }
-             * textskill13.innerHTML +=texttemp+"Дистанция полета увеличена до 20 метров; топорик летит быстрее.<br></a>";
-		 	textskill13.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill13.innerHTML +=texttemp+"Вы бросаете 3 топорика одновременно.<br></a>";
-		 	textskill13.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill13.innerHTML +=texttemp+"Топорики разбивают щиты.<br/></a>";
-             * 
-            northern_rage_text
-             *  var northern_rage_mindam = Math.ceil(northern_rage_a[skill14] * damage_monster[level] / 100);
-		var northern_rage_maxdam = Math.ceil(northern_rage_b[skill14] * damage_monster[level] / 100);
-		    textskill14.innerHTML = "<img src='/pic/skills/skillicon_frostwolf.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Ярость Севера</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill14+"/15<br/><br/>";
-			textskill14.innerHTML +="<br/>Вы кидаете ледяные осколки, которые отбрасывают врагов назад и замораживают.</a><br/>";
-		 	textskill14.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill14+"</a><br>";
-		 	textskill14.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+northern_rage_mana[skill14-1]+"</a><br>";
-		    textskill14.innerHTML +="<a style='color:#1F90FF'>Наносит 20% от урона текущего оружия в сек.</a><br \/>";
-			textskill14.innerHTML +="<a style='color:#1F90FF'>+" + northern_rage_mindam + "-" + northern_rage_maxdam + " к лед. урону*</a><br \/>";
-			textskill14.innerHTML +="<a style='color:#1F90FF'>80% шанс заморозить цель на " + northern_rage_c[skill14] + " сек.</a><br \/>";
-			textskill14.innerHTML +="<a style='color:#1F90FF'>" + northern_rage_d[skill14] + "% шанс разбить щит врага</a><br \/>";
-			textskill14.innerHTML +="<a style='color:#1F90FF'>+25 к отбрасыванию</a><br \/>";
-        if (skill14 > 5)
-		 	 {
-			textskill14.innerHTML +="<a style='color:#1F90FF'>От заклинателя расходятся 4 ледяные волны, пронзающие врагов.</a><br \/>";
-			 }
-             * textskill14.innerHTML +=texttemp+"Число волн увеличено до 4; распространяются дальше.<br></a>";
-		 	textskill14.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill14.innerHTML +=texttemp+"Число волн увеличено до 5; распространяются дальше.<br></a>";
-		 	textskill14.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill14.innerHTML +=texttemp+"Число волн увеличено до 6; распространяются дальше.<br/></a>";
-		 	textskill14.innerHTML +="<br><a style='color:#1F90FF; font-size: 10px;'>* улучшается вместе с уровнем игрока</a><br>";
-             * 
-            ice_shield_text
-             * textskill15.innerHTML = "<img src='/pic/skills/skillicon_iceshield.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Ледяная стена</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill15+"/15<br/><br/>";
-			textskill15.innerHTML +="<br/>Вы призываете ледяную стену, которая отражает снаряды обратно во врагов. Если в стену попадает снаряд, появляется шанс увеличить уровень индикатора Зарядов на 10%. Время действия стены - 10 сек.</a><br/>";
-		 	textskill15.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill15+"</a><br>";
-		 	textskill15.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+iceshield_mana[skill15-1]+"</a><br>";
-		 	textskill15.innerHTML +="<a style='color:#FF00FF'>Время между активациями: 8 сек.</a><br>";
-		    textskill15.innerHTML +="<a style='color:#1F90FF'>"+ iceshield_a[skill15] + "%-шанс, что при попадании в стену Заряд увеличится.</a><br \/>";
-			textskill15.innerHTML +="<a style='color:#1F90FF'>"+ iceshield_b[skill15] + "% шанс отразить снаряд с силой " + iceshield_c[skill15] + "% от урона оружия в сек. 10 сек.</a><br \/>";
-		 textskill15.innerHTML +=texttemp+"Стена отражает 75% урона, который наносят снаряды.<br></a>";
-		 	textskill15.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill15.innerHTML +=texttemp+"Стена отражает 100% урона, который наносят снаряды.<br></a>";
-		 	textskill15.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill15.innerHTML +=texttemp+"Стена отражает 125% урона, который наносят снаряды.<br/></a>";
-             * 
-            permafrost_text
-             * var permafrost_damage = Math.floor(Math.ceil(permafrost_a[skill16] * damage_monster[level] / 100) * permafrost_b[skill16]);
-		  	textskill16.innerHTML = "<img src='/pic/skills/skillicon_permafrost.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Вечная мерзлота</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill16+"/15<br/><br/>";
-			textskill16.innerHTML +="<br/>Вокруг вас распространяется суровый северный мороз, который медленно высасывает жизненную энергию из врагов, находящихся в радиусе 16 метров.</a><br/>";
-		 	textskill16.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill16+"</a><br>";
-		 	textskill16.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+permafrost_mana[skill16-1]+"</a><br>";
-		 	textskill16.innerHTML +="<a style='color:#FF00FF'>Время между активациями: "+permafrost_b[skill16]+" сек.</a><br \/>";
-		 	textskill16.innerHTML +="<a style='color:#1F90FF'>Лед. урон: "+ permafrost_damage + " в теч. " + permafrost_b[skill16] + " сек.*</a><br \/>";
-		  if (skill16 >= 5) {
-			textskill16.innerHTML +="<a style='color:#1F90FF'>"+ permafrost_d[skill16] + "% шанс заморозить цель на 6 сек.</a><br \/>";
-				}
-		  if (skill16 >= 10) {
-			textskill16.innerHTML +="<a style='color:#1F90FF'>"+  permafrost_c[skill16] + "% шанс обездвижить цель на 6 сек.</a><br \/>";
-				}
-             * textskill16.innerHTML +=texttemp+"Доп. 25% шанс заморозить врагов на 6 сек.<br></a>";
-		 	textskill16.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill16.innerHTML +=texttemp+"Доп. 25% шанс полностью заморозить врагов на 6 сек.<br></a>";
-		 	textskill16.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill16.innerHTML +=texttemp+"Шанс обездвижить врага увеличен до 50%<br/></a>";
-		 	textskill16.innerHTML +="<br/><a style='color:#1F90FF; font-size: 10px;'>* улучшается вместе с уровнем игрока</a><br>";
-             * 
-            glacial_shatter_text
-             *  var glacial_shatter_mindam_fire = Math.ceil(glacial_shatter_b[skill17] * damage_monster[level] / 100) * 3;
-		var glacial_shatter_maxdam_fire = Math.ceil(glacial_shatter_c[skill17] * damage_monster[level] / 100) * 3;
-		var glacial_shatter_mindam_ice = Math.ceil(glacial_shatter_d[skill17] * damage_monster[level] / 100);
-		var glacial_shatter_maxdam_ice = Math.ceil(glacial_shatter_e[skill17] * damage_monster[level] / 100);
-		    textskill17.innerHTML = "<img src='/pic/skills/skillicon_geysers.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Ледяной раскол</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill17+"/15<br/><br/>";
-			textskill17.innerHTML +="<br/>В выбранной точке земля раскалывается, и появляется 5 гейзеров, которые ослепляют и наносят урон врагам паром и горячей водой.</a><br/>";
-		 	textskill17.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill17+"</a><br>";
-		 	textskill17.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+glacial_shatter_mana[skill17-1]+"</a><br>";
-		    textskill17.innerHTML +="<a style='color:#1F90FF'>33% шанс ослепить цель на " + glacial_shatter_a[skill17] + "% в теч. 5 сек.</a><br \/>";
-			textskill17.innerHTML +="<a style='color:#1F90FF'>+"+ glacial_shatter_mindam_ice + "-" + glacial_shatter_maxdam_ice + " к лед. урону*</a><br \/>";
-			textskill17.innerHTML +="<a style='color:#1F90FF'>+7 к отбрасыванию</a><br \/>";
-			textskill17.innerHTML +="<a style='color:#1F90FF'>+35% к шансу прервать действие врага</a><br \/>";
-		 if (skill17 >= 10) {
-			textskill17.innerHTML +="<a style='color:#1F90FF'>Огн. урон: "+ glacial_shatter_mindam_fire + "-" + glacial_shatter_maxdam_fire + " в теч. 3 сек.*</a><br \/>";
-		      }
-             * textskill17.innerHTML +=texttemp+"Создается 7 гейзеров<br></a>";
-		 	textskill17.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill17.innerHTML +=texttemp+"Заклинание также поджигает врагов<br></a>";
-		 	textskill17.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill17.innerHTML +=texttemp+"Создается 9 гейзеров<br/></a>";
-		 	textskill17.innerHTML +="<br/><a style='color:#1F90FF; font-size: 10px;'>* улучшается вместе с уровнем игрока</a><br>";
-             * 
-            cold_steel_mastery_text
-             * textskill18.innerHTML = "<img src='/pic/skills/skillicon_coldsteel.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Мастер холодной стали (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill18+"/15<br/><br/>";
-			textskill18.innerHTML +="<br/>Прочнее стали только холодная сталь.</a><br/>";
-		 	textskill18.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill18+"</a><br>";
-			textskill18.innerHTML +="<a style='color:#1F90FF'>+" + cold_steel_mastery_a[skill18] + "% к Физ. урону</a><br \/>";
-			textskill18.innerHTML +="<a style='color:#1F90FF'>+" + cold_steel_mastery_b[skill18] + "% к Лед. урону</a><br \/>";
-             * 
-            shatter_storm_text
-             * textskill19.innerHTML = "<img src='/pic/skills/skillicon_shatterstorm.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Разрушительная буря (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill19+"/15<br/><br/>";
-			textskill19.innerHTML +="<br/>Уничтожив замороженного врага, вы накрываете находящихся в радиусе 4 м противников взрывной ледяной волной, делая их уязвимыми для дальнейших ледяных атак.</a><br/>";
-		 	textskill19.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill19+"</a><br>";
-			textskill19.innerHTML +="<a style='color:#1F90FF'>100% шанс обездвижить цель на " + shatter_storm_a[skill19] + " сек.</a><br \/>";
-			textskill19.innerHTML +="<a style='color:#1F90FF'>"+ shatter_storm_b[skill19] + "% шанс заморозить цель на 10 сек.</a><br \/>";
-			textskill19.innerHTML +="<a style='color:#1F90FF'>-" + shatter_storm_b[skill19] + "% к Лед. броне в теч. " + shatter_storm_a[skill19] + " сек.</a><br \/>";
-             * 
-            rage_retaliation_text
-             * textskill20.innerHTML = "<img src='/pic/skills/skillicon_rageretaliate.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Яростное возмездие (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill20+"/15<br/><br/>";
-			textskill20.innerHTML +="<br/>Когда враг наносит вам урон в ближнем бою, ваша ярость принимает материальное воплощение и наносит ответный удар. Урон равен 120% от урона вашего оружия в секунду. В секунду поражается не более одной цели.</a><br/>";
-		 	textskill20.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill20+"</a><br>";
-		  if (skill20 <= 10)
-			{textskill20.innerHTML +="<a style='color:#1F90FF'>Минимальное время между атаками: " + retaliation_a[skill20] + " сек.</a><br \/>";}
-		 if (skill20 == 11)
-			{textskill20.innerHTML +="<a style='color:#1F90FF'>Задержки между атаками нет.</a><br \/>";}
-		  if (skill20 >= 12)
-			{textskill20.innerHTML +="<a style='color:#1F90FF'>Урон: " + retaliation_b[skill20] + "% от урона вашего оружия в сек. Задержки между атаками нет.</a><br \/>";}
+            blood_hunger_text = "Нанося противнику критические повреждения оружием ближнего боя, вы" + Environment.NewLine +
+                "исцеляете себя с помощью жизненной энергии врага.                            " + Environment.NewLine + Environment.NewLine +
+                "Каждый критический удар повышает ваш уровень здоровья на " + blood_hunger_a[blood_hunger_lvl] + "% от макс." + Environment.NewLine + " ";
 
-            shadow_burst_text
-             * textskill21.innerHTML = "<img src='/pic/skills/skillicon_shadowleap.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Стремительная тень</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill21+"/15<br/><br/>";
-			textskill21.innerHTML +="<br/>Вы превращаетесь в волка-призрака и пролетаете сквозь врагов, нанося им урон и одновременно исцеляя себя. Исцеление происходит только при столкновении с двумя первыми целями.</a><br/>";
-		 	textskill21.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill21+"</a><br>";
-		 	textskill21.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+shadow_burst_mana[skill21-1]+"</a><br>";
-		 	textskill21.innerHTML +="<a style='color:#1F90FF'>Восстанавливает " + shadow_burst_c[skill21] + "% здоровья за " + shadow_burst_d[skill21] + " пораженные цели</a><br \/>";
-			textskill21.innerHTML +="<a style='color:#1F90FF'>Наносит " + shadow_burst_a[skill21] + "% от урона текущего оружия в сек. электричеством</a><br \/>";
-			textskill21.innerHTML +="<a style='color:#1F90FF'>"+shadow_burst_b[skill21] + "% шанс разбить щит врага</a><br \/>";
-             * textskill21.innerHTML +=texttemp+"Исцеление происходит при столкновении с 3 целями. Шанс уничтожить щит увеличен до 50%.<br></a>";
-		 	textskill21.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill21.innerHTML +=texttemp+"Исцеление происходит при столкновении с 4 целями. Шанс уничтожить щит увеличен до 75%.<br></a>";
-		 	textskill21.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill21.innerHTML +=texttemp+"Исцеление происходит при столкновении с 5 целями. Шанс уничтожить щит увеличен до 100%.<br/></a>";
-             * 
-            wolf_shade_text
-             *  var wolf_shade_mindam = Math.ceil(wolf_shade_d[skill22] * damage_minion_bylevel[level] / 100);
-		var wolf_shade_maxdam = Math.ceil(wolf_shade_e[skill22] * damage_minion_bylevel[level] / 100);
-		    textskill22.innerHTML = "<img src='/pic/skills/skillicon_wolfshade.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Волк-призрак</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill22+"/15<br/><br/>";
-			textskill22.innerHTML +="<br/>Призванный волк-призрак впивается ледяными клыками во врагов и передает их жизненную энергию вам. Его можно призвать раз в минуту.</a><br/>";
-		 	textskill22.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill22+"</a><br>";
-		 	textskill22.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+wolf_shade_mana[skill22-1]+"</a><br>";
-		 	textskill22.innerHTML +="<a style='color:#FF00FF'>Время между активациями: 60 сек.</a><br>";
-		 	textskill22.innerHTML +="<a style='color:#1F90FF'>+" + wolf_shade_a[skill22] + "% к люб. урону</a></a><br \/>";
-			textskill22.innerHTML +="<a style='color:#1F90FF'>+"+wolf_shade_b[skill22] + "% здоровья хозяину при каждом ударе</a><br \/>";
-			textskill22.innerHTML +="<a style='color:#1F90FF'>Время вызова: "+wolf_shade_c[skill22] + " сек.</a><br \/>";
-			textskill22.innerHTML +="<a style='color:#1F90FF'>Помощники наносят " + wolf_shade_mindam + "-" + wolf_shade_maxdam + " Физич. урона*</a><br \/>";
-             * textskill22.innerHTML +=texttemp+"Продолжительность вызова увеличена до 30 сек.<br></a>";
-		 	textskill22.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill22.innerHTML +=texttemp+"Продолжительность вызова увеличена до 45 сек.<br></a>";
-		 	textskill22.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill22.innerHTML +=texttemp+"Продолжительность вызова увеличена до 60 сек.<br/></a>";
-		 	textskill22.innerHTML +="<br/><a style='color:#1F90FF; font-size: 10px;'>* улучшается вместе с уровнем игрока</a><br>";
-             * 
-            shadowbind_text
-             * textskill23.innerHTML = "<img src='/pic/skills/skillicon_chargemastery.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Узы тьмы</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill23+"/15<br/><br/>";
-			textskill23.innerHTML +="<br/>Вы связываете узами тьмы врагов, которые находятся в радиусе 5 м от вас.<br>При последующих атаках в ближнем бою все эти враги получают часть урона, который вы наносите одной цели.</a><br/>";
-		 	textskill23.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill23+"</a><br>";
-		 	textskill23.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+shadowbind_mana[skill23-1]+"</a><br>";
-		    textskill23.innerHTML +="<a style='color:#FF00FF'>Время между активациями: 5 сек.</a><br>";
-		    textskill23.innerHTML +="<a style='color:#1F90FF'>Цели получают " + shadowbind_a[skill23] + "% урона в течение " + shadowbind_b[skill23] + " сек.</a><br \/>";
-             * textskill23.innerHTML +=texttemp+"Радиус зоны действия увеличен до 7 м<br></a>";
-		 	textskill23.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill23.innerHTML +=texttemp+"Радиус зоны действия увеличен до 9 м<br></a>";
-		 	textskill23.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill23.innerHTML +=texttemp+"Радиус зоны действия увеличен до 11 м<br/></a>";
-			textskill23.innerHTML +="<br/><a style='color:#ffff00'>Необходимо оружие ближнего боя.</a><br>";
-             * 
-            savage_rush_text
-             * var savage_rush_damage = Math.ceil(savage_rush_d[skill24] * damage_monster[level] / 100) * 5;
-		    textskill24.innerHTML = "<img src='/pic/skills/skillicon_werewolfrun.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Дикий натиск</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill24+"/15<br/><br/>";
-			textskill24.innerHTML +="<br/>Вами овладевает дух волка-призрака! Пока действует навык, вы скачете от врага к врагу и наносите им ужасные раны.</a><br/>";
-		 	textskill24.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill24+"</a><br>";
-		 	textskill24.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+savage_rush_mana[skill24-1]+" в сек.</a><br>";
-		 	//textskill24.innerHTML +="<a style='color:#FF00FF'>Время между активациями: 1 сек.</a><br>";
-		 	textskill24.innerHTML +="<a style='color:#1F90FF'>Наносит " + savage_rush_a[skill24] + "% урона от оружия</a><br \/>";
-			textskill24.innerHTML +="<a style='color:#1F90FF'>+20% к скорости движения</a><br \/>";
-			textskill24.innerHTML +="<a style='color:#1F90FF'>-" + savage_rush_b[skill24] + "% от люб. брони в теч. " + savage_rush_c[skill24] + " сек.</a><br \/>";
-			textskill24.innerHTML +="<a style='color:#1F90FF'>"+savage_rush_damage + " Физич. урона в теч. 5 сек.*</a><br \/>";
-             * textskill24.innerHTML +=texttemp+"-20% к броне врагов на 6 сек.<br></a>";
-		 	textskill24.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill24.innerHTML +=texttemp+"-30% к броне врагов на 8 сек.<br></a>";
-		 	textskill24.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill24.innerHTML +=texttemp+"-40% к броне врагов на 10 сек.<br/></a>";
-		 	textskill24.innerHTML +="<br/><a style='color:#1F90FF; font-size: 10px;'>* улучшается вместе с уровнем игрока</a><br>";
-             * 
-            chain_snare_text
-             * textskill25.innerHTML = "<img src='/pic/skills/skillicon_chainsnare.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Цепь-ловушка</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill25+"/15<br/><br/>";
-			textskill25.innerHTML +="<br/>Ловит всех врагов в радиусе 6 м и быстро подтягивает их к вам.</a><br/>";
-		 	textskill25.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill25+"</a><br>";
-		 	textskill25.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+chain_snare_mana[skill25-1]+"</a><br>";
-		    textskill25.innerHTML +="<a style='color:#1F90FF'>Наносит " + chain_snare_a[skill25] + "% от урона текущего оружия в сек.</a><br \/>";
-			textskill25.innerHTML +="<a style='color:#1F90FF'>Притягивает цель</a><br \/>";
-			textskill25.innerHTML +="<a style='color:#1F90FF'>75% шанс оглушить цель на " + chain_snare_b[skill25] + " сек.</a><br \/>";
-		if (skill25 >= 15) {
-			textskill25.innerHTML +="<a style='color:#1F90FF'>"+ chain_snare_c[skill25] + "% шанс разбить щит врага</a><br \/>";            }
-             * textskill25.innerHTML +=texttemp+"Время оглушения увеличено до 2 сек.<br></a>";
-		 	textskill25.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill25.innerHTML +=texttemp+"Радиус действия увеличен до 9 м.<br></a>";
-		 	textskill25.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill25.innerHTML +=texttemp+"Разбивает щиты.<br/></a>";
-             * 
-            battle_standard_text
-             * textskill26.innerHTML = "<img src='/pic/skills/skillicon_battlestandard.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Боевое знамя</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill26+"/15<br/><br/>";
-			textskill26.innerHTML +="<br/>Древнее знамя вашего племени повышает боевой дух и ваших союзников. Уклонение, сопротивление отбрасыванию и скорость роста заряда увеличиваются. Радиус действия 9 м.</a><br/>";
-		 	textskill26.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill26+"</a><br>";
-		 	textskill26.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+battle_standard_mana[skill26-1]+"</a><br>";
-		 	textskill26.innerHTML +="<a style='color:#FF00FF'>Время между активациями: 15 сек.</a><br>";
-		    textskill26.innerHTML +="<a style='color:#1F90FF'>Время вызова: "+ battle_standard_a[skill26] + " сек.</a><br \/>";
-			textskill26.innerHTML +="<a style='color:#1F90FF'>+" + battle_standard_b[skill26] + "% к шансу уклонения в теч. 4 сек.</a><br \/>";
-			textskill26.innerHTML +="<a style='color:#1F90FF'>Сопротивление отбрасыванию: "+ battle_standard_c[skill26] + "% в теч. 4 сек.</a><br \/>";
-			textskill26.innerHTML +="<a style='color:#1F90FF'>+" + battle_standard_b[skill26] + "% к скорости увеличения Заряда в теч. 4 сек.</a><br \/>";
-		if (skill26 >= 5) {
-			textskill26.innerHTML +="<a style='color:#1F90FF'>Восполняется " + battle_standard_d[skill26] + " ед. маны в теч. 4 сек.</a><br \/>";
-				}
-             * textskill26.innerHTML +=texttemp+"Скорость повышения уровня маны увеличивается<br></a>";
-		 	textskill26.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill26.innerHTML +=texttemp+"Радиус действия увеличен до 15 м<br></a>";
-		 	textskill26.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill26.innerHTML +=texttemp+"Время действия удваивается<br/></a>";
-             * 
-            wolfpack_text
-             * var wolfpack_mindam = Math.ceil(wolfpack_b[skill27] * damage_monster[level] / 100);
-		var wolfpack_maxdam = Math.ceil(wolfpack_c[skill27] * damage_monster[level] / 100);
-        	textskill27.innerHTML = "<img src='/pic/skills/skillicon_wolfpack.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Волчья стая</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill27+"/15<br/><br/>";
-			textskill27.innerHTML +="<br/>Окружающих вас врагов атакует стая из 5 волков-призраков.</a><br/>";
-		 	textskill27.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill27+"</a><br>";
-		 	textskill27.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+wolfpack_mana[skill27-1]+"</a><br>";
-			if (skill27 >= 2) {
-			textskill27.innerHTML +="<a style='color:#1F90FF'>Наносит " + wolfpack_a[skill27] + "% от урона текущего оружия в сек.</a><br \/>";
-			 }
-			textskill27.innerHTML +="<a style='color:#1F90FF'>+" + wolfpack_mindam + "-" + wolfpack_maxdam + " к Физич. урону*</a><br \/>";
-             * textskill27.innerHTML +=texttemp+"Волки могут наносить урон нескольким целям<br></a>";
-		 	textskill27.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill27.innerHTML +=texttemp+"Появляется еще 2 волка<br></a>";
-		 	textskill27.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill27.innerHTML +=texttemp+"Расход маны снижен<br/></a>";
-		 	textskill27.innerHTML +="<br/><a style='color:#1F90FF; font-size: 10px;'>* улучшается вместе с уровнем игрока</a><br>";
-             * 
+            executioner_text = "Ярость помогает наносить урон оружием в обеих руках" + Environment.NewLine +
+                "одновременно. В случае успешной атаки с двух рук скорость   " + Environment.NewLine +
+                "повышения уровня Заряда ненадолго увеличивается." + Environment.NewLine + Environment.NewLine +
+                "+ " + executioner_a[executioner_lvl] + "% к шансу казнить цель" + Environment.NewLine +
+                "+ " + executioner_b[executioner_lvl] + "% к скорости увеличения Заряда в теч. 2 сек.";
+              
+            rampage_text="При уничтожении врага оружием ближнего боя у вас"+Environment.NewLine+
+                "может начаться адреналиновое буйство." + Environment.NewLine +Environment.NewLine+
+                "25% к скорости атаки на 5 сек." + Environment.NewLine +
+                "25% к скорости применения заклинаний на 5 сек." + Environment.NewLine +
+                "12% к скорости передвижения на 5 сек." + Environment.NewLine +
+                "Шанс на буйство после уничтожения врага:"+rampage_a[rampage_lvl] + "%";
+
+            frost_breath_text = "Призвав на помощь холодные северные ветра, вы замораживаете" + Environment.NewLine +
+                "врага ледяным дыханием - противник обездвиживается и становится" + Environment.NewLine +
+                "уязвимым. Зона действия - сектор с углом 90 градусов и радиусом 5 м." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + frost_breath_mana[frost_breath_lvl] + Environment.NewLine +
+                "Наносит " + frost_breath_a[frost_breath_lvl] + "% от урона текущего оружия в сек. льдом" + Environment.NewLine +
+                frost_breath_b[frost_breath_lvl] + "% шанс заморозить цель на 4 сек." + Environment.NewLine +
+                "80% шанс обездвижить цель на 4 сек." + Environment.NewLine +
+                "+ " + frost_breath_b[frost_breath_lvl] + "% к получаемому люб. урону в теч. 4 сек. " + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Радиус сектора увеличен до 6 м, а угол - до 120 градусов." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Радиус сектора увеличен до 7 м, а угол - до 150 градусов" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Радиус сектора увеличен до 8 м, а угол - до 150 градусов. Позволяет" + Environment.NewLine +
+                "похищать здоровье и ману.";
+
+            stormclaw_text = "Вы насыщаете оружие электрической энергией. Когда оно" + Environment.NewLine +
+                "наносит удар, из него вырывается молния, которая поражает       " + Environment.NewLine +
+                "до 2 находящихся рядом врагов." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + stormclaw_mana[stormclaw_lvl] + Environment.NewLine +
+                "Время между активациями: 20 сек." + Environment.NewLine +
+                "Наносит " + stormclaw_a[stormclaw_lvl] + "% урона от оружия электричеством" + Environment.NewLine +
+                "50% шанс эффекта \"Молния\" вокруг цели " + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Молния поражает до 3 врагов" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Молния поражает до 4 врагов" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Молния поражает до 5 врагов" + Environment.NewLine + Environment.NewLine +
+                "Срабатывает при базовых атаках оружием ближнего боя";
+
+            storm_hatchet_text = "Вы высекаете из оружия дикую северную молнию, создавая электрический" + Environment.NewLine +
+                "метательный топор с радиусом действия 15 м.                                                           " + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + storm_hatchet_mana[storm_hatchet_lvl] + Environment.NewLine +
+                "Каждое попадание увеличивает уровень индикатора Зарядов на " + storm_hatchet_d[storm_hatchet_lvl] + "%" + Environment.NewLine +
+                "Наносит " + storm_hatchet_a[storm_hatchet_lvl] + "% от урона текущего оружия в сек. электричеством" + Environment.NewLine +
+                "-100% от скорости движения в теч. " + storm_hatchet_b[storm_hatchet_lvl] + " сек. " + Environment.NewLine;
+		    if (storm_hatchet_lvl == 15)
+		 	{
+                storm_hatchet_text += storm_hatchet_c[storm_hatchet_lvl] + "% шанс разбить щит врага" + Environment.NewLine;
+			}
+            storm_hatchet_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Дистанция полета увеличена до 20 метров; топорик летит быстрее" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Вы бросаете 3 топорика одновременно" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Топорики разбивают щиты";
+                 
+            int northern_rage_mindam = (int)Math.Ceiling(northern_rage_a[northern_rage_lvl] * damage_monster[level] / 100);
+            int northern_rage_maxdam = (int)Math.Ceiling(northern_rage_b[northern_rage_lvl] * damage_monster[level] / 100);
+            northern_rage_text = "Вы кидаете ледяные осколки, которые отбрасывают врагов" + Environment.NewLine +
+                "назад и замораживают.                                                                        " + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + northern_rage_mana[northern_rage_lvl] + Environment.NewLine +
+                "Наносит 20% от урона текущего оружия в сек." + Environment.NewLine +
+                "+" + northern_rage_mindam + "-" + northern_rage_maxdam + " к лед. урону*" + Environment.NewLine +
+                "80% шанс заморозить цель на " + northern_rage_c[northern_rage_lvl] + " сек." + Environment.NewLine +
+                northern_rage_d[northern_rage_lvl] + "% шанс разбить щит врага " + Environment.NewLine +
+                "+25 к отбрасыванию" + Environment.NewLine;
+            if (northern_rage_lvl > 5)
+            {
+                northern_rage_text += "От заклинателя расходятся 4 ледяные волны, пронзающие врагов. " + Environment.NewLine;
+            }
+            northern_rage_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Число волн увеличено до 4; распространяются дальше." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Число волн увеличено до 5; распространяются дальше." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Число волн увеличено до 6; распространяются дальше." + Environment.NewLine + Environment.NewLine +
+                "* улучшается вместе с уровнем игрока";
+
+            ice_shield_text = "Вы призываете ледяную стену, которая отражает снаряды обратно во врагов." + Environment.NewLine +
+                "Если в стену попадает снаряд, появляется шанс увеличить уровень индикатора      " + Environment.NewLine +
+                "Зарядов на 10%. Время действия стены - 10 сек." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + ice_shield_mana[ice_shield_lvl] + Environment.NewLine +
+                "Время между активациями: 8 сек." + Environment.NewLine +
+                ice_shield_a[ice_shield_lvl] + "%-шанс, что при попадании в стену Заряд увеличится." + Environment.NewLine +
+                ice_shield_b[ice_shield_lvl] + "% шанс отразить снаряд с силой " + ice_shield_c[ice_shield_lvl] + "% от урона оружия в сек. 10 сек. " + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Стена отражает 75% урона, который наносят снаряды." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Стена отражает 100% урона, который наносят снаряды." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Стена отражает 125% урона, который наносят снаряды.";
+            
+            int permafrost_damage = (int)Math.Floor((int)Math.Ceiling(permafrost_a[permafrost_lvl] * damage_monster[level] / 100) * permafrost_b[permafrost_lvl]);
+            permafrost_text = "Вокруг вас распространяется суровый северный мороз," + Environment.NewLine +
+                "который медленно высасывает жизненную энергию из      " + Environment.NewLine +
+                "врагов, находящихся в радиусе 16 метров." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + permafrost_mana[permafrost_lvl] + Environment.NewLine +
+                "Время между активациями: " + permafrost_b[permafrost_lvl] + " сек. " + Environment.NewLine +
+                "Лед. урон: " + permafrost_damage + " в теч. " + permafrost_b[permafrost_lvl] + " сек.* " + Environment.NewLine;
+		    if (permafrost_lvl >= 5) 
+            {
+                permafrost_text += permafrost_d[permafrost_lvl] + "% шанс заморозить цель на 6 сек. " + Environment.NewLine;
+            }
+		    if (permafrost_lvl >= 10) 
+            {
+                permafrost_text = permafrost_c[permafrost_lvl] + "% шанс обездвижить цель на 6 сек. " + Environment.NewLine;
+            }
+            permafrost_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Доп. 25% шанс заморозить врагов на 6 сек." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Доп. 25% шанс полностью заморозить врагов на 6 сек." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Шанс обездвижить врага увеличен до 50%" + Environment.NewLine + Environment.NewLine +
+                "* улучшается вместе с уровнем игрока";
+
+            int glacial_shatter_mindam_fire = (int)Math.Ceiling(glacial_shatter_b[glacial_shatter_lvl] * damage_monster[level] / 100) * 3;
+		    int glacial_shatter_maxdam_fire = (int)Math.Ceiling(glacial_shatter_c[glacial_shatter_lvl] * damage_monster[level] / 100) * 3;
+		    int glacial_shatter_mindam_ice = (int)Math.Ceiling(glacial_shatter_d[glacial_shatter_lvl] * damage_monster[level] / 100);
+		    int glacial_shatter_maxdam_ice = (int)Math.Ceiling(glacial_shatter_e[glacial_shatter_lvl] * damage_monster[level] / 100);
+            glacial_shatter_text = "В выбранной точке земля раскалывается, и появляется" + Environment.NewLine +
+                "5 гейзеров, которые ослепляют и наносят урон врагам        " + Environment.NewLine +
+                "паром и горячей водой." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + glacial_shatter_mana[glacial_shatter_lvl] + Environment.NewLine +
+                "33% шанс ослепить цель на " + glacial_shatter_a[glacial_shatter_lvl] + "% в теч. 5 сек. " + Environment.NewLine +
+                "+" + glacial_shatter_mindam_ice + "-" + glacial_shatter_maxdam_ice + " к лед. урону* " + Environment.NewLine +
+                "+7 к отбрасыванию " + Environment.NewLine +
+                "+35% к шансу прервать действие врага " + Environment.NewLine;
+		    if (glacial_shatter_lvl >= 10) 
+            {
+                glacial_shatter_text += "Огн. урон: " + glacial_shatter_mindam_fire + "-" + glacial_shatter_maxdam_fire + " в теч. 3 сек.* " + Environment.NewLine;
+            }
+            glacial_shatter_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Создается 7 гейзеров" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Заклинание также поджигает врагов" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Создается 9 гейзеров" + Environment.NewLine + Environment.NewLine +
+                "* улучшается вместе с уровнем игрока";
+
+            cold_steel_mastery_text = "Прочнее стали только холодная сталь." + Environment.NewLine + Environment.NewLine +
+                "+" + cold_steel_mastery_a[cold_steel_mastery_lvl] + "% к Физ. урону                                          " + Environment.NewLine +
+                "+" + cold_steel_mastery_b[cold_steel_mastery_lvl] + "% к Лед. урону";
+
+            shatter_storm_text = "Уничтожив замороженного врага, вы накрываете" + Environment.NewLine +
+                "находящихся в радиусе 4 м противников взрывной    " + Environment.NewLine +
+                "ледяной волной, делая их уязвимыми для" + Environment.NewLine +
+                "дальнейших ледяных атак." + Environment.NewLine + Environment.NewLine +
+                "100% шанс обездвижить цель на " + shatter_storm_a[shatter_storm_lvl] + " сек. " + Environment.NewLine +
+                shatter_storm_b[shatter_storm_lvl] + "% шанс заморозить цель на 10 сек. " + Environment.NewLine +
+                "-" + shatter_storm_b[shatter_storm_lvl] + "% к Лед. броне в теч. " + shatter_storm_a[shatter_storm_lvl] + " сек.";
+
+            rage_retaliation_text = "Когда враг наносит вам урон в ближнем бою, ваша" + Environment.NewLine +
+                "ярость принимает материальное воплощение и наносит      " + Environment.NewLine +
+                "ответный удар. Урон равен 120% от урона вашего" + Environment.NewLine +
+                "оружия в секунду. В секунду поражается не более одной" + Environment.NewLine +
+                "цели." + Environment.NewLine + Environment.NewLine;
+		    if (rage_retaliation_lvl <= 10)
+			{
+                rage_retaliation_text += "Минимальное время между атаками: " + rage_retaliation_a[rage_retaliation_lvl] + " сек." + Environment.NewLine;
+            }
+		    if (rage_retaliation_lvl == 11)
+			{
+                rage_retaliation_text += "Задержки между атаками нет." + Environment.NewLine;
+            }
+            if (rage_retaliation_lvl >= 12)
+            {
+                rage_retaliation_text += "Урон: " + rage_retaliation_b[rage_retaliation_lvl] + "% от урона вашего оружия в сек. Задержки между атаками нет." + Environment.NewLine;
+            }
+
+            shadow_burst_text = "Вы превращаетесь в волка-призрака и пролетаете сквозь врагов," + Environment.NewLine +
+                "нанося им урон и одновременно исцеляя себя. Исцеление происходит        " + Environment.NewLine +
+                "только при столкновении с двумя первыми целями." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + shadow_burst_mana[shadow_burst_lvl] + Environment.NewLine +
+                "Восстанавливает " + shadow_burst_c[shadow_burst_lvl] + "% здоровья за " + shadow_burst_d[shadow_burst_lvl] + " пораженные цели" + Environment.NewLine +
+                "Наносит " + shadow_burst_a[shadow_burst_lvl] + "% от урона текущего оружия в сек. электричеством " + Environment.NewLine + Environment.NewLine +
+                shadow_burst_b[shadow_burst_lvl] + "% шанс разбить щит врага " + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Исцеление происходит при столкновении с 3 целями. Шанс уничтожить" + Environment.NewLine +
+                "щит увеличен до 50%." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Исцеление происходит при столкновении с 4 целями. Шанс уничтожить" + Environment.NewLine +
+                "щит увеличен до 75%." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Исцеление происходит при столкновении с 5 целями. Шанс уничтожить" + Environment.NewLine +
+                "щит увеличен до 100%.";        
+            
+            int wolf_shade_mindam = (int)Math.Ceiling(wolf_shade_d[wolf_shade_lvl] * damage_minion_bylevel[level] / 100);
+            int wolf_shade_maxdam = (int)Math.Ceiling(wolf_shade_e[wolf_shade_lvl] * damage_minion_bylevel[level] / 100);
+            wolf_shade_text = "Призванный волк-призрак впивается ледяными клыками" + Environment.NewLine +
+                "во врагов и передает их жизненную энергию вам. Его можно     " + Environment.NewLine +
+                "призвать раз в минуту." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + wolf_shade_mana[wolf_shade_lvl] + Environment.NewLine +
+                "Время между активациями: 60 сек." + Environment.NewLine +
+                "+" + wolf_shade_a[wolf_shade_lvl] + "% к люб. урону  " + Environment.NewLine +
+                "+" + wolf_shade_b[wolf_shade_lvl] + "% здоровья хозяину при каждом ударе " + Environment.NewLine +
+                "Время вызова: " + wolf_shade_c[wolf_shade_lvl] + " сек. " + Environment.NewLine +
+                "Помощники наносят " + wolf_shade_mindam + "-" + wolf_shade_maxdam + " Физич. урона* " + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Продолжительность вызова увеличена до 30 сек." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Продолжительность вызова увеличена до 45 сек." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Продолжительность вызова увеличена до 60 сек." + Environment.NewLine + Environment.NewLine +
+                "* улучшается вместе с уровнем игрока";
+
+            shadowbind_text = "Вы связываете узами тьмы врагов, которые" + Environment.NewLine +
+                "находятся в радиусе 5 м от вас. При последующих     " + Environment.NewLine +
+                "атаках в ближнем бою все эти враги получают" + Environment.NewLine +
+                "часть урона, который вы наносите одной цели." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + shadowbind_mana[shadowbind_lvl] + Environment.NewLine +
+                "Время между активациями: 5 сек." + Environment.NewLine +
+                "Цели получают " + shadowbind_a[shadowbind_lvl] + "% урона в течение " + shadowbind_b[shadowbind_lvl] + " сек." + Environment.NewLine +
+                "Помощники наносят " + wolf_shade_mindam + "-" + wolf_shade_maxdam + " Физич. урона* " + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Радиус зоны действия увеличен до 7 м" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Радиус зоны действия увеличен до 9 м" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Радиус зоны действия увеличен до 11 м" + Environment.NewLine + Environment.NewLine +
+                "Необходимо оружие ближнего боя";
+            
+            int savage_rush_damage = (int)Math.Ceiling(savage_rush_d[savage_rush_lvl] * damage_monster[level] / 100) * 5;
+            savage_rush_text = "Вами овладевает дух волка-призрака! Пока" + Environment.NewLine +
+                "действует навык, вы скачете от врага к врагу и     " + Environment.NewLine +
+                "наносите им ужасные раны." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + savage_rush_mana[savage_rush_lvl] + " в сек." + Environment.NewLine +
+                "Наносит " + savage_rush_a[savage_rush_lvl] + "% урона от оружия " + Environment.NewLine +
+                "+20% к скорости движения " + Environment.NewLine +
+                "-" + savage_rush_b[savage_rush_lvl] + "% от люб. брони в теч. " + savage_rush_c[savage_rush_lvl] + " сек. " + Environment.NewLine +
+                savage_rush_damage + " Физич. урона в теч. 5 сек.* " + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "-20% к броне врагов на 6 сек." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "-30% к броне врагов на 8 сек." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "-40% к броне врагов на 10 сек." + Environment.NewLine + Environment.NewLine +
+                "* улучшается вместе с уровнем игрока";
+
+            chain_snare_text = "Ловит всех врагов в радиусе 6 м и быстро подтягивает их к вам." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + chain_snare_mana[chain_snare_lvl] + Environment.NewLine +
+                "Наносит " + chain_snare_a[chain_snare_lvl] + "% от урона текущего оружия в сек. " + Environment.NewLine +
+                "Притягивает цель " + Environment.NewLine +
+                "75% шанс оглушить цель на " + chain_snare_b[chain_snare_lvl] + " сек. " + Environment.NewLine;
+		    if (chain_snare_lvl >= 15) 
+            {
+                chain_snare_text += chain_snare_c[chain_snare_lvl] + "% шанс разбить щит врага " + Environment.NewLine;
+            }
+            chain_snare_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Время оглушения увеличено до 2 сек." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Радиус действия увеличен до 9 м." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Разбивает щиты.";
+
+            battle_standard_text = "Древнее знамя вашего племени повышает боевой дух и ваших"+Environment.NewLine+
+                "союзников. Уклонение, сопротивление отбрасыванию и скорость    "+Environment.NewLine+
+                "роста заряда увеличиваются. Радиус действия 9 м." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + battle_standard_mana[battle_standard_lvl] + Environment.NewLine +
+                "Время между активациями: 15 сек." + Environment.NewLine +
+                "Время вызова: " + battle_standard_a[battle_standard_lvl] + " сек. " + Environment.NewLine +
+                "+" + battle_standard_b[battle_standard_lvl] + "% к шансу уклонения в теч. 4 сек. " + Environment.NewLine +
+                "Сопротивление отбрасыванию: " + battle_standard_c[battle_standard_lvl] + "% в теч. 4 сек. " + Environment.NewLine +
+                "+" + battle_standard_b[battle_standard_lvl] + "% к скорости увеличения Заряда в теч. 4 сек. " + Environment.NewLine;
+		    if (battle_standard_lvl >= 5) 
+            {
+                battle_standard_text += "Восполняется " + battle_standard_d[battle_standard_lvl] + " ед. маны в теч. 4 сек. " + Environment.NewLine;
+            }
+            battle_standard_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Скорость повышения уровня маны увеличивается" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Радиус действия увеличен до 15 м" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Время действия удваивается";
+
+            int wolfpack_mindam = (int)Math.Ceiling(wolfpack_b[wolfpack_lvl] * damage_monster[level] / 100);
+		    int wolfpack_maxdam = (int)Math.Ceiling(wolfpack_c[wolfpack_lvl] * damage_monster[level] / 100);
+            wolfpack_text = "Окружающих вас врагов атакует стая из 5 волков-призраков." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + wolfpack_mana[wolfpack_lvl] + Environment.NewLine;
+			if (wolfpack_lvl >= 2) 
+            {
+                wolfpack_text += "Наносит " + wolfpack_a[wolfpack_lvl] + "% от урона текущего оружия в сек. " + Environment.NewLine;
+            }
+            wolfpack_text += "+" + wolfpack_mindam + "-" + wolfpack_maxdam + " к Физич. урону* " + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Волки могут наносить урон нескольким целям" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Появляется еще 2 волка" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Расход маны снижен" + Environment.NewLine + Environment.NewLine +
+                "* улучшается вместе с уровнем игрока";             /* 
             frenzy_mastery_tex
-             * var red_wolf_mindam = Math.ceil(red_wolf_a[skill30] * damage_monster[level] / 100);
-		var red_wolf_maxdam = Math.ceil(red_wolf_b[skill30] * damage_monster[level] / 100);
-            textskill30.innerHTML = "<img src='/pic/skills/skillicon_redt
-             * textskill28.innerHTML = "<img src='/pic/skills/skillicon_attackmagic.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Мастер бешенства (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill28+"/15<br/><br/>";
-			textskill28.innerHTML +="<br/>Вам все сложнее сдерживать свою звериную натуру. Продолжительность приступов бешенства (связанных с заполнением индикатора Заряда) увеличивается.</a><br/>";
-		 	textskill28.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill28+"</a><br>";
-		  	textskill28.innerHTML +="<a style='color:#1F90FF'>Приступ бешенства длится до " + frenzy_mastery_a[skill28] + " сек.</a><br \/>";
+             * int red_wolf_mindam = (int)Math.Ceiling(red_wolf_a[raze_lvl0] * damage_monster[level] / 100);
+		int red_wolf_maxdam = (int)Math.Ceiling(red_wolf_b[raze_lvl0] * damage_monster[level] / 100);
+            textraze_lvl0.innerHTML = "<img src='/pic/skills/skillicon_redt
+             * texthowl_lvl8.innerHTML = "<img src='/pic/skills/skillicon_attackmagic.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Мастер бешенства (Пассивный навык)" + Environment.NewLine +<a style='color:#ffffff; font-size: 13px;'> Ур. "+howl_lvl8+"/15  ";
+			texthowl_lvl8.innerHTML +=" Вам все сложнее сдерживать свою звериную натуру. Продолжительность приступов бешенства (связанных с заполнением индикатора Заряда) увеличивается." + Environment.NewLine +
+		 	texthowl_lvl8.innerHTML +="<a style='color:#C3C300'>Текущий ур.: "+howl_lvl8+ Environment.NewLine +
+		  	texthowl_lvl8.innerHTML +="<a style='color:#1F90FF'>Приступ бешенства длится до " + frenzy_mastery_a[howl_lvl8] + " сек. " + Environment.NewLine +
              * 
             shred_armor_text
-             * var shred_armor_armor_per_hit = Math.ceil(shred_armor_a[skill29] * armor_monster_bylevel[level] / 100);
-		 var shred_armor_armor = Math.ceil(shred_armor_b[skill29] * armor_player_bylevel_forset[level] / 100);
-		    textskill29.innerHTML = "<img src='/pic/skills/skillicon_fateaegis.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Броня в клочья (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill29+"/15<br/><br/>";
-			textskill29.innerHTML +="<br/>Вы яростно крушите вражескую броню, а отлетающие кусочки при этом прикрепляете к своей. С каждым ударом противник становится слабее, а ваш показатель брони растет.</a><br/>";
-		 	textskill29.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill29+"</a><br>";
-		  	textskill29.innerHTML +="<a style='color:#1F90FF'>-" + shred_armor_armor_per_hit + " от всех видов брони за каждый удар*</a><br \/>";
-			textskill29.innerHTML +="<a style='color:#1F90FF'>+" + shred_armor_armor + " к Физич. броне в теч. 3 сек.*</a><br \/>";
+             * int shred_armor_armor_per_hit = (int)Math.Ceiling(shred_armor_a[howl_lvl9] * armor_monster_bylevel[level] / 100);
+		 int shred_armor_armor = (int)Math.Ceiling(shred_armor_b[howl_lvl9] * armor_player_bylevel_forset[level] / 100);
+		    texthowl_lvl9.innerHTML = "<img src='/pic/skills/skillicon_fateaegis.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Броня в клочья (Пассивный навык)" + Environment.NewLine +<a style='color:#ffffff; font-size: 13px;'> Ур. "+howl_lvl9+"/15  ";
+			texthowl_lvl9.innerHTML +=" Вы яростно крушите вражескую броню, а отлетающие кусочки при этом прикрепляете к своей. С каждым ударом противник становится слабее, а ваш показатель брони растет." + Environment.NewLine +
+		 	texthowl_lvl9.innerHTML +="<a style='color:#C3C300'>Текущий ур.: "+howl_lvl9+ Environment.NewLine +
+		  	texthowl_lvl9.innerHTML +="<a style='color:#1F90FF'>-" + shred_armor_armor_per_hit + " от всех видов брони за каждый удар* " + Environment.NewLine +
+			texthowl_lvl9.innerHTML +="<a style='color:#1F90FF'>+" + shred_armor_armor + " к Физич. броне в теч. 3 сек.* " + Environment.NewLine +
              * 
-            red_wolf_textwolf.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Рыжий волк (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill30+"/15<br/><br/>";
-			textskill30.innerHTML +="<br/>Когда вы наносите противнику критические повреждения, на поле боя может появиться воплощение вашей ярости и порвать в клочья одного или двух врагов.</a><br/>";
-		 	textskill30.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill30+"</a><br>";
-		  	textskill30.innerHTML +="<a style='color:#1F90FF'>+" + red_wolf_mindam + "-" + red_wolf_maxdam + " к Физич. урону*</a><br \/>";
+            red_wolf_textwolf.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Рыжий волк (Пассивный навык)" + Environment.NewLine +<a style='color:#ffffff; font-size: 13px;'> Ур. "+raze_lvl0+"/15  ";
+			textraze_lvl0.innerHTML +=" Когда вы наносите противнику критические повреждения, на поле боя может появиться воплощение вашей ярости и порвать в клочья одного или двух врагов." + Environment.NewLine +
+		 	textraze_lvl0.innerHTML +="<a style='color:#C3C300'>Текущий ур.: "+raze_lvl0+ Environment.NewLine +
+		  	textraze_lvl0.innerHTML +="<a style='color:#1F90FF'>+" + red_wolf_mindam + "-" + red_wolf_maxdam + " к Физич. урону* " + Environment.NewLine +
             */
         }
     }

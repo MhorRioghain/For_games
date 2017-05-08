@@ -31,8 +31,10 @@ namespace Skill_Calculator
             e_levelbox.SelectedIndex = 0;
             Embermage_req_lvl();
             Outlander_req_lvl();
+            Berserker_req_lvl();
+            Engineer_req_lvl();
 
-            toolTip1.SetToolTip(TEST, outl.death_ritual_text);       
+            toolTip1.SetToolTip(TEST, ber.wolfpack_text);       
         }
 
         public void Embermage_calcpoints(object sender, EventArgs e)
@@ -156,7 +158,7 @@ namespace Skill_Calculator
             odm_lvl.Text = outl.dodge_mastery_reqlevel[outl.dodge_mastery_lvl];
             opb_lvl.Text = outl.poison_burst_reqlevel[outl.poison_burst_lvl];
             ostw_lvl.Text = outl.share_the_wealth_reqlevel[outl.share_the_wealth_lvl];
-            opb_lvl.Text = outl.blade_pact_reqlevel[outl.blade_pact_lvl];
+            obp_lvl.Text = outl.blade_pact_reqlevel[outl.blade_pact_lvl];
             oss_lvl.Text = outl.shadowshot_reqlevel[outl.shadowshot_lvl];
             obb_lvl.Text = outl.bane_breath_reqlevel[outl.bane_breath_lvl];
             orh_lvl.Text = outl.repulsion_hex_reqlevel[outl.repulsion_hex_lvl];
@@ -219,16 +221,76 @@ namespace Skill_Calculator
             b_statpoints.Text = Convert.ToString(ber.statpointsleft);
             ber.stats_bonuses();
             Berserker_tooltips();
-        } //complete
+        }
 
         public void Berserker_req_lvl()
         {
-
+            bev_lvl.Text = ber.eviscerate_reqlevel[ber.eviscerate_lvl];
+            bh_lvl.Text = ber.howl_reqlevel[ber.howl_lvl];
+            braze_lvl.Text = ber.raze_reqlevel[ber.raze_lvl];
+            bw_lvl.Text = ber.wolfstrike_reqlevel[ber.wolfstrike_lvl];
+            bbr_lvl.Text = ber.battle_rage_reqlevel[ber.battle_rage_lvl];
+            brup_lvl.Text = ber.rupture_reqlevel[ber.rupture_lvl];
+            brav_lvl.Text = ber.ravage_reqlevel[ber.ravage_lvl];
+            bbh_lvl.Text = ber.blood_hunger_reqlevel[ber.blood_hunger_lvl];
+            bex_lvl.Text = ber.executioner_reqlevel[ber.executioner_lvl];
+            bram_lvl.Text = ber.rampage_reqlevel[ber.rampage_lvl];
+            bfb_lvl.Text = ber.frost_breath_reqlevel[ber.frost_breath_lvl];
+            bst_lvl.Text = ber.stormclaw_reqlevel[ber.stormclaw_lvl];
+            bsh_lvl.Text = ber.storm_hatchet_reqlevel[ber.storm_hatchet_lvl];
+            bnr_lvl.Text = ber.northern_rage_reqlevel[ber.northern_rage_lvl];
+            bis_lvl.Text = ber.ice_shield_reqlevel[ber.ice_shield_lvl];
+            bpf_lvl.Text = ber.permafrost_reqlevel[ber.permafrost_lvl];
+            bgs_lvl.Text = ber.glacial_shatter_reqlevel[ber.glacial_shatter_lvl];
+            bcsm_lvl.Text = ber.cold_steel_mastery_reqlevel[ber.cold_steel_mastery_lvl];
+            bss_lvl.Text = ber.shatter_storm_reqlevel[ber.shatter_storm_lvl];
+            brr_lvl.Text = ber.rage_retaliation_reqlevel[ber.rage_retaliation_lvl];
+            bsb_lvl.Text = ber.shadow_burst_reqlevel[ber.shadow_burst_lvl];
+            bws_lvl.Text = ber.wolf_shade_reqlevel[ber.wolf_shade_lvl];
+            bshad_lvl.Text = ber.shadowbind_reqlevel[ber.shadowbind_lvl];
+            bsr_lvl.Text = ber.savage_rush_reqlevel[ber.savage_rush_lvl];
+            bcs_lvl.Text = ber.chain_snare_reqlevel[ber.chain_snare_lvl];
+            bbs_lvl.Text = ber.battle_standard_reqlevel[ber.battle_standard_lvl];
+            bwp_lvl.Text = ber.wolfpack_reqlevel[ber.wolfpack_lvl];
+            bfm_lvl.Text = ber.frenzy_mastery_reqlevel[ber.frenzy_mastery_lvl];
+            bsa_lvl.Text = ber.shred_armor_reqlevel[ber.shred_armor_lvl];
+            brw_lvl.Text = ber.red_wolf_reqlevel[ber.red_wolf_lvl];
         }
 
         public void Berserker_tooltips()
         {
+            ber.tooltips_text();
 
+            toolTip1.SetToolTip(bev_panel, ber.eviscerate_text);
+            toolTip1.SetToolTip(bh_panel, ber.howl_text);
+            toolTip1.SetToolTip(braze_panel, ber.raze_text);
+            toolTip1.SetToolTip(bw_panel, ber.wolfstrike_text);
+            toolTip1.SetToolTip(bbr_panel, ber.battle_rage_text);
+            toolTip1.SetToolTip(brup_panel, ber.rupture_text);
+            toolTip1.SetToolTip(brav_panel, ber.ravage_text);
+            toolTip1.SetToolTip(bbh_panel, ber.blood_hunger_text);
+            toolTip1.SetToolTip(bex_panel, ber.executioner_text);
+            toolTip1.SetToolTip(bram_panel, ber.rampage_text);
+            toolTip1.SetToolTip(bfb_panel, ber.frost_breath_text);
+            toolTip1.SetToolTip(bst_panel, ber.stormclaw_text);
+            toolTip1.SetToolTip(bsh_panel, ber.storm_hatchet_text);
+            toolTip1.SetToolTip(bnr_panel, ber.northern_rage_text);
+            toolTip1.SetToolTip(bis_panel, ber.ice_shield_text);
+            toolTip1.SetToolTip(bpf_panel, ber.permafrost_text);
+            toolTip1.SetToolTip(bgs_panel, ber.glacial_shatter_text);
+            toolTip1.SetToolTip(bcsm_panel, ber.cold_steel_mastery_text);
+            toolTip1.SetToolTip(bss_panel, ber.shatter_storm_text);
+            toolTip1.SetToolTip(brr_panel, ber.rage_retaliation_text);
+            toolTip1.SetToolTip(bsb_panel, ber.shadow_burst_text);
+            toolTip1.SetToolTip(bws_panel, ber.wolf_shade_text);
+            toolTip1.SetToolTip(bshad_panel, ber.shadowbind_text);
+            toolTip1.SetToolTip(bsr_panel, ber.savage_rush_text);
+            toolTip1.SetToolTip(bcs_panel, ber.chain_snare_text);
+            toolTip1.SetToolTip(bbs_panel, ber.battle_standard_text);
+            toolTip1.SetToolTip(bwp_panel, ber.wolfpack_text);
+            toolTip1.SetToolTip(bfm_panel, ber.frenzy_mastery_text);
+            toolTip1.SetToolTip(bsa_panel, ber.shred_armor_text);
+            toolTip1.SetToolTip(brw_panel, ber.red_wolf_text);
         }
 
         public void Engineer_calcpoints(object sender, EventArgs e)
@@ -241,16 +303,76 @@ namespace Skill_Calculator
             e_statpoints.Text = Convert.ToString(eng.statpointsleft);
             eng.stats_bonuses();
             Engineer__tooltips();
-        } //complete
+        }
 
         public void Engineer_req_lvl()
         {
-
+            efh_lvl.Text = eng.flame_hammer_reqlevel[eng.flame_hammer_lvl];
+            ess_lvl.Text = eng.seismic_slam_reqlevel[eng.seismic_slam_lvl];
+            eeh_lvl.Text = eng.ember_hammer_reqlevel[eng.ember_hammer_lvl];
+            eo_lvl.Text = eng.onslaught_reqlevel[eng.onslaught_lvl];
+            eer_lvl.Text = eng.ember_reach_reqlevel[eng.ember_reach_lvl];
+            esb_lvl.Text = eng.storm_burst_reqlevel[eng.storm_burst_lvl];
+            ee_lvl.Text = eng.emberquake_reqlevel[eng.emberquake_lvl];
+            ehl_lvl.Text = eng.heavy_lifting_reqlevel[eng.heavy_lifting_lvl];
+            es_lvl.Text = eng.supercharge_reqlevel[eng.supercharge_lvl];
+            ecdg_lvl.Text = eng.coup_de_grace_reqlevel[eng.coup_de_grace_lvl];
+            ehb_lvl.Text = eng.healing_bot_reqlevel[eng.healing_bot_lvl];
+            ebc_lvl.Text = eng.blast_cannon_reqlevel[eng.blast_cannon_lvl];
+            esm_lvl.Text = eng.spider_mines_reqlevel[eng.spider_mines_lvl];
+            egb_lvl.Text = eng.gun_bot_reqlevel[eng.gun_bot_lvl];
+            esg_lvl.Text = eng.shock_grenade_reqlevel[eng.shock_grenade_lvl];
+            ef_lvl.Text = eng.fusillade_reqlevel[eng.fusillade_lvl];
+            esbot_lvl.Text = eng.sledgebot_reqlevel[eng.sledgebot_lvl];
+            ebw_lvl.Text = eng.bulwark_reqlevel[eng.bulwark_lvl];
+            efas_lvl.Text = eng.fire_and_spark_reqlevel[eng.fire_and_spark_lvl];
+            ecd_lvl.Text = eng.charge_domination_reqlevel[eng.charge_domination_lvl];
+            eshb_lvl.Text = eng.shield_bash_reqlevel[eng.shield_bash_lvl];
+            eff_lvl.Text = eng.forcefield_reqlevel[eng.forcefield_lvl];
+            eol_lvl.Text = eng.overload_reqlevel[eng.overload_lvl];
+            edf_lvl.Text = eng.dynamo_field_reqlevel[eng.dynamo_field_lvl];
+            et_lvl.Text = eng.tremor_reqlevel[eng.tremor_lvl];
+            efb_lvl.Text = eng.fire_bash_reqlevel[eng.fire_bash_lvl];
+            eic_lvl.Text = eng.immobilization_copter_reqlevel[eng.immobilization_copter_lvl];
+            esab_lvl.Text = eng.sword_and_board_reqlevel[eng.sword_and_board_lvl];
+            eaof_lvl.Text = eng.aegis_of_fate_reqlevel[eng.aegis_of_fate_lvl];
+            ecr_lvl.Text = eng.charge_reconstitution_reqlevel[eng.charge_reconstitution_lvl];
         }
 
         public void Engineer__tooltips()
         {
+            eng.tooltips_text();
 
+            toolTip1.SetToolTip(efh_panel, eng.flame_hammer_text);
+            toolTip1.SetToolTip(ess_panel, eng.seismic_slam_text);
+            toolTip1.SetToolTip(eeh_panel, eng.ember_hammer_text);
+            toolTip1.SetToolTip(eo_panel, eng.onslaught_text);
+            toolTip1.SetToolTip(eer_panel, eng.ember_reach_text);
+            toolTip1.SetToolTip(esb_panel, eng.storm_burst_text);
+            toolTip1.SetToolTip(ee_panel, eng.emberquake_text);
+            toolTip1.SetToolTip(ehl_panel, eng.heavy_lifting_text);
+            toolTip1.SetToolTip(es_panel, eng.supercharge_text);
+            toolTip1.SetToolTip(ecdg_panel, eng.coup_de_grace_text);
+            toolTip1.SetToolTip(ehb_panel, eng.healing_bot_text);
+            toolTip1.SetToolTip(ebc_panel, eng.blast_cannon_text);
+            toolTip1.SetToolTip(esm_panel, eng.spider_mines_text);
+            toolTip1.SetToolTip(egb_panel, eng.gun_bot_text);
+            toolTip1.SetToolTip(esg_panel, eng.shock_grenade_text);
+            toolTip1.SetToolTip(ef_panel, eng.fusillade_text);
+            toolTip1.SetToolTip(esbot_panel, eng.sledgebot_text);
+            toolTip1.SetToolTip(ebw_panel, eng.bulwark_text);
+            toolTip1.SetToolTip(efas_panel, eng.fire_and_spark_text);
+            toolTip1.SetToolTip(ecd_panel, eng.charge_domination_text);
+            toolTip1.SetToolTip(eshb_panel, eng.shield_bash_text);
+            toolTip1.SetToolTip(eff_panel, eng.forcefield_text);
+            toolTip1.SetToolTip(eol_panel, eng.overload_text);
+            toolTip1.SetToolTip(edf_panel, eng.dynamo_field_text);
+            toolTip1.SetToolTip(et_panel, eng.tremor_text);
+            toolTip1.SetToolTip(efb_panel, eng.fire_bash_text);
+            toolTip1.SetToolTip(eic_panel, eng.immobilization_copter_text);
+            toolTip1.SetToolTip(esab_panel, eng.sword_and_board_text);
+            toolTip1.SetToolTip(eaof_panel, eng.aegis_of_fate_text);
+            toolTip1.SetToolTip(ecr_panel, eng.charge_reconstitution_text);
         }
 
         private void toolTip1_Draw(object sender, DrawToolTipEventArgs e)
@@ -437,42 +559,172 @@ namespace Skill_Calculator
 
         private void Berserker_reset_stats_Click(object sender, EventArgs e)
         {
-
-        }
+            b_StrengthUD.Value = 15;
+            b_DexterityUD.Value = 15;
+            b_FocusUD.Value = 5;
+            b_VitalityUD.Value = 5;
+        } 
 
         private void Berserker_reset_skills_Click(object sender, EventArgs e)
         {
-
-        }
+            eviscerate.Value = 0;
+            howl.Value = 0;
+            raze.Value = 0;
+            wolfstrike.Value = 0;
+            battle_rage.Value = 0;
+            rupture.Value = 0;
+            ravage.Value = 0;
+            blood_hunger.Value = 0;
+            executioner.Value = 0;
+            rampage.Value = 0;
+            frost_breath.Value = 0;
+            stormclaw.Value = 0;
+            storm_hatchet.Value = 0;
+            northern_rage.Value = 0;
+            ice_shield.Value = 0;
+            permafrost.Value = 0;
+            glacial_shatter.Value = 0;
+            cold_steel_mastery.Value = 0;
+            shatter_storm.Value = 0;
+            rage_retaliation.Value = 0;
+            shadow_burst.Value = 0;
+            wolf_shade.Value = 0;
+            shadowbind.Value = 0;
+            savage_rush.Value = 0;
+            chain_snare.Value = 0;
+            battle_standard.Value = 0;
+            wolfpack.Value = 0;
+            frenzy_mastery.Value = 0;
+            shred_armor.Value = 0;
+            red_wolf.Value = 0;
+        } 
 
         private void Berserker_stats_ValueChanged(object sender, EventArgs e)
         {
-
-        }
+            ber.strength = (int)b_StrengthUD.Value;
+            ber.dexterity = (int)b_DexterityUD.Value;
+            ber.focus = (int)b_FocusUD.Value;
+            ber.vitality = (int)b_VitalityUD.Value;
+            Berserker_calcpoints(sender, e);
+        } 
 
         private void Berserker_skills_ValueChanged(object sender, EventArgs e)
         {
-
-        }
+            ber.eviscerate_lvl = (int)eviscerate.Value;
+            ber.howl_lvl = (int)howl.Value;
+            ber.raze_lvl = (int)raze.Value;
+            ber.wolfstrike_lvl = (int)wolfstrike.Value;
+            ber.battle_rage_lvl = (int)battle_rage.Value;
+            ber.rupture_lvl = (int)rupture.Value;
+            ber.ravage_lvl = (int)ravage.Value;
+            ber.blood_hunger_lvl = (int)blood_hunger.Value;
+            ber.executioner_lvl = (int)executioner.Value;
+            ber.rampage_lvl = (int)rampage.Value;
+            ber.frost_breath_lvl = (int)frost_breath.Value;
+            ber.stormclaw_lvl = (int)stormclaw.Value;
+            ber.storm_hatchet_lvl = (int)storm_hatchet.Value;
+            ber.northern_rage_lvl = (int)northern_rage.Value;
+            ber.ice_shield_lvl = (int)ice_shield.Value;
+            ber.permafrost_lvl = (int)permafrost.Value;
+            ber.glacial_shatter_lvl = (int)glacial_shatter.Value;
+            ber.cold_steel_mastery_lvl = (int)cold_steel_mastery.Value;
+            ber.shatter_storm_lvl = (int)shatter_storm.Value;
+            ber.rage_retaliation_lvl = (int)rage_retaliation.Value;
+            ber.shadow_burst_lvl = (int)shadow_burst.Value;
+            ber.wolf_shade_lvl = (int)wolf_shade.Value;
+            ber.shadowbind_lvl = (int)shadowbind.Value;
+            ber.savage_rush_lvl = (int)savage_rush.Value;
+            ber.chain_snare_lvl = (int)chain_snare.Value;
+            ber.battle_standard_lvl = (int)battle_standard.Value;
+            ber.wolfpack_lvl = (int)wolfpack.Value;
+            ber.frenzy_mastery_lvl = (int)frenzy_mastery.Value;
+            ber.shred_armor_lvl = (int)shred_armor.Value;
+            ber.red_wolf_lvl = (int)red_wolf.Value;
+        } 
 
         private void Engineer_reset_stats_Click(object sender, EventArgs e)
         {
-
-        }
+            e_StrengthUD.Value = 15;
+            e_DexterityUD.Value = 5;
+            e_FocusUD.Value = 5;
+            e_VitalityUD.Value = 15;
+        } 
 
         private void Engineer_reset_skills_Click(object sender, EventArgs e)
         {
-
-        }
+            flame_hammer.Value = 0;
+            seismic_slam.Value = 0;
+            ember_hammer.Value = 0;
+            onslaught.Value = 0;
+            ember_reach.Value = 0;
+            storm_burst.Value = 0;
+            emberquake.Value = 0;
+            heavy_lifting.Value = 0;
+            supercharge.Value = 0;
+            coup_de_grace.Value = 0;
+            healing_bot.Value = 0;
+            blast_cannon.Value = 0;
+            spider_mines.Value = 0;
+            gun_bot.Value = 0;
+            shock_grenade.Value = 0;
+            fusillade.Value = 0;
+            sledgebot.Value = 0;
+            bulwark.Value = 0;
+            fire_and_spark.Value = 0;
+            charge_domination.Value = 0;
+            shield_bash.Value = 0;
+            forcefield.Value = 0;
+            overload.Value = 0;
+            dynamo_field.Value = 0;
+            tremor.Value = 0;
+            fire_bash.Value = 0;
+            immobilization_copter.Value = 0;
+            sword_and_board.Value = 0;
+            aegis_of_fate.Value = 0;
+            charge_reconstitution.Value = 0;
+        } 
 
         private void Engineer_stats_ValueChanged(object sender, EventArgs e)
         {
-
-        }
+            eng.strength = (int)e_StrengthUD.Value;
+            eng.dexterity = (int)e_DexterityUD.Value;
+            eng.focus = (int)e_FocusUD.Value;
+            eng.vitality = (int)e_VitalityUD.Value;
+            Engineer_calcpoints(sender, e);
+        } 
 
         private void Engineer_skills_ValueChanged(object sender, EventArgs e)
         {
-
+            eng.flame_hammer_lvl = (int)flame_hammer.Value;
+            eng.seismic_slam_lvl = (int)seismic_slam.Value;
+            eng.ember_hammer_lvl = (int)ember_hammer.Value;
+            eng.onslaught_lvl = (int)onslaught.Value;
+            eng.ember_reach_lvl = (int)ember_reach.Value;
+            eng.storm_burst_lvl = (int)storm_burst.Value;
+            eng.emberquake_lvl = (int)emberquake.Value;
+            eng.heavy_lifting_lvl = (int)heavy_lifting.Value;
+            eng.supercharge_lvl = (int)supercharge.Value;
+            eng.coup_de_grace_lvl = (int)coup_de_grace.Value;
+            eng.healing_bot_lvl = (int)healing_bot.Value;
+            eng.blast_cannon_lvl = (int)blast_cannon.Value;
+            eng.spider_mines_lvl = (int)spider_mines.Value;
+            eng.gun_bot_lvl = (int)gun_bot.Value;
+            eng.shock_grenade_lvl = (int)shock_grenade.Value;
+            eng.fusillade_lvl = (int)fusillade.Value;
+            eng.sledgebot_lvl = (int)sledgebot.Value;
+            eng.bulwark_lvl = (int)bulwark.Value;
+            eng.fire_and_spark_lvl = (int)fire_and_spark.Value;
+            eng.charge_domination_lvl = (int)charge_domination.Value;
+            eng.shield_bash_lvl = (int)shield_bash.Value;
+            eng.forcefield_lvl = (int)forcefield.Value;
+            eng.overload_lvl = (int)overload.Value;
+            eng.dynamo_field_lvl = (int)dynamo_field.Value;
+            eng.tremor_lvl = (int)tremor.Value;
+            eng.fire_bash_lvl = (int)fire_bash.Value;
+            eng.immobilization_copter_lvl = (int)immobilization_copter.Value;
+            eng.sword_and_board_lvl = (int)sword_and_board.Value;
+            eng.aegis_of_fate_lvl = (int)aegis_of_fate.Value;
+            eng.charge_reconstitution_lvl = (int)charge_reconstitution.Value;
         }
     }
 }
