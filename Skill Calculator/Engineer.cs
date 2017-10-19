@@ -316,20 +316,15 @@ namespace Skill_Calculator
                 "Бонус к броне: +" + armor_bonus + " %" + Environment.NewLine +
                 "Шанс блокировать удар: +" + block_chance + " %";
 
-            /*if((num==0)||(num==1))
-		if (skill1!=0) {
-			textskill1.innerHTML = "<img src='/pic/skills/skillicon_flamehammer.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'>&nbsp;Огненный молот</a><br/><a style='color:#ffffff; font-size: 13px;'>&nbsp;Ур. "+skill1+"/15<br/><br/>";
-			textskill1.innerHTML +="<br/>Это оружие сокрушает врагов, а при ударе образуются 4 осколка, которые самостоятельно ищут цели в радиусе 5 метров. При расходовании одного Заряда количество взрывов увеличивается до трех.</a><br/>";
-		 	textskill1.innerHTML +="<a style='color:#C3C300'>Текущий ур.:&nbsp;"+skill1+"</a><br>";
-		 	textskill1.innerHTML +="<a style='color:#FF00FF'>Расход маны:&nbsp;"+flame_hammer_mana[skill1-1]+"</a><br>";
-		 	textskill1.innerHTML +="<a style='color:#1F90FF'>Наносит " + flame_hammer_a[skill1] + "% от урона текущего оружия в сек.</a><br \/>";
-			textskill1.innerHTML +="<a style='color:#1F90FF'>"+ flame_hammer_b[skill1] + "% шанс поджечь цель на 3 сек.</a><br \/>";		 
-		 	textskill1.innerHTML +=texttemp+"Образуется 5 огненных осколков, летящих на 8 м.<br></a>";
-		 	textskill1.innerHTML +=texttemp2+"Преимущество II уровня<br></a>";
-		 	textskill1.innerHTML +=texttemp+"Образуется 6 огненных осколков, летящих на 11 м.<br></a>";
-		 	textskill1.innerHTML +=texttemp2+"Преимущество III уровня<br></a>";
-		 	textskill1.innerHTML +=texttemp+"Образуется 7 огненных осколков, летящих на 14 м.<br/></a>";
-		 	textskill1.innerHTML +="<br/><a style='color:#ffff00'>Необходим топор, меч, молот, посох или копье</a><br>";
+            flame_hammer_text="Это оружие сокрушает врагов, а при ударе образуются 4 осколка, которые самостоятельно ищут цели в радиусе 5 метров." + Environment.NewLine +
+                "При расходовании одного Заряда количество взрывов увеличивается до трех." + Environment.NewLine+Environment.NewLine+
+                "Расход маны: "+flame_hammer_mana[flame_hammer_lvl]+Environment.NewLine+
+                "Наносит " + flame_hammer_a[flame_hammer_lvl] + "% от урона текущего оружия в сек."+Environment.NewLine+
+                flame_hammer_b[flame_hammer_lvl] + "% шанс поджечь цель на 3 сек."+Environment.NewLine+Environment.NewLine+
+	             "Преимущество I уровня" + Environment.NewLine +"Образуется 5 огненных осколков, летящих на 8 м."+Environment.NewLine+
+                 "Преимущество II уровня"+Environment.NewLine+"Образуется 6 огненных осколков, летящих на 11 м."+Environment.NewLine+
+                 "Преимущество III уровня"+Environment.NewLine+"Образуется 7 огненных осколков, летящих на 14 м."+Environment.NewLine+Environment.NewLine+
+                 "Необходим топор, меч, молот, посох или копье";
              * 
         var seismic_slam_damage_instant = Math.ceil(seismic_slam_b[skill2] * damage_monster[level] / 100);
 		var seismic_slam_damage_dot = Math.ceil(seismic_slam_c[skill2] * damage_monster[level] / 100) * 5;
