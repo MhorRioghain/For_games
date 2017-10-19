@@ -334,12 +334,12 @@ namespace Skill_Calculator
                 rune_vault_text += "+" + rune_vault_d[rune_vault_lvl] + " к отбрасыванию";
             }
             rune_vault_text += Environment.NewLine +
-                "Преимущество I уровня" + Environment.NewLine + "Радиус действия магического знака увеличен до 5 м," + Environment.NewLine +
-                "ослепление длится до 4 сек. Позволяет похищать здоровье и ману." + Environment.NewLine +
-                "Преимущество II уровня" + Environment.NewLine + "Добавлено отбрасывание. Ослепление длится до 5 секунд." + Environment.NewLine +
-                "Не мешает применять способности, связанные с оружием." + Environment.NewLine +
-                "Преимущество III уровня" + Environment.NewLine + "Радиус увеличен до 6 м; ослепление длится до 6 сек." + Environment.NewLine +
-                "Создает Заряд." + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Радиус действия магического знака увеличен до 5 м, ослепление" + Environment.NewLine +
+                "длится до 4 сек. Позволяет похищать здоровье и ману." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Добавлено отбрасывание. Ослепление длится до 5 секунд. Не" + Environment.NewLine +
+                "мешает применять способности, связанные с оружием." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Радиус увеличен до 6 м; ослепление длится до 6 сек. Создает " + Environment.NewLine +
+                "Заряд." + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";            
             
             chaos_burst_text = "Атака тремя хаотически движущимися и рикошетящими снарядами." + Environment.NewLine + Environment.NewLine +

@@ -11180,7 +11180,7 @@
             this.e_VitalityUD.Size = new System.Drawing.Size(120, 20);
             this.e_VitalityUD.TabIndex = 103;
             this.e_VitalityUD.Value = new decimal(new int[] {
-            5,
+            15,
             0,
             0,
             0});
@@ -11198,7 +11198,7 @@
             this.e_FocusUD.Size = new System.Drawing.Size(120, 20);
             this.e_FocusUD.TabIndex = 102;
             this.e_FocusUD.Value = new decimal(new int[] {
-            10,
+            5,
             0,
             0,
             0});
@@ -11216,7 +11216,7 @@
             this.e_DexterityUD.Size = new System.Drawing.Size(120, 20);
             this.e_DexterityUD.TabIndex = 101;
             this.e_DexterityUD.Value = new decimal(new int[] {
-            15,
+            5,
             0,
             0,
             0});
@@ -11234,7 +11234,7 @@
             this.e_StrengthUD.Size = new System.Drawing.Size(120, 20);
             this.e_StrengthUD.TabIndex = 100;
             this.e_StrengthUD.Value = new decimal(new int[] {
-            10,
+            15,
             0,
             0,
             0});

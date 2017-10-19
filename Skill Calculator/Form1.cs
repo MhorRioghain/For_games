@@ -302,7 +302,7 @@ namespace Skill_Calculator
             e_famepoints.Text = eng.fame_ranks[eng.fame];
             e_statpoints.Text = Convert.ToString(eng.statpointsleft);
             eng.stats_bonuses();
-            Engineer__tooltips();
+            Engineer_tooltips();
         }
 
         public void Engineer_req_lvl()
@@ -339,7 +339,7 @@ namespace Skill_Calculator
             ecr_lvl.Text = eng.charge_reconstitution_reqlevel[eng.charge_reconstitution_lvl];
         }
 
-        public void Engineer__tooltips()
+        public void Engineer_tooltips()
         {
             eng.tooltips_text();
 
