@@ -315,8 +315,7 @@ namespace Skill_Calculator
                 "Шанс блокировать удар: +" + block_chance + " %";
 
             int eviscerate_damage= (int)(Math.Ceiling(eviscerate_b[eviscerate_lvl]*damage_monster[level]/100)*eviscerate_c[eviscerate_lvl]);
-            eviscerate_text = "Вы рвете на части всех досягаемых врагов впереди и вызываете у них 6-секундное кровотечение. Радиус" + Environment.NewLine +
-                "сектора - 2,7 м, угол - 120 градусов. Применение навыка уменьшает скорость увеличения Заряда на 67%.            " + Environment.NewLine + Environment.NewLine +
+            eviscerate_text = "Вы рвете на части всех досягаемых врагов впереди и вызываете у них 6-секундное кровотечение. Радиус сектора - 2,7 м, угол - 120 градусов. Применение навыка уменьшает скорость увеличения Заряда на 67%." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + eviscerate_mana[eviscerate_lvl] + Environment.NewLine +
                 "Наносит " + eviscerate_a[eviscerate_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine +
                 "Физич. урон: " + eviscerate_damage + " в теч. " + eviscerate_c[eviscerate_lvl] + " сек.*" + Environment.NewLine + Environment.NewLine +
@@ -326,8 +325,7 @@ namespace Skill_Calculator
                 "*улучшается вместе с уровнем игрока" + Environment.NewLine + Environment.NewLine +
                 "Необходимо оружие ближнего боя в правой руке";
 
-            howl_text = "Вы яростно воете, вселяя ужас в души врагов. Противники" + Environment.NewLine +
-                "на несколько секунд замедляются и становятся уязвимее.       " + Environment.NewLine + Environment.NewLine +
+            howl_text = "Вы яростно воете, вселяя ужас в души врагов. Противники на несколько секунд замедляются и становятся уязвимее." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + howl_mana[howl_lvl] + Environment.NewLine +
                 "Дальность: " + howl_d[howl_lvl] + " м" + Environment.NewLine +
                 "-" + howl_a[howl_lvl] + "% от скорости движения в теч. " + howl_c[howl_lvl] + " сек." + Environment.NewLine +
@@ -339,9 +337,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Дальность увеличена до 10,5 м" + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
 
-            raze_text = "Наносит огромный урон выбранной цели. С каждым" + Environment.NewLine +
-                "последующим ударом ваша сила возрастает. Уровень      " + Environment.NewLine +
-                "Заряда при этом не повышается." + Environment.NewLine + Environment.NewLine +
+            raze_text = "Наносит огромный урон выбранной цели. С каждым последующим ударом ваша сила возрастает. Уровень Заряда при этом не повышается." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + raze_mana[raze_lvl] + Environment.NewLine +
                 "Наносит " + raze_a[raze_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine +
                 "+100% шанс прервать действия врага" + Environment.NewLine +
@@ -365,8 +361,7 @@ namespace Skill_Calculator
                 "Преимущество II уровня" + Environment.NewLine + "Точность атак цели снижена" + Environment.NewLine +
                 "Преимущество III уровня" + Environment.NewLine + "Цель оглушена";
 
-            wolfstrike_text = "Вы бросаетесь вперед на 6 метров, раздирая когтями всех врагов," + Environment.NewLine +
-                "которые стоят на пути.                                                                                       " + Environment.NewLine + Environment.NewLine +
+            wolfstrike_text = "Вы бросаетесь вперед на 6 метров, раздирая когтями всех врагов, которые стоят на пути." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + wolfstrike_mana[wolfstrike_lvl] + Environment.NewLine +
                 "Наносит " + wolfstrike_a[wolfstrike_lvl] + "% от урона текущего оружия в сек. физич. уроном" + Environment.NewLine +
                 "+" + wolfstrike_b[wolfstrike_lvl] + " к отбрасыванию" + Environment.NewLine +
@@ -375,8 +370,7 @@ namespace Skill_Calculator
                 "Преимущество II уровня" + Environment.NewLine + "Дистанция броска увеличена до 8 метров" + Environment.NewLine +
                 "Преимущество III уровня" + Environment.NewLine + "Дистанция броска увеличена до 9 метров";
 
-            battle_rage_text = "Вы приходите в ярость, и наносимый вами урон зависит" + Environment.NewLine +
-                "от числа врагов в радиусе 4 метров. Время действия - 60 сек." + Environment.NewLine + Environment.NewLine +
+            battle_rage_text = "Вы приходите в ярость, и наносимый вами урон зависит от числа врагов в радиусе 4 метров. Время действия - 60 сек." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + battle_rage_mana[battle_rage_lvl] + Environment.NewLine +
                 "Время между активациями: 50 сек." + Environment.NewLine +
                 "+" + battle_rage_a[battle_rage_lvl] + "% люб. урона за каждого монстра в радиусе" + battle_rage_c[battle_rage_lvl] + " м" + Environment.NewLine;
@@ -390,10 +384,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Радиус действия увеличен до 6 м";
 
             int rupture_damage = (int)Math.Ceiling(rupture_b[rupture_lvl] * damage_monster[level] / 100);
-            rupture_text = "Мощным ударом вы отбрасываете врага назад," + Environment.NewLine +
-                "и после небольшой паузы он взрывается, нанося" + Environment.NewLine +
-                "повреждения всем находящимся в радиусе 4 м" + Environment.NewLine +
-                "противникам." + Environment.NewLine + Environment.NewLine +
+            rupture_text = "Мощным ударом вы отбрасываете врага назад, и после небольшой паузы он взрывается, нанося повреждения всем находящимся в радиусе 4 м противникам." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + rupture_mana[rupture_lvl] + Environment.NewLine +
                 rupture_a[rupture_lvl] + "% шанс оглушить цель на 3 сек." + Environment.NewLine +
                 "+35 к отбрасыванию" + Environment.NewLine +
@@ -405,8 +396,7 @@ namespace Skill_Calculator
                 "*улучшается вместе с уровнем игрока";
 
             int ravage_armor = (int)Math.Floor(ravage_c[ravage_lvl] * armor_monster_bylevel[level] / 100);
-            ravage_text = "Вы наносите 3 страшных удара каждому врагу в радиусе 4 м. После каждого" + Environment.NewLine +
-                "удара уровень брони врагов снижается.                                                                         " + Environment.NewLine +
+            ravage_text = "Вы наносите 3 страшных удара каждому врагу в радиусе 4 м. После каждого удара уровень брони врагов снижается." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + ravage_mana[ravage_lvl] + Environment.NewLine +
                 "Наносит " + ravage_a[ravage_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine +
                 "-" + ravage_armor + " от всех видов брони в теч. " + ravage_d[ravage_lvl] + " сек.*" + Environment.NewLine +
@@ -423,26 +413,20 @@ namespace Skill_Calculator
                 "*улучшается вместе с уровнем игрока" + Environment.NewLine + Environment.NewLine +
                 "Необходимо оружие ближнего боя в правой руке";
 
-            blood_hunger_text = "Нанося противнику критические повреждения оружием ближнего боя, вы" + Environment.NewLine +
-                "исцеляете себя с помощью жизненной энергии врага.                            " + Environment.NewLine + Environment.NewLine +
-                "Каждый критический удар повышает ваш уровень здоровья на " + blood_hunger_a[blood_hunger_lvl] + "% от макс." + Environment.NewLine + " ";
+            blood_hunger_text = "Нанося противнику критические повреждения оружием ближнего боя, вы исцеляете себя с помощью жизненной энергии врага." + Environment.NewLine + Environment.NewLine +
+                "Каждый критический удар повышает ваш уровень здоровья на " + blood_hunger_a[blood_hunger_lvl] + "% от макс.";
 
-            executioner_text = "Ярость помогает наносить урон оружием в обеих руках" + Environment.NewLine +
-                "одновременно. В случае успешной атаки с двух рук скорость   " + Environment.NewLine +
-                "повышения уровня Заряда ненадолго увеличивается." + Environment.NewLine + Environment.NewLine +
+            executioner_text = "Ярость помогает наносить урон оружием в обеих руках одновременно. В случае успешной атаки с двух рук скорость повышения уровня Заряда ненадолго увеличивается." + Environment.NewLine + Environment.NewLine +
                 "+ " + executioner_a[executioner_lvl] + "% к шансу казнить цель" + Environment.NewLine +
                 "+ " + executioner_b[executioner_lvl] + "% к скорости увеличения Заряда в теч. 2 сек.";
-              
-            rampage_text="При уничтожении врага оружием ближнего боя у вас"+Environment.NewLine+
-                "может начаться адреналиновое буйство." + Environment.NewLine +Environment.NewLine+
+
+            rampage_text = "При уничтожении врага оружием ближнего боя у вас может начаться адреналиновое буйство." + Environment.NewLine + Environment.NewLine +
                 "25% к скорости атаки на 5 сек." + Environment.NewLine +
                 "25% к скорости применения заклинаний на 5 сек." + Environment.NewLine +
                 "12% к скорости передвижения на 5 сек." + Environment.NewLine +
-                "Шанс на буйство после уничтожения врага:"+rampage_a[rampage_lvl] + "%";
+                "Шанс на буйство после уничтожения врага:" + rampage_a[rampage_lvl] + "%";
 
-            frost_breath_text = "Призвав на помощь холодные северные ветра, вы замораживаете" + Environment.NewLine +
-                "врага ледяным дыханием - противник обездвиживается и становится" + Environment.NewLine +
-                "уязвимым. Зона действия - сектор с углом 90 градусов и радиусом 5 м." + Environment.NewLine + Environment.NewLine +
+            frost_breath_text = "Призвав на помощь холодные северные ветра, вы замораживаете врага ледяным дыханием - противник обездвиживается и становится уязвимым. Зона действия - сектор с углом 90 градусов и радиусом 5 м." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + frost_breath_mana[frost_breath_lvl] + Environment.NewLine +
                 "Наносит " + frost_breath_a[frost_breath_lvl] + "% от урона текущего оружия в сек. льдом" + Environment.NewLine +
                 frost_breath_b[frost_breath_lvl] + "% шанс заморозить цель на 4 сек." + Environment.NewLine +
@@ -450,12 +434,9 @@ namespace Skill_Calculator
                 "+ " + frost_breath_b[frost_breath_lvl] + "% к получаемому люб. урону в теч. 4 сек. " + Environment.NewLine + Environment.NewLine +
                 "Преимущество I уровня" + Environment.NewLine + "Радиус сектора увеличен до 6 м, а угол - до 120 градусов." + Environment.NewLine +
                 "Преимущество II уровня" + Environment.NewLine + "Радиус сектора увеличен до 7 м, а угол - до 150 градусов" + Environment.NewLine +
-                "Преимущество III уровня" + Environment.NewLine + "Радиус сектора увеличен до 8 м, а угол - до 150 градусов. Позволяет" + Environment.NewLine +
-                "похищать здоровье и ману.";
+                "Преимущество III уровня" + Environment.NewLine + "Радиус сектора увеличен до 8 м, а угол - до 150 градусов. Позволяет похищать здоровье и ману.";
 
-            stormclaw_text = "Вы насыщаете оружие электрической энергией. Когда оно" + Environment.NewLine +
-                "наносит удар, из него вырывается молния, которая поражает       " + Environment.NewLine +
-                "до 2 находящихся рядом врагов." + Environment.NewLine + Environment.NewLine +
+            stormclaw_text = "Вы насыщаете оружие электрической энергией. Когда оно наносит удар, из него вырывается молния, которая поражает до 2 находящихся рядом врагов." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + stormclaw_mana[stormclaw_lvl] + Environment.NewLine +
                 "Время между активациями: 20 сек." + Environment.NewLine +
                 "Наносит " + stormclaw_a[stormclaw_lvl] + "% урона от оружия электричеством" + Environment.NewLine +
@@ -465,8 +446,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Молния поражает до 5 врагов" + Environment.NewLine + Environment.NewLine +
                 "Срабатывает при базовых атаках оружием ближнего боя";
 
-            storm_hatchet_text = "Вы высекаете из оружия дикую северную молнию, создавая электрический" + Environment.NewLine +
-                "метательный топор с радиусом действия 15 м.                                                           " + Environment.NewLine + Environment.NewLine +
+            storm_hatchet_text = "Вы высекаете из оружия дикую северную молнию, создавая электрический метательный топор с радиусом действия 15 м." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + storm_hatchet_mana[storm_hatchet_lvl] + Environment.NewLine +
                 "Каждое попадание увеличивает уровень индикатора Зарядов на " + storm_hatchet_d[storm_hatchet_lvl] + "%" + Environment.NewLine +
                 "Наносит " + storm_hatchet_a[storm_hatchet_lvl] + "% от урона текущего оружия в сек. электричеством" + Environment.NewLine +
@@ -482,8 +462,7 @@ namespace Skill_Calculator
                  
             int northern_rage_mindam = (int)Math.Ceiling(northern_rage_a[northern_rage_lvl] * damage_monster[level] / 100);
             int northern_rage_maxdam = (int)Math.Ceiling(northern_rage_b[northern_rage_lvl] * damage_monster[level] / 100);
-            northern_rage_text = "Вы кидаете ледяные осколки, которые отбрасывают врагов" + Environment.NewLine +
-                "назад и замораживают.                                                                        " + Environment.NewLine + Environment.NewLine +
+            northern_rage_text = "Вы кидаете ледяные осколки, которые отбрасывают врагов назад и замораживают." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + northern_rage_mana[northern_rage_lvl] + Environment.NewLine +
                 "Наносит 20% от урона текущего оружия в сек." + Environment.NewLine +
                 "+" + northern_rage_mindam + "-" + northern_rage_maxdam + " к лед. урону*" + Environment.NewLine +
@@ -500,9 +479,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Число волн увеличено до 6; распространяются дальше." + Environment.NewLine + Environment.NewLine +
                 "* улучшается вместе с уровнем игрока";
 
-            ice_shield_text = "Вы призываете ледяную стену, которая отражает снаряды обратно во врагов." + Environment.NewLine +
-                "Если в стену попадает снаряд, появляется шанс увеличить уровень индикатора      " + Environment.NewLine +
-                "Зарядов на 10%. Время действия стены - 10 сек." + Environment.NewLine + Environment.NewLine +
+            ice_shield_text = "Вы призываете ледяную стену, которая отражает снаряды обратно во врагов. Если в стену попадает снаряд, появляется шанс увеличить уровень индикатора Зарядов на 10%. Время действия стены - 10 сек." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + ice_shield_mana[ice_shield_lvl] + Environment.NewLine +
                 "Время между активациями: 8 сек." + Environment.NewLine +
                 ice_shield_a[ice_shield_lvl] + "%-шанс, что при попадании в стену Заряд увеличится." + Environment.NewLine +
@@ -512,9 +489,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Стена отражает 125% урона, который наносят снаряды.";
             
             int permafrost_damage = (int)Math.Floor((int)Math.Ceiling(permafrost_a[permafrost_lvl] * damage_monster[level] / 100) * permafrost_b[permafrost_lvl]);
-            permafrost_text = "Вокруг вас распространяется суровый северный мороз," + Environment.NewLine +
-                "который медленно высасывает жизненную энергию из      " + Environment.NewLine +
-                "врагов, находящихся в радиусе 16 метров." + Environment.NewLine + Environment.NewLine +
+            permafrost_text = "Вокруг вас распространяется суровый северный мороз, который медленно высасывает жизненную энергию из врагов, находящихся в радиусе 16 метров." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + permafrost_mana[permafrost_lvl] + Environment.NewLine +
                 "Время между активациями: " + permafrost_b[permafrost_lvl] + " сек. " + Environment.NewLine +
                 "Лед. урон: " + permafrost_damage + " в теч. " + permafrost_b[permafrost_lvl] + " сек.* " + Environment.NewLine;
@@ -536,9 +511,7 @@ namespace Skill_Calculator
 		    int glacial_shatter_maxdam_fire = (int)Math.Ceiling(glacial_shatter_c[glacial_shatter_lvl] * damage_monster[level] / 100) * 3;
 		    int glacial_shatter_mindam_ice = (int)Math.Ceiling(glacial_shatter_d[glacial_shatter_lvl] * damage_monster[level] / 100);
 		    int glacial_shatter_maxdam_ice = (int)Math.Ceiling(glacial_shatter_e[glacial_shatter_lvl] * damage_monster[level] / 100);
-            glacial_shatter_text = "В выбранной точке земля раскалывается, и появляется" + Environment.NewLine +
-                "5 гейзеров, которые ослепляют и наносят урон врагам        " + Environment.NewLine +
-                "паром и горячей водой." + Environment.NewLine + Environment.NewLine +
+            glacial_shatter_text = "В выбранной точке земля раскалывается, и появляется 5 гейзеров, которые ослепляют и наносят урон врагам паром и горячей водой." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + glacial_shatter_mana[glacial_shatter_lvl] + Environment.NewLine +
                 "33% шанс ослепить цель на " + glacial_shatter_a[glacial_shatter_lvl] + "% в теч. 5 сек. " + Environment.NewLine +
                 "+" + glacial_shatter_mindam_ice + "-" + glacial_shatter_maxdam_ice + " к лед. урону* " + Environment.NewLine +
@@ -555,54 +528,40 @@ namespace Skill_Calculator
                 "* улучшается вместе с уровнем игрока";
 
             cold_steel_mastery_text = "Прочнее стали только холодная сталь." + Environment.NewLine + Environment.NewLine +
-                "+" + cold_steel_mastery_a[cold_steel_mastery_lvl] + "% к Физ. урону                                          " + Environment.NewLine +
+                "+" + cold_steel_mastery_a[cold_steel_mastery_lvl] + "% к Физ. урону" + Environment.NewLine +
                 "+" + cold_steel_mastery_b[cold_steel_mastery_lvl] + "% к Лед. урону";
 
-            shatter_storm_text = "Уничтожив замороженного врага, вы накрываете" + Environment.NewLine +
-                "находящихся в радиусе 4 м противников взрывной    " + Environment.NewLine +
-                "ледяной волной, делая их уязвимыми для" + Environment.NewLine +
-                "дальнейших ледяных атак." + Environment.NewLine + Environment.NewLine +
+            shatter_storm_text = "Уничтожив замороженного врага, вы накрываете находящихся в радиусе 4 м противников взрывной ледяной волной, делая их уязвимыми для дальнейших ледяных атак." + Environment.NewLine + Environment.NewLine +
                 "100% шанс обездвижить цель на " + shatter_storm_a[shatter_storm_lvl] + " сек. " + Environment.NewLine +
                 shatter_storm_b[shatter_storm_lvl] + "% шанс заморозить цель на 10 сек. " + Environment.NewLine +
                 "-" + shatter_storm_b[shatter_storm_lvl] + "% к Лед. броне в теч. " + shatter_storm_a[shatter_storm_lvl] + " сек.";
 
-            rage_retaliation_text = "Когда враг наносит вам урон в ближнем бою, ваша" + Environment.NewLine +
-                "ярость принимает материальное воплощение и наносит      " + Environment.NewLine +
-                "ответный удар. Урон равен 120% от урона вашего" + Environment.NewLine +
-                "оружия в секунду. В секунду поражается не более одной" + Environment.NewLine +
-                "цели." + Environment.NewLine + Environment.NewLine;
+            rage_retaliation_text = "Когда враг наносит вам урон в ближнем бою, ваша ярость принимает материальное воплощение и наносит ответный удар. Урон равен 120% от урона вашего оружия в секунду. В секунду поражается не более одной цели." + Environment.NewLine + Environment.NewLine;
 		    if (rage_retaliation_lvl <= 10)
 			{
-                rage_retaliation_text += "Минимальное время между атаками: " + rage_retaliation_a[rage_retaliation_lvl] + " сек." + Environment.NewLine;
+                rage_retaliation_text += "Минимальное время между атаками: " + rage_retaliation_a[rage_retaliation_lvl] + " сек.";
             }
 		    if (rage_retaliation_lvl == 11)
 			{
-                rage_retaliation_text += "Задержки между атаками нет." + Environment.NewLine;
+                rage_retaliation_text += "Задержки между атаками нет.";
             }
             if (rage_retaliation_lvl >= 12)
             {
-                rage_retaliation_text += "Урон: " + rage_retaliation_b[rage_retaliation_lvl] + "% от урона вашего оружия в сек. Задержки между атаками нет." + Environment.NewLine;
+                rage_retaliation_text += "Урон: " + rage_retaliation_b[rage_retaliation_lvl] + "% от урона вашего оружия в сек. Задержки между атаками нет.";
             }
 
-            shadow_burst_text = "Вы превращаетесь в волка-призрака и пролетаете сквозь врагов," + Environment.NewLine +
-                "нанося им урон и одновременно исцеляя себя. Исцеление происходит        " + Environment.NewLine +
-                "только при столкновении с двумя первыми целями." + Environment.NewLine + Environment.NewLine +
+            shadow_burst_text = "Вы превращаетесь в волка-призрака и пролетаете сквозь врагов, нанося им урон и одновременно исцеляя себя. Исцеление происходит только при столкновении с двумя первыми целями." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + shadow_burst_mana[shadow_burst_lvl] + Environment.NewLine +
                 "Восстанавливает " + shadow_burst_c[shadow_burst_lvl] + "% здоровья за " + shadow_burst_d[shadow_burst_lvl] + " пораженные цели" + Environment.NewLine +
                 "Наносит " + shadow_burst_a[shadow_burst_lvl] + "% от урона текущего оружия в сек. электричеством " + Environment.NewLine + Environment.NewLine +
                 shadow_burst_b[shadow_burst_lvl] + "% шанс разбить щит врага " + Environment.NewLine +
-                "Преимущество I уровня" + Environment.NewLine + "Исцеление происходит при столкновении с 3 целями. Шанс уничтожить" + Environment.NewLine +
-                "щит увеличен до 50%." + Environment.NewLine +
-                "Преимущество II уровня" + Environment.NewLine + "Исцеление происходит при столкновении с 4 целями. Шанс уничтожить" + Environment.NewLine +
-                "щит увеличен до 75%." + Environment.NewLine +
-                "Преимущество III уровня" + Environment.NewLine + "Исцеление происходит при столкновении с 5 целями. Шанс уничтожить" + Environment.NewLine +
-                "щит увеличен до 100%.";        
+                "Преимущество I уровня" + Environment.NewLine + "Исцеление происходит при столкновении с 3 целями. Шанс уничтожить щит увеличен до 50%." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Исцеление происходит при столкновении с 4 целями. Шанс уничтожить щит увеличен до 75%." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Исцеление происходит при столкновении с 5 целями. Шанс уничтожить щит увеличен до 100%.";        
             
             int wolf_shade_mindam = (int)Math.Ceiling(wolf_shade_d[wolf_shade_lvl] * damage_minion_bylevel[level] / 100);
             int wolf_shade_maxdam = (int)Math.Ceiling(wolf_shade_e[wolf_shade_lvl] * damage_minion_bylevel[level] / 100);
-            wolf_shade_text = "Призванный волк-призрак впивается ледяными клыками" + Environment.NewLine +
-                "во врагов и передает их жизненную энергию вам. Его можно     " + Environment.NewLine +
-                "призвать раз в минуту." + Environment.NewLine + Environment.NewLine +
+            wolf_shade_text = "Призванный волк-призрак впивается ледяными клыками во врагов и передает их жизненную энергию вам. Его можно призвать раз в минуту." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + wolf_shade_mana[wolf_shade_lvl] + Environment.NewLine +
                 "Время между активациями: 60 сек." + Environment.NewLine +
                 "+" + wolf_shade_a[wolf_shade_lvl] + "% к люб. урону  " + Environment.NewLine +
@@ -614,10 +573,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Продолжительность вызова увеличена до 60 сек." + Environment.NewLine + Environment.NewLine +
                 "* улучшается вместе с уровнем игрока";
 
-            shadowbind_text = "Вы связываете узами тьмы врагов, которые" + Environment.NewLine +
-                "находятся в радиусе 5 м от вас. При последующих     " + Environment.NewLine +
-                "атаках в ближнем бою все эти враги получают" + Environment.NewLine +
-                "часть урона, который вы наносите одной цели." + Environment.NewLine + Environment.NewLine +
+            shadowbind_text = "Вы связываете узами тьмы врагов, которые находятся в радиусе 5 м от вас. При последующих атаках в ближнем бою все эти враги получают часть урона, который вы наносите одной цели." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + shadowbind_mana[shadowbind_lvl] + Environment.NewLine +
                 "Время между активациями: 5 сек." + Environment.NewLine +
                 "Цели получают " + shadowbind_a[shadowbind_lvl] + "% урона в течение " + shadowbind_b[shadowbind_lvl] + " сек." + Environment.NewLine +
@@ -628,9 +584,7 @@ namespace Skill_Calculator
                 "Необходимо оружие ближнего боя";
             
             int savage_rush_damage = (int)Math.Ceiling(savage_rush_d[savage_rush_lvl] * damage_monster[level] / 100) * 5;
-            savage_rush_text = "Вами овладевает дух волка-призрака! Пока" + Environment.NewLine +
-                "действует навык, вы скачете от врага к врагу и     " + Environment.NewLine +
-                "наносите им ужасные раны." + Environment.NewLine + Environment.NewLine +
+            savage_rush_text = "Вами овладевает дух волка-призрака! Пока действует навык, вы скачете от врага к врагу и наносите им ужасные раны." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + savage_rush_mana[savage_rush_lvl] + " в сек." + Environment.NewLine +
                 "Наносит " + savage_rush_a[savage_rush_lvl] + "% урона от оружия " + Environment.NewLine +
                 "+20% к скорости движения " + Environment.NewLine +
@@ -655,9 +609,7 @@ namespace Skill_Calculator
                 "Преимущество II уровня" + Environment.NewLine + "Радиус действия увеличен до 9 м." + Environment.NewLine +
                 "Преимущество III уровня" + Environment.NewLine + "Разбивает щиты.";
 
-            battle_standard_text = "Древнее знамя вашего племени повышает боевой дух и ваших"+Environment.NewLine+
-                "союзников. Уклонение, сопротивление отбрасыванию и скорость    "+Environment.NewLine+
-                "роста заряда увеличиваются. Радиус действия 9 м." + Environment.NewLine + Environment.NewLine +
+            battle_standard_text = "Древнее знамя вашего племени повышает боевой дух и ваших союзников. Уклонение, сопротивление отбрасыванию и скорость роста заряда увеличиваются. Радиус действия 9 м." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + battle_standard_mana[battle_standard_lvl] + Environment.NewLine +
                 "Время между активациями: 15 сек." + Environment.NewLine +
                 "Время вызова: " + battle_standard_a[battle_standard_lvl] + " сек. " + Environment.NewLine +
@@ -679,7 +631,7 @@ namespace Skill_Calculator
                 "Расход маны: " + wolfpack_mana[wolfpack_lvl] + Environment.NewLine;
 			if (wolfpack_lvl >= 2) 
             {
-                wolfpack_text += "Наносит " + wolfpack_a[wolfpack_lvl] + "% от урона текущего оружия в сек. " + Environment.NewLine;
+                wolfpack_text += "Наносит " + wolfpack_a[wolfpack_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine;
             }
             wolfpack_text += "+" + wolfpack_mindam + "-" + wolfpack_maxdam + " к Физич. урону* " + Environment.NewLine + Environment.NewLine +
                 "Преимущество I уровня" + Environment.NewLine + "Волки могут наносить урон нескольким целям" + Environment.NewLine +
@@ -687,25 +639,19 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Расход маны снижен" + Environment.NewLine + Environment.NewLine +
                 "* улучшается вместе с уровнем игрока";
 
-            frenzy_mastery_text = "Вам все сложнее сдерживать свою звериную натуру." + Environment.NewLine +
-                "Продолжительность приступов бешенства (связанных     " + Environment.NewLine +
-                "с заполнением индикатора Заряда) увеличивается." + Environment.NewLine + Environment.NewLine +
+            frenzy_mastery_text = "Вам все сложнее сдерживать свою звериную натуру. Продолжительность приступов бешенства (связанных  с заполнением индикатора Заряда) увеличивается." + Environment.NewLine + Environment.NewLine +
                 "Приступ бешенства длится до " + frenzy_mastery_a[frenzy_mastery_lvl] + " сек.";
 
             int shred_armor_armor_per_hit = (int)Math.Ceiling(shred_armor_a[shred_armor_lvl] * armor_monster_bylevel[level] / 100);
             int shred_armor_armor = (int)Math.Ceiling(shred_armor_b[shred_armor_lvl] * armor_player_bylevel_forset[level] / 100);
-            shred_armor_text = "Вы яростно крушите вражескую броню, а отлетающие" + Environment.NewLine +
-                "кусочки при этом прикрепляете к своей. С каждым ударом" + Environment.NewLine +
-                "противник становится слабее, а ваш показатель брони растет." + Environment.NewLine + Environment.NewLine +
+            shred_armor_text = "Вы яростно крушите вражескую броню, а отлетающие кусочки при этом прикрепляете к своей. С каждым ударом противник становится слабее, а ваш показатель брони растет." + Environment.NewLine + Environment.NewLine +
                 "-" + shred_armor_armor_per_hit + " от всех видов брони за каждый удар*" + Environment.NewLine +
                 "+" + shred_armor_armor + " к Физич. броне в теч. 3 сек.*" + Environment.NewLine + Environment.NewLine +
                 "* улучшается вместе с уровнем игрока";
 
             int red_wolf_mindam = (int)Math.Ceiling(red_wolf_a[red_wolf_lvl] * damage_monster[level] / 100);
             int red_wolf_maxdam = (int)Math.Ceiling(red_wolf_b[red_wolf_lvl] * damage_monster[level] / 100);
-            red_wolf_text = "Когда вы наносите противнику критические повреждения," + Environment.NewLine +
-                "на поле боя может появиться воплощение вашей ярости и     " + Environment.NewLine +
-                "порвать в клочья одного или двух врагов." + Environment.NewLine + Environment.NewLine +
+            red_wolf_text = "Когда вы наносите противнику критические повреждения, на поле боя может появиться воплощение вашей ярости и порвать в клочья одного или двух врагов." + Environment.NewLine + Environment.NewLine +
                 "+" + red_wolf_mindam + "-" + red_wolf_maxdam + " к Физич. урону*" + Environment.NewLine + Environment.NewLine +
                 "* улучшается вместе с уровнем игрока";
         }

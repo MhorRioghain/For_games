@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.TEST = new System.Windows.Forms.Button();
             this.reset_skills = new System.Windows.Forms.Button();
             this.reset_stats = new System.Windows.Forms.Button();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
@@ -1289,7 +1288,6 @@
             this.tabPage1.BackColor = System.Drawing.Color.Maroon;
             this.tabPage1.BackgroundImage = global::Skill_Calculator.Properties.Resources.background;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Controls.Add(this.TEST);
             this.tabPage1.Controls.Add(this.reset_skills);
             this.tabPage1.Controls.Add(this.reset_stats);
             this.tabPage1.Controls.Add(this.pictureBox32);
@@ -1322,16 +1320,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1853, 639);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Эмберлинг";
-            // 
-            // TEST
-            // 
-            this.TEST.Location = new System.Drawing.Point(765, 18);
-            this.TEST.Margin = new System.Windows.Forms.Padding(4);
-            this.TEST.Name = "TEST";
-            this.TEST.Size = new System.Drawing.Size(100, 28);
-            this.TEST.TabIndex = 40;
-            this.TEST.Text = "Tooltip test";
-            this.TEST.UseVisualStyleBackColor = true;
             // 
             // reset_skills
             // 
@@ -13296,7 +13284,6 @@
         private System.Windows.Forms.ComboBox o_levelbox;
         private System.Windows.Forms.Label label176;
         private System.Windows.Forms.Label label177;
-        private System.Windows.Forms.Button TEST;
         private System.Windows.Forms.Button b_reset_skills;
         private System.Windows.Forms.Button b_reset_stats;
         private System.Windows.Forms.PictureBox pictureBox65;

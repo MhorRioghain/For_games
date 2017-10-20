@@ -33,8 +33,6 @@ namespace Skill_Calculator
             Outlander_req_lvl();
             Berserker_req_lvl();
             Engineer_req_lvl();
-
-            toolTip1.SetToolTip(TEST, ber.wolfpack_text);
         }
 
         public void Embermage_calcpoints(object sender, EventArgs e)
@@ -261,6 +259,11 @@ namespace Skill_Calculator
         {
             ber.tooltips_text();
 
+            toolTip1.SetToolTip(b_StrengthUD, ber.strength_text);
+            toolTip1.SetToolTip(b_DexterityUD, ber.dexterity_text);
+            toolTip1.SetToolTip(b_FocusUD, ber.focus_text);
+            toolTip1.SetToolTip(b_VitalityUD, ber.vitality_text);
+
             toolTip1.SetToolTip(bev_panel, ber.eviscerate_text);
             toolTip1.SetToolTip(bh_panel, ber.howl_text);
             toolTip1.SetToolTip(braze_panel, ber.raze_text);
@@ -342,6 +345,11 @@ namespace Skill_Calculator
         public void Engineer_tooltips()
         {
             eng.tooltips_text();
+
+            toolTip1.SetToolTip(e_StrengthUD, eng.strength_text);
+            toolTip1.SetToolTip(e_DexterityUD, eng.dexterity_text);
+            toolTip1.SetToolTip(e_FocusUD, eng.focus_text);
+            toolTip1.SetToolTip(e_VitalityUD, eng.vitality_text);
 
             toolTip1.SetToolTip(efh_panel, eng.flame_hammer_text);
             toolTip1.SetToolTip(ess_panel, eng.seismic_slam_text);
@@ -650,6 +658,8 @@ namespace Skill_Calculator
             ber.frenzy_mastery_lvl = (int)frenzy_mastery.Value;
             ber.shred_armor_lvl = (int)shred_armor.Value;
             ber.red_wolf_lvl = (int)red_wolf.Value;
+            Berserker_calcpoints(sender, e);
+            Berserker_req_lvl();
         } 
 
         private void Engineer_reset_stats_Click(object sender, EventArgs e)
@@ -735,6 +745,8 @@ namespace Skill_Calculator
             eng.sword_and_board_lvl = (int)sword_and_board.Value;
             eng.aegis_of_fate_lvl = (int)aegis_of_fate.Value;
             eng.charge_reconstitution_lvl = (int)charge_reconstitution.Value;
+            Engineer_calcpoints(sender, e);
+            Engineer_tooltips();
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)

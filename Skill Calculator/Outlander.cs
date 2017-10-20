@@ -323,8 +323,7 @@ namespace Skill_Calculator
                 "*улучшается вместе с уровнем игрока" + Environment.NewLine + Environment.NewLine +
                 "Необходим лук, арбалет, дробовик или пистоль.";
 
-            rune_vault_text = "Вы ловко отпрыгиваете от цели, оставляя магический знак, который наносит урон врагам, находящимся в радиусе 4 м, и ослепляет их." + 
-                Environment.NewLine + Environment.NewLine +
+            rune_vault_text = "Вы ловко отпрыгиваете от цели, оставляя магический знак, который наносит урон врагам, находящимся в радиусе 4 м, и ослепляет их." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + rune_vault_mana[rune_vault_lvl] + Environment.NewLine +
                 "Наносит " + rune_vault_a[rune_vault_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine +
                 rune_vault_b[rune_vault_lvl] + "% шанс ослепить цель на " + rune_vault_c[rune_vault_lvl] + " сек." + Environment.NewLine;
@@ -351,8 +350,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "2 дополнительных снаряда в каждом залпе";            
             
             int cursed_daggers_dam = (int)Math.Ceiling(cursed_daggers_a[cursed_daggers_lvl] * damage_monster[level] / 100) * 4;
-            cursed_daggers_text = "Вы бросаете 9 кинжалов, которые, разлетаясь, отравляют врагов, причиняют им урон и уменьшают наносимый вам урон." + 
-                Environment.NewLine + Environment.NewLine +
+            cursed_daggers_text = "Вы бросаете 9 кинжалов, которые, разлетаясь, отравляют врагов, причиняют им урон и уменьшают наносимый вам урон." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + cursed_daggers_mana[cursed_daggers_lvl] + Environment.NewLine +
                 "Отравл. урон: " + cursed_daggers_dam + " в теч. 4 сек.*" + Environment.NewLine +
                 "-" + cursed_daggers_b[cursed_daggers_lvl] + "%  от люб. урона в теч. 8 сек." + Environment.NewLine +
@@ -364,8 +362,7 @@ namespace Skill_Calculator
 
             int vortex_hex_dam = (int)Math.Ceiling(vortex_hex_a[vortex_hex_lvl] * damage_monster[level] / 100);
 		    double vortex_hex_mana_regen = Math.Round(vortex_hex_b[vortex_hex_lvl] * mana_player_generic[level] / 10) / 10;
-            vortex_hex_text = "Вы призываете магических кукол, каждая из которых может притянуть к себе и оглушить до 3 врагов. Шанс оглушения целей - до 8%." + 
-                Environment.NewLine + Environment.NewLine +
+            vortex_hex_text = "Вы призываете магических кукол, каждая из которых может притянуть к себе и оглушить до 3 врагов. Шанс оглушения целей - до 8%." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + vortex_hex_mana[vortex_hex_lvl] + Environment.NewLine +
                 "Время между активациями: 3 сек." + Environment.NewLine +
                 "Время вызова: 15 сек." + Environment.NewLine +
@@ -411,7 +408,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Из эпицентра взрыва разлетаются потоки огня" + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
 
-            venomous_hail_text = "Вы выстреливаете в небо, и на землю рядом с целью в радиусе 4 метров падает 8 ядовитых зарядов, наносящих урон врагу.           " + Environment.NewLine + Environment.NewLine +
+            venomous_hail_text = "Вы выстреливаете в небо, и на землю рядом с целью в радиусе 4 метров падает 8 ядовитых зарядов, наносящих урон врагу." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + venomous_hail_mana[venomous_hail_lvl] + Environment.NewLine +
                 "Время между активациями: 2 сек." + Environment.NewLine +
                 "Наносит " + venomous_hail_a[venomous_hail_lvl] + "% от урона текущего оружия в сек. ядом" + Environment.NewLine;
@@ -425,9 +422,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Разбивает щиты" + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
 
-            long_range_mastery_text = "Ваш опыт владения луками, арбалетами, пистолями и жезлами" + Environment.NewLine +
-                "увеличивает урон, наносимый ими врагу, и повышает дальность     " + Environment.NewLine +
-                "стрельбы." + Environment.NewLine + Environment.NewLine +
+            long_range_mastery_text = "Ваш опыт владения луками, арбалетами, пистолями и жезлами увеличивает урон, наносимый ими врагу, и повышает дальность стрельбы." + Environment.NewLine + Environment.NewLine +
                 "+" + long_range_mastery_a[long_range_mastery_lvl] + "% к урону в стрелковом бою" + Environment.NewLine +
                 "+" + long_range_mastery_b[long_range_mastery_lvl] + " м к дальнобойн. (лук, арбалет, пистоль, жезл)" + Environment.NewLine;
 
@@ -437,8 +432,7 @@ namespace Skill_Calculator
                 shotgonne_mastery_c[shotgonne_mastery_lvl] + "% шанс ослепить цель на 67% в теч. 3 сек." + Environment.NewLine + Environment.NewLine +
                 "Необходим дробовик";
 
-            akimbo_text = "Ваше умение обращаться с огнестрельным оружием позволяет стрелять из двух пистолей одновременно... нанося страшный урон врагам." + 
-                Environment.NewLine + Environment.NewLine +
+            akimbo_text = "Ваше умение обращаться с огнестрельным оружием позволяет стрелять из двух пистолей одновременно... нанося страшный урон врагам." + Environment.NewLine + Environment.NewLine +
                 "+" + akimbo_a[akimbo_lvl] + "% к урону при ведении боя с оружием в каждой руке" + Environment.NewLine + Environment.NewLine +
                 "Необходимо держать в руках два пистоля";
             
@@ -457,8 +451,7 @@ namespace Skill_Calculator
             
             int tangling_shot_damage = (int)Math.Floor(Math.Ceiling(tangling_shot_b[tangling_shot_lvl] * damage_monster[level] / 100) * tangling_shot_a[tangling_shot_lvl]);
 		    int tangling_shot_damage_secondary = (int)Math.Floor(Math.Ceiling(tangling_shot_d[tangling_shot_lvl] * damage_monster[level] / 100) * 3);
-            tangling_shot_text = "Вы стреляете проклятым снарядом, который обездвиживает цель. Кроме того, снаряд может обездвижить врагов, которые находятся в радиусе 3,5 м от цели. Обездвиженные враги получают урон в течение некоторого времени." + 
-                Environment.NewLine + Environment.NewLine +
+            tangling_shot_text = "Вы стреляете проклятым снарядом, который обездвиживает цель. Кроме того, снаряд может обездвижить врагов, которые находятся в радиусе 3,5 м от цели. Обездвиженные враги получают урон в течение некоторого времени." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + tangling_shot_mana[tangling_shot_lvl] + Environment.NewLine +
                 "100% шанс обездвижить цель на " + tangling_shot_a[tangling_shot_lvl] + " сек." + Environment.NewLine +
                 tangling_shot_damage + " Отравл. урона в теч. " + tangling_shot_a[tangling_shot_lvl] + " сек.*" + Environment.NewLine +
@@ -471,8 +464,7 @@ namespace Skill_Calculator
                 "*улучшается вместе с уровнем игрока";
                          
             int glaive_sweep_damage = (int)Math.Ceiling(glaive_sweep_c[glaive_sweep_lvl] * damage_monster[level] / 100) * 5;
-            glaive_sweep_text = "Вы наносите круговой удар глефой, отбрасывая врагов в радиусе 4 метров и оглушая их. Ваш уровень Заряда увеличивается при каждом попадании." + 
-                Environment.NewLine + Environment.NewLine +
+            glaive_sweep_text = "Вы наносите круговой удар глефой, отбрасывая врагов в радиусе 4 метров и оглушая их. Ваш уровень Заряда увеличивается при каждом попадании." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + glaive_sweep_mana[glaive_sweep_lvl] + Environment.NewLine +
                 "Наносит " + glaive_sweep_a[glaive_sweep_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine +
                 "+40 к отбрасыванию" + Environment.NewLine +
@@ -493,8 +485,7 @@ namespace Skill_Calculator
 		    int sandstorm_maxdam_1 = (int)Math.Ceiling(sandstorm_c[sandstorm_lvl] * damage_monster[level] / 100);
 		    int sandstorm_mindam_2 = (int)Math.Ceiling(70 * damage_monster[level] / 100);
 		    int sandstorm_maxdam_2 = (int)Math.Ceiling(100 * damage_monster[level] / 100);
-            sandstorm_text = "Вы бросаете глефу, которая превращается в вихрь, наносящий урон врагам и крадущий у них здоровье. Вихрь пролетает 20 м и увеличивает ваш индикатор Заряда на 1,5% за каждое попадание." + 
-                Environment.NewLine + Environment.NewLine +
+            sandstorm_text = "Вы бросаете глефу, которая превращается в вихрь, наносящий урон врагам и крадущий у них здоровье. Вихрь пролетает 20 м и увеличивает ваш индикатор Заряда на 1,5% за каждое попадание." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + sandstorm_mana[sandstorm_lvl] + Environment.NewLine +
                 "+15 к отбрасыванию" + Environment.NewLine +
                 "100% шанс оглушить цель на " + sandstorm_a[sandstorm_lvl] + " сек." + Environment.NewLine +
@@ -559,17 +550,14 @@ namespace Skill_Calculator
             dodge_mastery_text = "Вы освоили акробатику и поэтому более эффективно уклоняетесь от ударов." + Environment.NewLine + Environment.NewLine +
                 "+" + dodge_mastery_a[dodge_mastery_lvl] + "% к шансу уклонения";
 
-            poison_burst_text = "Вы смазываете оружие ядом, и в случае поражения ваш противник, вполне возможно, взорвется, оставляя после себя облако ядовитого газа, наносящего дополнительный урон в радиусе 6 метров." + 
-                Environment.NewLine + Environment.NewLine +
+            poison_burst_text = "Вы смазываете оружие ядом, и в случае поражения ваш противник, вполне возможно, взорвется, оставляя после себя облако ядовитого газа, наносящего дополнительный урон в радиусе 6 метров." + Environment.NewLine + Environment.NewLine +
                 "Наносит " + poison_burst_a[poison_burst_lvl] + "% от урона текущего оружия в сек. ядом" + Environment.NewLine +
                 poison_burst_b[poison_burst_lvl] + "% шанс уничтожить цель заклинанием \"Взрыв\"";
 
-            share_the_wealth_text = "Все питомцы и союзники, которые находятся рядом с вами в радиусе 16 метров, получают часть бонусов от вашего Заряда, а ваши собственные бонусы возрастают на такую же долю." + 
-                Environment.NewLine + Environment.NewLine +
+            share_the_wealth_text = "Все питомцы и союзники, которые находятся рядом с вами в радиусе 16 метров, получают часть бонусов от вашего Заряда, а ваши собственные бонусы возрастают на такую же долю." + Environment.NewLine + Environment.NewLine +
                 "Общая доля бонусов от заряда: " + share_the_wealth_a[share_the_wealth_lvl] + "%";
 
-            blade_pact_text = "Вы насылаете на врагов древнее проклятие замедляющее движение и уменьшающее защиту. Эффект длится 7 сек. и действует на всех врагов, находящихся в зоне действия заклинания." + 
-                Environment.NewLine + Environment.NewLine +
+            blade_pact_text = "Вы насылаете на врагов древнее проклятие замедляющее движение и уменьшающее защиту. Эффект длится 7 сек. и действует на всех врагов, находящихся в зоне действия заклинания." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + blade_pact_mana[blade_pact_lvl] + Environment.NewLine +
                 "-" + blade_pact_a[blade_pact_lvl] + "% от скорости атаки в теч. 3 сек." + Environment.NewLine +
                 "-" + blade_pact_b[blade_pact_lvl] + "% от скорости движения в теч. 3 сек." + Environment.NewLine +
@@ -593,8 +581,7 @@ namespace Skill_Calculator
 		    int bane_breath_maxdam_instant = (int)Math.Ceiling(bane_breath_d[bane_breath_lvl] * damage_monster[level] / 100);
 		    int bane_breath_mindam_minion = (int)Math.Ceiling(50 * damage_minion_bylevel[level] / 100);
 		    int bane_breath_maxdam_minion = (int)Math.Ceiling(80 * damage_minion_bylevel[level] / 100);
-            bane_breath_text = "Дыхание смерти отравляет врагов, и если они при этом погибают, то превращаются в теневиков-дьяволов, которые в течение 10 сек. сражаются на вашей стороне. Ритуал смерти способствует повышению боеспособности теневиков." + 
-                Environment.NewLine + Environment.NewLine +
+            bane_breath_text = "Дыхание смерти отравляет врагов, и если они при этом погибают, то превращаются в теневиков-дьяволов, которые в течение 10 сек. сражаются на вашей стороне. Ритуал смерти способствует повышению боеспособности теневиков." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + bane_breath_mana[bane_breath_lvl] + Environment.NewLine +
                 bane_breath_mindam_dot + "-" + bane_breath_maxdam_dot + " Отравл. урона в теч. 2 сек.*" + Environment.NewLine +
                 "+" + bane_breath_mindam_instant + "-" + bane_breath_maxdam_instant + " Отравл. урона*" + Environment.NewLine +
@@ -605,7 +592,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Теневики двигаются и атакуют на 30% быстрее" + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
 
-            repulsion_hex_text = "Вы призываете парящего аватара, который отталкивает находящихся рядом врагов." + Environment.NewLine +
+            repulsion_hex_text = "Вы призываете парящего аватара, который отталкивает находящихся рядом врагов." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + repulsion_hex_mana[repulsion_hex_lvl] + Environment.NewLine +
                 "Время между активациями: 35 сек." + Environment.NewLine + Environment.NewLine;
             if (repulsion_hex_lvl == 1)
@@ -629,8 +616,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "В 30% случаев заклинание на 5 секунд обращает врагов в бегство";
             
             int stone_pact_hp_regen = (int)Math.Ceiling((int)Math.Ceiling(stone_pact_c[stone_pact_lvl] * health_player_generic[level] / 100 * 3) / 62.5);
-            stone_pact_text = "Вы применяете древнее заклинание, защищающее от обычного и магического урона и частично отражающее его во врагов. Эффект длится 20 сек. и действует на всех союзников, находящихся в зоне действия заклинания." + 
-                Environment.NewLine + Environment.NewLine +
+            stone_pact_text = "Вы применяете древнее заклинание, защищающее от обычного и магического урона и частично отражающее его во врагов. Эффект длится 20 сек. и действует на всех союзников, находящихся в зоне действия заклинания." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + stone_pact_mana[stone_pact_lvl] + Environment.NewLine +
                 "Время между активациями: 8 сек." + Environment.NewLine +
                 "+" + stone_pact_a[stone_pact_lvl] + "% ко всем видам брони в теч. 3 сек." + Environment.NewLine +
@@ -669,8 +655,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "ЗСкорость атаки силача увеличивается на 30%" + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
 
-            master_of_the_elements_text = "Ваши знания о стихиях позволяют лучше сражаться. Эффект при использовании яда вдвое больше, чем в случае других стихий." + 
-                Environment.NewLine + Environment.NewLine +
+            master_of_the_elements_text = "Ваши знания о стихиях позволяют лучше сражаться. Эффект при использовании яда вдвое больше, чем в случае других стихий." + Environment.NewLine + Environment.NewLine +
                 "+" + master_of_the_elements_a[master_of_the_elements_lvl] + "% к лед. урону" + Environment.NewLine +
                 "+" + master_of_the_elements_a[master_of_the_elements_lvl] + "% к огнен. урону" + Environment.NewLine +
                 "+" + master_of_the_elements_b[master_of_the_elements_lvl] + "% к отравл. урону" + Environment.NewLine +
@@ -678,8 +663,7 @@ namespace Skill_Calculator
             
             int shadowling_ammo_mindam = (int)Math.Ceiling(shadowling_ammo_b[shadowling_ammo_lvl] * damage_minion_bylevel[level] / 100);
 		    int shadowling_ammo_maxdam = (int)Math.Ceiling(shadowling_ammo_c[shadowling_ammo_lvl] * damage_minion_bylevel[level] / 100);
-            shadowling_ammo_text = "Вы накладываете на боеприпасы темные чары. При попадании они иногда превращают убитых врагов в теневиков-нетопырей, которые в течение 10 сек. сражаются на вашей стороне. Ритуал смерти способствует повышению боеспособности теневиков." + 
-                Environment.NewLine + Environment.NewLine +
+            shadowling_ammo_text = "Вы накладываете на боеприпасы темные чары. При попадании они иногда превращают убитых врагов в теневиков-нетопырей, которые в течение 10 сек. сражаются на вашей стороне. Ритуал смерти способствует повышению боеспособности теневиков." + Environment.NewLine + Environment.NewLine +
                 shadowling_ammo_a[shadowling_ammo_lvl] + "% шанс уничтожить цель заклинанием \"Создать теневика-союзника\"" + Environment.NewLine +
                 "Помощники наносят " + shadowling_ammo_mindam + "-" + shadowling_ammo_maxdam + " Физич. урона*" + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
