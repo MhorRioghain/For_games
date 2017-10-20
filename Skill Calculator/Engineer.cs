@@ -402,11 +402,11 @@ namespace Skill_Calculator
                 "+" + heavy_lifting_a[heavy_lifting_lvl] + "% к скорости атаки" + Environment.NewLine +
                 heavy_lifting_a[heavy_lifting_lvl] + "% шанс оглушить цель на 3 сек." + Environment.NewLine + Environment.NewLine +
                 "Необходим двуручный топор, двуручный молот, двуручный меч, копье или пушка";
-             /*
-            supercharge_text="При атаке в ближнем бою можно передать избыток энергии в оружие - и в течение 10 секунд удары будут сильнее. При этом ваш уровень Заряда повышается." + Environment.NewLine +Environment.NewLine+
-//???????                "Supercharge surges do " + supercharge_a[skill9] + "%. Уровень Заряда повышается на " + supercharge_b[skill9] + "%." + Environment.NewLine +
-			supercharge_c[skill9] + "% шанс сотворить заклинание &quot;Конденсатор&quot; при атаке" + Environment.NewLine +
-		    "<br><a style='color:#ffff00'>Необходимо оружие ближнего боя" + Environment.NewLine +
+
+            supercharge_text = "При атаке в ближнем бою можно передать избыток энергии в оружие - и в течение 10 секунд удары будут сильнее. При этом ваш уровень Заряда повышается." + Environment.NewLine + Environment.NewLine +
+                "Уровень Заряда повышается на " + supercharge_b[supercharge_lvl] + "%." + Environment.NewLine +
+                supercharge_c[supercharge_lvl] + "% шанс сотворить заклинание \"Конденсатор\" при атаке" + Environment.NewLine + Environment.NewLine +
+                "Необходимо оружие ближнего боя";
              /* 
 		    textskill10.innerHTML = "<img src='/pic/skills/skillicon_coupdegrace.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Удар милосердия (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill10+"/15<br/><br/>";
 			"<br/>При нанесении удара оглушенной цели электрический заряд помогает вам ее прикончить. Частота применения - не более 1 раза в сек." + Environment.NewLine +

@@ -34,7 +34,7 @@ namespace Skill_Calculator
             Berserker_req_lvl();
             Engineer_req_lvl();
 
-            toolTip1.SetToolTip(TEST, ber.wolfpack_text);       
+            toolTip1.SetToolTip(TEST, ber.wolfpack_text);
         }
 
         public void Embermage_calcpoints(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace Skill_Calculator
             toolTip1.SetToolTip(FocusUD, emb.focus_text);
             toolTip1.SetToolTip(VitalityUD, emb.vitality_text);
 
-            toolTip1.SetToolTip(ms_panel, emb.magma_spear_text);                        
+            toolTip1.SetToolTip(ms_panel, emb.magma_spear_text);   
             toolTip1.SetToolTip(mm_panel, emb.magma_mace_text);
             toolTip1.SetToolTip(fb_panel, emb.firebombs_text);            
             toolTip1.SetToolTip(bp_panel, emb.blazing_pillar_text);
@@ -377,10 +377,20 @@ namespace Skill_Calculator
 
         private void toolTip1_Draw(object sender, DrawToolTipEventArgs e)
         {
-            Font f = new Font("Arial", 9.0f);  
-            e.DrawBackground();
-            e.DrawBorder();
-            e.Graphics.DrawString(e.ToolTipText, f, Brushes.AntiqueWhite, e.Bounds);   
+            Font f = new Font("Arial", 9.0f);
+            Color c = Color.Lime;
+
+            if (tabControl1.SelectedTab == tabPage1) c = Color.Crimson;
+            if (tabControl1.SelectedTab == tabPage2) c = Color.Goldenrod;
+            if (tabControl1.SelectedTab == tabPage3) c = Color.DeepSkyBlue;
+            if (tabControl1.SelectedTab == tabPage4) c = Color.LightSeaGreen;            
+            Pen pen = new Pen(c, 3); //Color.Maroon
+            e.DrawBackground();            
+            //e.DrawBorder();
+            e.Graphics.DrawLines(pen, new Point[] {new Point (0, e.Bounds.Height + 1), new Point (0, 0),new Point (e.Bounds.Width + 1, 0)});
+            e.Graphics.DrawLines(pen, new Point[] {new Point (0, e.Bounds.Height - 1), new Point (e.Bounds.Width - 1, e.Bounds.Height - 1),new Point (e.Bounds.Width - 1, 0)});
+            //e.Graphics.DrawRectangle(pen, e.Bounds);
+            e.Graphics.DrawString(e.ToolTipText, f, Brushes.AntiqueWhite, e.Bounds);
         }      
 
         private void Embermage_reset_stats_Click(object sender, EventArgs e)
@@ -725,6 +735,15 @@ namespace Skill_Calculator
             eng.sword_and_board_lvl = (int)sword_and_board.Value;
             eng.aegis_of_fate_lvl = (int)aegis_of_fate.Value;
             eng.charge_reconstitution_lvl = (int)charge_reconstitution.Value;
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+            int THeight, TWidth = 450;
+            Font f = new Font("Arial", 9.0f);
+            Graphics g = CreateGraphics();
+            THeight = (int)g.MeasureString(toolTip1.GetToolTip(e.AssociatedControl), f, TWidth).Height;
+            e.ToolTipSize = new Size(TWidth, THeight);
         }
     }
 }

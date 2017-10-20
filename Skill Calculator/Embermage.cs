@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Skill_Calculator
 {
@@ -241,7 +243,7 @@ namespace Skill_Calculator
         public string[] lightning_brand_reqlevel = { "14", "15", "16", "18", "20", "23", "27", "32", "38", "46", "55", "63", "72", "83", "94", "full" };
 
         double weapon_damage, critical_damage, double_chance, critical_chance, fumble_recovery,
-            max_mana, magic_damage, execute_chance, max_health, armor_bonus, block_chance;
+            max_mana, magic_damage, execute_chance, max_health, armor_bonus, block_chance;        
 
         public Embermage()
         {
@@ -312,7 +314,7 @@ namespace Skill_Calculator
                 "Шанс блокировать удар: +" + block_chance + " %";
 
             int magma_spear_damage = (int)Math.Ceiling(magma_spear_c[magma_spear_lvl] * damage_monster[level] / 100) * magma_spear_d[magma_spear_lvl];
-            magma_spear_text = "Вы обстреливаете врагов струей магмы, которая" + Environment.NewLine + "пробивает и поджигает их. Радиус зоны поражения 16 м." + Environment.NewLine + Environment.NewLine +
+            magma_spear_text = "Вы обстреливаете врагов струей магмы, которая пробивает и поджигает их. Радиус зоны поражения 16 м." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + magma_spear_mana[magma_spear_lvl] + " в сек." + Environment.NewLine +
                 "Наносит " + magma_spear_a[magma_spear_lvl] + "% от урона текущего оружия в сек. огнем" + Environment.NewLine +
                 magma_spear_b[magma_spear_lvl] + "% шанс на +" + magma_spear_damage + " Огнен. урона в теч. " + magma_spear_d[magma_spear_lvl] + " сек.*" + Environment.NewLine + Environment.NewLine +
@@ -322,8 +324,7 @@ namespace Skill_Calculator
                 "*улучшается вместе с уровнем игрока";
 
             int magma_mace_damage = (int)Math.Ceiling(magma_mace_c[magma_mace_lvl] * damage_monster[level] / 100) * 6;
-            magma_mace_text = "Вы призываете огромную огненную палицу, которая оглушает" + Environment.NewLine +
-                "и поджигает врагов в секторе радиусом 5 м. Заряд при этом не создается." + Environment.NewLine + Environment.NewLine +
+            magma_mace_text = "Вы призываете огромную огненную палицу, которая оглушает и поджигает врагов в секторе радиусом 5 м. Заряд при этом не создается." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + magma_mace_mana[magma_mace_lvl] + Environment.NewLine +
                 "Наносит " + magma_mace_a[magma_mace_lvl] + "% от урона текущего оружия в сек. огнем" + Environment.NewLine +
                 "80% шанс оглушить цель на 3 сек." + Environment.NewLine +
@@ -344,9 +345,7 @@ namespace Skill_Calculator
 
             int firebombs_mindam = (int)Math.Floor(Math.Ceiling(30 * damage_monster[level] / 100) * firebombs_c[firebombs_lvl]);
             int firebombs_maxdam = (int)Math.Floor(Math.Ceiling(60 * damage_monster[level] / 100) * firebombs_c[firebombs_lvl]);
-            firebombs_text = "Атака тремя огненными бомбами, которые поджигают землю на 3 сек." + Environment.NewLine + 
-                "Кроме того, иногда попавшие в ловушку враги мечутся в панике и тоже " + Environment.NewLine +
-                "возгораются. Уровень Заряда при этом не увеличивается." + Environment.NewLine + Environment.NewLine +
+            firebombs_text = "Атака тремя огненными бомбами, которые поджигают землю на 3 сек. Кроме того, иногда попавшие в ловушку враги мечутся в панике и тоже возгораются. Уровень Заряда при этом не увеличивается." +  Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + firebombs_mana[firebombs_lvl] + Environment.NewLine +
                 "Время между активациями: " + firebombs_f[firebombs_lvl] + " сек." + Environment.NewLine +
                 firebombs_mindam + "-" + firebombs_maxdam + " Огнен. урона в теч. " + firebombs_c[firebombs_lvl] + " сек.*" + Environment.NewLine +
@@ -359,8 +358,7 @@ namespace Skill_Calculator
 
             int blazing_pillar_mindam = (int)Math.Ceiling(75 * damage_monster[level] / 100);
             int blazing_pillar_maxdam = (int)Math.Ceiling(blazing_pillar_b[blazing_pillar_lvl] * damage_monster[level] / 100);   
-            blazing_pillar_text = "Атака четырьмя огромными огненными столпами." + Environment.NewLine + 
-                "Повышает уровень Заряда." + Environment.NewLine + Environment.NewLine +
+            blazing_pillar_text = "Атака четырьмя огромными огненными столпами. Повышает уровень Заряда." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + blazing_pillar_mana[blazing_pillar_lvl] + Environment.NewLine +
                 "Время между активациями: " + blazing_pillar_d[blazing_pillar_lvl] + " сек." + Environment.NewLine +
                 "+" + blazing_pillar_mindam + "-" + blazing_pillar_maxdam + " к Огнен. урону*" + Environment.NewLine +
@@ -372,8 +370,7 @@ namespace Skill_Calculator
 
             int infernal_collapse_mindam = (int)Math.Ceiling(infernal_collapse_a[infernal_collapse_lvl] * damage_monster[level] / 100);
             int infernal_collapse_maxdam = (int)Math.Ceiling(infernal_collapse_b[infernal_collapse_lvl] * damage_monster[level] / 100);
-            infernal_collapse_text = "Вы создаете шар из раскаленной материи, который резко расширяется," + Environment.NewLine + 
-                "накрывая взрывом сектор радиусом 4 м." + "                                                                   " + Environment.NewLine + Environment.NewLine +
+            infernal_collapse_text = "Вы создаете шар из раскаленной материи, который резко расширяется, накрывая взрывом сектор радиусом 4 м." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + infernal_collapse_mana[infernal_collapse_lvl] + Environment.NewLine +
                 "Время между активациями: " + infernal_collapse_d[infernal_collapse_lvl] + Environment.NewLine +
                 "+" + infernal_collapse_mindam + "-" + infernal_collapse_maxdam + " к Огнен. урону*" + Environment.NewLine +
@@ -384,7 +381,7 @@ namespace Skill_Calculator
                 "*улучшается вместе с уровнем игрока";
 
             int immolation_aura_damage = (int)Math.Ceiling(immolation_aura_b[immolation_aura_lvl] * damage_monster[level] / 100);
-            immolation_aura_text = "Вас окружает огненный вихрь, наносящий урон" + Environment.NewLine + "врагам, находящимся в радиусе 3 м." + Environment.NewLine + Environment.NewLine +
+            immolation_aura_text = "Вас окружает огненный вихрь, наносящий урон врагам, находящимся в радиусе 3 м." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + immolation_aura_mana[immolation_aura_lvl] + Environment.NewLine +
                 "Эффект длится " + immolation_aura_c[immolation_aura_lvl] + " сек." + Environment.NewLine +
                 immolation_aura_damage + " Огнен. урона в теч. 1 сек.*" + Environment.NewLine;
@@ -402,8 +399,7 @@ namespace Skill_Calculator
 		    int firestorm_dot_maxdam = (int)Math.Ceiling(firestorm_b[firestorm_lvl] * damage_monster[level] / 100) * 6;
 		    int firestorm_instant_mindam = (int)Math.Ceiling(20 * damage_monster[level] / 100);
 		    int firestorm_instant_maxdam = (int)Math.Ceiling(30 * damage_monster[level] / 100);
-            firestorm_text = "Небесный огонь поджигает всех врагов в радиусе 15 м. Вражеская" + Environment.NewLine +
-                "уязвимость к огню повышается. Уровень Заряда при этом не увеличивается." + Environment.NewLine + Environment.NewLine +
+            firestorm_text = "Небесный огонь поджигает всех врагов в радиусе 15 м. Вражеская уязвимость к огню повышается. Уровень Заряда при этом не увеличивается." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + firestorm_mana[firestorm_lvl] + Environment.NewLine +
                 "Время между активациями: " + firestorm_g[firestorm_lvl] + " сек." + Environment.NewLine +
                 firestorm_dot_mindam + "-" + firestorm_dot_maxdam + " Огнен. урона в теч. 6 сек.*" + Environment.NewLine +
@@ -422,13 +418,11 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Радиус полета горящих осколков увеличен вдвое." + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
             
-            charge_mastery_text = "Ваше мастерство позволяет вам быстрее" + Environment.NewLine +
-                "набирать Заряд и дольше его сохранять.            " + Environment.NewLine + Environment.NewLine +
+            charge_mastery_text = "Ваше мастерство позволяет вам быстрее набирать Заряд и дольше его сохранять." + Environment.NewLine + Environment.NewLine +
                 "-" + charge_mastery_a[charge_mastery_lvl] + "% от скорости рассеивания Заряда" + Environment.NewLine +
                 "+" + charge_mastery_b[charge_mastery_lvl] + "% к скорости увеличения Заряда";
 
-            elemental_attunement_text = "Эмберлинг находится в тесном контакте с природой, и это позволяет" + Environment.NewLine +
-                "ему продлевать действие эффектов магии стихий на врагов.                          " + Environment.NewLine + Environment.NewLine +
+            elemental_attunement_text = "Эмберлинг находится в тесном контакте с природой, и это позволяет ему продлевать действие эффектов магии стихий на врагов." + Environment.NewLine + Environment.NewLine +
                 "+" + elemental_attunement_a[elemental_attunement_lvl] + " сек. к времени горения/удара током/заморозки/отравления" + Environment.NewLine +
                 elemental_attunement_a[elemental_attunement_lvl] + "% шанс поджечь цель на 1 сек." + Environment.NewLine +
                 elemental_attunement_a[elemental_attunement_lvl] + "% шанс заморозить цель на 1 сек." + Environment.NewLine +
@@ -437,13 +431,11 @@ namespace Skill_Calculator
 
             int fire_brand_mindam = (int)Math.Ceiling(fire_brand_a[fire_brand_lvl] * damage_monster[level] / 100);
             int fire_brand_maxdam = (int)Math.Ceiling(fire_brand_b[fire_brand_lvl] * damage_monster[level] / 100);
-            fire_brand_text = "Атакуя горящего врага, вы наносите ему" + Environment.NewLine +
-                "дополнительный огненный урон." + Environment.NewLine + Environment.NewLine +
+            fire_brand_text = "Атакуя горящего врага, вы наносите ему дополнительный огненный урон." + Environment.NewLine + Environment.NewLine +
                 "+" + fire_brand_mindam + "-" + fire_brand_maxdam + " к Огнен. урону*" + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
 
-            icy_blast_text = "Обстрел врагов 5 рикошетящими ледяными снарядами," + Environment.NewLine +
-                "которые замедляют и обездвиживают их.                                      " + Environment.NewLine + Environment.NewLine +
+            icy_blast_text = "Обстрел врагов 5 рикошетящими ледяными снарядами, которые замедляют и обездвиживают их." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + icy_blast_mana[icy_blast_lvl] + Environment.NewLine +
                 "Наносит " + icy_blast_a[icy_blast_lvl] + "% от урона текущего оружия в сек. льдом" + Environment.NewLine +
                 icy_blast_b[icy_blast_lvl] + "% шанс заморозить цель на " + icy_blast_c[icy_blast_lvl] + " сек." + Environment.NewLine +
@@ -455,12 +447,11 @@ namespace Skill_Calculator
             icy_blast_text += Environment.NewLine +
                 "Преимущество I уровня" + Environment.NewLine + "На 6 сек. наносимый цели урон уменьшается на 20%" + Environment.NewLine +
                 "Преимущество II уровня" + Environment.NewLine + "75% к шансу обездвижить врага в течение 4 сек." + Environment.NewLine +
-                "Преимущество III уровня" + Environment.NewLine + "Число зарядов увеличено до 7 на сектор поражения" + Environment.NewLine;
+                "Преимущество III уровня" + Environment.NewLine + "Число зарядов увеличено до 7 на сектор поражения";
 
             int hailstorm_mindam = (int)Math.Ceiling(hailstorm_b[hailstorm_lvl] * damage_monster[level] / 100);
             int hailstorm_maxdam = (int)Math.Ceiling(hailstorm_c[hailstorm_lvl] * damage_monster[level] / 100);
-            hailstorm_text = "Сверху падают ледяные осколки, наносящие урон врагу в радиусе 15 метров." + Environment.NewLine +
-                "Уровень Заряда при этом не увеличивается.                                                                       " + Environment.NewLine + Environment.NewLine +
+            hailstorm_text = "Сверху падают ледяные осколки, наносящие урон врагу в радиусе 15 метров. Уровень Заряда при этом не увеличивается." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + hailstorm_mana[hailstorm_lvl] + Environment.NewLine +
                 "Время между активациями: " + hailstorm_f[hailstorm_lvl] + " сек." + Environment.NewLine +
                 hailstorm_a[hailstorm_lvl] + "% шанс оглушить цель на 3 сек." + Environment.NewLine +
@@ -479,8 +470,7 @@ namespace Skill_Calculator
 
             int frost_phase_mindam = (int)Math.Ceiling(35 * damage_monster[level] / 100);
             int frost_phase_maxdam = (int)Math.Ceiling(frost_phase_b[frost_phase_lvl] * damage_monster[level] / 100);                       
-            frost_phase_text = "Вы мгновенно телепортируетесь, нанося урон" + Environment.NewLine + 
-                "холодом врагам в радиусе 2,5 м от обеих точек." + Environment.NewLine + Environment.NewLine+
+            frost_phase_text = "Вы мгновенно телепортируетесь, нанося урон холодом врагам в радиусе 2,5 м от обеих точек." + Environment.NewLine + Environment.NewLine+
                 "Расход маны: "+frost_phase_mana[frost_phase_lvl] + Environment.NewLine +
                 "+" + frost_phase_mindam + "-" + frost_phase_maxdam + " к Лед. урону*" + Environment.NewLine +
                 "+" + frost_phase_c[frost_phase_lvl] + " к отбрасыванию" + Environment.NewLine +
@@ -490,9 +480,7 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Радиус зоны поражения увеличен до 6,25 м" + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
 
-            elemental_boon_text = "Особая аура повышает наносимый вами урон магией стихий и сопротивляемость" + Environment.NewLine +
-                "к атакам этой магии. Эффект длится 60 сек. и действует также на всех союзников         " + Environment.NewLine +
-                "в радиусе 12 м." + Environment.NewLine + Environment.NewLine +
+            elemental_boon_text = "Особая аура повышает наносимый вами урон магией стихий и сопротивляемость к атакам этой магии. Эффект длится 60 сек. и действует также на всех союзниковв радиусе 12 м." +  Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + elemental_boon_mana[elemental_boon_lvl] + Environment.NewLine +
                 "Время между активациями: 30 сек." + Environment.NewLine +
                 "-" + elemental_boon_b[elemental_boon_lvl] + "% от получаемого Отравл. урона в теч. 15 сек." + Environment.NewLine +
@@ -520,8 +508,7 @@ namespace Skill_Calculator
             int frost_wave_instant_mindam = (int)Math.Ceiling(70 * damage_monster[level] / 100);
             int frost_wave_instant_maxdam = (int)Math.Ceiling(140 * damage_monster[level] / 100);
             int frost_wave_dot = (int)Math.Ceiling(frost_wave_d[frost_wave_lvl] * damage_monster[level] / 100) * 7;
-            frost_wave_text = "Атака волной ледяных осколков, которые замораживают" + Environment.NewLine + 
-                "и пронзают врагов.                                                                           " + Environment.NewLine + Environment.NewLine +
+            frost_wave_text = "Атака волной ледяных осколков, которые замораживают и пронзают врагов." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + frost_wave_mana[frost_wave_lvl] + Environment.NewLine +
                 "+" + frost_wave_instant_mindam + "-" + frost_wave_instant_maxdam + " к Лед. урону*" + Environment.NewLine +
                 frost_wave_c[frost_wave_lvl] + "% шанс заморозить цель на 7 сек." + Environment.NewLine +
@@ -533,9 +520,7 @@ namespace Skill_Calculator
                          
             int ice_prison_mindam = (int)Math.Ceiling(30 * damage_monster[level] / 100) * 5;
             int ice_prison_maxdam = (int)Math.Ceiling(50 * damage_monster[level] / 100) * 5;
-            ice_prison_text = "Вы заключаете цель в ледяную тюрьму. Враг, в отличие от вас, " + Environment.NewLine +
-                "не может пройти через ее стены. Если враг атакует ледяные          " + Environment.NewLine +
-                "колонны, они отражают нанесенный урон." + Environment.NewLine + Environment.NewLine +
+            ice_prison_text = "Вы заключаете цель в ледяную тюрьму. Враг, в отличие от вас, не может пройти через ее стены. Если враг атакует ледяные колонны, они отражают нанесенный урон." +  Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + ice_prison_mana[ice_prison_lvl] + Environment.NewLine +
                 "Время между активациями: " + ice_prison_f[ice_prison_lvl] + " сек." + Environment.NewLine +
                 "Колонны существуют " + ice_prison_a[ice_prison_lvl] + " сек." + Environment.NewLine +
@@ -556,9 +541,7 @@ namespace Skill_Calculator
 
             int astral_ally_mindam = (int)Math.Ceiling(100 * (double)damage_minion_bylevel[level] / 100);
             int astral_ally_maxdam = (int)Math.Ceiling(150 * (double)damage_minion_bylevel[level] / 100);
-            astral_ally_text = "Вызов астрального клона другого эмберлинга: он" + Environment.NewLine +
-                "сражается на вашей стороне, поражая врагов            " + Environment.NewLine +
-                "мощными заклинаниями." + Environment.NewLine + Environment.NewLine +
+            astral_ally_text = "Вызов астрального клона другого эмберлинга: он сражается на вашей стороне, поражая врагов мощными заклинаниями." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + astral_ally_mana[astral_ally_lvl] + Environment.NewLine +
                 "Время между активациями: " + astral_ally_e[astral_ally_lvl] + " сек." + Environment.NewLine +
                 "Время вызова: " + astral_ally_a[astral_ally_lvl] + " сек." + Environment.NewLine +
@@ -574,29 +557,25 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Астральный союзник появляется на 50 сек." + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
 
-            staff_mastery_text = "Каждый точный удар посохом, магматической палицей, магматическим копьем," + Environment.NewLine + 
-                "ледяным залпом и электроразрядами снижает сопротивление врага магии стихий." + Environment.NewLine + Environment.NewLine +
+            staff_mastery_text = "Каждый точный удар посохом, магматической палицей, магматическим копьем, ледяным залпом и электроразрядами снижает сопротивление врага магии стихий." + Environment.NewLine + Environment.NewLine +
                 "-" + staff_mastery_a[staff_mastery_lvl] + "% от Электр. брони в теч. 8 сек." + Environment.NewLine +
                 "-" + staff_mastery_a[staff_mastery_lvl] + "% от Отравл. брони в теч. 8 сек." + Environment.NewLine +
                 "-" + staff_mastery_a[staff_mastery_lvl] + "% от Лед. брони в теч. 8 сек." + Environment.NewLine +
                 "-" + staff_mastery_a[staff_mastery_lvl] + "% от Огнен. брони в теч. 8 сек." + Environment.NewLine + Environment.NewLine +
                 "Необходим посох";
 
-            frozen_fate_text = "Уничтожив врага, вы получаете шанс заморозить до 4" + Environment.NewLine +
-                "противников, находящихся в радиусе 7 метров.               " + Environment.NewLine + Environment.NewLine +
+            frozen_fate_text = "Уничтожив врага, вы получаете шанс заморозить до 4 противников, находящихся в радиусе 7 метров." + Environment.NewLine + Environment.NewLine +
                 frozen_fate_a[frozen_fate_lvl] + "% шанс обездвижить цель на " + frozen_fate_b[frozen_fate_lvl] + " сек.";
 
             
             int ice_brand_mindam = (int)Math.Ceiling(70 * damage_monster[level] / 100);
             int ice_brand_maxdam = (int)Math.Ceiling(ice_brand_b[ice_brand_lvl] * damage_monster[level] / 100);
-            ice_brand_text = "Атакуя замороженного врага, вы наносите ему" + Environment.NewLine +
-                "дополнительный ледяной урон.                                  " + Environment.NewLine + Environment.NewLine +
+            ice_brand_text = "Атакуя замороженного врага, вы наносите ему дополнительный ледяной урон." + Environment.NewLine + Environment.NewLine +
                 "+" + ice_brand_mindam + "-" + ice_brand_maxdam + " к Лед. урону*" + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
             
             int prismatic_bolt_dam = (int)Math.Floor(Math.Ceiling(12 * damage_monster[level] / 100) * prismatic_bolt_b[prismatic_bolt_lvl]);
-            prismatic_bolt_text = "Вы обрушиваете на врагов 5 самонаводящихся" + Environment.NewLine +
-                "призматических зарядов.                                              " + Environment.NewLine + Environment.NewLine +
+            prismatic_bolt_text = "Вы обрушиваете на врагов 5 самонаводящихся призматических зарядов." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + prismatic_bolt_mana[prismatic_bolt_lvl] + Environment.NewLine +
                 "+" + prismatic_bolt_dam + " к Огнен. урону*" + Environment.NewLine +
                 "+" + prismatic_bolt_dam + " к Лед. урону*" + Environment.NewLine +
@@ -608,14 +587,12 @@ namespace Skill_Calculator
                 prismatic_bolt_c[prismatic_bolt_lvl] + "% шанс заморозить цель на " + prismatic_bolt_d[prismatic_bolt_lvl] + " сек." + Environment.NewLine + Environment.NewLine +
                 "Преимущество I уровня" + Environment.NewLine + "Урон увеличен на 10%" + Environment.NewLine +
                 "Преимущество II уровня" + Environment.NewLine + "Урон увеличен на 20%" + Environment.NewLine +
-                "Преимущество III уровня" + Environment.NewLine + "Урон увеличен на 30%";
+                "Преимущество III уровня" + Environment.NewLine + "Урон увеличен на 30%" + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока";
                         
             int shocking_burst_mindam = (int)Math.Ceiling(20 * damage_monster[level] / 100);
             int shocking_burst_maxdam = (int)Math.Ceiling(shocking_burst_c[shocking_burst_lvl] * damage_monster[level] / 100);
-            shocking_burst_text = "Вы обрушиваете на врагов электрический разряд, который оглушает" + Environment.NewLine +
-                "их и наносит урон. Зона действия - сектор с углом 75 градусов и радиусом      " + Environment.NewLine +
-                "8 м. Эффект длится, пока вы удерживаете кнопку мыши, и столько же" + Environment.NewLine +
-                "времени тратится мана." + Environment.NewLine + Environment.NewLine +
+            shocking_burst_text = "Вы обрушиваете на врагов электрический разряд, который оглушает их и наносит урон. Зона действия - сектор с углом 75 градусов и радиусом8 м. Эффект длится, пока вы удерживаете кнопку мыши, и столько же времени тратится мана." +  Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + shocking_burst_mana[shocking_burst_lvl] + " в сек." + Environment.NewLine +
                 "Наносит " + shocking_burst_a[shocking_burst_lvl] + "% от урона текущего оружия в сек. электричеством" + Environment.NewLine +
                 shocking_burst_mindam + "-" + shocking_burst_maxdam + " Электр. урона в теч. 1 сек.*" + Environment.NewLine +
@@ -628,9 +605,7 @@ namespace Skill_Calculator
             
             int thunder_locus_mindam = (int)Math.Ceiling(thunder_locus_b[thunder_locus_lvl] * damage_monster[level] / 100);
             int thunder_locus_maxdam = (int)Math.Ceiling(thunder_locus_c[thunder_locus_lvl] * damage_monster[level] / 100);
-            thunder_locus_text = "В заданной точке появляется миниатюрный вихрь с громом и молнией." + Environment.NewLine +
-                "Противники, находящиеся в радиусе 7 метров, получают урон до тех пор,     " + Environment.NewLine +
-                "пока вихрь не исчезнет. Сгусток энергии не повышает уровень Зарядов." + Environment.NewLine + Environment.NewLine+
+            thunder_locus_text = "В заданной точке появляется миниатюрный вихрь с громом и молнией. Противники, находящиеся в радиусе 7 метров, получают урон до тех пор, пока вихрь не исчезнет. Сгусток энергии не повышает уровень Зарядов." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: "+thunder_locus_mana[thunder_locus_lvl] + Environment.NewLine +
                 "Время между активациями: 10 сек." + Environment.NewLine +
                 "Время вызова: " + thunder_locus_a[thunder_locus_lvl] + " сек." + Environment.NewLine +
@@ -642,9 +617,7 @@ namespace Skill_Calculator
             
             int arc_beam_mindam = (int)Math.Ceiling(10 * damage_monster[level] / 100);
             int arc_beam_maxdam = (int)Math.Ceiling(20 * damage_monster[level] / 100);
-            arc_beam_text = "Ваше оружие излучает направленный поток энергии." + Environment.NewLine +
-                "Дополнительный эффект: если противник погибает," + Environment.NewLine +
-                "луч расщепляется и наносит урон находящимся рядом врагам." + Environment.NewLine + Environment.NewLine +
+            arc_beam_text = "Ваше оружие излучает направленный поток энергии. Дополнительный эффект: если противник погибает, луч расщепляется и наносит урон находящимся рядом врагам." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + arc_beam_mana[arc_beam_lvl] + " в сек." + Environment.NewLine +
                 "Наносит " + arc_beam_a[arc_beam_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine +
                 "Взрыв при гибели" + Environment.NewLine +
@@ -660,9 +633,7 @@ namespace Skill_Calculator
 
             int deaths_bounty_hp_regen = (int)Math.Ceiling(deaths_bounty_a[deaths_bounty_lvl] * health_player_generic[level] / 100);
             int deaths_bounty_mana_regen = (int)Math.Floor(deaths_bounty_a[deaths_bounty_lvl] * mana_player_generic[level] / 10) / 10;
-            deaths_bounty_text = "Вы связываете жизненную энергию всех врагов, находящихся в радиусе 6 м от цели." + Environment.NewLine +
-                "После их гибели здоровье и мана переходят к вам или другим игрокам в виде 3 разрядов." + Environment.NewLine +
-                "Количество здоровья и маны указано для одного заряда." + Environment.NewLine + Environment.NewLine +
+            deaths_bounty_text = "Вы связываете жизненную энергию всех врагов, находящихся в радиусе 6 м от цели. После их гибели здоровье и мана переходят к вам или другим игрокам в виде 3 разрядов. Количество здоровья и маны указано для одного заряда." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + deaths_bounty_mana[deaths_bounty_lvl] + Environment.NewLine +
                 "Время между активациями: " + deaths_bounty_b[deaths_bounty_lvl] + " сек." + Environment.NewLine +
                 "Восполняется " + deaths_bounty_hp_regen + " ед. здоровья в сек.*" + Environment.NewLine +
@@ -689,30 +660,26 @@ namespace Skill_Calculator
                 shockbolts_text += "10% шанс обездвижить цель на 3 сек." + Environment.NewLine;                    
             }
             shockbolts_text += Environment.NewLine +           
-                "Преимущество I уровня" + Environment.NewLine + "10% вероятность того, что разряд обездвижит врага" + Environment.NewLine +              "Преимущество II уровня" + Environment.NewLine + "Скорость разрядов увеличивается" + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "10% вероятность того, что разряд обездвижит врага" + Environment.NewLine +     
+                "Преимущество II уровня" + Environment.NewLine + "Скорость разрядов увеличивается" + Environment.NewLine +
                 "Преимущество III уровня" + Environment.NewLine + "Вы выпускаете 5 разрядов";
 
-            shocking_orb_text = "Медленно движущийся шар поражает электрическими" + Environment.NewLine +
-                "зарядами находящихся рядом врагов.                     " + Environment.NewLine + Environment.NewLine +
+            shocking_orb_text = "Медленно движущийся шар поражает электрическими зарядами находящихся рядом врагов." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + shocking_orb_mana[shocking_orb_lvl] + Environment.NewLine +
                 "Наносит " + shocking_orb_a[shocking_orb_lvl] + "% урона от оружия электричеством" + Environment.NewLine +
                 "Преимущество I уровня" + Environment.NewLine + "Вы выпускаете 3 шара" + Environment.NewLine +
                 "Преимущество II уровня" + Environment.NewLine + "Шары отскакивают от препятствий" + Environment.NewLine +
                 "Преимущество III уровня" + Environment.NewLine + "Радиус поражения увеличен на 50%";
 
-            prismatic_rift_text = "Энергия хаоса телепортирует врага, который нанес вам удар. Кроме того, может" + Environment.NewLine +
-                "возникнуть выбранный случайным образом магический эффект.                                  " + Environment.NewLine + Environment.NewLine +
+            prismatic_rift_text = "Энергия хаоса телепортирует врага, который нанес вам удар. Кроме того, может возникнуть выбранный случайным образом магический эффект." + Environment.NewLine + Environment.NewLine +
                 prismatic_rift_a[prismatic_rift_lvl] + "% шанс сотворить заклинание \"Хаотический разлом\" при получении удара";
 
-            wand_chaos_text = "Нанесение урона врагам жезлом, магматической палицей, магматическим" + Environment.NewLine +
-                "копьем, ледяным залпом и электроразрядами может привести к странным      " + Environment.NewLine +
-                "случайным нарушениям стихий." + Environment.NewLine + Environment.NewLine +
+            wand_chaos_text = "Нанесение урона врагам жезлом, магматической палицей, магматическим копьем, ледяным залпом и электроразрядами может привести к странным случайным нарушениям стихий." + Environment.NewLine + Environment.NewLine +
                 wand_chaos_a[wand_chaos_lvl] + "% шанс сотворить заклинание \"Странный эффект\" при атаке";
 
             int lightning_brand_mindam = (int)Math.Ceiling(lightning_brand_a[lightning_brand_lvl] * damage_monster[level] / 100);
             int lightning_brand_maxdam = (int)Math.Ceiling(lightning_brand_b[lightning_brand_lvl] * damage_monster[level] / 100);
-            lightning_brand_text = "Атакуя врага, получившего удар током, вы наносите ему" + Environment.NewLine +
-                "дополнительный электрический урон.                                     " + Environment.NewLine + Environment.NewLine +
+            lightning_brand_text = "Атакуя врага, получившего удар током, вы наносите ему дополнительный электрический урон." + Environment.NewLine + Environment.NewLine +
                 lightning_brand_mindam + "-" + lightning_brand_maxdam + " к Электр. урону*" + Environment.NewLine + Environment.NewLine +
                 "*улучшается вместе с уровнем игрока";
         }
