@@ -31,68 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel60 = new System.Windows.Forms.Panel();
-            this.fbr_panel = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.fbr_lvl = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.fire_brand = new System.Windows.Forms.NumericUpDown();
-            this.label35 = new System.Windows.Forms.Label();
-            this.cm_panel = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.cm_lvl = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.charge_mastery = new System.Windows.Forms.NumericUpDown();
-            this.label32 = new System.Windows.Forms.Label();
-            this.ea_panel = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.ea_lvl = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.elemental_attunement = new System.Windows.Forms.NumericUpDown();
-            this.label29 = new System.Windows.Forms.Label();
-            this.fs_panel = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.fs_lvl = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.firestorm = new System.Windows.Forms.NumericUpDown();
-            this.label26 = new System.Windows.Forms.Label();
-            this.ia_panel = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.ia_lvl = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.immolation_aura = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
-            this.ic_panel = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.ic_lvl = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.infernal_collapse = new System.Windows.Forms.NumericUpDown();
-            this.label20 = new System.Windows.Forms.Label();
-            this.bp_panel = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.bp_lvl = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.blazing_pillar = new System.Windows.Forms.NumericUpDown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.fb_panel = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.fb_lvl = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.firebombs = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
-            this.mm_panel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.mm_lvl = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.magma_mace = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.ms_panel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ms_lvl = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.magma_spear = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.ibr_panel = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -217,6 +155,68 @@
             this.label100 = new System.Windows.Forms.Label();
             this.prismatic_bolt = new System.Windows.Forms.NumericUpDown();
             this.label101 = new System.Windows.Forms.Label();
+            this.panel60 = new System.Windows.Forms.Panel();
+            this.fbr_panel = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.fbr_lvl = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.fire_brand = new System.Windows.Forms.NumericUpDown();
+            this.label35 = new System.Windows.Forms.Label();
+            this.cm_panel = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.cm_lvl = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.charge_mastery = new System.Windows.Forms.NumericUpDown();
+            this.label32 = new System.Windows.Forms.Label();
+            this.ea_panel = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.ea_lvl = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.elemental_attunement = new System.Windows.Forms.NumericUpDown();
+            this.label29 = new System.Windows.Forms.Label();
+            this.fs_panel = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.fs_lvl = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.firestorm = new System.Windows.Forms.NumericUpDown();
+            this.label26 = new System.Windows.Forms.Label();
+            this.ia_panel = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.ia_lvl = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.immolation_aura = new System.Windows.Forms.NumericUpDown();
+            this.label23 = new System.Windows.Forms.Label();
+            this.ic_panel = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.ic_lvl = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.infernal_collapse = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
+            this.bp_panel = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.bp_lvl = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.blazing_pillar = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.fb_panel = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.fb_lvl = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.firebombs = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.mm_panel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.mm_lvl = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.magma_mace = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ms_panel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ms_lvl = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.magma_spear = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.reset_skills = new System.Windows.Forms.Button();
             this.reset_stats = new System.Windows.Forms.Button();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
@@ -869,37 +869,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.panel60.SuspendLayout();
-            this.fbr_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fire_brand)).BeginInit();
-            this.cm_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.charge_mastery)).BeginInit();
-            this.ea_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elemental_attunement)).BeginInit();
-            this.fs_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firestorm)).BeginInit();
-            this.ia_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.immolation_aura)).BeginInit();
-            this.ic_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.infernal_collapse)).BeginInit();
-            this.bp_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blazing_pillar)).BeginInit();
-            this.fb_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firebombs)).BeginInit();
-            this.mm_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magma_mace)).BeginInit();
-            this.ms_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magma_spear)).BeginInit();
             this.panel10.SuspendLayout();
             this.ibr_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -962,6 +931,37 @@
             this.pb_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prismatic_bolt)).BeginInit();
+            this.panel60.SuspendLayout();
+            this.fbr_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fire_brand)).BeginInit();
+            this.cm_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.charge_mastery)).BeginInit();
+            this.ea_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elemental_attunement)).BeginInit();
+            this.fs_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firestorm)).BeginInit();
+            this.ia_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.immolation_aura)).BeginInit();
+            this.ic_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infernal_collapse)).BeginInit();
+            this.bp_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blazing_pillar)).BeginInit();
+            this.fb_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firebombs)).BeginInit();
+            this.mm_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magma_mace)).BeginInit();
+            this.ms_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magma_spear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VitalityUD)).BeginInit();
@@ -1320,790 +1320,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1853, 654);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Эмберлинг";
-            // 
-            // panel60
-            // 
-            this.panel60.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_modelmenu3;
-            this.panel60.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel60.Controls.Add(this.fbr_panel);
-            this.panel60.Controls.Add(this.cm_panel);
-            this.panel60.Controls.Add(this.ea_panel);
-            this.panel60.Controls.Add(this.fs_panel);
-            this.panel60.Controls.Add(this.ia_panel);
-            this.panel60.Controls.Add(this.ic_panel);
-            this.panel60.Controls.Add(this.bp_panel);
-            this.panel60.Controls.Add(this.fb_panel);
-            this.panel60.Controls.Add(this.mm_panel);
-            this.panel60.Controls.Add(this.label8);
-            this.panel60.Controls.Add(this.ms_panel);
-            this.panel60.Location = new System.Drawing.Point(15, 119);
-            this.panel60.Margin = new System.Windows.Forms.Padding(4);
-            this.panel60.Name = "panel60";
-            this.panel60.Size = new System.Drawing.Size(609, 495);
-            this.panel60.TabIndex = 34;
-            this.panel60.Tag = "1";
-            // 
-            // fbr_panel
-            // 
-            this.fbr_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold5;
-            this.fbr_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fbr_panel.Controls.Add(this.pictureBox10);
-            this.fbr_panel.Controls.Add(this.fbr_lvl);
-            this.fbr_panel.Controls.Add(this.label34);
-            this.fbr_panel.Controls.Add(this.fire_brand);
-            this.fbr_panel.Controls.Add(this.label35);
-            this.fbr_panel.Location = new System.Drawing.Point(407, 375);
-            this.fbr_panel.Margin = new System.Windows.Forms.Padding(4);
-            this.fbr_panel.Name = "fbr_panel";
-            this.fbr_panel.Size = new System.Drawing.Size(189, 105);
-            this.fbr_panel.TabIndex = 24;
-            this.fbr_panel.Tag = "1";
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_firebreath;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.InitialImage = null;
-            this.pictureBox10.Location = new System.Drawing.Point(3, 23);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(73, 65);
-            this.pictureBox10.TabIndex = 13;
-            this.pictureBox10.TabStop = false;
-            // 
-            // fbr_lvl
-            // 
-            this.fbr_lvl.AutoSize = true;
-            this.fbr_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fbr_lvl.Location = new System.Drawing.Point(159, 63);
-            this.fbr_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.fbr_lvl.Name = "fbr_lvl";
-            this.fbr_lvl.Size = new System.Drawing.Size(24, 17);
-            this.fbr_lvl.TabIndex = 12;
-            this.fbr_lvl.Text = "    ";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label34.Location = new System.Drawing.Point(83, 63);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(63, 17);
-            this.label34.TabIndex = 11;
-            this.label34.Text = "Уровень";
-            // 
-            // fire_brand
-            // 
-            this.fire_brand.Location = new System.Drawing.Point(84, 23);
-            this.fire_brand.Margin = new System.Windows.Forms.Padding(4);
-            this.fire_brand.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.fire_brand.Name = "fire_brand";
-            this.fire_brand.Size = new System.Drawing.Size(80, 22);
-            this.fire_brand.TabIndex = 9;
-            this.fire_brand.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label35.Location = new System.Drawing.Point(24, 4);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(124, 17);
-            this.label35.TabIndex = 10;
-            this.label35.Text = "Огненное клеймо";
-            // 
-            // cm_panel
-            // 
-            this.cm_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold5;
-            this.cm_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cm_panel.Controls.Add(this.pictureBox9);
-            this.cm_panel.Controls.Add(this.cm_lvl);
-            this.cm_panel.Controls.Add(this.label31);
-            this.cm_panel.Controls.Add(this.charge_mastery);
-            this.cm_panel.Controls.Add(this.label32);
-            this.cm_panel.Location = new System.Drawing.Point(12, 375);
-            this.cm_panel.Margin = new System.Windows.Forms.Padding(4);
-            this.cm_panel.Name = "cm_panel";
-            this.cm_panel.Size = new System.Drawing.Size(189, 105);
-            this.cm_panel.TabIndex = 24;
-            this.cm_panel.Tag = "1";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_magicmastery;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox9.InitialImage = null;
-            this.pictureBox9.Location = new System.Drawing.Point(3, 23);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(73, 65);
-            this.pictureBox9.TabIndex = 13;
-            this.pictureBox9.TabStop = false;
-            // 
-            // cm_lvl
-            // 
-            this.cm_lvl.AutoSize = true;
-            this.cm_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cm_lvl.Location = new System.Drawing.Point(159, 63);
-            this.cm_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.cm_lvl.Name = "cm_lvl";
-            this.cm_lvl.Size = new System.Drawing.Size(24, 17);
-            this.cm_lvl.TabIndex = 12;
-            this.cm_lvl.Text = "    ";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label31.Location = new System.Drawing.Point(83, 63);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(63, 17);
-            this.label31.TabIndex = 11;
-            this.label31.Text = "Уровень";
-            // 
-            // charge_mastery
-            // 
-            this.charge_mastery.Location = new System.Drawing.Point(84, 23);
-            this.charge_mastery.Margin = new System.Windows.Forms.Padding(4);
-            this.charge_mastery.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.charge_mastery.Name = "charge_mastery";
-            this.charge_mastery.Size = new System.Drawing.Size(80, 22);
-            this.charge_mastery.TabIndex = 9;
-            this.charge_mastery.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label32.Location = new System.Drawing.Point(39, 4);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(108, 17);
-            this.label32.TabIndex = 10;
-            this.label32.Text = "Мастер заряда";
-            // 
-            // ea_panel
-            // 
-            this.ea_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold5;
-            this.ea_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ea_panel.Controls.Add(this.pictureBox8);
-            this.ea_panel.Controls.Add(this.ea_lvl);
-            this.ea_panel.Controls.Add(this.label28);
-            this.ea_panel.Controls.Add(this.elemental_attunement);
-            this.ea_panel.Controls.Add(this.label29);
-            this.ea_panel.Location = new System.Drawing.Point(209, 375);
-            this.ea_panel.Margin = new System.Windows.Forms.Padding(4);
-            this.ea_panel.Name = "ea_panel";
-            this.ea_panel.Size = new System.Drawing.Size(189, 105);
-            this.ea_panel.TabIndex = 23;
-            this.ea_panel.Tag = "1";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_magicitem;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.InitialImage = null;
-            this.pictureBox8.Location = new System.Drawing.Point(3, 23);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(73, 65);
-            this.pictureBox8.TabIndex = 13;
-            this.pictureBox8.TabStop = false;
-            // 
-            // ea_lvl
-            // 
-            this.ea_lvl.AutoSize = true;
-            this.ea_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ea_lvl.Location = new System.Drawing.Point(159, 63);
-            this.ea_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ea_lvl.Name = "ea_lvl";
-            this.ea_lvl.Size = new System.Drawing.Size(24, 17);
-            this.ea_lvl.TabIndex = 12;
-            this.ea_lvl.Text = "    ";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label28.Location = new System.Drawing.Point(83, 63);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(63, 17);
-            this.label28.TabIndex = 11;
-            this.label28.Text = "Уровень";
-            // 
-            // elemental_attunement
-            // 
-            this.elemental_attunement.Location = new System.Drawing.Point(84, 23);
-            this.elemental_attunement.Margin = new System.Windows.Forms.Padding(4);
-            this.elemental_attunement.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.elemental_attunement.Name = "elemental_attunement";
-            this.elemental_attunement.Size = new System.Drawing.Size(80, 22);
-            this.elemental_attunement.TabIndex = 9;
-            this.elemental_attunement.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label29.Location = new System.Drawing.Point(16, 4);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(152, 17);
-            this.label29.TabIndex = 10;
-            this.label29.Text = "Гармония с природой";
-            // 
-            // fs_panel
-            // 
-            this.fs_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
-            this.fs_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fs_panel.Controls.Add(this.pictureBox7);
-            this.fs_panel.Controls.Add(this.fs_lvl);
-            this.fs_panel.Controls.Add(this.label25);
-            this.fs_panel.Controls.Add(this.firestorm);
-            this.fs_panel.Controls.Add(this.label26);
-            this.fs_panel.Location = new System.Drawing.Point(209, 263);
-            this.fs_panel.Margin = new System.Windows.Forms.Padding(4);
-            this.fs_panel.Name = "fs_panel";
-            this.fs_panel.Size = new System.Drawing.Size(189, 105);
-            this.fs_panel.TabIndex = 22;
-            this.fs_panel.Tag = "1";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_firestorm;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.InitialImage = null;
-            this.pictureBox7.Location = new System.Drawing.Point(3, 23);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(73, 65);
-            this.pictureBox7.TabIndex = 13;
-            this.pictureBox7.TabStop = false;
-            // 
-            // fs_lvl
-            // 
-            this.fs_lvl.AutoSize = true;
-            this.fs_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fs_lvl.Location = new System.Drawing.Point(159, 63);
-            this.fs_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.fs_lvl.Name = "fs_lvl";
-            this.fs_lvl.Size = new System.Drawing.Size(24, 17);
-            this.fs_lvl.TabIndex = 12;
-            this.fs_lvl.Text = "    ";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label25.Location = new System.Drawing.Point(83, 63);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(63, 17);
-            this.label25.TabIndex = 11;
-            this.label25.Text = "Уровень";
-            // 
-            // firestorm
-            // 
-            this.firestorm.Location = new System.Drawing.Point(84, 23);
-            this.firestorm.Margin = new System.Windows.Forms.Padding(4);
-            this.firestorm.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.firestorm.Name = "firestorm";
-            this.firestorm.Size = new System.Drawing.Size(80, 22);
-            this.firestorm.TabIndex = 9;
-            this.firestorm.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label26.Location = new System.Drawing.Point(31, 4);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(121, 17);
-            this.label26.TabIndex = 10;
-            this.label26.Text = "Огненный шторм";
-            // 
-            // ia_panel
-            // 
-            this.ia_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
-            this.ia_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ia_panel.Controls.Add(this.pictureBox6);
-            this.ia_panel.Controls.Add(this.ia_lvl);
-            this.ia_panel.Controls.Add(this.label22);
-            this.ia_panel.Controls.Add(this.immolation_aura);
-            this.ia_panel.Controls.Add(this.label23);
-            this.ia_panel.Location = new System.Drawing.Point(407, 151);
-            this.ia_panel.Margin = new System.Windows.Forms.Padding(4);
-            this.ia_panel.Name = "ia_panel";
-            this.ia_panel.Size = new System.Drawing.Size(189, 105);
-            this.ia_panel.TabIndex = 21;
-            this.ia_panel.Tag = "1";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_flameaura;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.InitialImage = null;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 23);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(73, 65);
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
-            // 
-            // ia_lvl
-            // 
-            this.ia_lvl.AutoSize = true;
-            this.ia_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ia_lvl.Location = new System.Drawing.Point(159, 63);
-            this.ia_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ia_lvl.Name = "ia_lvl";
-            this.ia_lvl.Size = new System.Drawing.Size(24, 17);
-            this.ia_lvl.TabIndex = 12;
-            this.ia_lvl.Text = "    ";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label22.Location = new System.Drawing.Point(83, 63);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(63, 17);
-            this.label22.TabIndex = 11;
-            this.label22.Text = "Уровень";
-            // 
-            // immolation_aura
-            // 
-            this.immolation_aura.Location = new System.Drawing.Point(84, 23);
-            this.immolation_aura.Margin = new System.Windows.Forms.Padding(4);
-            this.immolation_aura.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.immolation_aura.Name = "immolation_aura";
-            this.immolation_aura.Size = new System.Drawing.Size(80, 22);
-            this.immolation_aura.TabIndex = 9;
-            this.immolation_aura.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label23.Location = new System.Drawing.Point(24, 4);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(131, 17);
-            this.label23.TabIndex = 10;
-            this.label23.Text = "Аура всесожжения";
-            // 
-            // ic_panel
-            // 
-            this.ic_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
-            this.ic_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ic_panel.Controls.Add(this.pictureBox5);
-            this.ic_panel.Controls.Add(this.ic_lvl);
-            this.ic_panel.Controls.Add(this.label19);
-            this.ic_panel.Controls.Add(this.infernal_collapse);
-            this.ic_panel.Controls.Add(this.label20);
-            this.ic_panel.Location = new System.Drawing.Point(209, 151);
-            this.ic_panel.Margin = new System.Windows.Forms.Padding(4);
-            this.ic_panel.Name = "ic_panel";
-            this.ic_panel.Size = new System.Drawing.Size(189, 105);
-            this.ic_panel.TabIndex = 21;
-            this.ic_panel.Tag = "1";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_infernalcollapse;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.InitialImage = null;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 23);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(73, 65);
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
-            // 
-            // ic_lvl
-            // 
-            this.ic_lvl.AutoSize = true;
-            this.ic_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ic_lvl.Location = new System.Drawing.Point(159, 63);
-            this.ic_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ic_lvl.Name = "ic_lvl";
-            this.ic_lvl.Size = new System.Drawing.Size(24, 17);
-            this.ic_lvl.TabIndex = 12;
-            this.ic_lvl.Text = "    ";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label19.Location = new System.Drawing.Point(83, 63);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(63, 17);
-            this.label19.TabIndex = 11;
-            this.label19.Text = "Уровень";
-            // 
-            // infernal_collapse
-            // 
-            this.infernal_collapse.Location = new System.Drawing.Point(84, 23);
-            this.infernal_collapse.Margin = new System.Windows.Forms.Padding(4);
-            this.infernal_collapse.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.infernal_collapse.Name = "infernal_collapse";
-            this.infernal_collapse.Size = new System.Drawing.Size(80, 22);
-            this.infernal_collapse.TabIndex = 9;
-            this.infernal_collapse.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label20.Location = new System.Drawing.Point(48, 4);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(98, 17);
-            this.label20.TabIndex = 10;
-            this.label20.Text = "Адское пекло";
-            // 
-            // bp_panel
-            // 
-            this.bp_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
-            this.bp_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bp_panel.Controls.Add(this.pictureBox4);
-            this.bp_panel.Controls.Add(this.bp_lvl);
-            this.bp_panel.Controls.Add(this.label16);
-            this.bp_panel.Controls.Add(this.blazing_pillar);
-            this.bp_panel.Controls.Add(this.label17);
-            this.bp_panel.Location = new System.Drawing.Point(12, 151);
-            this.bp_panel.Margin = new System.Windows.Forms.Padding(4);
-            this.bp_panel.Name = "bp_panel";
-            this.bp_panel.Size = new System.Drawing.Size(189, 105);
-            this.bp_panel.TabIndex = 20;
-            this.bp_panel.Tag = "1";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_blazingpillar2;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.InitialImage = null;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 23);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(73, 65);
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            // 
-            // bp_lvl
-            // 
-            this.bp_lvl.AutoSize = true;
-            this.bp_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bp_lvl.Location = new System.Drawing.Point(159, 63);
-            this.bp_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bp_lvl.Name = "bp_lvl";
-            this.bp_lvl.Size = new System.Drawing.Size(24, 17);
-            this.bp_lvl.TabIndex = 12;
-            this.bp_lvl.Text = "    ";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(83, 63);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(63, 17);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Уровень";
-            // 
-            // blazing_pillar
-            // 
-            this.blazing_pillar.Location = new System.Drawing.Point(84, 23);
-            this.blazing_pillar.Margin = new System.Windows.Forms.Padding(4);
-            this.blazing_pillar.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.blazing_pillar.Name = "blazing_pillar";
-            this.blazing_pillar.Size = new System.Drawing.Size(80, 22);
-            this.blazing_pillar.TabIndex = 9;
-            this.blazing_pillar.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(39, 4);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(108, 17);
-            this.label17.TabIndex = 10;
-            this.label17.Text = "Огненый столп";
-            // 
-            // fb_panel
-            // 
-            this.fb_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
-            this.fb_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.fb_panel.Controls.Add(this.pictureBox3);
-            this.fb_panel.Controls.Add(this.fb_lvl);
-            this.fb_panel.Controls.Add(this.label13);
-            this.fb_panel.Controls.Add(this.firebombs);
-            this.fb_panel.Controls.Add(this.label14);
-            this.fb_panel.Location = new System.Drawing.Point(407, 39);
-            this.fb_panel.Margin = new System.Windows.Forms.Padding(4);
-            this.fb_panel.Name = "fb_panel";
-            this.fb_panel.Size = new System.Drawing.Size(189, 105);
-            this.fb_panel.TabIndex = 21;
-            this.fb_panel.Tag = "1";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_firebomb;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.InitialImage = null;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 23);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(73, 65);
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
-            // fb_lvl
-            // 
-            this.fb_lvl.AutoSize = true;
-            this.fb_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fb_lvl.Location = new System.Drawing.Point(159, 63);
-            this.fb_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.fb_lvl.Name = "fb_lvl";
-            this.fb_lvl.Size = new System.Drawing.Size(24, 17);
-            this.fb_lvl.TabIndex = 12;
-            this.fb_lvl.Text = "    ";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(83, 63);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 17);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "Уровень";
-            // 
-            // firebombs
-            // 
-            this.firebombs.Location = new System.Drawing.Point(84, 23);
-            this.firebombs.Margin = new System.Windows.Forms.Padding(4);
-            this.firebombs.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.firebombs.Name = "firebombs";
-            this.firebombs.Size = new System.Drawing.Size(80, 22);
-            this.firebombs.TabIndex = 9;
-            this.firebombs.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(34, 4);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(121, 17);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Огненные бомбы";
-            // 
-            // mm_panel
-            // 
-            this.mm_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
-            this.mm_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.mm_panel.Controls.Add(this.pictureBox2);
-            this.mm_panel.Controls.Add(this.mm_lvl);
-            this.mm_panel.Controls.Add(this.label10);
-            this.mm_panel.Controls.Add(this.magma_mace);
-            this.mm_panel.Controls.Add(this.label11);
-            this.mm_panel.Location = new System.Drawing.Point(209, 39);
-            this.mm_panel.Margin = new System.Windows.Forms.Padding(4);
-            this.mm_panel.Name = "mm_panel";
-            this.mm_panel.Size = new System.Drawing.Size(189, 105);
-            this.mm_panel.TabIndex = 20;
-            this.mm_panel.Tag = "1";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_magmamace;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 23);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(73, 65);
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
-            // mm_lvl
-            // 
-            this.mm_lvl.AutoSize = true;
-            this.mm_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.mm_lvl.Location = new System.Drawing.Point(159, 63);
-            this.mm_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.mm_lvl.Name = "mm_lvl";
-            this.mm_lvl.Size = new System.Drawing.Size(24, 17);
-            this.mm_lvl.TabIndex = 12;
-            this.mm_lvl.Text = "    ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(83, 63);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 17);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Уровень";
-            // 
-            // magma_mace
-            // 
-            this.magma_mace.Location = new System.Drawing.Point(84, 23);
-            this.magma_mace.Margin = new System.Windows.Forms.Padding(4);
-            this.magma_mace.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.magma_mace.Name = "magma_mace";
-            this.magma_mace.Size = new System.Drawing.Size(80, 22);
-            this.magma_mace.TabIndex = 9;
-            this.magma_mace.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(16, 4);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(162, 17);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Магматическая палица";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(271, 15);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 20);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Ад";
-            // 
-            // ms_panel
-            // 
-            this.ms_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
-            this.ms_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ms_panel.Controls.Add(this.pictureBox1);
-            this.ms_panel.Controls.Add(this.ms_lvl);
-            this.ms_panel.Controls.Add(this.label7);
-            this.ms_panel.Controls.Add(this.magma_spear);
-            this.ms_panel.Controls.Add(this.label3);
-            this.ms_panel.Location = new System.Drawing.Point(12, 39);
-            this.ms_panel.Margin = new System.Windows.Forms.Padding(4);
-            this.ms_panel.Name = "ms_panel";
-            this.ms_panel.Size = new System.Drawing.Size(189, 105);
-            this.ms_panel.TabIndex = 19;
-            this.ms_panel.Tag = "1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_magmaspear;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 23);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 65);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // ms_lvl
-            // 
-            this.ms_lvl.AutoSize = true;
-            this.ms_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ms_lvl.Location = new System.Drawing.Point(159, 63);
-            this.ms_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.ms_lvl.Name = "ms_lvl";
-            this.ms_lvl.Size = new System.Drawing.Size(24, 17);
-            this.ms_lvl.TabIndex = 12;
-            this.ms_lvl.Text = "    ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(83, 63);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 17);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Уровень";
-            // 
-            // magma_spear
-            // 
-            this.magma_spear.Location = new System.Drawing.Point(84, 23);
-            this.magma_spear.Margin = new System.Windows.Forms.Padding(4);
-            this.magma_spear.Maximum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.magma_spear.Name = "magma_spear";
-            this.magma_spear.Size = new System.Drawing.Size(80, 22);
-            this.magma_spear.TabIndex = 9;
-            this.magma_spear.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(12, 4);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 17);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Магматическое копьё";
             // 
             // panel10
             // 
@@ -3674,6 +2890,790 @@
             this.label101.Size = new System.Drawing.Size(162, 17);
             this.label101.TabIndex = 10;
             this.label101.Text = "Призматический зарад";
+            // 
+            // panel60
+            // 
+            this.panel60.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_modelmenu3;
+            this.panel60.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel60.Controls.Add(this.fbr_panel);
+            this.panel60.Controls.Add(this.cm_panel);
+            this.panel60.Controls.Add(this.ea_panel);
+            this.panel60.Controls.Add(this.fs_panel);
+            this.panel60.Controls.Add(this.ia_panel);
+            this.panel60.Controls.Add(this.ic_panel);
+            this.panel60.Controls.Add(this.bp_panel);
+            this.panel60.Controls.Add(this.fb_panel);
+            this.panel60.Controls.Add(this.mm_panel);
+            this.panel60.Controls.Add(this.label8);
+            this.panel60.Controls.Add(this.ms_panel);
+            this.panel60.Location = new System.Drawing.Point(15, 119);
+            this.panel60.Margin = new System.Windows.Forms.Padding(4);
+            this.panel60.Name = "panel60";
+            this.panel60.Size = new System.Drawing.Size(609, 495);
+            this.panel60.TabIndex = 34;
+            this.panel60.Tag = "1";
+            // 
+            // fbr_panel
+            // 
+            this.fbr_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold5;
+            this.fbr_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.fbr_panel.Controls.Add(this.pictureBox10);
+            this.fbr_panel.Controls.Add(this.fbr_lvl);
+            this.fbr_panel.Controls.Add(this.label34);
+            this.fbr_panel.Controls.Add(this.fire_brand);
+            this.fbr_panel.Controls.Add(this.label35);
+            this.fbr_panel.Location = new System.Drawing.Point(407, 375);
+            this.fbr_panel.Margin = new System.Windows.Forms.Padding(4);
+            this.fbr_panel.Name = "fbr_panel";
+            this.fbr_panel.Size = new System.Drawing.Size(189, 105);
+            this.fbr_panel.TabIndex = 24;
+            this.fbr_panel.Tag = "1";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_firebreath;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox10.InitialImage = null;
+            this.pictureBox10.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(73, 65);
+            this.pictureBox10.TabIndex = 13;
+            this.pictureBox10.TabStop = false;
+            // 
+            // fbr_lvl
+            // 
+            this.fbr_lvl.AutoSize = true;
+            this.fbr_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.fbr_lvl.Location = new System.Drawing.Point(159, 63);
+            this.fbr_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.fbr_lvl.Name = "fbr_lvl";
+            this.fbr_lvl.Size = new System.Drawing.Size(24, 17);
+            this.fbr_lvl.TabIndex = 12;
+            this.fbr_lvl.Text = "    ";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label34.Location = new System.Drawing.Point(83, 63);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(63, 17);
+            this.label34.TabIndex = 11;
+            this.label34.Text = "Уровень";
+            // 
+            // fire_brand
+            // 
+            this.fire_brand.Location = new System.Drawing.Point(84, 23);
+            this.fire_brand.Margin = new System.Windows.Forms.Padding(4);
+            this.fire_brand.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.fire_brand.Name = "fire_brand";
+            this.fire_brand.Size = new System.Drawing.Size(80, 22);
+            this.fire_brand.TabIndex = 9;
+            this.fire_brand.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label35.Location = new System.Drawing.Point(24, 4);
+            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(124, 17);
+            this.label35.TabIndex = 10;
+            this.label35.Text = "Огненное клеймо";
+            // 
+            // cm_panel
+            // 
+            this.cm_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold5;
+            this.cm_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cm_panel.Controls.Add(this.pictureBox9);
+            this.cm_panel.Controls.Add(this.cm_lvl);
+            this.cm_panel.Controls.Add(this.label31);
+            this.cm_panel.Controls.Add(this.charge_mastery);
+            this.cm_panel.Controls.Add(this.label32);
+            this.cm_panel.Location = new System.Drawing.Point(12, 375);
+            this.cm_panel.Margin = new System.Windows.Forms.Padding(4);
+            this.cm_panel.Name = "cm_panel";
+            this.cm_panel.Size = new System.Drawing.Size(189, 105);
+            this.cm_panel.TabIndex = 24;
+            this.cm_panel.Tag = "1";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_magicmastery;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox9.InitialImage = null;
+            this.pictureBox9.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(73, 65);
+            this.pictureBox9.TabIndex = 13;
+            this.pictureBox9.TabStop = false;
+            // 
+            // cm_lvl
+            // 
+            this.cm_lvl.AutoSize = true;
+            this.cm_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cm_lvl.Location = new System.Drawing.Point(159, 63);
+            this.cm_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cm_lvl.Name = "cm_lvl";
+            this.cm_lvl.Size = new System.Drawing.Size(24, 17);
+            this.cm_lvl.TabIndex = 12;
+            this.cm_lvl.Text = "    ";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label31.Location = new System.Drawing.Point(83, 63);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(63, 17);
+            this.label31.TabIndex = 11;
+            this.label31.Text = "Уровень";
+            // 
+            // charge_mastery
+            // 
+            this.charge_mastery.Location = new System.Drawing.Point(84, 23);
+            this.charge_mastery.Margin = new System.Windows.Forms.Padding(4);
+            this.charge_mastery.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.charge_mastery.Name = "charge_mastery";
+            this.charge_mastery.Size = new System.Drawing.Size(80, 22);
+            this.charge_mastery.TabIndex = 9;
+            this.charge_mastery.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label32.Location = new System.Drawing.Point(39, 4);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(108, 17);
+            this.label32.TabIndex = 10;
+            this.label32.Text = "Мастер заряда";
+            // 
+            // ea_panel
+            // 
+            this.ea_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold5;
+            this.ea_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ea_panel.Controls.Add(this.pictureBox8);
+            this.ea_panel.Controls.Add(this.ea_lvl);
+            this.ea_panel.Controls.Add(this.label28);
+            this.ea_panel.Controls.Add(this.elemental_attunement);
+            this.ea_panel.Controls.Add(this.label29);
+            this.ea_panel.Location = new System.Drawing.Point(209, 375);
+            this.ea_panel.Margin = new System.Windows.Forms.Padding(4);
+            this.ea_panel.Name = "ea_panel";
+            this.ea_panel.Size = new System.Drawing.Size(189, 105);
+            this.ea_panel.TabIndex = 23;
+            this.ea_panel.Tag = "1";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_magicitem;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox8.InitialImage = null;
+            this.pictureBox8.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(73, 65);
+            this.pictureBox8.TabIndex = 13;
+            this.pictureBox8.TabStop = false;
+            // 
+            // ea_lvl
+            // 
+            this.ea_lvl.AutoSize = true;
+            this.ea_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ea_lvl.Location = new System.Drawing.Point(159, 63);
+            this.ea_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ea_lvl.Name = "ea_lvl";
+            this.ea_lvl.Size = new System.Drawing.Size(24, 17);
+            this.ea_lvl.TabIndex = 12;
+            this.ea_lvl.Text = "    ";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label28.Location = new System.Drawing.Point(83, 63);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(63, 17);
+            this.label28.TabIndex = 11;
+            this.label28.Text = "Уровень";
+            // 
+            // elemental_attunement
+            // 
+            this.elemental_attunement.Location = new System.Drawing.Point(84, 23);
+            this.elemental_attunement.Margin = new System.Windows.Forms.Padding(4);
+            this.elemental_attunement.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.elemental_attunement.Name = "elemental_attunement";
+            this.elemental_attunement.Size = new System.Drawing.Size(80, 22);
+            this.elemental_attunement.TabIndex = 9;
+            this.elemental_attunement.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label29.Location = new System.Drawing.Point(16, 4);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(152, 17);
+            this.label29.TabIndex = 10;
+            this.label29.Text = "Гармония с природой";
+            // 
+            // fs_panel
+            // 
+            this.fs_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
+            this.fs_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.fs_panel.Controls.Add(this.pictureBox7);
+            this.fs_panel.Controls.Add(this.fs_lvl);
+            this.fs_panel.Controls.Add(this.label25);
+            this.fs_panel.Controls.Add(this.firestorm);
+            this.fs_panel.Controls.Add(this.label26);
+            this.fs_panel.Location = new System.Drawing.Point(209, 263);
+            this.fs_panel.Margin = new System.Windows.Forms.Padding(4);
+            this.fs_panel.Name = "fs_panel";
+            this.fs_panel.Size = new System.Drawing.Size(189, 105);
+            this.fs_panel.TabIndex = 22;
+            this.fs_panel.Tag = "1";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_firestorm;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox7.InitialImage = null;
+            this.pictureBox7.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(73, 65);
+            this.pictureBox7.TabIndex = 13;
+            this.pictureBox7.TabStop = false;
+            // 
+            // fs_lvl
+            // 
+            this.fs_lvl.AutoSize = true;
+            this.fs_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.fs_lvl.Location = new System.Drawing.Point(159, 63);
+            this.fs_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.fs_lvl.Name = "fs_lvl";
+            this.fs_lvl.Size = new System.Drawing.Size(24, 17);
+            this.fs_lvl.TabIndex = 12;
+            this.fs_lvl.Text = "    ";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label25.Location = new System.Drawing.Point(83, 63);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(63, 17);
+            this.label25.TabIndex = 11;
+            this.label25.Text = "Уровень";
+            // 
+            // firestorm
+            // 
+            this.firestorm.Location = new System.Drawing.Point(84, 23);
+            this.firestorm.Margin = new System.Windows.Forms.Padding(4);
+            this.firestorm.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.firestorm.Name = "firestorm";
+            this.firestorm.Size = new System.Drawing.Size(80, 22);
+            this.firestorm.TabIndex = 9;
+            this.firestorm.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label26.Location = new System.Drawing.Point(31, 4);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(121, 17);
+            this.label26.TabIndex = 10;
+            this.label26.Text = "Огненный шторм";
+            // 
+            // ia_panel
+            // 
+            this.ia_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
+            this.ia_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ia_panel.Controls.Add(this.pictureBox6);
+            this.ia_panel.Controls.Add(this.ia_lvl);
+            this.ia_panel.Controls.Add(this.label22);
+            this.ia_panel.Controls.Add(this.immolation_aura);
+            this.ia_panel.Controls.Add(this.label23);
+            this.ia_panel.Location = new System.Drawing.Point(407, 151);
+            this.ia_panel.Margin = new System.Windows.Forms.Padding(4);
+            this.ia_panel.Name = "ia_panel";
+            this.ia_panel.Size = new System.Drawing.Size(189, 105);
+            this.ia_panel.TabIndex = 21;
+            this.ia_panel.Tag = "1";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_flameaura;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.InitialImage = null;
+            this.pictureBox6.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(73, 65);
+            this.pictureBox6.TabIndex = 13;
+            this.pictureBox6.TabStop = false;
+            // 
+            // ia_lvl
+            // 
+            this.ia_lvl.AutoSize = true;
+            this.ia_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ia_lvl.Location = new System.Drawing.Point(159, 63);
+            this.ia_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ia_lvl.Name = "ia_lvl";
+            this.ia_lvl.Size = new System.Drawing.Size(24, 17);
+            this.ia_lvl.TabIndex = 12;
+            this.ia_lvl.Text = "    ";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label22.Location = new System.Drawing.Point(83, 63);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(63, 17);
+            this.label22.TabIndex = 11;
+            this.label22.Text = "Уровень";
+            // 
+            // immolation_aura
+            // 
+            this.immolation_aura.Location = new System.Drawing.Point(84, 23);
+            this.immolation_aura.Margin = new System.Windows.Forms.Padding(4);
+            this.immolation_aura.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.immolation_aura.Name = "immolation_aura";
+            this.immolation_aura.Size = new System.Drawing.Size(80, 22);
+            this.immolation_aura.TabIndex = 9;
+            this.immolation_aura.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label23.Location = new System.Drawing.Point(24, 4);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(131, 17);
+            this.label23.TabIndex = 10;
+            this.label23.Text = "Аура всесожжения";
+            // 
+            // ic_panel
+            // 
+            this.ic_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
+            this.ic_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ic_panel.Controls.Add(this.pictureBox5);
+            this.ic_panel.Controls.Add(this.ic_lvl);
+            this.ic_panel.Controls.Add(this.label19);
+            this.ic_panel.Controls.Add(this.infernal_collapse);
+            this.ic_panel.Controls.Add(this.label20);
+            this.ic_panel.Location = new System.Drawing.Point(209, 151);
+            this.ic_panel.Margin = new System.Windows.Forms.Padding(4);
+            this.ic_panel.Name = "ic_panel";
+            this.ic_panel.Size = new System.Drawing.Size(189, 105);
+            this.ic_panel.TabIndex = 21;
+            this.ic_panel.Tag = "1";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_infernalcollapse;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.InitialImage = null;
+            this.pictureBox5.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(73, 65);
+            this.pictureBox5.TabIndex = 13;
+            this.pictureBox5.TabStop = false;
+            // 
+            // ic_lvl
+            // 
+            this.ic_lvl.AutoSize = true;
+            this.ic_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ic_lvl.Location = new System.Drawing.Point(159, 63);
+            this.ic_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ic_lvl.Name = "ic_lvl";
+            this.ic_lvl.Size = new System.Drawing.Size(24, 17);
+            this.ic_lvl.TabIndex = 12;
+            this.ic_lvl.Text = "    ";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label19.Location = new System.Drawing.Point(83, 63);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(63, 17);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "Уровень";
+            // 
+            // infernal_collapse
+            // 
+            this.infernal_collapse.Location = new System.Drawing.Point(84, 23);
+            this.infernal_collapse.Margin = new System.Windows.Forms.Padding(4);
+            this.infernal_collapse.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.infernal_collapse.Name = "infernal_collapse";
+            this.infernal_collapse.Size = new System.Drawing.Size(80, 22);
+            this.infernal_collapse.TabIndex = 9;
+            this.infernal_collapse.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label20.Location = new System.Drawing.Point(48, 4);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(98, 17);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "Адское пекло";
+            // 
+            // bp_panel
+            // 
+            this.bp_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
+            this.bp_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bp_panel.Controls.Add(this.pictureBox4);
+            this.bp_panel.Controls.Add(this.bp_lvl);
+            this.bp_panel.Controls.Add(this.label16);
+            this.bp_panel.Controls.Add(this.blazing_pillar);
+            this.bp_panel.Controls.Add(this.label17);
+            this.bp_panel.Location = new System.Drawing.Point(12, 151);
+            this.bp_panel.Margin = new System.Windows.Forms.Padding(4);
+            this.bp_panel.Name = "bp_panel";
+            this.bp_panel.Size = new System.Drawing.Size(189, 105);
+            this.bp_panel.TabIndex = 20;
+            this.bp_panel.Tag = "1";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_blazingpillar2;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.InitialImage = null;
+            this.pictureBox4.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(73, 65);
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
+            // 
+            // bp_lvl
+            // 
+            this.bp_lvl.AutoSize = true;
+            this.bp_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bp_lvl.Location = new System.Drawing.Point(159, 63);
+            this.bp_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bp_lvl.Name = "bp_lvl";
+            this.bp_lvl.Size = new System.Drawing.Size(24, 17);
+            this.bp_lvl.TabIndex = 12;
+            this.bp_lvl.Text = "    ";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(83, 63);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 17);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Уровень";
+            // 
+            // blazing_pillar
+            // 
+            this.blazing_pillar.Location = new System.Drawing.Point(84, 23);
+            this.blazing_pillar.Margin = new System.Windows.Forms.Padding(4);
+            this.blazing_pillar.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.blazing_pillar.Name = "blazing_pillar";
+            this.blazing_pillar.Size = new System.Drawing.Size(80, 22);
+            this.blazing_pillar.TabIndex = 9;
+            this.blazing_pillar.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(39, 4);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(108, 17);
+            this.label17.TabIndex = 10;
+            this.label17.Text = "Огненый столп";
+            // 
+            // fb_panel
+            // 
+            this.fb_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
+            this.fb_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.fb_panel.Controls.Add(this.pictureBox3);
+            this.fb_panel.Controls.Add(this.fb_lvl);
+            this.fb_panel.Controls.Add(this.label13);
+            this.fb_panel.Controls.Add(this.firebombs);
+            this.fb_panel.Controls.Add(this.label14);
+            this.fb_panel.Location = new System.Drawing.Point(407, 39);
+            this.fb_panel.Margin = new System.Windows.Forms.Padding(4);
+            this.fb_panel.Name = "fb_panel";
+            this.fb_panel.Size = new System.Drawing.Size(189, 105);
+            this.fb_panel.TabIndex = 21;
+            this.fb_panel.Tag = "1";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_firebomb;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.InitialImage = null;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(73, 65);
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // fb_lvl
+            // 
+            this.fb_lvl.AutoSize = true;
+            this.fb_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.fb_lvl.Location = new System.Drawing.Point(159, 63);
+            this.fb_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.fb_lvl.Name = "fb_lvl";
+            this.fb_lvl.Size = new System.Drawing.Size(24, 17);
+            this.fb_lvl.TabIndex = 12;
+            this.fb_lvl.Text = "    ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(83, 63);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 17);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "Уровень";
+            // 
+            // firebombs
+            // 
+            this.firebombs.Location = new System.Drawing.Point(84, 23);
+            this.firebombs.Margin = new System.Windows.Forms.Padding(4);
+            this.firebombs.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.firebombs.Name = "firebombs";
+            this.firebombs.Size = new System.Drawing.Size(80, 22);
+            this.firebombs.TabIndex = 9;
+            this.firebombs.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(34, 4);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(121, 17);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Огненные бомбы";
+            // 
+            // mm_panel
+            // 
+            this.mm_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
+            this.mm_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mm_panel.Controls.Add(this.pictureBox2);
+            this.mm_panel.Controls.Add(this.mm_lvl);
+            this.mm_panel.Controls.Add(this.label10);
+            this.mm_panel.Controls.Add(this.magma_mace);
+            this.mm_panel.Controls.Add(this.label11);
+            this.mm_panel.Location = new System.Drawing.Point(209, 39);
+            this.mm_panel.Margin = new System.Windows.Forms.Padding(4);
+            this.mm_panel.Name = "mm_panel";
+            this.mm_panel.Size = new System.Drawing.Size(189, 105);
+            this.mm_panel.TabIndex = 20;
+            this.mm_panel.Tag = "1";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_magmamace;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(73, 65);
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // mm_lvl
+            // 
+            this.mm_lvl.AutoSize = true;
+            this.mm_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.mm_lvl.Location = new System.Drawing.Point(159, 63);
+            this.mm_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.mm_lvl.Name = "mm_lvl";
+            this.mm_lvl.Size = new System.Drawing.Size(24, 17);
+            this.mm_lvl.TabIndex = 12;
+            this.mm_lvl.Text = "    ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(83, 63);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 17);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Уровень";
+            // 
+            // magma_mace
+            // 
+            this.magma_mace.Location = new System.Drawing.Point(84, 23);
+            this.magma_mace.Margin = new System.Windows.Forms.Padding(4);
+            this.magma_mace.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.magma_mace.Name = "magma_mace";
+            this.magma_mace.Size = new System.Drawing.Size(80, 22);
+            this.magma_mace.TabIndex = 9;
+            this.magma_mace.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(16, 4);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(162, 17);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Магматическая палица";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(271, 15);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 20);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Ад";
+            // 
+            // ms_panel
+            // 
+            this.ms_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
+            this.ms_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ms_panel.Controls.Add(this.pictureBox1);
+            this.ms_panel.Controls.Add(this.ms_lvl);
+            this.ms_panel.Controls.Add(this.label7);
+            this.ms_panel.Controls.Add(this.magma_spear);
+            this.ms_panel.Controls.Add(this.label3);
+            this.ms_panel.Location = new System.Drawing.Point(12, 39);
+            this.ms_panel.Margin = new System.Windows.Forms.Padding(4);
+            this.ms_panel.Name = "ms_panel";
+            this.ms_panel.Size = new System.Drawing.Size(189, 105);
+            this.ms_panel.TabIndex = 19;
+            this.ms_panel.Tag = "1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Skill_Calculator.Properties.Resources.skillicon_magmaspear;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 65);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // ms_lvl
+            // 
+            this.ms_lvl.AutoSize = true;
+            this.ms_lvl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ms_lvl.Location = new System.Drawing.Point(159, 63);
+            this.ms_lvl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ms_lvl.Name = "ms_lvl";
+            this.ms_lvl.Size = new System.Drawing.Size(24, 17);
+            this.ms_lvl.TabIndex = 12;
+            this.ms_lvl.Text = "    ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(83, 63);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 17);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Уровень";
+            // 
+            // magma_spear
+            // 
+            this.magma_spear.Location = new System.Drawing.Point(84, 23);
+            this.magma_spear.Margin = new System.Windows.Forms.Padding(4);
+            this.magma_spear.Maximum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.magma_spear.Name = "magma_spear";
+            this.magma_spear.Size = new System.Drawing.Size(80, 22);
+            this.magma_spear.TabIndex = 9;
+            this.magma_spear.ValueChanged += new System.EventHandler(this.Embermage_skills_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(12, 4);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(152, 17);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Магматическое копьё";
             // 
             // reset_skills
             // 
@@ -12394,52 +12394,10 @@
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Torchlight 2. Калькулятор навыков";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.panel60.ResumeLayout(false);
-            this.panel60.PerformLayout();
-            this.fbr_panel.ResumeLayout(false);
-            this.fbr_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fire_brand)).EndInit();
-            this.cm_panel.ResumeLayout(false);
-            this.cm_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.charge_mastery)).EndInit();
-            this.ea_panel.ResumeLayout(false);
-            this.ea_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elemental_attunement)).EndInit();
-            this.fs_panel.ResumeLayout(false);
-            this.fs_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firestorm)).EndInit();
-            this.ia_panel.ResumeLayout(false);
-            this.ia_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.immolation_aura)).EndInit();
-            this.ic_panel.ResumeLayout(false);
-            this.ic_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.infernal_collapse)).EndInit();
-            this.bp_panel.ResumeLayout(false);
-            this.bp_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.blazing_pillar)).EndInit();
-            this.fb_panel.ResumeLayout(false);
-            this.fb_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firebombs)).EndInit();
-            this.mm_panel.ResumeLayout(false);
-            this.mm_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magma_mace)).EndInit();
-            this.ms_panel.ResumeLayout(false);
-            this.ms_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.magma_spear)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.ibr_panel.ResumeLayout(false);
@@ -12524,6 +12482,48 @@
             this.pb_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prismatic_bolt)).EndInit();
+            this.panel60.ResumeLayout(false);
+            this.panel60.PerformLayout();
+            this.fbr_panel.ResumeLayout(false);
+            this.fbr_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fire_brand)).EndInit();
+            this.cm_panel.ResumeLayout(false);
+            this.cm_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.charge_mastery)).EndInit();
+            this.ea_panel.ResumeLayout(false);
+            this.ea_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elemental_attunement)).EndInit();
+            this.fs_panel.ResumeLayout(false);
+            this.fs_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firestorm)).EndInit();
+            this.ia_panel.ResumeLayout(false);
+            this.ia_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.immolation_aura)).EndInit();
+            this.ic_panel.ResumeLayout(false);
+            this.ic_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infernal_collapse)).EndInit();
+            this.bp_panel.ResumeLayout(false);
+            this.bp_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.blazing_pillar)).EndInit();
+            this.fb_panel.ResumeLayout(false);
+            this.fb_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.firebombs)).EndInit();
+            this.mm_panel.ResumeLayout(false);
+            this.mm_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magma_mace)).EndInit();
+            this.ms_panel.ResumeLayout(false);
+            this.ms_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magma_spear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VitalityUD)).EndInit();
