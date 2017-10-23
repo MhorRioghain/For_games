@@ -3139,7 +3139,7 @@
             // 
             // so_panel
             // 
-            this.so_panel.BackColor = System.Drawing.Color.Maroon;
+            this.so_panel.BackColor = System.Drawing.Color.Transparent;
             this.so_panel.BackgroundImage = global::Skill_Calculator.Properties.Resources.IG_menu_frame_bold2;
             this.so_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.so_panel.Controls.Add(this.pictureBox24);
