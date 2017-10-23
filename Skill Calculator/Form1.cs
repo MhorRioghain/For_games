@@ -18,6 +18,8 @@ namespace Skill_Calculator
         Berserker ber = new Berserker();
         Engineer eng = new Engineer();
 
+        Font f = new Font("Arial", 9.0f);
+
         public Form1()
         {
             InitializeComponent();
@@ -385,21 +387,41 @@ namespace Skill_Calculator
 
         private void toolTip1_Draw(object sender, DrawToolTipEventArgs e)
         {
-            Font f = new Font("Arial", 9.0f);
-            Color c = Color.Lime;
+            Color c = Color.Lime; ; //Color.Maroon
 
-            if (tabControl1.SelectedTab == tabPage1) c = Color.Crimson;
-            if (tabControl1.SelectedTab == tabPage2) c = Color.Goldenrod;
-            if (tabControl1.SelectedTab == tabPage3) c = Color.DeepSkyBlue;
-            if (tabControl1.SelectedTab == tabPage4) c = Color.LightSeaGreen;            
-            Pen pen = new Pen(c, 3); //Color.Maroon
+            switch (tabControl1.SelectedIndex)
+            {
+                case 0: c = Color.Crimson; break;
+                case 1: c = Color.Goldenrod; break;
+                case 2: c = Color.DeepSkyBlue; break;
+                case 3: c = Color.LightSeaGreen; break;
+                default: break;
+            }
+            
+            switch ((string)e.AssociatedControl.Parent.Tag)
+            {
+                case "1": toolTip1.BackColor = Color.FromArgb(21, 9, 9); break;
+                case "2": toolTip1.BackColor = Color.FromArgb(16, 12, 38); break;
+                case "3": toolTip1.BackColor = Color.FromArgb(47, 13, 26); break;
+                default: break;
+            }
+
             e.DrawBackground();            
             //e.DrawBorder();
-            e.Graphics.DrawLines(pen, new Point[] {new Point (0, e.Bounds.Height + 1), new Point (0, 0),new Point (e.Bounds.Width + 1, 0)});
-            e.Graphics.DrawLines(pen, new Point[] {new Point (0, e.Bounds.Height - 1), new Point (e.Bounds.Width - 1, e.Bounds.Height - 1),new Point (e.Bounds.Width - 1, 0)});
-            //e.Graphics.DrawRectangle(pen, e.Bounds);
+            Pen pen = new Pen(c, 3);
+            e.Graphics.DrawLines(pen, new Point[] { new Point(0, e.Bounds.Height + 1), new Point(0, 0), new Point(e.Bounds.Width + 1, 0) });
+            e.Graphics.DrawLines(pen, new Point[] { new Point(0, e.Bounds.Height - 1), new Point(e.Bounds.Width - 1, e.Bounds.Height - 1), new Point(e.Bounds.Width - 1, 0) });
             e.Graphics.DrawString(e.ToolTipText, f, Brushes.AntiqueWhite, e.Bounds);
-        }      
+        }  
+    
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+            int THeight, TWidth = 450;
+            
+            Graphics g = CreateGraphics();
+            THeight = (int)g.MeasureString(toolTip1.GetToolTip(e.AssociatedControl), f, TWidth).Height;
+            e.ToolTipSize = new Size(TWidth, THeight);
+        }
 
         private void Embermage_reset_stats_Click(object sender, EventArgs e)
         {
@@ -746,16 +768,7 @@ namespace Skill_Calculator
             eng.aegis_of_fate_lvl = (int)aegis_of_fate.Value;
             eng.charge_reconstitution_lvl = (int)charge_reconstitution.Value;
             Engineer_calcpoints(sender, e);
-            Engineer_tooltips();
-        }
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-            int THeight, TWidth = 450;
-            Font f = new Font("Arial", 9.0f);
-            Graphics g = CreateGraphics();
-            THeight = (int)g.MeasureString(toolTip1.GetToolTip(e.AssociatedControl), f, TWidth).Height;
-            e.ToolTipSize = new Size(TWidth, THeight);
-        }
+            Engineer_req_lvl();
+        }        
     }
 }

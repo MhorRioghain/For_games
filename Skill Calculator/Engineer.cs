@@ -325,8 +325,8 @@ namespace Skill_Calculator
                 "Преимущество III уровня" + Environment.NewLine + "Образуется 7 огненных осколков, летящих на 14 м." + Environment.NewLine + Environment.NewLine +
                 "Необходим топор, меч, молот, посох или копье";
             
-            var seismic_slam_damage_instant = (int)Math.Ceiling(seismic_slam_b[seismic_slam_lvl] * damage_monster[level] / 100);
-            var seismic_slam_damage_dot = (int)Math.Ceiling(seismic_slam_c[seismic_slam_lvl] * damage_monster[level] / 100) * 5;
+            int seismic_slam_damage_instant = (int)Math.Ceiling(seismic_slam_b[seismic_slam_lvl] * damage_monster[level] / 100);
+            int seismic_slam_damage_dot = (int)Math.Ceiling(seismic_slam_c[seismic_slam_lvl] * damage_monster[level] / 100) * 5;
             seismic_slam_text = "С помощью механических средств вы топчете и сжигаете всех окружающих вас врагов в радиусе 4 метров." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + seismic_slam_mana[seismic_slam_lvl] + Environment.NewLine +
                 seismic_slam_a[seismic_slam_lvl] + "% шанс оглушить цель на 2 сек." + Environment.NewLine +
@@ -386,7 +386,7 @@ namespace Skill_Calculator
                 "Преимущество II уровня" + Environment.NewLine + "20% шанс обездвижить врагов" + Environment.NewLine +
                 "Преимущество III уровня" + Environment.NewLine + "Время активации снижено до 1 сек.";
 
-		    var emberquake_damage = (int)Math.Floor(Math.Ceiling(emberquake_a[emberquake_lvl] * damage_monster[level] / 100) * emberquake_b[emberquake_lvl]);
+		    int emberquake_damage = (int)Math.Floor(Math.Ceiling(emberquake_a[emberquake_lvl] * damage_monster[level] / 100) * emberquake_b[emberquake_lvl]);
             emberquake_text = "После мощного удара в земле появляется 8 трещин с лавой; потоки лавы ищут и уничтожают врагов заклинателя." + Environment.NewLine + Environment.NewLine +
                 "Расход маны: " + emberquake_mana[emberquake_lvl] + Environment.NewLine +
                 "+" + emberquake_damage + " урон Огнем*" + Environment.NewLine +
@@ -407,303 +407,253 @@ namespace Skill_Calculator
                 "Уровень Заряда повышается на " + supercharge_b[supercharge_lvl] + "%." + Environment.NewLine +
                 supercharge_c[supercharge_lvl] + "% шанс сотворить заклинание \"Конденсатор\" при атаке" + Environment.NewLine + Environment.NewLine +
                 "Необходимо оружие ближнего боя";
-             /* 
-		    textskill10.innerHTML = "<img src='/pic/skills/skillicon_coupdegrace.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Удар милосердия (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill10+"/15<br/><br/>";
-			"<br/>При нанесении удара оглушенной цели электрический заряд помогает вам ее прикончить. Частота применения - не более 1 раза в сек." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill10 + Environment.NewLine +
-			"Урон в " + coup_de_grace_a[skill10] + " раз(а) превышает вашу силу." + Environment.NewLine +            "+" + coup_de_grace_b[skill10] + " к Электр. урону" + Environment.NewLine +
+            
+            coup_de_grace_text = "При нанесении удара оглушенной цели электрический заряд помогает вам ее прикончить. Частота применения - не более 1 раза в сек." + Environment.NewLine + Environment.NewLine +
+                "Урон в " + coup_de_grace_a[coup_de_grace_lvl] + " раз(а) превышает вашу силу." + Environment.NewLine +
+                "+" + coup_de_grace_b[coup_de_grace_lvl] + " к Электр. урону";
 		 
-	    var healing_bot_hp_regen = (int)Math.Ceiling((int)Math.Ceiling(healing_bot_c[skill11] * health_player_generic[level] / 100 * 4) / 62.5)
-		var healing_bot_mana_regen = (int)Math.Ceiling((int)Math.Ceiling(healing_bot_e[skill11] * mana_player_generic[level] / 100 * 4) / 62.5)
-			textskill11.innerHTML = "<img src='/pic/skills/skillicon_supportbot.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Робот-медик</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill11+"/15<br/><br/>";
-			"<br/>Маленький робот излучает энергию, которая исцеляет вас и ваших союзников." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill11 + Environment.NewLine +
-		 	"Расход маны: "+healing_bot_mana[skill11-1] + Environment.NewLine +
-		    "Время между активациями: 10 сек." + Environment.NewLine +
-		    "Робот действует каждые " + healing_bot_a[skill11] + " сек. в радиусе " + healing_bot_b[skill11] + " м" + Environment.NewLine +
-			"Восполняется "+healing_bot_hp_regen + " ед. здоровья в теч. 4 сек.*" + Environment.NewLine +
-		  if (skill11 >= 5) {
-			"+" + healing_bot_mana_regen + " к запасу маны в теч. 4 сек.*" + Environment.NewLine +
-				}
-		  if (skill11 >= 10) {
-			healing_bot_d[skill11] + "% к люб. броне в теч. 10 сек." + Environment.NewLine +
-				}		
-		 	texttemp+"Заряд энергии также восстанавливает уровень маны.<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Уровень брони инженера и его союзников повышается на 8%<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Уровень брони инженера и его союзников повышается на 16%<br/></a>";
-		 	"<br/><a style='color:#1F90FF; font-size: 10px;'>*улучшается вместе с уровнем игрока" + Environment.NewLine +
-		 
-			textskill12.innerHTML = "<img src='/pic/skills/skillicon_blastcannon.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Огненный снаряд</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill12+"/15<br/><br/>";
-			"<br/>Вы ведете обстрел снарядами дальнего действия. На высоких уровнях навыка взрывы делают врагов более восприимчивыми к огненному и физическому урону." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill12 + Environment.NewLine +
-		 	"Расход маны: "+blast_cannon_mana[skill12-1] + Environment.NewLine +
-		    "Наносит " + blast_cannon_a[skill12] + "% от урона текущего оружия в сек." + Environment.NewLine +
-		if (skill12 >= 2)
-		 {
-			"+" + blast_cannon_c[skill12] + "% к получаемому Физич. урону в теч. 4 сек." + Environment.NewLine +
-			"+" + blast_cannon_c[skill12] + "% к получаемому Огнен. урону в теч. 4 сек." + Environment.NewLine +
-		 }
-		  if (skill12 >= 5) {
-			blast_cannon_b[skill12] + "% шанс ослепить цель на 4 сек." + Environment.NewLine +
-				}
-		 	texttemp+"Шанс ослепить врагов на 4 сек.: 25%<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Шанс ослепить врагов на 4 сек.: 50%<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Шанс ослепить врагов на 4 сек.: 75%<br/></a>";
-		 	"<br/><a style='color:#ffff00'>Необходима пушка" + Environment.NewLine +
-		 
-      	var spider_mines_dam_physical = (int)Math.Ceiling(spider_mines_b[skill13] * damage_minion_bylevel[level] / 100);
-		var spider_mines_dam_fire =  (int)Math.Ceiling(spider_mines_c[skill13] * damage_minion_bylevel[level] / 100) * 3;
-		    textskill13.innerHTML = "<img src='/pic/skills/skillicon_spidermine.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Мины-пауки</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill13+"/15<br/><br/>";
-			"<br/>Три робота-паука подбегают к ближайшим врагам и взрываются; радиус взрыва составляет 3 метра. Усовершенствованные роботы наносят на 20% больше повреждений; радиус их взрыва составляет 5 метров, время оглушения цели 2 сек., доп. урон электричеством." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill13 + Environment.NewLine +
-		 	"Расход маны: "+spider_mines_mana[skill13-1] + Environment.NewLine +
+	        int healing_bot_hp_regen = (int)Math.Ceiling((int)Math.Ceiling(healing_bot_c[healing_bot_lvl] * health_player_generic[level] / 100 * 4) / 62.5);
+		    int healing_bot_mana_regen = (int)Math.Ceiling((int)Math.Ceiling(healing_bot_e[healing_bot_lvl] * mana_player_generic[level] / 100 * 4) / 62.5);
+            healing_bot_text = "Маленький робот излучает энергию, которая исцеляет вас и ваших союзников." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + healing_bot_mana[healing_bot_lvl] + Environment.NewLine +
+                "Время между активациями: 10 сек." + Environment.NewLine +
+                "Робот действует каждые " + healing_bot_a[healing_bot_lvl] + " сек. в радиусе " + healing_bot_b[healing_bot_lvl] + " м" + Environment.NewLine +
+                "Восполняется " + healing_bot_hp_regen + " ед. здоровья в теч. 4 сек.*" + Environment.NewLine;
+            if (healing_bot_lvl >= 5) 
+            {
+                healing_bot_text += "+" + healing_bot_mana_regen + " к запасу маны в теч. 4 сек.*" + Environment.NewLine;
+            }
+            if (healing_bot_lvl >= 10) 
+            {
+                healing_bot_text += healing_bot_d[healing_bot_lvl] + "% к люб. броне в теч. 10 сек." + Environment.NewLine;
+            }
+            healing_bot_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Заряд энергии также восстанавливает уровень маны" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Уровень брони инженера и его союзников повышается на 8%" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Уровень брони инженера и его союзников повышается на 16%" + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока";
 
-	  		"Время между активациями: "+spider_mines_f[skill13]+" сек." + Environment.NewLine +
-	        spider_mines_a[skill13] + "%-шанс взрыва усовершенствованного робота" + Environment.NewLine +
-			"Помощники наносят " + spider_mines_dam_physical + " Физич. урона*" + Environment.NewLine +
-			"Помощники наносят " + spider_mines_dam_fire + " Огнен. урона в теч. 3 сек.*" + Environment.NewLine +
-			"Время вызова: "+spider_mines_d[skill13] + " сек." + Environment.NewLine +		
-		 	texttemp+"Затраты маны снижены на 20%<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Затраты маны снижены на 40%<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Затраты маны снижены на 60%<br/></a>";
-		 	"<br/><a style='color:#1F90FF; font-size: 10px;'>*улучшается вместе с уровнем игрока" + Environment.NewLine +
+            blast_cannon_text = "Вы ведете обстрел снарядами дальнего действия. На высоких уровнях навыка взрывы делают врагов более восприимчивыми к огненному и физическому урону." + Environment.NewLine +
+                "Расход маны: " + blast_cannon_mana[blast_cannon_lvl] + Environment.NewLine +
+                "Наносит " + blast_cannon_a[blast_cannon_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine;
+		    if (blast_cannon_lvl >= 2)
+            {
+                blast_cannon_text += "+" + blast_cannon_c[blast_cannon_lvl] + "% к получаемому Физич. урону в теч. 4 сек." + Environment.NewLine +
+                "+" + blast_cannon_c[blast_cannon_lvl] + "% к получаемому Огнен. урону в теч. 4 сек." + Environment.NewLine;
+            }
+            if (blast_cannon_lvl >= 5) 
+            {
+                blast_cannon_text += blast_cannon_b[blast_cannon_lvl] + "% шанс ослепить цель на 4 сек." + Environment.NewLine;
+            }
+            blast_cannon_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Шанс ослепить врагов на 4 сек.: 25%" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Шанс ослепить врагов на 4 сек.: 50%" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Шанс ослепить врагов на 4 сек.: 75%" + Environment.NewLine + Environment.NewLine +
+                "Необходима пушка";
 		 
-	    var gun_bot_mindam = (int)Math.Ceiling(gun_bot_b[skill14] * damage_minion_bylevel[level] / 100);
-		var gun_bot_maxdam = (int)Math.Ceiling(gun_bot_c[skill14] * damage_minion_bylevel[level] / 100);
-		    textskill14.innerHTML = "<img src='/pic/skills/skillicon_gunturret.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Робот-артиллерист</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill14+"/15<br/><br/>";
-			"<br/>Вы выпускаете на поле боя небольшого робота, который производит 5 выстрелов в сек. по врагам. С каждым новым уровнем навыка урон, наносимый роботом, повышается." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill14 + Environment.NewLine +
-		 	"Расход маны: "+gun_bot_mana[skill14-1] + Environment.NewLine +
-            "Время между активациями: "+gun_bot_e[skill14]+" мин." + Environment.NewLine +
-            "Время вызова: 1 мин." + Environment.NewLine +
-		if (skill14 >= 2)
-		 {	"+" + gun_bot_a[skill14] + "% к люб. урону" + Environment.NewLine + }
+      	    int spider_mines_dam_physical = (int)Math.Ceiling(spider_mines_b[spider_mines_lvl] * damage_minion_bylevel[level] / 100);
+		    int spider_mines_dam_fire =  (int)Math.Ceiling(spider_mines_c[spider_mines_lvl] * damage_minion_bylevel[level] / 100) * 3;
+            spider_mines_text = "Три робота-паука подбегают к ближайшим врагам и взрываются; радиус взрыва составляет 3 метра. Усовершенствованные роботы наносят на 20% больше повреждений; радиус их взрыва составляет 5 метров, время оглушения цели 2 сек., доп. урон электричеством." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + spider_mines_mana[spider_mines_lvl] + Environment.NewLine +
+                "Время между активациями: " + spider_mines_f[spider_mines_lvl] + " сек." + Environment.NewLine +
+                spider_mines_a[spider_mines_lvl] + "%-шанс взрыва усовершенствованного робота" + Environment.NewLine +
+                "Помощники наносят " + spider_mines_dam_physical + " Физич. урона*" + Environment.NewLine +
+                "Помощники наносят " + spider_mines_dam_fire + " Огнен. урона в теч. 3 сек.*" + Environment.NewLine +
+                "Время вызова: " + spider_mines_d[spider_mines_lvl] + " сек." + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Затраты маны снижены на 20%" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Затраты маны снижены на 40%" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Затраты маны снижены на 60%" + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока";
 
-			"Помощники наносят " + gun_bot_mindam + "-" + gun_bot_maxdam + " Физич. урона*" + Environment.NewLine +
-	 	 	texttemp+"Радиус обстрела увеличен вдвое.<br>Время между активациями сокращено до 2.5 мин.<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Меткие выстрелы пронзают врагов.<br>Время между активациями сокращено до 2 мин.<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Интенсивность обстрела утраивается.<br>Время между активациями сокращено до 1.5 мин.<br/></a>";
-		 	"<br><a style='color:#1F90FF; font-size: 10px;'>*улучшается вместе с уровнем игрока" + Environment.NewLine +
+	        int gun_bot_mindam = (int)Math.Ceiling(gun_bot_b[gun_bot_lvl] * damage_minion_bylevel[level] / 100);
+		    int gun_bot_maxdam = (int)Math.Ceiling(gun_bot_c[gun_bot_lvl] * damage_minion_bylevel[level] / 100);
+            gun_bot_text = "Вы выпускаете на поле боя небольшого робота, который производит 5 выстрелов в сек. по врагам. С каждым новым уровнем навыка урон, наносимый роботом, повышается." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + gun_bot_mana[gun_bot_lvl] + Environment.NewLine +
+                "Время между активациями: " + gun_bot_e[gun_bot_lvl] + " мин." + Environment.NewLine +
+                "Время вызова: 1 мин.";
+            if (gun_bot_lvl >= 2)
+            {
+                gun_bot_text += "+" + gun_bot_a[gun_bot_lvl] + "% к люб. урону" + Environment.NewLine;
+            }
+            gun_bot_text += "Помощники наносят " + gun_bot_mindam + "-" + gun_bot_maxdam + " Физич. урона*" + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Радиус обстрела увеличен вдвое. Время между активациями сокращено до 2.5 мин." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Меткие выстрелы пронзают врагов. Время между активациями сокращено до 2 мин." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Интенсивность обстрела утраивается. Время между активациями сокращено до 1.5 мин." + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока";
 		 
-        var shock_grenade_mindam = (int)Math.Ceiling(shock_grenade_d[skill15] * damage_monster[level] / 100) * 4;
-		var shock_grenade_maxdam = (int)Math.Ceiling(shock_grenade_e[skill15] * damage_monster[level] / 100) * 4;
-		  	textskill15.innerHTML = "<img src='/pic/skills/skillicon_shockgrenade.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Шоковая граната</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill15+"/15<br/><br/>";
-			"<br/>Вы бросаете гранату, взрыв которой наносит урон электричеством и оглушает врагов в радиусе 4 м. Для двух дополнительных гранат требуется один Заряд." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill15 + Environment.NewLine +
-		 	"Расход маны: "+shock_grenade_mana[skill15-1] + Environment.NewLine +
-            shock_grenade_a[skill15] + "% шанс бить цель током в теч. 4 сек." + Environment.NewLine +
-			shock_grenade_b[skill15] + "% шанс оглушить цель на " + shock_grenade_c[skill15] + " сек." + Environment.NewLine +
-			"Электр. урон: "+shock_grenade_mindam + "-" + shock_grenade_maxdam + " в теч. 4 сек.*" + Environment.NewLine +
-			"+100% шанс прервать действия врага" + Environment.NewLine +
-		 	texttemp+"Радиус действия шоковой гранаты до 5 м<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Время оглушения шоковой гранатой до 5 сек.<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Радиус действия шоковой гранаты увеличен до 6 м, эффект оглушения - до 6 сек.<br/></a>";
-		 	"<br><a style='color:#1F90FF; font-size: 10px;'>*улучшается вместе с уровнем игрока" + Environment.NewLine +
-		 
-			textskill16.innerHTML = "<img src='/pic/skills/skillicon_fusillade.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Расстрел</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill16+"/15<br/><br/>";
-			"<br/>Вы непрерывно обстреливаете противника ракетами дальнего действия. Пока вы удерживаете кнопку мышки, персонаж стреляет залпами по 2 ракеты." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill16 + Environment.NewLine +
-		 	"Расход маны: "+fusillade_mana[skill16-1]+" в сек." + Environment.NewLine +
-		    "Наносит " + fusillade_a[skill16] + "% от урона текущего оружия в сек. Огнем" + Environment.NewLine +
-		   	texttemp+"В каждом залпе 3 ракеты.<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Ракеты взрываются в радиусе 3 м<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"В каждом залпе 4 ракеты.<br/></a>";
-		 	//"<br/><a style='color:#1F90FF; font-size: 10px;'>*улучшается вместе с уровнем игрока" + Environment.NewLine +
-		 	"<br/><a style='color:#ffff00'>Необходима пушка" + Environment.NewLine +
-		 
-            var sledgebot_mindam = (int)Math.Ceiling(sledgebot_c[skill17] * damage_minion_bylevel[level] / 100);
-		var sledgebot_maxdam = (int)Math.Ceiling(sledgebot_d[skill17] * damage_minion_bylevel[level] / 100);
-		    textskill17.innerHTML = "<img src='/pic/skills/skillicon_hammerbot.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Робот-кувалда</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill17+"/15<br/><br/>";
-			"<br/>Вы создаете мощного робота-кувалду, который превращает врагов в кашицу." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill17 + Environment.NewLine +
-		 	"Расход маны: "+sledgebot_mana[skill17-1] + Environment.NewLine +
-		 	"Время между активациями: 1.5 мин." + Environment.NewLine +
-            "Время вызова: "+sledgebot_a[skill17] + " сек." + Environment.NewLine +
-		if (skill17>=2)
-			{
-			"+" + sledgebot_b[skill17] + "% к люб. урону" + Environment.NewLine +
-			"+" + sledgebot_b[skill17] + "% к люб. броне" + Environment.NewLine +
-			}
-			"Помощники наносят " + sledgebot_mindam + "-" + sledgebot_maxdam + " Physical Damage*" + Environment.NewLine +
- 		 	texttemp+"Робот-кувалда приобретает круговую атаку<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Робот-кувалда приобретает сокрушающую атаку<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Робот-кувалда атакует врагов ракетами<br/></a>";
-		 	"<br/><a style='color:#1F90FF; font-size: 10px;'>*улучшается вместе с уровнем игрока" + Environment.NewLine +
-		
-		    textskill18.innerHTML = "<img src='/pic/skills/skillicon_armor.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Бастион (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill18+"/15<br/><br/>";
-			"<br/>Опыт обращения с доспехами позволяет использовать их максимально эффективно. Урон, наносимый врагами, уменьшается." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill18 + Environment.NewLine +
-			"+" + bulwark_a[skill18] + "% к Физич. броне" + Environment.NewLine +
-			"-" + bulwark_b[skill18] + "% от получаемого Физич. урона" + Environment.NewLine +
-		 
-		    textskill19.innerHTML = "<img src='/pic/skills/skillicon_fireandspark.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Искра и огонь (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill19+"/15<br/><br/>";
-			"<br/>Искра, чтобы все заработало... а огонь - чтобы все сдохли." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill19 + Environment.NewLine +
-			"+" + fire_and_spark_a[skill19] + "% к Огнен. урону" + Environment.NewLine +
-			"+" + fire_and_spark_a[skill19] + "% к Электр. урону" + Environment.NewLine +
-		
-		    textskill20.innerHTML = "<img src='/pic/skills/skillicon_chargedomination.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Доминирование (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill20+"/15<br/><br/>";
-			"<br/>После смерти врага у вас появляется возможность поглотить его энергию и заполнить индикатор Заряда. Перерыв между применениями способности 3 сек." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill20 + Environment.NewLine +
-		    "Шанс пополнить заряд: "+charge_domination_a[skill20] + "%" + Environment.NewLine +
-		   
-		    textskill21.innerHTML = "<img src='/pic/skills/skillicon_shieldbash.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Удар щитом</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill21+"/15<br/><br/>";
-			"<br/>Вы бьете щитом находящихся перед вами врагов, оглушая и отбрасывая их, а также замедляя атаки. Урон в 5 раз больше показателя брони щита. Каждый Заряд увеличивает урон на 10%." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill21 + Environment.NewLine +
-		 	"Расход маны: "+shield_bash_mana[skill21-1] + Environment.NewLine +
-		    "" + shield_bash_a[skill21] + " Заряда за каждый удар" + Environment.NewLine +
-			shield_bash_b[skill21] + "% шанс оглушить цель на " + shield_bash_c[skill21] + " сек." + Environment.NewLine +
-			"+25 к отбрасыванию" + Environment.NewLine +
-			"-" + shield_bash_d[skill21] + "% от скорости атаки в теч. 2 сек." + Environment.NewLine +
-		  	texttemp+"Урон в 7,5 раз больше показателя брони<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Урон в 10 раз больше показателя брони<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Урон в 12,5 раз больше показателя брони<br/></a>";
-		    "<br><a style='color:#ffff00'>Необходимо держать в руках щит" + Environment.NewLine +
-		 
-        var forcefield_absorb = (int)Math.Ceiling(forcefield_a[skill22] * health_monster_bylevel[level] / 100);
-		    textskill22.innerHTML = "<img src='/pic/skills/skillicon_forcefield.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Силовое поле</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill22+"/15<br/><br/>";
-			"<br/>Ваши доспехи излучают эмберитовую энергию, которая образует защитное поле вокруг вас и (вдвое слабее) вокруг ваших союзников. Нейтрализовав определенное количество урона, защитное поле исчезает. Силовое поле использует все доступные Заряды; поглощаемый урон увеличивается на 50% за каждый Заряд." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill22 + Environment.NewLine +
-		 	"Расход маны: "+forcefield_mana[skill22-1] + Environment.NewLine +
-		 	"Время между активациями: 8 сек." + Environment.NewLine +
-		    "Поглощение "+forcefield_absorb + " очков Люб. урона в теч. 30 сек.*" + Environment.NewLine +
-		 if (skill22>=2){"Сопротивление отбрасыванию: "+forcefield_b[skill22] + "%" + Environment.NewLine +}		
-		 	texttemp+"Затраты маны и время применения снижены на 20%<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Союзники получают полноценный щит<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Затраты маны и время применения снижены на 50%<br/></a>";
-		 	"<br/><a style='color:#1F90FF; font-size: 10px;'>*улучшается вместе с уровнем игрока" + Environment.NewLine +
-		
-        var overload_mindam = (int)Math.Ceiling(overload_b[skill23] * damage_monster[level] / 100);
-		var overload_maxdam = (int)Math.Ceiling(overload_c[skill23] * damage_monster[level] / 100);
-		  	textskill23.innerHTML = "<img src='/pic/skills/skillicon_overload.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Перегрузка</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill23+"/15<br/><br/>";
-			"<br/>Вы перегружаете электрические цепи брони, создавая мощный разряд эмберитовой энергии, который наносит электрический удар 5 врагам в радиусе 6 метров. При перегрузке расходуются все доступные Заряды; наносимый урон увеличивается на 50% за каждый Заряд." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill23 + Environment.NewLine +
-		 	"Расход маны: "+overload_mana[skill23-1] + Environment.NewLine +
-		    "Время между активациями: 1.4 сек." + Environment.NewLine +
-		    "Наносит " + overload_a[skill23] + "% от урона текущего оружия в сек." + Environment.NewLine +
-			overload_mindam + "-" + overload_maxdam + " к Электр. урону*" + Environment.NewLine +
-			"+50 к отбрасыванию" + Environment.NewLine +
-		if (skill23>=2){overload_d[skill23] + "% шанс оглушить цель на 2 сек." + Environment.NewLine +}
-		 	texttemp+"Электроудар: до 7 врагов в радиусе 8 м<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Электроудар: до 9 врагов в радиусе 10 м<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Электроудар: до 11 врагов в радиусе 12 м<br/></a>";
-		 	"<br/><a style='color:#1F90FF; font-size: 10px;'>*улучшается вместе с уровнем игрока" + Environment.NewLine +
-		
-      var dynamo_field_dam = (int)Math.Ceiling(dynamo_field_b[skill24] * damage_monster[level] / 100) * 2;
-		    textskill24.innerHTML = "<img src='/pic/skills/skillicon_dynamofield.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Магнитное поле</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill24+"/15<br/><br/>";
-			"<br/>Вы преобразуете энергию своей брони в электрический разряд, который поражает врагов в радиусе 5 метров. За каждого врага, которому нанесен урон (до 5), ваш уровень заряда повышается." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill24 + Environment.NewLine +
-		 	"Расход маны: "+dynamo_field_mana[skill24-1] + Environment.NewLine +
-		    "" + dynamo_field_a[skill24] + " Заряда за каждого получившего урон врага" + Environment.NewLine +
-			dynamo_field_dam + " Электр. урона в теч. 2 сек.*" + Environment.NewLine +
-			"+" + dynamo_field_c[skill24] + "% шанс прервать действия врага" + Environment.NewLine +
-		 	texttemp+"Радиус поля: 7 м;<br>вероятность прерывания: 70%.<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Радиус поля: 9 м;<br>вероятность прерывания: 90%.<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Радиус поля: 11 м;<br>вероятность прерывания: 110%.<br/></a>";
-		 	"<br/><a style='color:#1F90FF; font-size: 10px;'>*улучшается вместе с уровнем игрока" + Environment.NewLine +
-		 
-       		textskill25.innerHTML = "<img src='/pic/skills/skillicon_tremor.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Землетрясение</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill25+"/15<br/><br/>";
-			"<br/>Вы выпускаете поток энергии из костюма в землю, создавая мощную ударную волну, которая сбивает с ног и ослабляет врагов в пределах 24 метров. Данный эффект достигается только в том случае, если израсходован один Заряд." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill25 + Environment.NewLine +
-		 	"Расход маны: "+tremor_mana[skill25-1] + Environment.NewLine +
-		 	"Время между активациями: 10 сек." + Environment.NewLine +
-			"Наносит " + tremor_a[skill25] + "% от урона текущего оружия в сек." + Environment.NewLine +
-			"+30 к отбрасыванию" + Environment.NewLine +
-			tremor_b[skill25] + "% шанс прервать действия врага" + Environment.NewLine +
-			"-" + tremor_c[skill25] + "% от Физич. урона в теч. 10 сек." + Environment.NewLine +
-				if (skill25 >= 5) {
-			tremor_d[skill25] + "% шанс обратить цель в бегство на 10 сек." + Environment.NewLine +
-				}
-				if (skill25 >= 10) {
-			"-" + tremor_e[skill25] + "% от Физич. урона в теч. 10 сек." + Environment.NewLine +
-				}
-				if (skill25 >= 15) {
-			tremor_f[skill25] + "% шанс оглушить цель на 2 сек." + Environment.NewLine +
-				}			 
-		 	texttemp+"В 20% случаев заклинание на 10 секунд обращает врагов в бегство<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Ослабленные враги наносят на 20% меньше физического урона<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Все цели оглушены на 2 секунды<br/></a>";
-		 
-        	textskill26.innerHTML = "<img src='/pic/skills/skillicon_firebash.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Огненный удар</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill26+"/15<br/><br/>";
-			"<br/>С помощью щита вы направляете на врага мощный поток энергии на расстояние 6 метров. Наносимый урон зависит от показателя брони щита. При использовании одного Заряда физический урон утраивается, радиус действия увеличивается до 9 метров." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill26 + Environment.NewLine +
-		 	"Расход маны: "+fire_bash_mana[skill26-1] + Environment.NewLine +
-		    fire_bash_a[skill26] + "% к урону" + Environment.NewLine +
-			"+35 к отбрасыванию" + Environment.NewLine +
-				if (skill26 >= 15) {
-			"-" + fire_bash_b[skill26] + "% от Огнен. урона в теч. 5 сек." + Environment.NewLine +
-				}
-            texttemp+"Время горения увеличено до 5 сек.<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Угол сектора увеличен на 40 градусов<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Горящие цели получают на 50% огненного урона больше<br/></a>";
-		 	"<br/><a style='color:#ffff00'>Необходимо держать в руках щит." + Environment.NewLine +
-		 
-        var immobilization_copter_damage = (int)Math.Floor((int)Math.Ceiling(immobilization_copter_c[skill27] * damage_minion_bylevel[level] / 100) * 0.15);
-        	textskill27.innerHTML = "<img src='/pic/skills/skillicon_slowcopter.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Обездвижив. вертолет</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill27+"/15<br/><br/>";
-			"<br/>Вы выпускаете вертолет, который обездвиживает врагов своим лучом. Одновременно можно воздействовать на 3 цели." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill27 + Environment.NewLine +
-		 	"Расход маны: "+immobilization_copter_mana[skill27-1] + Environment.NewLine +
-		 	"Время между активациями: 10 сек." + Environment.NewLine +
-		    "-" + immobilization_copter_a[skill27] + "% от скорости движения в теч. 0.2 сек." + Environment.NewLine +
-			"-" + immobilization_copter_b[skill27] + "% от скорости атаки в теч. 0.2 сек." + Environment.NewLine +
-			"-" + immobilization_copter_b[skill27] + "% от скорости применения заклинаний в теч. 0.2 сек." + Environment.NewLine +
-				if (skill27 >= 10) {
-			"" + immobilization_copter_damage + " к Электр. урона в теч. 0.2 сек.*" + Environment.NewLine +
-				}
-				if (skill27 >= 15) {
-			"+" + immobilization_copter_d[skill27] + "% шанс прервать действия врага" + Environment.NewLine +
-				}
-		 	texttemp+"Одновременно можно воздействовать на 5 целей<br></a>";
-		 	texttemp2+"Преимущество II уровня<br></a>";
-		 	texttemp+"Замедленные враги также получают урон электричеством<br></a>";
-		 	texttemp2+"Преимущество III уровня<br></a>";
-		 	texttemp+"Действия целей постоянно прерываются<br/></a>";
-			
-		    textskill28.innerHTML = "<img src='/pic/skills/skillicon_swordandboard.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Щит и меч (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill28+"/15<br/><br/>";
-			"<br/>Умение обращаться со щитом переходит из категории &quot;защита&quot; в категорию &quot;нападение&quot;. Ваши атаки в ближнем бою наносят дополнительный урон, напрямую зависящий от показателя брони вашего щита." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill28 + Environment.NewLine +
-		   	"Урон в рукопашной: +"+sword_and_board_a[skill28] + "% от параметра брони щита" + Environment.NewLine +
-		    "<br/><a style='color:#ffff00'>Необходим щит и любое оружие ближнего боя" + Environment.NewLine +
-             * 
-		    textskill29.innerHTML = "<img src='/pic/skills/skillicon_aegis_of_fate.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Эгида судьбы (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill29+"/15<br/><br/>";
-			"<br/>При атаке врагов броня может окружить вас защитной сферой, которая предотвратит нанесение урона. Эта сфера способна нейтрализовать урон, который на 100 ед. больше показателя брони, умноженного на два. Пока эффект действует, ваша устойчивость к отбрасыванию повышается на 50%." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill29 + Environment.NewLine +
-		    aegis_of_fate_a[skill29] + "% шанс сотворить заклинание &quot;Эгида&quot; при получении удара" + Environment.NewLine +		
+            int shock_grenade_mindam = (int)Math.Ceiling(shock_grenade_d[shock_grenade_lvl] * damage_monster[level] / 100) * 4;
+		    int shock_grenade_maxdam = (int)Math.Ceiling(shock_grenade_e[shock_grenade_lvl] * damage_monster[level] / 100) * 4;
+            shock_grenade_text = "Вы бросаете гранату, взрыв которой наносит урон электричеством и оглушает врагов в радиусе 4 м. Для двух дополнительных гранат требуется один Заряд." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + shock_grenade_mana[shock_grenade_lvl] + Environment.NewLine +
+                shock_grenade_a[shock_grenade_lvl] + "% шанс бить цель током в теч. 4 сек." + Environment.NewLine +
+                shock_grenade_b[shock_grenade_lvl] + "% шанс оглушить цель на " + shock_grenade_c[shock_grenade_lvl] + " сек." + Environment.NewLine +
+                "Электр. урон: " + shock_grenade_mindam + "-" + shock_grenade_maxdam + " в теч. 4 сек.*" + Environment.NewLine +
+                "+100% шанс прервать действия врага" + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Радиус действия шоковой гранаты до 5 м" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Время оглушения шоковой гранатой до 5 сек." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Радиус действия шоковой гранаты увеличен до 6 м, эффект оглушения - до 6 сек." + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока";
 
-       var charge_reconstitution_hp_regen = (int)Math.Ceiling((int)Math.Ceiling(charge_reconstitution_a[skill30] * health_player_generic[level] / 100 * 2) / 62.5);
-            textskill30.innerHTML = "<img src='/pic/skills/skillicon_charge_of_recon.png' class='class2CSS' width='40' height='40'><a style='color:#ffffff; font-size: 15px; font-weight:bold;'> Конвертация заряда (Пассивный навык)</a><br/><a style='color:#ffffff; font-size: 13px;'> Ур. "+skill30+"/15<br/><br/>";
-			"<br/>При использовании Заряда на применение навыков вы частично восстанавливаете здоровье." + Environment.NewLine +
-		 	"<a style='color:#C3C300'>Текущий ур.: "+skill30 + Environment.NewLine +
-		  	"Восполняется "+charge_reconstitution_hp_regen + " ед. здоровья в теч. 2 сек.*" + Environment.NewLine +		  
-			"<br/><a style='color:#1F90FF; font-size: 10px;'>*улучшается вместе с уровнем игрока" + Environment.NewLine +
-        }
-*/
+            fusillade_text = "Вы непрерывно обстреливаете противника ракетами дальнего действия. Пока вы удерживаете кнопку мышки, персонаж стреляет залпами по 2 ракеты." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + fusillade_mana[fusillade_lvl] + " в сек." + Environment.NewLine +
+                "Наносит " + fusillade_a[fusillade_lvl] + "% от урона текущего оружия в сек. Огнем" + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "В каждом залпе 3 ракеты." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Ракеты взрываются в радиусе 3 м" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "В каждом залпе 4 ракеты." + Environment.NewLine + Environment.NewLine +
+                "Необходима пушка";
+		 
+            int sledgebot_mindam = (int)Math.Ceiling(sledgebot_c[sledgebot_lvl] * damage_minion_bylevel[level] / 100);
+		    int sledgebot_maxdam = (int)Math.Ceiling(sledgebot_d[sledgebot_lvl] * damage_minion_bylevel[level] / 100);
+            sledgebot_text = "Вы создаете мощного робота-кувалду, который превращает врагов в кашицу." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + sledgebot_mana[sledgebot_lvl] + Environment.NewLine +
+                "Время между активациями: 1.5 мин." + Environment.NewLine +
+                "Время вызова: " + sledgebot_a[sledgebot_lvl] + " сек." + Environment.NewLine;
+            if (sledgebot_lvl >= 2)
+            {
+                sledgebot_text += "+" + sledgebot_b[sledgebot_lvl] + "% к люб. урону" + Environment.NewLine +
+                    "+" + sledgebot_b[sledgebot_lvl] + "% к люб. броне" + Environment.NewLine;
+            }
+            sledgebot_text += "Помощники наносят " + sledgebot_mindam + "-" + sledgebot_maxdam + " Физич. урона*" + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Робот-кувалда приобретает круговую атаку" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Робот-кувалда приобретает сокрушающую атаку" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Робот-кувалда атакует врагов ракетами" + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока";
+
+            bulwark_text = "Опыт обращения с доспехами позволяет использовать их максимально эффективно. Урон, наносимый врагами, уменьшается." + Environment.NewLine + Environment.NewLine +
+                "+" + bulwark_a[bulwark_lvl] + "% к Физич. броне" + Environment.NewLine +
+                "-" + bulwark_b[bulwark_lvl] + "% от получаемого Физич. урона" + Environment.NewLine;
+
+            fire_and_spark_text = "Искра, чтобы все заработало... а огонь - чтобы все сдохли." + Environment.NewLine + Environment.NewLine +
+                "+" + fire_and_spark_a[fire_and_spark_lvl] + "% к Огнен. урону" + Environment.NewLine +
+                "+" + fire_and_spark_a[fire_and_spark_lvl] + "% к Электр. урону" + Environment.NewLine;
+
+            charge_domination_text = "После смерти врага у вас появляется возможность поглотить его энергию и заполнить индикатор Заряда. Перерыв между применениями способности 3 сек." + Environment.NewLine + Environment.NewLine +
+                "Шанс пополнить заряд: " + charge_domination_a[charge_domination_lvl] + "%" + Environment.NewLine;
+
+            shield_bash_text = "Вы бьете щитом находящихся перед вами врагов, оглушая и отбрасывая их, а также замедляя атаки. Урон в 5 раз больше показателя брони щита. Каждый Заряд увеличивает урон на 10%." + Environment.NewLine +
+                "Расход маны: " + shield_bash_mana[shield_bash_lvl] + Environment.NewLine +
+                "" + shield_bash_a[shield_bash_lvl] + " Заряда за каждый удар" + Environment.NewLine +
+                shield_bash_b[shield_bash_lvl] + "% шанс оглушить цель на " + shield_bash_c[shield_bash_lvl] + " сек." + Environment.NewLine +
+                "+25 к отбрасыванию" + Environment.NewLine +
+                "-" + shield_bash_d[shield_bash_lvl] + "% от скорости атаки в теч. 2 сек." + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Урон в 7,5 раз больше показателя брони" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Урон в 10 раз больше показателя брони" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Урон в 12,5 раз больше показателя брони" + Environment.NewLine + Environment.NewLine +
+                "Необходимо держать в руках щит";
+		 
+            int forcefield_absorb = (int)Math.Ceiling(forcefield_a[forcefield_lvl] * health_monster_bylevel[level] / 100);
+            forcefield_text = "Ваши доспехи излучают эмберитовую энергию, которая образует защитное поле вокруг вас и (вдвое слабее) вокруг ваших союзников. Нейтрализовав определенное количество урона, защитное поле исчезает. Силовое поле использует все доступные Заряды; поглощаемый урон увеличивается на 50% за каждый Заряд." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + forcefield_mana[forcefield_lvl] + Environment.NewLine +
+                "Время между активациями: 8 сек." + Environment.NewLine +
+                "Поглощение " + forcefield_absorb + " очков Люб. урона в теч. 30 сек.*" + Environment.NewLine;
+            if (forcefield_lvl >= 2)
+            {
+                forcefield_text += "Сопротивление отбрасыванию: " + forcefield_b[forcefield_lvl] + "%" + Environment.NewLine;
+            }
+            forcefield_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Затраты маны и время применения снижены на 20%" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Робот-кувалда приобретает сокрушающую атаку" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Затраты маны и время применения снижены на 50%" + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока";
+		
+            int overload_mindam = (int)Math.Ceiling(overload_b[overload_lvl] * damage_monster[level] / 100);
+		    int overload_maxdam = (int)Math.Ceiling(overload_c[overload_lvl] * damage_monster[level] / 100);
+            overload_text = "Вы перегружаете электрические цепи брони, создавая мощный разряд эмберитовой энергии, который наносит электрический удар 5 врагам в радиусе 6 метров. При перегрузке расходуются все доступные Заряды; наносимый урон увеличивается на 50% за каждый Заряд." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + overload_mana[overload_lvl] + Environment.NewLine +
+                "Время между активациями: 1.4 сек." + Environment.NewLine +
+                "Наносит " + overload_a[overload_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine +
+                overload_mindam + "-" + overload_maxdam + " к Электр. урону*" + Environment.NewLine +
+                "+50 к отбрасыванию" + Environment.NewLine;
+            if (overload_lvl >= 2)
+            {
+                overload_text += overload_d[overload_lvl] + "% шанс оглушить цель на 2 сек." + Environment.NewLine;
+            }
+            overload_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Электроудар: до 7 врагов в радиусе 8 м" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Электроудар: до 9 врагов в радиусе 10 м" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Электроудар: до 11 врагов в радиусе 12 м" + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока";
+		
+            int dynamo_field_dam = (int)Math.Ceiling(dynamo_field_b[dynamo_field_lvl] * damage_monster[level] / 100) * 2;
+            dynamo_field_text = "Вы преобразуете энергию своей брони в электрический разряд, который поражает врагов в радиусе 5 метров. За каждого врага, которому нанесен урон (до 5), ваш уровень заряда повышается." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + dynamo_field_mana[dynamo_field_lvl] + Environment.NewLine +
+                "" + dynamo_field_a[dynamo_field_lvl] + " Заряда за каждого получившего урон врага" + Environment.NewLine +
+                dynamo_field_dam + " Электр. урона в теч. 2 сек.*" + Environment.NewLine +
+                "+" + dynamo_field_c[dynamo_field_lvl] + "% шанс прервать действия врага" + Environment.NewLine + Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Радиус поля: 7 м; вероятность прерывания: 70%." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Радиус поля: 7 м; вероятность прерывания: 90%." + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Радиус поля: 7 м; вероятность прерывания: 100%." + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока";
+
+            tremor_text = "Вы выпускаете поток энергии из костюма в землю, создавая мощную ударную волну, которая сбивает с ног и ослабляет врагов в пределах 24 метров. Данный эффект достигается только в том случае, если израсходован один Заряд." + Environment.NewLine + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + tremor_mana[tremor_lvl] + Environment.NewLine +
+                "Время между активациями: 10 сек." + Environment.NewLine +
+                "Наносит " + tremor_a[tremor_lvl] + "% от урона текущего оружия в сек." + Environment.NewLine +
+                "+30 к отбрасыванию" + Environment.NewLine +
+                tremor_b[tremor_lvl] + "% шанс прервать действия врага" + Environment.NewLine +
+                "-" + tremor_c[tremor_lvl] + "% от Физич. урона в теч. 10 сек." + Environment.NewLine;
+            if (tremor_lvl >= 5)
+            {
+                tremor_text += tremor_d[tremor_lvl] + "% шанс обратить цель в бегство на 10 сек." + Environment.NewLine;
+            }
+            if (tremor_lvl >= 10) 
+            {
+                tremor_text += "-" + tremor_e[tremor_lvl] + "% от Физич. урона в теч. 10 сек." + Environment.NewLine;
+            }
+            if (tremor_lvl == 15) 
+            {
+                tremor_text += tremor_f[tremor_lvl] + "% шанс оглушить цель на 2 сек." + Environment.NewLine;
+            }
+            tremor_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "В 20% случаев заклинание на 10 секунд обращает врагов в бегство" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Ослабленные враги наносят на 20% меньше физического урона" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Все цели оглушены на 2 секунды";
+
+            fire_bash_text = "С помощью щита вы направляете на врага мощный поток энергии на расстояние 6 метров. Наносимый урон зависит от показателя брони щита. При использовании одного Заряда физический урон утраивается, радиус действия увеличивается до 9 метров." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + fire_bash_mana[fire_bash_lvl] + Environment.NewLine +
+                fire_bash_a[fire_bash_lvl] + "% к урону" + Environment.NewLine +
+                "+35 к отбрасыванию" + Environment.NewLine;
+            if (fire_bash_lvl == 15) 
+            {
+                fire_bash_text += "-" + fire_bash_b[fire_bash_lvl] + "% от Огнен. урона в теч. 5 сек." + Environment.NewLine;
+            }
+            overload_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Время горения увеличено до 5 сек." + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Угол сектора увеличен на 40 градусов" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Горящие цели получают на 50% огненного урона больше" + Environment.NewLine + Environment.NewLine +
+                "Необходимо держать в руках щит.";
+		 
+            int immobilization_copter_damage = (int)Math.Floor((int)Math.Ceiling(immobilization_copter_c[immobilization_copter_lvl] * damage_minion_bylevel[level] / 100) * 0.15);
+            immobilization_copter_text = "Вы выпускаете вертолет, который обездвиживает врагов своим лучом. Одновременно можно воздействовать на 3 цели." + Environment.NewLine + Environment.NewLine +
+                "Расход маны: " + immobilization_copter_mana[immobilization_copter_lvl] + Environment.NewLine +
+                "Время между активациями: 10 сек." + Environment.NewLine +
+                "-" + immobilization_copter_a[immobilization_copter_lvl] + "% от скорости движения в теч. 0.2 сек." + Environment.NewLine +
+                "-" + immobilization_copter_b[immobilization_copter_lvl] + "% от скорости атаки в теч. 0.2 сек." + Environment.NewLine +
+                "-" + immobilization_copter_b[immobilization_copter_lvl] + "% от скорости применения заклинаний в теч. 0.2 сек." + Environment.NewLine;
+            if (immobilization_copter_lvl >= 10)
+            {
+                immobilization_copter_text += "" + immobilization_copter_damage + " к Электр. урона в теч. 0.2 сек.*" + Environment.NewLine;
+            }
+            if (immobilization_copter_lvl == 15) 
+            {
+                immobilization_copter_text += "+" + immobilization_copter_d[immobilization_copter_lvl] + "% шанс прервать действия врага" + Environment.NewLine;
+            }
+            immobilization_copter_text += Environment.NewLine +
+                "Преимущество I уровня" + Environment.NewLine + "Одновременно можно воздействовать на 5 целей" + Environment.NewLine +
+                "Преимущество II уровня" + Environment.NewLine + "Замедленные враги также получают урон электричеством" + Environment.NewLine +
+                "Преимущество III уровня" + Environment.NewLine + "Действия целей постоянно прерываются";
+
+            sword_and_board_text = "Умение обращаться со щитом переходит из категории \"защита\" в категорию \"нападение\". Ваши атаки в ближнем бою наносят дополнительный урон, напрямую зависящий от показателя брони вашего щита." + Environment.NewLine + Environment.NewLine +
+                "Урон в рукопашной: +" + sword_and_board_a[sword_and_board_lvl] + "% от параметра брони щита" + Environment.NewLine + Environment.NewLine +
+                "Необходим щит и любое оружие ближнего боя";
+
+            aegis_of_fate_text = "При атаке врагов броня может окружить вас защитной сферой, которая предотвратит нанесение урона. Эта сфера способна нейтрализовать урон, который на 100 ед. больше показателя брони, умноженного на два. Пока эффект действует, ваша устойчивость к отбрасыванию повышается на 50%." + Environment.NewLine + Environment.NewLine +
+                aegis_of_fate_a[aegis_of_fate_lvl] + "% шанс сотворить заклинание \"Эгида\" при получении удара";		
+         
+            int charge_reconstitution_hp_regen = (int)Math.Ceiling((int)Math.Ceiling(charge_reconstitution_a[charge_reconstitution_lvl] * health_player_generic[level] / 100 * 2) / 62.5);
+            charge_reconstitution_text = "При использовании Заряда на применение навыков вы частично восстанавливаете здоровье." + Environment.NewLine + Environment.NewLine +
+                "Восполняется " + charge_reconstitution_hp_regen + " ед. здоровья в теч. 2 сек.*" + Environment.NewLine + Environment.NewLine +
+                "*улучшается вместе с уровнем игрока" + Environment.NewLine;            
         }
     }
 }
