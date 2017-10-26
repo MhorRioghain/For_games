@@ -64,6 +64,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -77,6 +78,114 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alchemist_portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vanquisher_portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warrior_portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Advancedspellcasting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adventurer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Criticalstrikes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emberbolt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emberlance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emberlightning.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emberstrike.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iceshock.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magicalexpertise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Offensivemastery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pyre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alchemicalgolem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beamgolem.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Burningbind.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Charmmastery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Netherimp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Petmastery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rangedexpertise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Terror.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thornedminions.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Treasurehunter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Armorexpertise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blockandparry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Defensivemastery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dualwielding.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emberphase.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Embersentry.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Embershield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Embershock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Frailty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Infuse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Martialexpertise.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
