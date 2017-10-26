@@ -242,8 +242,7 @@ namespace Skill_Calculator
         double[] lightning_brand_b = { 0, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210 }; 
         public string[] lightning_brand_reqlevel = { "14", "15", "16", "18", "20", "23", "27", "32", "38", "46", "55", "63", "72", "83", "94", "full" };
 
-        double weapon_damage, critical_damage, double_chance, critical_chance, fumble_recovery,
-            max_mana, magic_damage, execute_chance, max_health, armor_bonus, block_chance;        
+        double weapon_damage, critical_damage, double_chance, critical_chance, fumble_recovery, max_mana, magic_damage, execute_chance, max_health, armor_bonus, block_chance;        
 
         public Embermage()
         {
