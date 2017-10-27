@@ -293,6 +293,26 @@ namespace SkillCalculator.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IG_menu_frame_bold2 {
+            get {
+                object obj = ResourceManager.GetObject("IG_menu_frame_bold2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IG_menu_frame_bold5 {
+            get {
+                object obj = ResourceManager.GetObject("IG_menu_frame_bold5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Infuse {
             get {
                 object obj = ResourceManager.GetObject("Infuse", resourceCulture);
