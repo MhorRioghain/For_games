@@ -27,7 +27,7 @@ namespace SkillCalculator
         public string magic_weapon_text;
         public string[] magic_weapon_reqlvl = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "full" };
         int[] magic_weapon_a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        int[] magic_weapon_b = { 4, 8, 12, 16, 20, 24, 28, 32, 36, 40 };
+        int[] magic_weapon_b = { 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40 };
 
         public int iceshock_lvl = 0;
         public string iceshock_text;
@@ -87,7 +87,7 @@ namespace SkillCalculator
         public string nether_imp_text;
         public string[] nether_imp_reqlvl = { "1", "2", "3", "5", "7", "10", "13", "17", "21", "26", "full" };
         int[] nether_imp_mana = { 0, 15, 13, 14, 16, 17, 18, 19, 20, 21 };
-        int[] nether_imp_a = { 0, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6 };
+        int[] nether_imp_a = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6 };
         int[] nether_imp_b = { 0, 0, 0, 20, 20, 40, 40, 60, 60, 80, 80 };
         int[] nether_imp_c = { 0, 0, 0, 5, 5, 10, 10, 15, 15, 20, 20 };
 
@@ -129,7 +129,7 @@ namespace SkillCalculator
 
         public int burning_bind_lvl = 0;
         public string burning_bind_text;
-        public string[] burning_bind_reqlvl = { "20", "21", "22", "23", "24", "25", "27", "29", "31", "33" };
+        public string[] burning_bind_reqlvl = { "20", "21", "22", "23", "24", "25", "27", "29", "31", "33", "full" };
         int[] burning_bind_mana = { 0, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32 };
         int[] burning_bind_a = { 0, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140 };
         int[] burning_bind_b = { 0, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33 };
@@ -158,7 +158,7 @@ namespace SkillCalculator
 
         public int armor_expertise_lvl = 0;
         public string armor_expertise_text;
-        public string[] armor_expertise_reqlvl = { "1", "2", "3", "5", "7", "10", "13", "17", "21", "26" };
+        public string[] armor_expertise_reqlvl = { "1", "2", "3", "5", "7", "10", "13", "17", "21", "26", "full" };
         int[] armor_expertise_a = { 0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10 };
         int[] armor_expertise_b = { 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40 };
 
@@ -196,12 +196,12 @@ namespace SkillCalculator
 
         public int dual_wielding_lvl = 0;
         public string dual_wielding_text;
-        public string[] dual_wielding_reqlvl = { "15", "16", "17", "18", "19", "20", "21", "22", "23", "24" };
+        public string[] dual_wielding_reqlvl = { "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "full" };
         int[] dual_wielding_a = { 0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60 };
 
         public int ember_phase_lvl = 0;
         public string ember_phase_text;
-        public string[] ember_phase_reqlvl = { "20", "21", "22", "23", "24", "25", "27", "29", "31", "33" };
+        public string[] ember_phase_reqlvl = { "20", "21", "22", "23", "24", "25", "27", "29", "31", "33", "full" };
         int[] ember_phase_mana = { 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16 };
         string[] ember_phase_a = { "+78-155", "+83-165", "+88-176", "+94-187", "+100-199", "+105-210", "+117-234", "+130-260", "+143-286", "+157-314" };
         int[] ember_phase_b = { 0, 42, 44, 46, 48, 50, 52, 56, 60, 64, 68 };
