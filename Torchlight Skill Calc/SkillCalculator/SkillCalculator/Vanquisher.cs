@@ -19,7 +19,7 @@ namespace SkillCalculator
         public int ranged_weapon_lvl = 0;
         public string ranged_weapon_text;
         public string[] ranged_weapon_reqlvl = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "full" };
-        int[] ranged_weapon_a = { 0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10 };
+        int[] ranged_weapon_a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         int[] ranged_weapon_b = { 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40 };
 
         public int ricochet_lvl = 0;
@@ -94,7 +94,7 @@ namespace SkillCalculator
         public int armor_expertise_lvl = 0;
         public string armor_expertise_text;
         public string[] armor_expertise_reqlvl = { "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "full" };
-        int[] armor_expertise_a = { 0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10 };
+        int[] armor_expertise_a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         int[] armor_expertise_b = { 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40 };
 
         public int wind_of_justice_lvl = 0;
@@ -113,7 +113,7 @@ namespace SkillCalculator
         public int martial_weapons_lvl = 0;
         public string martial_weapons_text;
         public string[] martial_weapons_reqlvl = { "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "full" };
-        int[] martial_weapons_a = { 0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10 };
+        int[] martial_weapons_a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         int[] martial_weapons_b = { 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40 };
 
         public int barter_lvl = 0;
@@ -138,7 +138,7 @@ namespace SkillCalculator
         public string[] hamstring_reqlvl = { "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "full" };
         int[] hamstring_mana = { 0, 25, 25, 27, 29, 31, 33, 35, 37, 39, 41 };
         int[] hamstring_a = { 0, 63, 63, 66, 69, 72, 75, 78, 81, 84, 87 };
-        int[] hamstring_b = { 0, -21, -21, -22, -23, -24, -25, -26, -26, -28, -29 };
+        int[] hamstring_b = { 0, 21, 21, 22, 23, 24, 25, 26, 26, 28, 29 };
         int[] hamstring_c = { 0, 26, 26, 27, 28, 30, 31, 32, 33, 35, 36 };
         int[] hamstring_d = { 0, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14 };
         int[] hamstring_e = { 0, 61, 64, 68, 71, 75, 79, 83, 86, 91, 95 };
@@ -204,56 +204,69 @@ namespace SkillCalculator
         public string[] advanced_spellcasting_reqlvl = { "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "full" };
         int[] advanced_spellcasting_a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         int[] advanced_spellcasting_b = { 0, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12 };
-
-        public int _lvl = 0;
-        public string _text;
-        public string[] _reqlvl;
-
-        public int _lvl = 0;
-        public string _text;
-        public string[] _reqlvl;
-
-        public int _lvl = 0;
-        public string _text;
-        public string[] _reqlvl;
-
-        public int _lvl = 0;
-        public string _text;
-        public string[] _reqlvl;
-
-        public int _lvl = 0;
-        public string _text;
-        public string[] _reqlvl;
-
-        public int _lvl = 0;
-        public string _text;
-        public string[] _reqlvl;
-
-        public int _lvl = 0;
-        public string _text;
-        public string[] _reqlvl;
-
-
-
-        /*
-         * 
-         * adventurer
-         * offensive_spell
-         * block_and_parry
-         * armor_expertise
-         * defensive_spell
-         * martial_weapons
-         * barter
-         * treasure_hunter
-         * dual_wielding
-         * pet_mastery
-         * magic_weapon
-         * advanced_spellcasting
-         */
-
+                
         public Vanquisher()
         { 
 
+        }
+
+        public void calc()
+        {
+            skillpointsleft = (level + fame) - ranged_weapon_lvl - ricochet_lvl - frost_pilum_lvl - critical_strikes_lvl - adventurer_lvl - seeking_shot_lvl - offensive_spell_lvl - explosive_shot_lvl - block_and_parry_lvl - arrow_hail_lvl - needle_arc_lvl - stab_lvl - armor_expertise_lvl - wind_of_justice_lvl - defensive_spell_lvl - martial_weapons_lvl - barter_lvl - venomous_dirks_lvl - treasure_hunter_lvl - hamstring_lvl - lightning_bomb_lvl - dual_wielding_lvl - flame_trap_lvl - charm_spell_lvl - flechette_trap_lvl - pet_mastery_lvl - magic_weapon_lvl - devouring_trap_lvl - shock_trap_lvl - advanced_spellcasting_lvl;
+            statpointsleft = (int)(40 + ((level - 1) * 5) - strength - dexterity - focus - vitality);
+        }
+
+        public void stats_bonuses()
+        {
+            weapon_damage = Math.Round(strength, 2);
+            critical_damage = Math.Round(strength * 0.4, 1);
+
+            critical_chance = double_chance = Math.Round(dexterity * (0.2002 - 0.0002 * dexterity), 1);
+            if (dexterity >= 500)
+            {
+                critical_chance = 50.1;
+                double_chance = 50.1;
+            }
+            fumble_recovery = Math.Round(25 + dexterity * (0.3003 - 0.0003 * dexterity), 1);
+            if (dexterity >= 478)
+            {
+                fumble_recovery = 100;
+            }
+
+            max_mana = Math.Round(47 + level + Math.Floor(focus * 0.5));
+            magic_damage = Math.Round((focus / 2), 1);
+            execute_chance = Math.Round(9.8 + focus * (0.2002 - 0.0002 * focus), 1);
+            if (focus >= 499)
+            {
+                execute_chance = 60;
+            }
+
+            max_health = Math.Round(160 + (level * 40) + Math.Floor(vitality * 3.6));
+            armor_bonus = Math.Round(vitality * 0.25, 2);
+            if (vitality >= 500)
+            {
+                armor_bonus = 249.75;
+            }
+            block_chance = Math.Round(vitality * (0.2002 - 0.0002 * vitality), 1);
+            if (vitality >= 500)
+            {
+                block_chance = 50.1;
+            }
+        }
+
+        public void tooltips_text()
+        {
+            strength_text = "Урон от оружия: +" + weapon_damage + Environment.NewLine +
+                "Критический урон: +" + critical_damage + " %" + Environment.NewLine;
+            dexterity_text = "Шанс критического удара: +" + critical_chance + " %" + Environment.NewLine +
+                "Шанс уклонения: +" + double_chance + " %" + Environment.NewLine +
+                "Точность удара: +" + fumble_recovery + " %";
+            focus_text = "Запас Маны (ОМ):  " + max_mana + Environment.NewLine +
+                "Урон от магии: +" + magic_damage + " %" + Environment.NewLine +
+                "Шанс казни: +" + execute_chance + " %";
+            vitality_text = "Запас Здоровья (ОЗ): " + max_health + Environment.NewLine +
+                "Бонус к броне: +" + armor_bonus + " %" + Environment.NewLine +
+                "Шанс блокировать удар: +" + block_chance + " %";
         }
     }
 }

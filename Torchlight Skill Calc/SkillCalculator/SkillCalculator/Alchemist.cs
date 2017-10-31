@@ -159,7 +159,7 @@ namespace SkillCalculator
         public int armor_expertise_lvl = 0;
         public string armor_expertise_text;
         public string[] armor_expertise_reqlvl = { "1", "2", "3", "5", "7", "10", "13", "17", "21", "26", "full" };
-        int[] armor_expertise_a = { 0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10 };
+        int[] armor_expertise_a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         int[] armor_expertise_b = { 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40 };
 
         public int ember_shield_lvl = 0;
@@ -171,7 +171,7 @@ namespace SkillCalculator
         public int martial_weapons_lvl = 0;
         public string martial_weapons_text;
         public string[] martial_weapons_reqlvl = { "10", "11", "12", "13", "15", "17", "20", "23", "26", "30", "full" };
-        int[] martial_weapons_a = { 0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10 };
+        int[] martial_weapons_a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         int[] martial_weapons_b = { 0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40 };
 
         public int infuse_lvl = 0;
@@ -189,7 +189,7 @@ namespace SkillCalculator
         public string frailty_text;
         public string[] frailty_reqlvl = { "15", "16", "17", "18", "19", "21", "23", "25", "28", "31", "full" };
         int[] frailty_mana = { 0, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 };
-        int[] frailty_a = { 0, -20, -25, -30, -35, -40, -45, -50, -55, -60, -65 };
+        int[] frailty_a = { 0, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65 };
         int[] frailty_b = { 0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
         int[] frailty_c = { 0, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28 };
         int[] frailty_d = { 0, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4 };
