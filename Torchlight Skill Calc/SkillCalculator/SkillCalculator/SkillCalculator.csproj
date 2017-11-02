@@ -195,6 +195,15 @@
   <ItemGroup>
     <None Include="Resources\IG_menu_frame_bold5.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\torchlight-alchemist-glutsteinschuss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\torchlight-passiv-expertise-mit-magischen-waffen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\torchlight-passiv-kritische-treffer.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

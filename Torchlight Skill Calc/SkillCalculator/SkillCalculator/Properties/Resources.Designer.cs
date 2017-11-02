@@ -413,6 +413,36 @@ namespace SkillCalculator.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap torchlight_alchemist_glutsteinschuss {
+            get {
+                object obj = ResourceManager.GetObject("torchlight-alchemist-glutsteinschuss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap torchlight_passiv_expertise_mit_magischen_waffen {
+            get {
+                object obj = ResourceManager.GetObject("torchlight-passiv-expertise-mit-magischen-waffen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap torchlight_passiv_kritische_treffer {
+            get {
+                object obj = ResourceManager.GetObject("torchlight-passiv-kritische-treffer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Treasurehunter {
             get {
                 object obj = ResourceManager.GetObject("Treasurehunter", resourceCulture);

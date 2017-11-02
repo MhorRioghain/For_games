@@ -124,11 +124,17 @@
   <data name="Emberbolt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Emberbolt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IG_menu_frame_bold5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IG_menu_frame_bold5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Terror" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Terror.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Barter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Barter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Charmmastery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Charmmastery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Warrior_portrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warrior_portrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -153,12 +159,6 @@
   </data>
   <data name="Criticalstrikes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Criticalstrikes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Defensivemastery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Defensivemastery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Treasurehunter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Treasurehunter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Infuse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Infuse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,8 +187,14 @@
   <data name="Beamgolem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Beamgolem.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="torchlight-passiv-expertise-mit-magischen-waffen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\torchlight-passiv-expertise-mit-magischen-waffen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Offensivemastery" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Offensivemastery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rangedexpertise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rangedexpertise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Burningbind" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Burningbind.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,14 +202,17 @@
   <data name="Embersentry" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Embersentry.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="torchlight-alchemist-glutsteinschuss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\torchlight-alchemist-glutsteinschuss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Alchemist_portrait" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Alchemist_portrait.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Charmmastery" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Charmmastery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Treasurehunter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Treasurehunter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Rangedexpertise" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Rangedexpertise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Defensivemastery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Defensivemastery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Iceshock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iceshock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,16 +229,16 @@
   <data name="Emberlightning" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Emberlightning.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IG_menu_frame_bold2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IG_menu_frame_bold2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Adventurer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Adventurer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Alchemicalgolem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Alchemicalgolem.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IG_menu_frame_bold2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IG_menu_frame_bold2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IG_menu_frame_bold5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IG_menu_frame_bold5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torchlight-passiv-kritische-treffer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\torchlight-passiv-kritische-treffer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
